@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import SimpleMenu from '../menubutton';
+
 
 class Homepage extends Component {
     render() {
