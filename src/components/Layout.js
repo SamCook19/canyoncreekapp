@@ -12,7 +12,6 @@ export default class Layout extends Component {
           <h1>Canyon Creek Services</h1>
           <div className='escape-button'> <EscapeButton /> </div>
           <div className='hotline-button'><HotlineButton /></div>
-          
         </div>
     </div>
           

@@ -11,15 +11,7 @@ class Homepage extends Component {
         };
     }
 
-    componentDidMount () {
-        const currentRoute = this.props.location;
-        if (currentRoute === '/') {
-          this.setState({ isNavbarHidden: true });
-        }
-      }
-
     render() {
-        const { isNavbarHidden } = this.state
         return (
             <div>
                 <h1> This is the homepage </h1>
