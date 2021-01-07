@@ -1,15 +1,15 @@
 import React, { Component } from 'react';
 import NavigationBar from '../navigation/NavigationBar';
 
-class Donate extends Component {
+class Blog extends Component {
     render() {
         return (
             <div>
-                <h1>this is the donate</h1>
+                This is the blog
                 
             </div>
         );
     }
 }
 
-export default Donate;
+export default Blog;
