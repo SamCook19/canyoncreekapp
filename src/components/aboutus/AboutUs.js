@@ -4,10 +4,15 @@ import NavigationComponent from '../navigation/NavigationBar';
 class AboutUs extends Component {
     render() {
         return (
-            <div>
-                <h1>this is the about</h1>
-                <NavigationComponent />
-            </div>
+            <div className='container'>
+                <div className='navbar-container'>
+                <div className='navbar'>  <NavigationComponent />
+                </div>
+                <div className='content-container'>
+                    this is the about
+                </div>
+                </div>
+            </div> 
         );
     }
 }

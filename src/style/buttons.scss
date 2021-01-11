@@ -1,0 +1,11 @@
+.button__hotline {
+    @include base-btn();
+}
+
+.button__escape {
+    @include base-btn();
+}
+
+.button__blog {
+    @include base-btn();
+}

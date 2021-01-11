@@ -4,10 +4,12 @@ import NavigationComponent from '../navigation/NavigationBar';
 class Prevention extends Component {
     render() {
         return (
-            <div>
-                <h1> this is the prevention page</h1>
-                <NavigationComponent />
-            </div>
+            <div className='title-container'>
+                <div className='title'><h1>this is the prevention</h1>
+                </div>
+                <div className='navbar'>  <NavigationComponent />
+                </div>
+            </div> 
         );
     }
 }

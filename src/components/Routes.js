@@ -23,9 +23,9 @@ export default class Routes extends Component {
 
     render() {
       return (
-        <div className='container'>
+        <div className='route-container'>
           <Router> 
-          <div>
+          <div className='nav-routes'>
           <Switch>
             <Route exact path="/" component={Homepage}/>
             <Route exact path="/about" component={AboutUs}/>

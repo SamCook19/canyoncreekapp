@@ -1,5 +1,8 @@
 @import 'header.scss';
 @import 'home.scss';
+@import 'pagesetup.scss';
+@import 'mixins.scss';
+@import 'buttons.scss';
 
 html {
     font-size: 62.5%; // 1rem is 10px
@@ -11,7 +14,7 @@ html {
     margin: 0;
     padding: 0;
     box-sizing: inherit;
-    font-family: 'montserrat';
+    font-family: 'Stellar Light';
 }
 
 body {
@@ -22,10 +25,8 @@ body {
     -moz-osx-font-smoothing: grayscale;
     text-rendering: optimizeLegibility;
     -webkit-tap-highlight-color: transparent;
+    
 }
 
-.app {
-    margin-top: 2rem;
-    display: grid;
-    justify-items: center;
-}
+
+

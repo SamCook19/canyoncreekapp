@@ -18,7 +18,7 @@ export default function SimpleMenu() {
   return (
     <div>
       <Button aria-controls="simple-menu" aria-haspopup="true" onClick={handleClick}>
-        Navigation
+        Menu
       </Button>
       <Menu
         id="simple-menu"

@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
-import SimpleMenu from '../navigation/navigationmenu'
+import SimpleMenu from '../navigation/navigationmenu';
+import CenterPiece from './centerpiece';
+
 
 
 class Homepage extends Component {
@@ -13,9 +15,12 @@ class Homepage extends Component {
 
     render() {
         return (
-            <div>
-                <h1> This is the homepage </h1>
-                <SimpleMenu />
+        <div className='homepage-wrapper'>
+            <div className='title-menu'>
+                <div className='home-menu'><SimpleMenu /> </div>
+                <div className='home-center-piece'><CenterPiece /></div>
+            </div>
+
             </div>
         );
     }
