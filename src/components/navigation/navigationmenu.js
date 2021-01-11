@@ -32,6 +32,7 @@ export default function SimpleMenu() {
         <MenuItem component={Link} to='/prevention' onClick={handleClose}>Prevent Violence</MenuItem>
         <MenuItem component={Link} to='/donate' onClick={handleClose}>Donate</MenuItem>
         <MenuItem component={Link} to='/volunteer' onClick={handleClose}>Volunteer</MenuItem>
+        <MenuItem component={Link} to='/blog' onClick={handleClose}>Blog</MenuItem>
 
       </Menu>
     </div>

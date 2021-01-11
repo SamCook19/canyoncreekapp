@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
 
-class Corner extends Component {
+class CenterSlideshow extends Component {
     render() {
         return (
             <div>
-                Cycling quotes, and icons here
+                slideshow
             </div>
         );
     }
 }
 
-export default Corner;
+export default CenterSlideshow;

@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
 import Layout from './Layout';
-import Routes from './Routes';
+
 
 
 export default class App extends Component {
@@ -16,7 +16,6 @@ export default class App extends Component {
       return (
         <div className='app-container'>
         <Layout />
-        <Routes />
         </div>
     );
   }
