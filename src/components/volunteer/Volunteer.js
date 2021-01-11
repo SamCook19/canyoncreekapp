@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import NavigationComponent from '../navigation/NavigationBar';
+import EscapeButton from '../buttons/escapebutton';
+import HotlineButton from '../buttons/hotline';
 
 class Volunteer extends Component {
     render() {

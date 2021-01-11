@@ -12,8 +12,7 @@ import Prevention from './prevention/Prevention';
 
 import NoMatch from "./otherpages/no-match";
 import Blog from "./blog/Blog"
-import EscapeButton from './buttons/escapebutton';
-import HotlineButton from './buttons/hotline';
+
 
 
 
@@ -22,10 +21,6 @@ export default class Layout extends Component {
     render() {
       return (
         <div className='container'>
-          <div className='header' >
-          <div className='escape-button'> <EscapeButton /> </div>
-          <div className='hotline-button'> <HotlineButton /></div>
-          </div>
           <div className='route-container'>
           <Switch>
             <Route exact path="/" component={Homepage}/>
@@ -38,7 +33,8 @@ export default class Layout extends Component {
             <Route component={NoMatch} />
           </Switch>
         </div>
-    </div>
+        </div>
+    
           
        
     );

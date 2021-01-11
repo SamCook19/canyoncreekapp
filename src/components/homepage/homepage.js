@@ -4,6 +4,8 @@ import CenterPiece from './centerpiece';
 import LeftCorner from './leftcorner';
 import RightCorner from './rightcorner';
 import CenterSlideshow from '../slideshows/center-footer-slideshow';
+import EscapeButton from '../buttons/escapebutton';
+import HotlineButton from '../buttons/hotline';
 
 
 class Homepage extends Component {
@@ -18,9 +20,11 @@ class Homepage extends Component {
     render() {
         return (
         <div className='homepage-wrapper'>
-            <div className='title-menu'>
+            <div className='header-menu'>
                 <div className='home-menu'><SimpleMenu /> </div>
-                </div>
+                <div className='escape-button'> <EscapeButton /> </div>
+                <div className='hotline-button'> <HotlineButton /></div>
+            </div>
                 <div className='home-center-piece'><CenterPiece /></div>
                 <div className='home-left-corner'> <LeftCorner /> </div>
                 <div className='home-right-corner'><RightCorner /> </div>

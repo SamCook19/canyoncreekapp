@@ -1,13 +1,16 @@
 import React, { Component } from 'react';
 import NavigationComponent from '../navigation/NavigationBar';
+import EscapeButton from '../buttons/escapebutton';
+import HotlineButton from '../buttons/hotline';
 
 class Help extends Component {
     render() {
         return (
-            <div className='title-container'>
-                <div className='title'><h1>this is the help</h1>
-                </div>
-                <div className='navbar'>  <NavigationComponent />
+            <div className='page-container'>
+                <div className='header'>
+            <div className='navbar'>  <NavigationComponent /> </div>
+                <div className='escape-button'> <EscapeButton /> </div>
+                <div className='hotline-button'> <HotlineButton /></div>
                 </div>
             </div> 
         );
