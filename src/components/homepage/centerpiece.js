@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
-import Logo from '../logo/logo';
+import HomeLogo from '../logo/logo';
 
 class CenterPiece extends Component {
     render() {
         return (
             <div className='centerpiece-container'>
             <div className='centerpiece-logo'>
-                <Logo />
+                <HomeLogo />
             </div>
             <div className='purposestatement'>
                 Communities Free of Domestic Violence and Sexual Assault

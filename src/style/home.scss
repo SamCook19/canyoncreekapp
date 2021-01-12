@@ -1,0 +1,44 @@
+.homepage-wrapper {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        width: 100vw;
+        height: 100vh;
+        .homepage-header{
+                grid-column: 1 / 4;
+                display: flex;
+                justify-content: space-around;
+                height: 10vh;
+        }
+        
+        .home-center-piece {
+                grid-column: 2;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-size: 250%;
+                .centerpiece-logo{
+                        display: flex;
+                        justify-content: center;
+
+                }
+        }
+        .home-left-corner {
+                grid-column: 1;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+        }
+        .home-right-corner {
+                grid-column : 3;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+        }
+        .home-slideshow {
+                grid-column: 2;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+        }
+}

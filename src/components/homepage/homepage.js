@@ -20,10 +20,15 @@ class Homepage extends Component {
     render() {
         return (
         <div className='homepage-wrapper'>
-            <div className='header-menu'>
-                <div className='home-menu'><SimpleMenu /> </div>
+            <div className='homepage-header'>
+            <div className='left-side-header'>
                 <div className='escape-button'> <EscapeButton /> </div>
                 <div className='hotline-button'> <HotlineButton /></div>
+            </div>
+            <div className='right-side-header'> 
+            <div className='home-menu'><SimpleMenu /> </div>
+            <div className='contact-button'> Contact Us </div>
+            </div>
             </div>
                 <div className='home-center-piece'><CenterPiece /></div>
                 <div className='home-left-corner'> <LeftCorner /> </div>

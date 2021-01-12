@@ -2,11 +2,11 @@ import React, { Component } from 'react';
 
 import { Link } from 'react-router-dom';
 
-class Logo extends Component {
+class HomeLogo extends Component {
     render() {
         const size = {
-            height: this.props.size ? this.props.size : 100,
-            width: this.props.size ? this.props.size : 200,
+            height: this.props.size ? this.props.size : 200,
+            width: this.props.size ? this.props.size : 400,
         }
         return (
             <div className="logo-main">
@@ -18,4 +18,4 @@ class Logo extends Component {
     }
 }
 
-export default Logo;
+export default HomeLogo;
