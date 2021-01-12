@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import HomeLogo from '../logo/logo';
+import HomeLogo from '../logo/homelogo';
 
 class CenterPiece extends Component {
     render() {

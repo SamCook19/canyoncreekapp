@@ -1,0 +1,23 @@
+.header {
+    display: flex;
+    justify-content: space-around;
+    .left-side-header {
+        display: grid;
+        grid-gap: 15px;
+    }
+    .right-side-header {
+        width: 600px;
+        .navbar {
+            width: 600px;
+            .nav-wrapper {
+                width: 600px;
+                display: flex;
+                justify-content: space-evenly;
+                font-size: 20px;
+                .nav-link-wrapper {
+                    a:visited { text-decoration: none; color: grey}
+                }
+            }
+        }
+    }
+}

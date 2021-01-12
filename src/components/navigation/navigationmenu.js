@@ -27,7 +27,6 @@ export default function SimpleMenu() {
         open={Boolean(anchorEl)}
         onClose={handleClose}
       >
-        <MenuItem component={Link} to='/' onClick={handleClose} > Home </MenuItem>
         <MenuItem component={Link} to='/about' onClick={handleClose}>About Us</MenuItem>
         <MenuItem component={Link} to='/prevention' onClick={handleClose}>Prevent Violence</MenuItem>
         <MenuItem component={Link} to='/donate' onClick={handleClose}>Donate</MenuItem>

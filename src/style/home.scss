@@ -8,7 +8,10 @@
                 grid-column: 1 / 4;
                 display: flex;
                 justify-content: space-around;
-                height: 10vh;
+                height: 15vh;
+                .left-side-header {
+                        display: grid;
+                }
         }
         
         .home-center-piece {
@@ -28,12 +31,15 @@
                 display: flex;
                 justify-content: center;
                 align-items: center;
+                
         }
         .home-right-corner {
                 grid-column : 3;
                 display: flex;
                 justify-content: center;
                 align-items: center;
+                
+                
         }
         .home-slideshow {
                 grid-column: 2;
