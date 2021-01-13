@@ -6,8 +6,8 @@ class LeftCorner extends Component {
     render() {
         const size = {
             height: this.props.size ? this.props.size : 40,
-            
         }
+        
         return (
             <div className='left-corner-container'>
                 <div className='quote-slide-show'>
