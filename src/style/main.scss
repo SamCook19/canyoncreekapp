@@ -3,6 +3,7 @@
 @import 'pagesetup.scss';
 @import 'mixins.scss';
 @import 'buttons.scss';
+@import 'left-corner-home.scss';
 
 html {
     font-size: 62.5%; // 1rem is 10px
@@ -24,6 +25,7 @@ body {
     background-size: 250vh;
     overflow-x: hidden;
     font-weight: normal;
+    background-color: #f8f8ff;
 
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;

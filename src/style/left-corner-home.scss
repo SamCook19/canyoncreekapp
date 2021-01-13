@@ -1,0 +1,14 @@
+.home-left-corner {
+    display: flex;
+    position: relative;
+.left-corner-container {
+    position: absolute; bottom: 0;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    .social-media-icons {
+        width: 260px;
+        display: flex;
+        justify-content: space-evenly;
+    }
+}
+}

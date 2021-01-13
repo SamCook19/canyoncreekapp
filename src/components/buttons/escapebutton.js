@@ -7,7 +7,7 @@ const EscapeButton = () => {
                 e.preventDefault();
                 window.location.href='http://google.com';
                     }}>
-                Leave this Site
+                Leave This Site
             </a>
             </div>
         );

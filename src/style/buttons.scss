@@ -1,9 +1,15 @@
 .button__hotline {
     @include base-btn();
+    display: flex;
+    justify-content: center;
+    
 }
 
 .button__escape {
     @include base-btn();
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
 }
 
 .button__blog {
