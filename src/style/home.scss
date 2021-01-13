@@ -1,11 +1,11 @@
 .homepage-wrapper {
         display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 200px 1fr 1fr 1fr 200px 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
         width: 100vw;
         height: 100vh;
         .homepage-header{
-                grid-column: 1 / 4;
+                grid-column: 1 / 6;
                 display: flex;
                 justify-content: space-around;
                 height: 15vh;
@@ -20,7 +20,8 @@
         }
         
         .home-center-piece {
-                grid-column: 2;
+                grid-column: 2/7;
+                grid-row: 2/6;
                 display: flex;
                 justify-content: center;
                 align-items: center;
@@ -35,23 +36,29 @@
                 }
         }
         .home-left-corner {
-                grid-column: 1;
                 display: flex;
                 justify-content: center;
                 align-items: center;
                 background-color: white;
                 position: relative;
                 z-index: 2;
-                
+                grid-column: 1/3;
+                grid-row: 4/6;
+                -webkit-box-shadow: 3px 0px 17px 2px #969696; 
+                box-shadow: 3px 0px 17px 2px #969696;
+
         }
         .home-right-corner {
-                grid-column : 3;
                 display: flex;
                 justify-content: center;
                 align-items: center;
                 background-color: white;
-                
-                
+                position: relative;
+                z-index: 2;
+                grid-column: 6/8;
+                grid-row: 4/6;
+                -webkit-box-shadow: -5px 2px 17px 2px #969696; 
+                box-shadow: -5px 2px 17px 2px #969696;
         }
         .home-slideshow {
                 grid-column: 2;

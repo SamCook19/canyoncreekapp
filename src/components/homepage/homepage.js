@@ -1,9 +1,7 @@
 import React, { Component } from 'react';
-import SimpleMenu from '../navigation/navigationmenu';
 import CenterPiece from './centerpiece';
 import LeftCorner from './leftcorner';
 import RightCorner from './rightcorner';
-import CenterCycling from './CenterSlides';
 import EscapeButton from '../buttons/escapebutton';
 import HotlineButton from '../buttons/hotline';
 import TemporaryDrawer from '../navigation/navigation-sidebar';
@@ -34,10 +32,7 @@ class Homepage extends Component {
                 <div className='home-center-piece'><CenterPiece /></div>
                 <div className='home-left-corner'> <LeftCorner /> </div>
                 <div className='home-right-corner'><RightCorner /> </div>
-                <div className='home-slideshow'><CenterCycling /> </div>
-            
-
-            </div>
+               </div>
         );
     }
 }
