@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 
+
+
 class LeftCorner extends Component {
     render() {
         const size = {
@@ -12,18 +14,18 @@ class LeftCorner extends Component {
                 Cycling quotes 
                 </div>
                 <div className='social-media-icons'>
-                <div className='facebook-icon'>
+                <a className='facebook-icon' href='https://www.facebook.com/CCreekServices/'>
                 <img style={size} alt="ccs facebook" src="/assets/images/facebook.png"/>
-                </div>
-                <div className='instagram-icon'>
+                </a>
+                <a className='instagram-icon' href='https://www.instagram.com/ccreekservices/?hl=en'>
                 <img style={size} alt="ccs instagram" src="/assets/images/instagram.png"/>
-                </div>
-                <div className='linkedin-icon'>
+                </a>
+                <a className='linkedin-icon' href='https://www.linkedin.com/company/canyon-creek-services/'>
                 <img style={size} alt="ccs linkedin" src="/assets/images/linkedin.png"/>
-                </div>
-                <div className='twitter-icon'>
+                </a>
+                <a className='twitter-icon' href='https://twitter.com/ccreekservices?lang=en'>
                 <img style={size} alt="ccs twitter" src="/assets/images/twitter.png"/>
-                </div>
+                </a>
                 </div>
             </div>
         );
