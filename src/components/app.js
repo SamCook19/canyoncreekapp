@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
 import Layout from './Layout';
-
+import '../../static/assets/fonts/stellar-light.woff';
 
 
 export default class App extends Component {

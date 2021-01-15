@@ -6,6 +6,13 @@
 @import 'left-corner-home.scss';
 @import 'slideshow.scss';
 
+@font-face {
+    font-family: "StellarLight";
+    src: local("StellarLight"),
+    url("../../static/assets/fonts/stellar-light.woff") format("woff");
+}
+
+
 html {
     font-size: 62.5%; // 1rem is 10px
 }
@@ -17,7 +24,7 @@ html {
     margin: 0;
     padding: 0;
     box-sizing: inherit;
-    font-family: 'Stellar Medium';
+    font-family: 'StellarLight';
 }
 
 body {
