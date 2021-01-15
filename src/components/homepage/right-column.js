@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 
 
-class LeftCorner extends Component {
+class RightColumn extends Component {
     render() {
         const size = {
             height: this.props.size ? this.props.size : 40,
@@ -32,4 +32,4 @@ class LeftCorner extends Component {
     }
 }
 
-export default LeftCorner;
+export default RightColumn;

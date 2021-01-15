@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-class RightCorner extends Component {
+class LeftColumn extends Component {
     render() {
         return (
             <div>
@@ -10,4 +10,4 @@ class RightCorner extends Component {
     }
 }
 
-export default RightCorner;
+export default LeftColumn;

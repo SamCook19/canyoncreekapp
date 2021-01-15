@@ -1,11 +1,10 @@
 import React, { Component } from 'react';
-import CenterPiece from './centerpiece';
-import LeftCorner from './leftcorner';
-import RightCorner from './rightcorner';
+import NavigationComponent from '../navigation/NavigationBar';
 import EscapeButton from '../buttons/escapebutton';
 import HotlineButton from '../buttons/hotline';
-import TemporaryDrawer from '../navigation/navigation-sidebar';
-
+import PageLogo from '../logo/pagelogo';
+import RightColumn from './right-column';
+import LeftColumn from './left-column';
 
 class Homepage extends Component {
     
@@ -18,21 +17,29 @@ class Homepage extends Component {
 
     render() {
         return (
-        <div className='homepage-wrapper'>
-            <div className='homepage-header'>
-            <div className='left-side-header'>
+            <div className='homepage-container'>
+            <div className='header'>
+                <div className='left-side-header'>
+                <div className='page-logo'> <PageLogo /> </div>
                 <div className='escape-button'> <EscapeButton /> </div>
                 <div className='hotline-button'> <HotlineButton /></div>
             </div>
-            <div className='right-side-header'> 
-            <div className='home-sidebar'><TemporaryDrawer /> </div>
-            <div className='contact-button'> Contact Us </div>
+            <div className='right-side-header'>
+            <div className='navbar'>  <NavigationComponent /> </div>
             </div>
+                </div>
+                <div className='hero-image'>
+
+                </div>
+                <div className='home-page-content'>
+                <div className='left-side-column'>
+                    <LeftColumn />
+                </div>
+                <div className='right-side-column'>
+                    <RightColumn />
+                </div>
+                </div>
             </div>
-                <div className='home-center-piece'><CenterPiece /></div>
-                <div className='home-left-corner'> <LeftCorner /> </div>
-                <div className='home-right-corner'><RightCorner /> </div>
-               </div>
         );
     }
 }
