@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import NavigationComponent from '../navigation/NavigationBar';
+import Menu from '../navigation/NavigationBar';
 import EscapeButton from '../buttons/escapebutton';
 import HotlineButton from '../buttons/hotline';
 import PageLogo from '../logo/pagelogo';
@@ -25,7 +25,7 @@ class Homepage extends Component {
                 <div className='hotline-button'> <HotlineButton /></div>
             </div>
             <div className='right-side-header'>
-            <div className='navbar'>  <NavigationComponent /> </div>
+            <div className='navbar'>  <Menu /> </div>
             </div>
                 </div>
                 <div className='hero-image'>

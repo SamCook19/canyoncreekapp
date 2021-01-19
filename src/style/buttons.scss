@@ -2,7 +2,11 @@
     @include base-btn();
     display: flex;
     justify-content: center;
-    
+}
+
+.button__hotline a {
+    text-decoration: none;
+    color: black;
 }
 
 .button__escape {
