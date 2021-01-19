@@ -9,7 +9,7 @@ class RightColumn extends Component {
         }
         
         return (
-            <div className='left-corner-container'>
+            <div className='right-column-container'>
                 <div className='quote-slide-show'>
                 Cycling quotes 
                 </div>

@@ -4,7 +4,7 @@ class LeftColumn extends Component {
     render() {
         return (
             <div>
-                Cycling statistics, icon information here right corner
+                Cycling statistics, icon information here
             </div>
         );
     }

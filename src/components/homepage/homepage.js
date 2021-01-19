@@ -27,9 +27,9 @@ class Homepage extends Component {
             <div className='right-side-header'>
             <div className='navbar'>  <Menu /> </div>
             </div>
-                </div>
-                <div className='hero-image'>
 
+            <div className='hero-image'>
+                </div>
                 </div>
                 <div className='home-page-content'>
                 <div className='left-side-column'>
