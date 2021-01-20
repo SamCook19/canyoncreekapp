@@ -70,6 +70,15 @@ width: 100%;
     }
   }
 }
+
+.nav__menu-item a {
+        text-decoration: none;
+        color: black;
+}
+
+.nav__submenu-item a {
+        color: white;
+}
     
 .nav__submenu {
   font-weight: 300;
@@ -79,7 +88,6 @@ width: 100%;
   width: $submenu-width;
   background-color: rgba(0,0,0,0.5);
   color: white;
-  margin-top: 3px;
 }
     
 .nav__submenu-item {

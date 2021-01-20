@@ -9,19 +9,27 @@ class AboutUsSubmenu extends React.Component {
     return (
       <ul className="nav__submenu">
         <div className="nav__submenu-item ">
-          <a>Who We Are</a>
+        <NavLink to="/whoweare" activeClassName="nav-link-active">
+            Who We Are
+          </NavLink>
         </div>
         <div className="nav__submenu-item ">
-          <a>Organizational Leadership</a>
+        <NavLink to="/organization" activeClassName="nav-link-active">
+            Organizational Leadership
+          </NavLink>
         </div>
         <div className="nav__submenu-item ">
-          <a>Financials</a>
+        <NavLink to="/financials" activeClassName="nav-link-active">
+            Financials
+          </NavLink>
         </div>
         <div className="nav__submenu-item ">
-          <a>Employment Opportunities</a>
+          <NavLink to="/employmentopportunities" activeClassName="nav-link-active">Employment Opportunities</NavLink>
         </div>
         <div className="nav__submenu-item ">
-          <a>Annual Report</a>
+        <NavLink to="/annualreport" activeClassName="nav-link-active">
+            Annual Report
+          </NavLink>
         </div>
       </ul>
     )
@@ -33,7 +41,9 @@ class PreventSubmenu extends React.Component {
     return (
       <ul className="nav__submenu">
         <div className="nav__submenu-item ">
-          <a>Coalition</a>
+        <NavLink to="/coalition" activeClassName="nav-link-active">
+            Coalition
+          </NavLink>
         </div>
       </ul>
     )
@@ -45,7 +55,9 @@ class DonateSubmenu extends React.Component {
     return (
       <ul className="nav__submenu">
         <div className="nav__submenu-item ">
-          <a>Our Supporters</a>
+        <NavLink to="/oursupporters" activeClassName="nav-link-active">
+            Our Supporters
+          </NavLink>
         </div>
       </ul>
     )
@@ -81,10 +93,14 @@ class Menu extends React.Component {
             { this.state.showAboutMenu && <AboutUsSubmenu /> }
           </div>
           <div className="nav__menu-item">
-            <a>Volunteer</a>
+          <NavLink to="/volunteer" activeClassName="nav-link-active">
+            Volunteer
+          </NavLink>
           </div>
           <div className="nav__menu-item">
-            <a>Help For Survivors</a>
+          <NavLink to="/help" activeClassName="nav-link-active">
+            Help For Survivors
+          </NavLink>
           </div>
           <div
             className="nav__menu-item"
@@ -95,7 +111,9 @@ class Menu extends React.Component {
             { this.state.showAboutMenu && <DonateSubmenu /> }
           </div>
           <div className="nav__menu-item">
-            <a>Blog</a>
+          <NavLink to="/blog" activeClassName="nav-link-active">
+            Blog
+          </NavLink>
           </div>
           <div
             className="nav__menu-item"
