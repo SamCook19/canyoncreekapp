@@ -10,23 +10,86 @@
                     grid-gap: 15px;
                     
                 }
-                .right-side-header {
-                    width: 600px;
-                    .navbar {
-                        width: 600px;
-                        .nav__menu {
-                            width: 600px;
-                            display: flex;
-                            justify-content: space-evenly;
-                            font-size: 20px;
-                            .nav-link-wrapper {
-                                a:visited { text-decoration: none; color: grey}
-                            }
-                        }
-                    }
+.right-side-header {
+ width: 40%;
+$color-blue: #00aeef;
+$color-blue-dark: #0d2035;
+$submenu-width: 180px;
+
+body {
+  margin: 0;
+  font-family: 'Stellar Light', sans-serif;
+  line-height: 1.5;
+}
+
+.menu-container {
+  text-align: center;
+}
+
+nav {
+  ul {
+    list-style: none;
+    padding-left: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+}
+
+.nav {
+width: 100%;
+  display: inline-block;
+  margin: 2rem auto 0;
+  color: black;
+  text-align: left;
+  
+  a {
+    display: block;
+    padding: 0 16px;
+    line-height: inherit;
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: normal;
+  }
+}
+  
+.nav__menu {
+  line-height: 45px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+  
+.nav__menu-item {
+  display: inline-block;
+  position: relative;
+
+  &:hover {
+          text-decoration: underline;
+
+    .nav__submenu {
+      display: block;
+    }
+  }
+}
+    
+.nav__submenu {
+  font-weight: 300;
+  text-transform: none;
+  display: none;
+  position: absolute;
+  width: $submenu-width;
+  background-color: rgba(0,0,0,0.5);
+  color: white;
+  margin-top: 3px;
+}
+    
+.nav__submenu-item {
+  &:hover {
+    background: rgba(#000, 0.1);
+  }
+}
                 }
             }
-            .home-page-content {
+.home-page-content {
                 display: grid;
                 grid-template-columns: 1fr 1fr;
             }

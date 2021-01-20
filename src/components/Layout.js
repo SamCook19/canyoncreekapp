@@ -18,6 +18,7 @@ import Organization from "./aboutus/Organization";
 import WhoWeAre from "./aboutus/WhoWeAre";
 import Supporters from "./donate/Supporters";
 import Coalition from "./prevention/Coalition";
+import Login from "./auth/login";
 
 export default class Layout extends Component {
   
@@ -27,6 +28,7 @@ export default class Layout extends Component {
           <div className='route-container'>
           <Switch>
             <Route exact path="/" component={Homepage}/>
+            <Route exact path='/login' component={Login}/>
             <Route exact path="/about" component={AboutUs}/>
             <Route exact path="/help" component={Help}/>
             <Route exact path="/prevention" component={Prevention}/>

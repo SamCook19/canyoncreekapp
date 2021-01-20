@@ -33,7 +33,7 @@ class PreventSubmenu extends React.Component {
     return (
       <ul className="nav__submenu">
         <div className="nav__submenu-item ">
-          <a>Our Company</a>
+          <a>Coalition</a>
         </div>
       </ul>
     )
