@@ -1,8 +1,7 @@
 import React from "react";
 import { withRouter } from "react-router";
 import { NavLink } from "react-router-dom";
-import { CSSTransition }  from 'react-transition-group';
-
+import { CSSTransitionGroup } from 'react-transition-group'
 
 class AboutUsSubmenu extends React.Component {
   render() {
@@ -82,11 +81,11 @@ class Menu extends React.Component {
     };
   }
   
-  handleHover = () => {
+  handleHover = (event) => {
     this.setState({ showAboutMenu: true });
   };
   
-  handleLeave = () => {
+  handleLeave = (event) => {
     this.setState({ showAboutMenu: false });
   };
   
@@ -100,7 +99,15 @@ class Menu extends React.Component {
           >
             <a onMouseEnter={this.handleHover}>
               About Us</a>
-            { this.state.showAboutMenu && <AboutUsSubmenu /> }
+            <div className="submenu-container">
+              <CSSTransitionGroup
+                transitionName="slide"
+                transitionEnterTimeout={300}
+                transitionLeaveTimeout={300}
+              >
+                { this.state.showAboutMenu && <AboutUsSubmenu /> }
+              </CSSTransitionGroup>
+            </div>
           </div>
           <div className="nav__menu-item">
           <NavLink to="/volunteer" activeClassName="nav-link-active">
@@ -118,7 +125,15 @@ class Menu extends React.Component {
           >
             <a onMouseEnter={this.handleHover}>
               Donate</a>
-            { this.state.showAboutMenu && <DonateSubmenu /> }
+              <div className="submenu-container">
+              <CSSTransitionGroup
+                transitionName="slide"
+                transitionEnterTimeout={300}
+                transitionLeaveTimeout={300}
+              >
+                { this.state.showAboutMenu && <DonateSubmenu /> }
+              </CSSTransitionGroup>
+            </div>
           </div>
           <div className="nav__menu-item">
           <NavLink to="/blog" activeClassName="nav-link-active">
@@ -131,7 +146,15 @@ class Menu extends React.Component {
           >
             <a onMouseEnter={this.handleHover}>
               Prevention</a>
-            { this.state.showAboutMenu && <PreventSubmenu /> }
+              <div className="submenu-container">
+              <CSSTransitionGroup
+                transitionName="slide"
+                transitionEnterTimeout={300}
+                transitionLeaveTimeout={300}
+              >
+                { this.state.showAboutMenu && <PreventSubmenu /> }
+              </CSSTransitionGroup>
+            </div>
           </div>
         </ul>
       </nav>
@@ -139,64 +162,4 @@ class Menu extends React.Component {
   }
 }
 
-
 export default Menu;
-
-
-// const NavigationComponent = props => {
-//   const dynamicLink = (route, linkText) => {
-//     return (
-//       <div className="nav-link-wrapper">
-//         <NavLink to={route} activeClassName="nav-link-active">
-//           {linkText}
-//         </NavLink>
-//       </div>
-//     );
-//   };
-
-  
-
-//   return (
-//     <div className="nav-wrapper">
-
-//         <div className="nav-link-wrapper">
-//           <NavLink to="/about" activeClassName="nav-link-active">
-//             About Us
-//           </NavLink>
-//         </div>
-
-//         <div className="nav-link-wrapper">
-//           <NavLink to="/help" activeClassName="nav-link-active">
-//             Help
-//           </NavLink>
-//         </div>
-
-//         <div className="nav-link-wrapper">
-//           <NavLink to="/prevention" activeClassName="nav-link-active">
-//             Prevention
-//           </NavLink>
-//         </div>
-
-//         <div className="nav-link-wrapper">
-//           <NavLink to="/donate" activeClassName="nav-link-active">
-//             Donate
-//           </NavLink>
-//         </div>
-        
-//         <div className="nav-link-wrapper">
-//           <NavLink to="/volunteer" activeClassName="nav-link-active">
-//             Volunteer
-//           </NavLink>
-//         </div>
-
-//         <div className="nav-link-wrapper">
-//           <NavLink to="/blog" activeClassName="nav-link-active">
-//             Blog
-//           </NavLink>
-//         </div>
-
-//       </div>
-//   );
-// };
-
-// export default withRouter(NavigationComponent);

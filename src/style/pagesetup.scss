@@ -10,91 +10,123 @@
         grid-gap: 15px;
         
     }
-.right-side-header {
-width: 40%;
-$color-blue: #00aeef;
-$color-blue-dark: #0d2035;
-$submenu-width: 180px;
-
-body {
-margin: 0;
-font-family: 'Stellar Light', sans-serif;
-line-height: 1.5;
-}
-
-.menu-container {
-text-align: center;
-}
-
-nav {
-ul {
-list-style: none;
-padding-left: 0;
-margin-top: 0;
-margin-bottom: 0;
-}
-}
-
-.nav {
-width: 100%;
-display: inline-block;
-margin: 2rem auto 0;
-color: black;
-text-align: left;
-
-a {
-display: block;
-padding: 0 16px;
-line-height: inherit;
-cursor: pointer;
-font-size: 20px;
-font-weight: normal;
-}
-}
-
-.nav__menu {
-line-height: 45px;
-font-weight: 700;
-text-transform: uppercase;
-}
-
-.nav__menu-item {
-display: inline-block;
-position: relative;
-
-&:hover {
-text-decoration: underline;
-
-.nav__submenu {
-display: block;
-}
-}
-}
-
-.nav__menu-item a {
-text-decoration: none;
-color: black;
-}
-
-.nav__submenu-item a {
-color: white;
-}
-
-.nav__submenu {
-font-weight: 300;
-text-transform: none;
-display: none;
-position: absolute;
-width: $submenu-width;
-background-color: rgba(0,0,0,0.5);
-color: white;
-}
-
-.nav__submenu-item {
-&:hover {
-background: rgba(#000, 0.1);
-}
-}
+    .right-side-header {
+        width: 100%;
+        height: 20%;
+       $color-blue: #00aeef;
+       $color-blue-dark: #0d2035;
+       $submenu-width: 180px;
+       
+       .slide-enter {
+         transform: translateY(-100%);
+         transition: .3s cubic-bezier(0, 1, 0.5, 1);
+       
+         &.slide-enter-active {
+           transform: translateY(0%);
+         }
+       }
+       
+       .slide-leave {
+         transform: translateY(0%);
+         transition: .3s ease-in-out;
+       
+         &.slide-leave-active {
+           transform: translateY(-100%);
+         }
+       }
+       
+       /*
+         CSS for the submenu container, needed to adjust the behaviour to our needs.
+         Try commenting out this part to see how the animation looks without the container involved.
+       */
+       
+       .submenu-container {
+         height: 400px;
+         min-width: $submenu-width;
+         position: absolute;
+         overflow: hidden;
+         z-index: 2;  
+       }
+       body {
+         margin: 0;
+         font-family: 'Stellar Light', sans-serif;
+         line-height: 1.5;
+       }
+       
+       .menu-container {
+         text-align: center;
+       }
+       
+       nav {
+         ul {
+           list-style: none;
+           padding-left: 0;
+           margin-top: 0;
+           margin-bottom: 0;
+         }
+       }
+       
+       .nav {
+       width: 100%;
+         margin: 2rem auto 0;
+         color: black;
+         text-align: left;
+         display: flex;
+         justify-content: center;
+         
+         a {
+           display: block;
+           padding: 0 16px;
+           line-height: inherit;
+           cursor: pointer;
+           font-size: 20px;
+           font-weight: normal;
+         }
+       }
+         
+       .nav__menu {
+         line-height: 45px;
+         font-weight: 700;
+         text-transform: uppercase;
+       }
+         
+       .nav__menu-item {
+         display: inline-block;
+         position: relative;
+       
+         &:hover {
+                 text-decoration: underline;
+       
+           .nav__submenu {
+             display: block;
+           }
+         }
+       }
+       
+       .nav__menu-item a {
+               text-decoration: none;
+               color: black;
+       }
+       
+       .nav__submenu-item a {
+               color: white;
+       }
+           
+       .nav__submenu {
+         font-weight: 300;
+         text-transform: none;
+         display: none;
+         position: absolute;
+         width: $submenu-width;
+         background-color: rgba(0,0,0,0.5);
+         color: white;
+       }
+           
+       .nav__submenu-item {
+         &:hover {
+           background: rgba(#000, 0.1);
+         }
+       }
     }
 }
 .home-page-content {
