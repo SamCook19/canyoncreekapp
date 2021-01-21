@@ -45,6 +45,11 @@ class PreventSubmenu extends React.Component {
             Coalition
           </NavLink>
         </div>
+        <div className="nav__submenu-item ">
+        <NavLink to="/prevention" activeClassName="nav-link-active">
+            Prevention
+          </NavLink>
+        </div>
       </ul>
     )
   }
@@ -55,8 +60,13 @@ class DonateSubmenu extends React.Component {
     return (
       <ul className="nav__submenu">
         <div className="nav__submenu-item ">
-        <NavLink to="/oursupporters" activeClassName="nav-link-active">
+        <NavLink to="/supporters" activeClassName="nav-link-active">
             Our Supporters
+          </NavLink>
+        </div>
+        <div className="nav__submenu-item ">
+        <NavLink to="/donate" activeClassName="nav-link-active">
+           Donation Form
           </NavLink>
         </div>
       </ul>

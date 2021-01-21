@@ -2,16 +2,28 @@
                 width: 100vw;
                 height: 100vh;
             .header {
-                display: flex;
-                justify-content: space-around;
+                display: grid;
                 margin-top: 15px;
                 .left-side-header {
                     display: grid;
+                    grid-template-columns: 1fr;
                     grid-gap: 15px;
-                    
+                    .page-logo {
+                            display: flex;
+                            justify-content: center;
+                    }
+                    .escape-button {
+                        display: flex;
+                        justify-content: center;
+                    }
+                    .hotline-button {
+                        display: flex;
+                        justify-content: center;
+                    }
                 }
 .right-side-header {
- width: 40%;
+ width: 100%;
+ height: 20%;
 $color-blue: #00aeef;
 $color-blue-dark: #0d2035;
 $submenu-width: 180px;
@@ -37,10 +49,11 @@ nav {
 
 .nav {
 width: 100%;
-  display: inline-block;
   margin: 2rem auto 0;
   color: black;
   text-align: left;
+  display: flex;
+  justify-content: center;
   
   a {
     display: block;
@@ -102,3 +115,10 @@ width: 100%;
                 grid-template-columns: 1fr 1fr;
             }
             }
+
+.hero-image {
+        width: 100%;
+        background-color: black;
+        height: 20vh;
+        grid-column: 1/3;
+}
