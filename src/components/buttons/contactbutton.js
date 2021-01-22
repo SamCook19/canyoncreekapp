@@ -1,20 +1,15 @@
-import React, { Component } from 'react';
+import React from 'react';
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-class ContactButton extends Component {
-    constructor() {
-        super();
-
-        
-
-    }
-
-    render() {
-        return (
-            <div>
-                
-            </div>
-        );
-    }
-}
+const ContactButton = () => {
+    return (
+        <div className='button__contact'>
+        <a onClick={console.log("trying to go to contact")}>
+        <FontAwesomeIcon icon="envelope"/>
+        </a>
+        </div>
+    )
+} 
 
 export default ContactButton;

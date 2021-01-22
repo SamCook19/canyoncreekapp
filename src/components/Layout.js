@@ -19,6 +19,7 @@ import WhoWeAre from "./aboutus/WhoWeAre";
 import Supporters from "./donate/Supporters";
 import Coalition from "./prevention/Coalition";
 import Login from "./auth/login";
+import Contact from "./contact/contact";
 
 export default class Layout extends Component {
   
@@ -42,6 +43,7 @@ export default class Layout extends Component {
             <Route exact path="/whoweare" component={WhoWeAre}/>
             <Route exact path="/supporters" component={Supporters}/>
             <Route exact path="/coalition" component={Coalition}/>
+            <Route exact path="/contact" component={Contact}/>
             <Route component={NoMatch} />
           </Switch>
         </div>

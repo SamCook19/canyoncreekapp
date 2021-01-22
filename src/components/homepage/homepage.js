@@ -29,7 +29,7 @@ class Homepage extends Component {
             </div>
 
             <div className='hero-image'>
-                </div>
+            </div>
                 </div>
                 <div className='home-page-content'>
                 <div className='left-side-column'>

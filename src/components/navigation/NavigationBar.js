@@ -2,6 +2,7 @@ import React from "react";
 import { withRouter } from "react-router";
 import { NavLink } from "react-router-dom";
 import { CSSTransitionGroup } from 'react-transition-group'
+import ContactButton from '../buttons/contactbutton';
 
 class AboutUsSubmenu extends React.Component {
   render() {
@@ -88,6 +89,7 @@ class Menu extends React.Component {
   handleLeave = (event) => {
     this.setState({ showAboutMenu: false });
   };
+
   
   render() {
     return (
@@ -157,6 +159,7 @@ class Menu extends React.Component {
             </div>
           </div>
         </ul>
+        <ContactButton />
       </nav>
     )
   }
