@@ -1,13 +1,13 @@
 import React from 'react';
-import { library } from '@fortawesome/fontawesome-svg-core'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { NavLink } from 'react-router-dom';
 
 const ContactButton = () => {
     return (
         <div className='button__contact'>
-        <a onClick={console.log("trying to go to contact")}>
+        <NavLink to="/contact" activeClassName="nav-link-active">
         <FontAwesomeIcon icon="envelope"/>
-        </a>
+        </NavLink>
         </div>
     )
 } 

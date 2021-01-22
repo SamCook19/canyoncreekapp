@@ -19,3 +19,17 @@
 .button__blog {
     @include base-btn();
 }
+
+.contact-envelope a{
+    color: grey;
+    
+}
+
+.contact-envelope {
+    display: flex;
+    .button__contact {
+    display: flex;
+    justify-content: center;
+    align-self: center;
+}
+}
