@@ -5,6 +5,7 @@ import HotlineButton from '../buttons/hotline';
 import PageLogo from '../logo/pagelogo';
 import ContactForm from './contact-form';
 
+
 class Contact extends Component {
     render() {
         return (
@@ -21,7 +22,7 @@ class Contact extends Component {
            
                 </div>
             <div className='contact-page-content'>
-                <h1>heading</h1>
+                <h1>Contact Us!</h1>
                 <ContactForm />
                 
             </div>
