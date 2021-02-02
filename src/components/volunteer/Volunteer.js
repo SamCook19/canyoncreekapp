@@ -3,6 +3,7 @@ import NavigationComponent from '../navigation/NavigationBar';
 import EscapeButton from '../buttons/escapebutton';
 import HotlineButton from '../buttons/hotline';
 import PageLogo from '../logo/pagelogo';
+import NewVolunteer from './NewVolunteer';
 
 class Volunteer extends Component {
     render() {
@@ -20,6 +21,7 @@ class Volunteer extends Component {
            
                 </div>
             <div className='page-content'>
+                <NewVolunteer />
                 <h1>Volunteer Signin</h1>
         <iframe className="volunteer-signin-form"
         src="https://www.volgistics.com/ex2/vicnet.dll/?from=496230&amp;embedded=on" style=

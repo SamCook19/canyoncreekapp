@@ -3,6 +3,7 @@ import NavigationComponent from '../navigation/NavigationBar';
 import EscapeButton from '../buttons/escapebutton';
 import HotlineButton from '../buttons/hotline';
 import PageLogo from '../logo/pagelogo';
+import DonationForm from './donationform';
 
 class Donate extends Component {
     render() {
@@ -20,7 +21,7 @@ class Donate extends Component {
            
                 </div>
                 <div className='page-content'>
-                <h1>page content</h1>
+                <DonationForm />
                 </div>
             </div>
         );
