@@ -57,12 +57,15 @@ export default class Login extends Component {
 
   render() {
     return (
-      <div>
+      <div className="login-form-wrapper">
+        <div className="login-heading">
         <h1>LOGIN TO ACCESS YOUR DASHBOARD</h1>
+        </div>
 
         <div>{this.state.errorText}</div>
 
         <form onSubmit={this.handleSubmit} className="auth-form-wrapper">
+  <div className="login-form">
   <div className="form-group">
     <FontAwesomeIcon icon="envelope" />
     <input
@@ -83,12 +86,12 @@ export default class Login extends Component {
             value={this.state.password}
             onChange={this.handleChange}
           /></div>
-
-          
-            <button className="btn" type="submit">Login</button>
-          
+          <div className = "btn-div">
+          <button className="btn" type="submit">Login</button>
+        </div>
+        </div>  
         </form>
-      </div>
+        </div>
     );
   }
 }

@@ -29,6 +29,7 @@ export default class Layout extends Component {
           <div className='route-container'>
           <Switch>
             <Route exact path="/" component={Homepage}/>
+            <Route exact path="/home" component={Homepage}/>
             <Route exact path='/login' component={Login}/>
             <Route exact path="/about" component={AboutUs}/>
             <Route exact path="/help" component={Help}/>
