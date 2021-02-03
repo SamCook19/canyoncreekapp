@@ -5,6 +5,7 @@ import HotlineButton from '../buttons/hotline';
 import PageLogo from '../logo/pagelogo';
 import RightColumn from './right-column';
 import LeftColumn from './left-column';
+// import HeroImage from './HeroImage';
 
 class Homepage extends Component {
     
@@ -17,7 +18,7 @@ class Homepage extends Component {
 
     render() {
         return (
-            <div className='homepage-container'>
+            <div className='page-container'>
             <div className='header'>
                 <div className='left-side-header'>
                 <div className='page-logo'> <PageLogo /> </div>
@@ -29,6 +30,7 @@ class Homepage extends Component {
             </div>
 
             <div className='hero-image'>
+            {/* <HeroImage /> */}
             </div>
                 </div>
                 <div className='home-page-content'>

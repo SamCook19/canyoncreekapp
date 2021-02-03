@@ -1,4 +1,4 @@
-.homepage-container {
+.page-container {
                 width: 100vw;
                 height: 100vh;
             .header {
@@ -106,7 +106,7 @@ width: 100%;
   position: relative;
 
   &:hover {
-          text-decoration: underline;
+          text-decoration: none;
 
     .nav__submenu {
       display: block;
@@ -140,9 +140,9 @@ width: 100%;
 }
                 }
             }
-.home-page-content {
+.header {
                 display: grid;
-                grid-template-columns: 1fr 1fr;
+                
             }
             }
 
