@@ -5,13 +5,15 @@ import { Card, CardImg, CardTitle, CardSubtitle, CardBody, Badge } from 'reactst
 const ArticleCard = (props) => {
         return (
             <Card className = "ArticleCard">
+                <div className="ArticleCardImg">
                 <CardImg
                 top
-                width="100%"
-                src="https://placeimg.com/325/180/any"
+                width="100px"
+                src="https://placeimg.com/100/100/any"
                 alt="Card Image"
                 className="CardImage"
                 />
+                </div>
                     
                 <CardBody className = "CardBody">
                     <CardTitle className="CardTitle">

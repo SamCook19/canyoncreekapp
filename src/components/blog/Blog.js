@@ -6,6 +6,7 @@ import EscapeButton from '../buttons/escapebutton';
 import HotlineButton from '../buttons/hotline';
 import PageLogo from '../logo/pagelogo';
 import ArticleCard from "./ArticleCard";
+import BlogHeading from "./BlogHeading";
 
 class Blog extends Component {
   constructor(props) {
@@ -30,6 +31,7 @@ class Blog extends Component {
            
                 </div>
                 <div className='page-content'>
+                <BlogHeading />
                 <ArticleCard />
                 </div>
             </div>
