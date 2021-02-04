@@ -17,7 +17,7 @@ const ArticleCard = (props) => {
                     
                 <CardBody className = "CardBody">
                     <CardTitle className="CardTitle">
-                        Test Title
+                        {props.data.title}
                     </CardTitle>
                     <CardSubtitle className="CardSubtitle">
                         <Badge className="ArticleLabel">
