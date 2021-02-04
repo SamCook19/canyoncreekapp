@@ -1,6 +1,10 @@
 import React, { Component } from 'react';
 import { Card, CardImg, CardTitle, CardSubtitle, CardBody, Badge } from 'reactstrap';
 
+export function timeStampToString(ts) {
+    const date = new Date(ts*1000)
+    return date.getFullYear() + '/' + (date.getMonth() + 1) + '/' + date.getDate()
+}
 
 const ArticleCard = (props) => {
         return (
@@ -21,7 +25,10 @@ const ArticleCard = (props) => {
                     </CardTitle>
                     <CardSubtitle className="CardSubtitle">
                         <Badge className="ArticleLabel">
-                            topic
+                            {props.data.categoryLabel}
+                        </Badge>
+                        <Badge className="createDate">
+                            {timeStampToString(props.data.createDate)}
                         </Badge>
                     </CardSubtitle>
                 </CardBody>
