@@ -10,6 +10,9 @@
 @import 'blog-form.scss';
 @import 'blog.scss';
 @import 'login.scss';
+@import 'article-card.scss';
+@import 'NewArticle.scss';
+@import 'ViewArticle.scss';
 
 @font-face {
     font-family: "StellarLight";
@@ -33,10 +36,6 @@ html {
 }
 
 body {
-    background-image: url(../../static/assets/images/backgroundribbons.png);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: 250vh;
     overflow-x: hidden;
     font-weight: normal;
     background-color: #f8f8ff;

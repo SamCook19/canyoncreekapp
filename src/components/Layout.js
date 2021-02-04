@@ -20,6 +20,8 @@ import Supporters from "./donate/Supporters";
 import Coalition from "./prevention/Coalition";
 import Login from "./auth/login";
 import Contact from "./contact/contact";
+import ViewArticle from "./blog/ViewArticle/ViewArticle";
+import NewArticle from "./blog/NewArticle/NewArticle";
 
 export default class Layout extends Component {
   
@@ -27,6 +29,7 @@ export default class Layout extends Component {
       return (
         <div className='container'>
           <div className='route-container'>
+          <Router>
           <Switch>
             <Route exact path="/" component={Homepage}/>
             <Route exact path="/home" component={Homepage}/>
@@ -45,8 +48,13 @@ export default class Layout extends Component {
             <Route exact path="/supporters" component={Supporters}/>
             <Route exact path="/coalition" component={Coalition}/>
             <Route exact path="/contact" component={Contact}/>
+            <Route path='/article/:id'> <ViewArticle/> </Route>
+            <Route path='/newarticle'>
+              <NewArticle />
+            </Route>
             <Route component={NoMatch} />
           </Switch>
+          </Router>
         </div>
         </div>
     

@@ -34,7 +34,7 @@ class Blog extends Component {
         let allArticles = []
         docs.forEach(function (doc) {
           const article = {
-            id:doc,
+            id: doc.id,
             ...doc.data()
           }
 

@@ -25,21 +25,9 @@ class BlogHeading extends Component {
                 <Collapse isOpen={this.state.isOpen} navbar>
                     <Nav className="mr-auto" navbar>
                     <NavItem>
-                        <NavLink href='/'>New Article</NavLink>
+                        <NavLink href='/newarticle'>New Article</NavLink>
                         </NavItem>
                         </Nav>
-                        <UncontrolledDropdown>
-                            <DropdownToggle nav caret> Options 
-                            </DropdownToggle>
-                            <DropdownMenu>
-                                <DropdownItem>
-                                    Login
-                                </DropdownItem>
-                                <DropdownItem>
-                                    Logout
-                                </DropdownItem>
-                            </DropdownMenu>
-                        </UncontrolledDropdown>
                 </Collapse>
             </Navbar>
             </div>

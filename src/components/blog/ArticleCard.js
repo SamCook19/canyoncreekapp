@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Card, CardImg, CardTitle, CardSubtitle, CardBody, Badge } from 'reactstrap';
+import { Link } from "react-router-dom"
 
 export function timeStampToString(ts) {
     const date = new Date(ts*1000)
@@ -9,6 +10,7 @@ export function timeStampToString(ts) {
 const ArticleCard = (props) => {
         return (
             <Card className = "ArticleCard">
+                <Link to={'article/' + props.data.id}>
                 <div className="ArticleCardImg">
                 <CardImg
                 top
@@ -18,10 +20,14 @@ const ArticleCard = (props) => {
                 className="CardImage"
                 />
                 </div>
+                </Link>
+                
                     
                 <CardBody className = "CardBody">
                     <CardTitle className="CardTitle">
+                    <Link to={'article/' + props.data.id}>
                         {props.data.title}
+                        </Link>
                     </CardTitle>
                     <CardSubtitle className="CardSubtitle">
                         <Badge className="ArticleLabel">
