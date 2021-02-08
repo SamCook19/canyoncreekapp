@@ -87,9 +87,9 @@ class NewArticle extends Component {
         return (
             <Container>
             <Row>
-                <Col xl={9} lg={9} md={8} sm={12} xs={12}>
+                <Col >
                     <h2 className='SectionTitle'>New Article</h2>
-                    <FormGroup>
+                    <FormGroup className='TitleForm'>
                         <Label className='TitleLabel'>
                             Title
                         </Label>
@@ -97,8 +97,9 @@ class NewArticle extends Component {
                         onChange={(e) => this.onChangeArticleTitle(e.target.value)}
                         value={this.state.article.title}/>
                     </FormGroup>
-
-                    <FormGroup>
+                </Col>
+                <div className='edit-blog-container'>
+                    <FormGroup className='left-column'>
                         <ReactQuill 
                             ref={(el) => this.quill = el}
                             value={this.state.article.content}
@@ -107,16 +108,15 @@ class NewArticle extends Component {
                             modules={this.modules}
                             formats={this.formats}
                         />
-                    </FormGroup>
-                </Col>
-                <Col xl={3} lg={3} md={4} sm={12} xs={12}>
+                        </FormGroup>
+                <Col className='right-column'>
                     <Card>
                         <CardHeader>
                             Article Setting
                         </CardHeader>
                         <CardBody>
                             <FormGroup>
-                                <Label ClassName='Label'>Is Published?</Label>
+                                <Label className='Label'>Is Published?</Label>
                                 <Input type='select' name='publish' id='publish'
                                 onChange={(e)=> this.onChangePublish(e.target.value)}>
                                     <option>False</option>
@@ -132,6 +132,7 @@ class NewArticle extends Component {
                         </CardBody>
                     </Card>
                 </Col>
+                </div>
             </Row>
             </Container>
         );
