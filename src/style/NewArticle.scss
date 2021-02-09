@@ -1,7 +1,7 @@
 .Label {
     float: left;
     font-size: 12px;
-    color: red;
+    color: #fafafa;
 }
 
 .SectionTitle {
@@ -23,4 +23,23 @@
 .edit-blog-container {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    .card{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        font-size: 20px;
+        grid-gap: 15px;
+        background-color: #00A6A8;
+        .card-header {
+            font-weight: bold;
+            grid-column: 2/3;
+            display: flex;
+            justify-content: center;
+        }
+        .card-body {
+            grid-column: -3/-2;
+            display: flex;
+            justify-content: center;
+        }
+    }
 }

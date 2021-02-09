@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 import {Container, Row, Col, Card, CardHeader, CardBody, FormGroup, Label, Input, Button} from 'reactstrap';
 import ReactQuill from 'react-quill'
 import 'react-quill/dist/quill.snow.css'
+import history from '../../../history'
 
 class NewArticle extends Component {
     constructor(props) {
@@ -82,6 +83,7 @@ class NewArticle extends Component {
             }
         })
     }
+
 
     render() {
         return (

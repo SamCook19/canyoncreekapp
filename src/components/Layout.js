@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
-
-
 import Homepage from './homepage/homepage.js';
 import AboutUs from './aboutus/AboutUs';
 import Donate from './donate/Donate';
