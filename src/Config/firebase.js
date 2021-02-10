@@ -19,4 +19,5 @@ firebase.default.initializeApp(firebaseConfig)
 firebase.default.firestore()
 firebase.default.auth()
 
+
 export default firebase

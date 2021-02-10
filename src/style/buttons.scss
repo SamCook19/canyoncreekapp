@@ -14,26 +14,39 @@
     display: flex;
     justify-content: center;
     margin-top: 10px;
+    margin-bottom: 10px;
 }
 
 .button__blog {
     @include base-btn();
 }
 
-.contact-envelope a{
-    color: grey;
-}
-
-.contact-envelope a:hover {
-    color: black;
-    transition: ease-in-out 0.5s;
-}
-
-.contact-envelope {
-    display: flex;
-    .button__contact {
+.business-button {
+    @include base-btn();
     display: flex;
     justify-content: center;
-    align-self: center;
+    margin-top: 10px;
 }
+
+.business-button a {
+    text-decoration: none;
+    color: black;
+}
+
+.contact-button {
+    @include contact-btn();
+    margin-top: 10px;
+}
+
+.contact-button a {
+    @include contact-btn();
+    color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: lighter;
+}
+
+.home-button-group {
+    background-color: black;
 }

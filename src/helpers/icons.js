@@ -5,10 +5,14 @@ import {
     faSpinner,
     faPlusCircle,
     faPhone,
-    faEnvelope,
     faMapMarkedAlt,
     faLock,
   } from "@fortawesome/free-solid-svg-icons";
+
+  import {
+    faEnvelope
+  } from "@fortawesome/free-regular-svg-icons";
+
   import { library } from "@fortawesome/fontawesome-svg-core";
   
   const Icons = () => {
@@ -21,7 +25,8 @@ import {
       faPhone,
       faEnvelope,
       faMapMarkedAlt,
-      faLock   
+      faLock,
+      
     );
   };
   

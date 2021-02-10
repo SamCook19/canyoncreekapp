@@ -159,9 +159,6 @@ class Menu extends React.Component {
             </div>
           </div>
         </ul>
-        <div className='contact-envelope'>
-          <ContactButton />
-          </div>
       </nav>
     )
   }

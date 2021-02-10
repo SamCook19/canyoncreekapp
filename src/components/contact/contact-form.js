@@ -11,8 +11,8 @@ export default function ContactForm() {
       <input type="text" placeholder="Last Name" name="firstName" ref={register} />
       <input type="text" placeholder="First Name" name="firstName" ref={register} />
       <select name="gender" ref={register}>
-        <option value="email">female</option>
-        <option value="email">male</option>
+        <option value="email"></option>
+        <option value="email"></option>
         <option value="email">other</option>
       </select>
       <input type="submit" />
