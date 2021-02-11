@@ -4,6 +4,7 @@ import PageLogo from '../logo/pagelogo';
 import RightColumn from './right-column';
 import LeftColumn from './left-column';
 import HomeButtonsComponent from '../buttons/homebuttons-component';
+import CenterPiece from './centerpiece';
 // import HeroImage from './HeroImage';
 
 class Homepage extends Component {
@@ -25,9 +26,12 @@ class Homepage extends Component {
             <div className='right-side-header'>
             <div className='navbar'>  <Menu /> </div>
             </div>
+            <div className='purposestatement'>
+                <CenterPiece />
+            </div>
             </div>
             <div className='centerpiece'>
-            <div className='button-component'>
+            <div className='homebutton-component'>
                 <HomeButtonsComponent />
             </div>
             </div>

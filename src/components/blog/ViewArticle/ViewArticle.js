@@ -6,10 +6,10 @@ import NavigationComponent from '../../navigation/NavigationBar';
 import EscapeButton from '../../buttons/escapebutton';
 import HotlineButton from '../../buttons/hotline';
 import PageLogo from '../../logo/pagelogo';
-import firebase from '../../../Config/firebase';
+import firebaseConfig from '../../../Config/firebase';
+import * as firebase from 'firebase'
 
 const db = firebase.default.firestore();
-
 
 class ViewArticle extends Component {
     constructor(props) {

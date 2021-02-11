@@ -11,8 +11,9 @@ const initialState = {}
 
 const store = createStore(rootReducer, initialState)
 const rrfConfig={
-
+    userProfile: 'users'
 }
+
 const rrfProps = {
     firebase,
     config: rrfConfig,

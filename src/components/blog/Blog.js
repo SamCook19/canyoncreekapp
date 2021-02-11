@@ -7,7 +7,8 @@ import HotlineButton from '../buttons/hotline';
 import PageLogo from '../logo/pagelogo';
 import ArticleCard from "./ArticleCard";
 import BlogHeading from "./BlogHeading";
-import firebase from '../../Config/firebase';
+import firebaseConfig from '../../Config/firebase';
+import * as firebase from 'firebase'
 
 const db = firebase.default.firestore()
 

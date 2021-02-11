@@ -7,6 +7,7 @@ import BusinessButton from './businessbutton';
 class HomeButtonsComponent extends Component {
     render() {
         return (
+            <div className='hero-img'>
             <div className='home-button-group'>
             <div className='escape-button'>
                 <EscapeButton />
@@ -20,6 +21,7 @@ class HomeButtonsComponent extends Component {
             
             <div className='contact-button'>
                 <ContactButton />
+            </div>
             </div>
             </div>
         );

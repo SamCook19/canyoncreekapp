@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
+import { AuthProvider } from "../contexts/AuthContext"
 import Homepage from './homepage/homepage.js';
 import AboutUs from './aboutus/AboutUs';
 import Donate from './donate/Donate';
@@ -26,8 +27,10 @@ export default class Layout extends Component {
     render() {
       return (
         <div className='container'>
+          
           <div className='route-container'>
           <Router>
+          <AuthProvider>
           <Switch>
             <Route exact path="/" component={Homepage}/>
             <Route exact path="/home" component={Homepage}/>
@@ -52,8 +55,10 @@ export default class Layout extends Component {
             </Route>
             <Route component={NoMatch} />
           </Switch>
+          </AuthProvider>
           </Router>
         </div>
+        
         </div>
     
           
