@@ -22,12 +22,13 @@
                     }
                 }
 .right-side-header {
- width: 100%;
+ width: 90%;
  height: 20%;
-$color-blue: #00aeef;
-$color-blue-dark: #0d2035;
 $submenu-width: 180px;
-
+.logout {
+  display: flex;
+  justify-content: center;
+}
 .slide-enter {
   transform: translateY(-100%);
   transition: .3s cubic-bezier(0, 1, 0.5, 1);
