@@ -5,27 +5,18 @@ import RightColumn from './right-column';
 import LeftColumn from './left-column';
 import HomeButtonsComponent from '../buttons/homebuttons-component';
 import CenterPiece from './centerpiece';
-import { Button } from "react-bootstrap";
-import { useAuth } from "../../contexts/AuthContext";
-import { useHistory } from "react-router-dom";
+
 
 // import HeroImage from './HeroImage';
 
-function Homepage() {
-        const [error, setError] = useState("")
-        const { logout } = useAuth()
-        const history = useHistory()
+class Homepage extends Component {
+    constructor(props) {
+        super(props);
+        
+    }
 
-       async function handleLogout() {
-            setError("")
-
-            try {
-                await logout()
-                history.push("/login")
-            } catch (error) {
-                setError('Failed to logout')
-            }
-        }
+    render() {
+       
 
         return (
             <div className='page-container'>
@@ -35,15 +26,11 @@ function Homepage() {
             </div>
             <div className='right-side-header'>
             <div className='navbar'>  <Menu /> </div>
-            <div className='logout'>
-                <Button variant ="link" onClick={handleLogout}>
-                    Log Out
-                </Button>
+            
             </div>
             </div>
             <div className='purposestatement'>
                 <CenterPiece />
-            </div>
             </div>
             <div className='centerpiece'>
             <div className='homebutton-component'>
@@ -59,8 +46,9 @@ function Homepage() {
                     <RightColumn />
                 </div>
                 </div>
-            </div>
+                </div>
         );
     }
+}
 
 export default Homepage;

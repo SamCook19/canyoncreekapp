@@ -21,6 +21,8 @@ import Login from "./auth/login";
 import Contact from "./contact/contact";
 import ViewArticle from "./blog/ViewArticle/ViewArticle";
 import NewArticle from "./blog/NewArticle/NewArticle";
+import Logout from "./otherpages/logout";
+import PrivateRoute from './PrivateRoute';
 
 export default class Layout extends Component {
   
@@ -53,6 +55,7 @@ export default class Layout extends Component {
             <Route path='/newarticle'>
               <NewArticle />
             </Route>
+            <PrivateRoute path='/logout' component={Logout}/>
             <Route component={NoMatch} />
           </Switch>
           </AuthProvider>
