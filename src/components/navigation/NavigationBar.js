@@ -111,15 +111,24 @@ class Menu extends React.Component {
               </CSSTransitionGroup>
             </div>
           </div>
-          <div className="nav__menu-item">
-          <NavLink to="/volunteer" activeClassName="nav-link-active">
-            Volunteer
-          </NavLink>
-          </div>
-          <div className="nav__menu-item">
           <NavLink to="/help" activeClassName="nav-link-active">
             Help For Survivors
           </NavLink>
+          <div
+            className="nav__menu-item"
+            onMouseLeave={this.handleLeave}
+          >
+            <a onMouseEnter={this.handleHover}>
+              Prevent Violence</a>
+              <div className="submenu-container">
+              <CSSTransitionGroup
+                transitionName="slide"
+                transitionEnterTimeout={300}
+                transitionLeaveTimeout={300}
+              >
+                { this.state.showAboutMenu && <PreventSubmenu /> }
+              </CSSTransitionGroup>
+            </div>
           </div>
           <div
             className="nav__menu-item"
@@ -137,27 +146,22 @@ class Menu extends React.Component {
               </CSSTransitionGroup>
             </div>
           </div>
+          
+          <div className="nav__menu-item">
+          <NavLink to="/volunteer" activeClassName="nav-link-active">
+            Volunteer
+          </NavLink>
+          </div>
+          <div className="nav__menu-item">
+         
+          </div>
+          
           <div className="nav__menu-item">
           <NavLink to="/blog" activeClassName="nav-link-active">
             Blog
           </NavLink>
           </div>
-          <div
-            className="nav__menu-item"
-            onMouseLeave={this.handleLeave}
-          >
-            <a onMouseEnter={this.handleHover}>
-              Prevention</a>
-              <div className="submenu-container">
-              <CSSTransitionGroup
-                transitionName="slide"
-                transitionEnterTimeout={300}
-                transitionLeaveTimeout={300}
-              >
-                { this.state.showAboutMenu && <PreventSubmenu /> }
-              </CSSTransitionGroup>
-            </div>
-          </div>
+          
         </ul>
       </nav>
     )

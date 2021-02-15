@@ -12,14 +12,6 @@
                             display: flex;
                             justify-content: center;
                     }
-                    .escape-button {
-                        display: flex;
-                        justify-content: center;
-                    }
-                    .hotline-button {
-                        display: flex;
-                        justify-content: center;
-                    }
                 }
 .right-side-header {
  width: 90%;
@@ -93,6 +85,8 @@ width: 100%;
     cursor: pointer;
     font-size: 20px;
     font-weight: normal;
+    color: black;
+    text-decoration: none;
   }
 }
   
@@ -100,6 +94,7 @@ width: 100%;
   line-height: 45px;
   font-weight: 700;
   text-transform: uppercase;
+  width: 100%;
 }
   
 .nav__menu-item {

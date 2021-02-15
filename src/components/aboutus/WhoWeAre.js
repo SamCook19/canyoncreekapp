@@ -3,6 +3,7 @@ import NavigationComponent from '../navigation/NavigationBar';
 import EscapeButton from '../buttons/escapebutton';
 import HotlineButton from '../buttons/hotline';
 import PageLogo from '../logo/pagelogo';
+import ButtonsComponent from '../buttons/buttons-component';
 
 
 class WhoWeAre extends Component {
@@ -12,16 +13,23 @@ class WhoWeAre extends Component {
             <div className='header'>
                 <div className='left-side-header'>
                 <div className='page-logo'> <PageLogo /> </div>
-                <div className='escape-button'> <EscapeButton /> </div>
-                <div className='hotline-button'> <HotlineButton /></div>
+                
             </div>
             <div className='right-side-header'>
             <div className='navbar'>  <NavigationComponent /> </div>
             </div>
-           
+           <div className='page-heading'>
+               <h1>About <span style={{color: "#00A6A8"}}>Us</span></h1>
+           </div>
+           <div className='spacer'></div>
                 </div>
                 <div className='page-content'>
+                <div className='buttons-component'>
+                    <ButtonsComponent />
+                </div>
+                    <div className='page-info'>
                 <h1>page content</h1>
+                </div>
                 </div>
             </div>
                 
