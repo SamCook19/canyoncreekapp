@@ -101,7 +101,7 @@ class Menu extends React.Component {
           >
             <a onMouseEnter={this.handleHover}>
               About Us</a>
-            <div className="submenu-container">
+            <div className="submenu-container-about">
               <CSSTransitionGroup
                 transitionName="slide"
                 transitionEnterTimeout={300}

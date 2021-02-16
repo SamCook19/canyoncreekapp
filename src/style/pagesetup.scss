@@ -39,9 +39,17 @@
          CSS for the submenu container, needed to adjust the behaviour to our needs.
          Try commenting out this part to see how the animation looks without the container involved.
        */
-       
+       .submenu-container-about {
+        
+          height: 400px;
+          min-width: $submenu-width;
+          position: absolute;
+          overflow: hidden;
+          z-index: 2;  
+        
+       }
        .submenu-container {
-         height: 400px;
+         height: 200px;
          min-width: $submenu-width;
          position: absolute;
          overflow: hidden;

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import {Navbar, NavbarBrand, Nav, NavItem, NavLink, UncontrolledDropdown, DropdownToggle, DropdownItem, DropdownMenu, Collapse, NavbarToggler} from 'reactstrap';
-
+import NewArticleButton from './NewArticle/NewArticleButton'
 
 class BlogHeading extends Component {
     constructor(props) {
@@ -25,7 +25,7 @@ class BlogHeading extends Component {
                 <Collapse isOpen={this.state.isOpen} navbar>
                     <Nav className="mr-auto" navbar>
                     <NavItem>
-                        <NavLink href='/newarticle'>New Article</NavLink>
+                        <NewArticleButton />
                         </NavItem>
                         </Nav>
                 </Collapse>

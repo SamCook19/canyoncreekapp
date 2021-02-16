@@ -1,12 +1,12 @@
-import React, { Component } from 'react';
+import React, { Component, useState } from 'react';
 import NavigationComponent from '../navigation/NavigationBar';
-import EscapeButton from '../buttons/escapebutton';
-import HotlineButton from '../buttons/hotline';
 import PageLogo from '../logo/pagelogo';
 import ButtonsComponent from '../buttons/buttons-component';
 
 
+
 class WhoWeAre extends Component {
+    
     render() {
         return (
         <div className='page-container'>
@@ -27,13 +27,13 @@ class WhoWeAre extends Component {
                 <div className='buttons-component'>
                     <ButtonsComponent />
                 </div>
-                    <div className='page-info'>
-                <h1>page content</h1>
-                </div>
+
+                    <div className='page-info'> 
+                    
                 </div>
             </div>
-                
-        );
+            </div>
+        )
     }
 }
 
