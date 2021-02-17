@@ -78,24 +78,23 @@ class ViewArticle extends Component {
             </div>
                 <Container>
                 <div className='Article'>
+                <div className='ArticleInfo'>
+                            <h1 className='Title'>
+                                {this.state.article.title}
+                            </h1>
+                            </div>
+                            <div className='Date'>
+                                {this.timeStampToString(this.state.article.lastModified)}
+                            </div>
                     <div className='ImageContainer'>
                         <img className='Image' 
                             src={this.state.article.featuredImage}
                             alt={this.state.article.title}
-                        />
-                        <div className='ArticleInfo'>
-                            <h1 className='Title'>
-                                {this.state.article.title}
-                            </h1>
-                            <div className='Date'>
-                                {this.timeStampToString(this.state.article.lastModified)}
-                            </div>
+                        /></div>
                         </div>
-                    </div>
                     <div className='ArticleMain'>
                         {parse(this.state.article.content)}
                     </div>
-                </div>
                 </Container>
                 </div>
                 </div>

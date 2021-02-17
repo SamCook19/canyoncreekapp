@@ -52,9 +52,7 @@ export default class Layout extends Component {
             <Route exact path="/coalition" component={Coalition}/>
             <Route exact path="/contact" component={Contact}/>
             <Route path='/article/:id'> <ViewArticle/> </Route>
-            <Route path='/newarticle'>
-              <NewArticle />
-            </Route>
+            <PrivateRoute path='/newarticle' component={NewArticle}/>
             <PrivateRoute path='/logout' component={Logout}/>
             <Route component={NoMatch} />
           </Switch>

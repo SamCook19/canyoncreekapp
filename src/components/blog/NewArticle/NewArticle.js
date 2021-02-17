@@ -112,12 +112,10 @@ class NewArticle extends Component {
                         />
                         </FormGroup>
                 <Col className='right-column'>
-                    <Card>
-                        <CardHeader>
-                            Article Setting
+                        <CardHeader className="new-article-header">
+                            Article Published?
                         </CardHeader>
-                        <CardBody>
-                            <FormGroup>
+                            <FormGroup className='publish-status'>
                                 <Label className='Label'>Is Published?</Label>
                                 <Input type='select' name='publish' id='publish'
                                 onChange={(e)=> this.onChangePublish(e.target.value)}>
@@ -125,14 +123,12 @@ class NewArticle extends Component {
                                     <option>True</option>
                                 </Input>
                             </FormGroup>
-                            <FormGroup>
+                            <FormGroup className='publish-status-button'>
                                 <Button color='danger'
                                 onClick={(e) => console.log(this.state.article)}>
                                     Submit
                                 </Button>
                             </FormGroup>
-                        </CardBody>
-                    </Card>
                 </Col>
                 </div>
             </Row>
