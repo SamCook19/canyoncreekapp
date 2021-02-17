@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import {Navbar, NavbarBrand, Nav, NavItem, NavLink, UncontrolledDropdown, DropdownToggle, DropdownItem, DropdownMenu, Collapse, NavbarToggler} from 'reactstrap';
+import { NavItem } from 'reactstrap';
 import NewArticleButton from './NewArticle/NewArticleButton'
 
 class BlogHeading extends Component {
@@ -18,18 +18,12 @@ class BlogHeading extends Component {
 
     render() {
         return (
-            <div>
-            <Navbar >
-                <NavbarBrand href='/blog'>Blog</NavbarBrand>
-                <NavbarToggler onClick={this.toggle}/>
-                <Collapse isOpen={this.state.isOpen} navbar>
-                    <Nav className="mr-auto" navbar>
-                    <NavItem>
+            <div className = "new-article-button">
+                
+                    
                         <NewArticleButton />
-                        </NavItem>
-                        </Nav>
-                </Collapse>
-            </Navbar>
+                    
+                
             </div>
         );
     }

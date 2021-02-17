@@ -2,13 +2,11 @@ import React, { Component } from 'react';
 import {Container} from 'reactstrap';
 
 import NavigationComponent from '../navigation/NavigationBar';
-import EscapeButton from '../buttons/escapebutton';
-import HotlineButton from '../buttons/hotline';
 import PageLogo from '../logo/pagelogo';
 import ArticleCard from "./ArticleCard";
 import BlogHeading from "./BlogHeading";
-import firebaseConfig from '../../Config/firebase';
-import * as firebase from 'firebase'
+import * as firebase from 'firebase';
+import ButtonsComponentBlog from '../buttons/buttons-component-blog';
 
 const db = firebase.default.firestore()
 
@@ -59,8 +57,6 @@ class Blog extends Component {
             <div className='header'>
                 <div className='left-side-header'>
                 <div className='page-logo'> <PageLogo /> </div>
-                <div className='escape-button'> <EscapeButton /> </div>
-                <div className='hotline-button'> <HotlineButton /></div>
             </div>
             <div className='right-side-header'>
             <div className='navbar'>  <NavigationComponent /> </div>
@@ -68,8 +64,9 @@ class Blog extends Component {
            
                 </div>
                 <div className='page-content'>
-                <BlogHeading />
-                  <Container>
+                <ButtonsComponentBlog />
+                
+                  <Container className='article-container'>
                     {
                       this.state.isLoaded ?
                         this.state.articles.map((article, index) => {

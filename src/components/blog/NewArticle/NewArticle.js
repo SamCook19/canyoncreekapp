@@ -95,7 +95,7 @@ class NewArticle extends Component {
                         <Label className='TitleLabel'>
                             Title
                         </Label>
-                        <input type ='text' name='articleTitle' id='articleTitle' placeholder=''
+                        <input type ='text' className='articleTitle' placeholder=''
                         onChange={(e) => this.onChangeArticleTitle(e.target.value)}
                         value={this.state.article.title}/>
                     </FormGroup>
@@ -110,25 +110,28 @@ class NewArticle extends Component {
                             modules={this.modules}
                             formats={this.formats}
                         />
+                        <div className='spacer-newarticle'>
+
+                        </div>
+                        <FormGroup className='publish-status-button'>
+                                <Button color='danger'
+                                onClick={(e) => console.log(this.state.article)}>
+                                    Submit
+                                </Button>
+                            </FormGroup>
                         </FormGroup>
                 <Col className='right-column'>
                         <CardHeader className="new-article-header">
                             Article Published?
                         </CardHeader>
                             <FormGroup className='publish-status'>
-                                <Label className='Label'>Is Published?</Label>
                                 <Input type='select' name='publish' id='publish'
                                 onChange={(e)=> this.onChangePublish(e.target.value)}>
                                     <option>False</option>
                                     <option>True</option>
                                 </Input>
                             </FormGroup>
-                            <FormGroup className='publish-status-button'>
-                                <Button color='danger'
-                                onClick={(e) => console.log(this.state.article)}>
-                                    Submit
-                                </Button>
-                            </FormGroup>
+                            
                 </Col>
                 </div>
             </Row>
