@@ -4,6 +4,9 @@ import {Container, Row, Col, Card, CardHeader, CardBody, FormGroup, Label, Input
 import ReactQuill from 'react-quill'
 import 'react-quill/dist/quill.snow.css'
 import history from '../../../history'
+import firebase from "firebase";
+
+const db = firebase.default.firestore()
 
 class NewArticle extends Component {
     constructor(props) {
@@ -17,7 +20,6 @@ class NewArticle extends Component {
                 featuredImage: '',
                 isPublished: false,
                 lastModified: new Date(),
-                createUserID: ''
             }
         }
     }
@@ -84,6 +86,18 @@ class NewArticle extends Component {
         })
     }
 
+    submitArticle = () => {
+        const article = this.state.article
+        db.collection("Articles")
+            .add(
+                article
+            )
+            .then( res => {
+                console.log(res)
+            } )
+            .catch( err => console.log(err))
+    }
+
 
     render() {
         return (
@@ -115,7 +129,7 @@ class NewArticle extends Component {
                         </div>
                         <FormGroup className='publish-status-button'>
                                 <Button color='danger'
-                                onClick={(e) => console.log(this.state.article)}>
+                                onClick={(e) => this.submitArticle()}>
                                     Submit
                                 </Button>
                             </FormGroup>

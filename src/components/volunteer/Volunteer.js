@@ -20,7 +20,7 @@ class Volunteer extends Component {
             </div>
            
                 </div>
-            <div className='page-content'>
+            <div className='page-content-volunteer'>
                 <NewVolunteer />
                 <h1>Volunteer Signin</h1>
         <iframe className="volunteer-signin-form"

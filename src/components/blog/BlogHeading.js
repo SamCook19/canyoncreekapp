@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { NavItem } from 'reactstrap';
 import NewArticleButton from './NewArticle/NewArticleButton'
 
 class BlogHeading extends Component {
@@ -16,14 +15,12 @@ class BlogHeading extends Component {
         })
     }
 
+
+
     render() {
         return (
             <div className = "new-article-button">
-                
-                    
                         <NewArticleButton />
-                    
-                
             </div>
         );
     }

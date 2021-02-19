@@ -20,7 +20,7 @@ class Donate extends Component {
             </div>
            
                 </div>
-                <div className='page-content'>
+                <div className='page-content-donate'>
                 <DonationForm />
                 </div>
             </div>

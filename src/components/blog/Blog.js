@@ -51,6 +51,7 @@ class Blog extends Component {
     })
   }
 
+
   render() {
     return (
       <div className='page-container'>
@@ -86,5 +87,6 @@ class Blog extends Component {
     );
   }
 }
+
 
 export default Blog;

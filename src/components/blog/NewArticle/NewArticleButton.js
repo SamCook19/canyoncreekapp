@@ -13,6 +13,7 @@ function NewArticleButton() {
        
        <div className='action-icon'>
             <NavLink href='/newarticle'>
+            <div className='spacer-newarticle'></div>
            <FontAwesomeIcon icon="edit"  /> New Article
            </NavLink>
 
