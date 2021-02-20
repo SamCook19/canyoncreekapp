@@ -5,8 +5,10 @@ import ReactQuill from 'react-quill'
 import 'react-quill/dist/quill.snow.css'
 import history from '../../../history'
 import firebase from "firebase";
+import { v4 as uuidv4 } from 'uuid'
 
 const db = firebase.default.firestore()
+const storageRef = firebase.storage()
 
 class NewArticle extends Component {
     constructor(props) {
@@ -98,6 +100,23 @@ class NewArticle extends Component {
             .catch( err => console.log(err))
     }
 
+    uploadImageCallBack = (e) => {
+        return new Promise(async(resolve, reject) => {
+            const file = e.target.files[0]
+            const fileName = uuidv4()
+            storageRef.ref().child("Articles/" + fileName).put(file)
+            .then( async snapshot => {
+                
+                const downloadURL = await storageRef.ref().child("Articles/" +fileName).getDownloadURL()
+
+                resolve({
+                    success: true,
+                    data: {link: downloadURL}
+                })
+            })
+        })
+    }
+
 
     render() {
         return (
@@ -146,6 +165,27 @@ class NewArticle extends Component {
                                 </Input>
                             </FormGroup>
                             
+                            <FormGroup className='featured-image'> Featured Image
+                                <Input type="file" accept='image/*' className="image-uploader"
+                                onChange={async (e) => {
+                                    const uploadState = await this.uploadImageCallBack(e)
+                                    if(uploadState.success) {
+                                        this.setState({
+                                            hasFeaturedImage: true,
+                                            article: {
+                                                ...this.state.article,
+                                                featuredImage: uploadState.data.link
+                                            }
+                                        })
+                                    }
+                                }}> 
+                                </Input>
+                                <div className='image'>
+                                {
+                                    this.state.hasFeaturedImage ?
+                                        <img src={this.state.article.featuredImage} /> : ''
+                                }</div>
+                            </FormGroup>
                 </Col>
                 </div>
             </Row>

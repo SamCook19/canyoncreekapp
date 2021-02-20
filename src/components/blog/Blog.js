@@ -72,7 +72,7 @@ class Blog extends Component {
                       this.state.isLoaded ?
                         this.state.articles.map((article, index) => {
                           return(
-                          <ArticleCard
+                          <ArticleCard className='article-card'
                             key={index}
                             data={article}
                           />
