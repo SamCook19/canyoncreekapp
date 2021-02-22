@@ -75,7 +75,7 @@ width: 100%;
   margin: 2rem auto 0;
   color: black;
   text-align: left;
-  display: flex;
+  display: grid;
   justify-content: center;
   
   a {
@@ -136,6 +136,11 @@ width: 100%;
 }
                 }
             }
+
+.blog-link {
+  display: flex;
+  justify-content: flex-end;
+}
 .header {
                 display: grid;
                 

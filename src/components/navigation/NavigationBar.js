@@ -156,13 +156,18 @@ class Menu extends React.Component {
          
           </div>
           
-          <div className="nav__menu-item">
+          {/* <div className="blog-link">
+          <NavLink to="/blog" activeClassName="nav-link-active">
+            Blog
+          </NavLink>
+          </div> */}
+          
+        </ul>
+        <div className="blog-link">
           <NavLink to="/blog" activeClassName="nav-link-active">
             Blog
           </NavLink>
           </div>
-          
-        </ul>
       </nav>
     )
   }

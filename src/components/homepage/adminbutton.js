@@ -2,7 +2,7 @@ import React from 'react';
 import { useAuth } from '../../contexts/AuthContext'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-const test = () => {
+const handleEdit = () => {
     console.log('trying to edit')
 }
 
@@ -12,7 +12,7 @@ function AdminButton() {
     
     return ( 
        currentUser ? (  <div className='action-icon'>
-            <a onClick={test}>
+            <a onClick={handleEdit}>
            <FontAwesomeIcon icon="edit" />
            </a>
        </div> ) : null

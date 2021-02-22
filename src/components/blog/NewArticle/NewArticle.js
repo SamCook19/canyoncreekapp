@@ -1,6 +1,6 @@
 
 import React, { Component } from 'react';
-import {Container, Row, Col, Card, CardHeader, CardBody, FormGroup, Label, Input, Button} from 'reactstrap';
+import {Container, Row, Col, Card, CardHeader, CardBody, FormGroup, Label, Input, Button, NavLink} from 'reactstrap';
 import ReactQuill from 'react-quill'
 import 'react-quill/dist/quill.snow.css'
 import history from '../../../history'
@@ -146,12 +146,19 @@ class NewArticle extends Component {
                         <div className='spacer-newarticle'>
 
                         </div>
+                        
                         <FormGroup className='publish-status-button'>
-                                <Button color='danger'
+                                <Button 
                                 onClick={(e) => this.submitArticle()}>
                                     Submit
                                 </Button>
+                                <NavLink href='/blog'>
+                                <Button>
+                                    Return to Blog
+                                </Button>
+                                </NavLink> 
                             </FormGroup>
+                            
                         </FormGroup>
                 <Col className='right-column'>
                         <CardHeader className="new-article-header">

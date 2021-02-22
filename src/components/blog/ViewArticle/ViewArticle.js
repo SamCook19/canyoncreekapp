@@ -3,8 +3,7 @@ import {withRouter} from 'react-router-dom';
 import parse from 'html-react-parser';
 import {Container} from 'reactstrap';
 import NavigationComponent from '../../navigation/NavigationBar';
-import EscapeButton from '../../buttons/escapebutton';
-import HotlineButton from '../../buttons/hotline';
+import ButtonsComponent from '../../buttons/buttons-component';
 import PageLogo from '../../logo/pagelogo';
 import firebaseConfig from '../../../Config/firebase';
 import * as firebase from 'firebase'
@@ -70,31 +69,42 @@ class ViewArticle extends Component {
             <div className='header'>
                 <div className='left-side-header'>
                 <div className='page-logo'> <PageLogo /> </div>
-                <div className='escape-button'> <EscapeButton /> </div>
-                <div className='hotline-button'> <HotlineButton /></div>
+                
             </div>
             <div className='right-side-header'>
             <div className='navbar'>  <NavigationComponent /> </div>
             </div>
-                <Container>
+           <div className='spacer'></div>
+                </div>
+                <div className='page-content'>
+                <div className='buttons-component'>
+                    <ButtonsComponent />
+                </div>
+                
+                <Container className='article-view-container'>
                 <div className='Article'>
-                <div className='ArticleInfo'>
+                <div className='ArticleTitle'>
                             <h1 className='Title'>
                                 {this.state.article.title}
                             </h1>
                             </div>
-                            <div className='Date'>
+                            <div className='ArticleDate'>
                                 {this.timeStampToString(this.state.article.lastModified)}
                             </div>
+                    
+                        </div>
+                        <div className='blog-spacer'></div>
+                    <div className='ArticleMain'>
+                        <div className='ArticleContent'>
+                            {parse(this.state.article.content)}
+                            </div>
+                    </div>
+                    <div className='blog-spacer'></div>
                     <div className='ImageContainer'>
                         <img className='Image' 
                             src={this.state.article.featuredImage}
                             alt={this.state.article.title}
                         /></div>
-                        </div>
-                    <div className='ArticleMain'>
-                        {parse(this.state.article.content)}
-                    </div>
                 </Container>
                 </div>
                 </div>

@@ -1,12 +1,21 @@
+.article-container {
+    background-color: white;
+    -webkit-box-shadow: -8px 11px 10px 5px rgba(0,0,0,0.09); 
+    box-shadow: -8px 11px 10px 5px rgba(0,0,0,0.09);
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
 .ArticleCard {
     width: 325px;
-    display: inline-block !important;
+    display: flex;
+    justify-content: center;
     margin: 15px;
 }
 
 .ArticleCardImg {
-    height: 20vh;
-    width: 40vw;
+    height: fit-content;
+    width: fit-content;
 }
 
 .CardImage {
@@ -18,17 +27,20 @@
 }
 
 .CardTitle {
-    font-size: 16px;
-    height: 45px;
+    font-size: 18px;
+    height: fit-content;
     text-overflow: ellipsis;
+    
+}
+
+.CardTitle a {
+    color: black;
+    text-decoration: none;
 }
 
 .CardSubtitle {
+    height: fit-content;
     font-size: 12px;
     color: black;
 }
 
-.ArticleLabel {
-    padding: 5px 10px 5px 10px;
-    font-size: 14px;;
-}

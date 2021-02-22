@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import { Card, CardImg, CardTitle, CardSubtitle, CardBody, Badge } from 'reactstrap';
-import { Link } from "react-router-dom"
+import { Link } from "react-router-dom";
+import DeleteButton from "../buttons/deletebutton";
+
 
 export function timeStampToString() {
     const date = new Date()
@@ -8,6 +10,9 @@ export function timeStampToString() {
 }
 
 const ArticleCard = (props) => {
+
+    
+
         return (
             <Card className = "ArticleCard">
                 <Link to={
@@ -28,7 +33,7 @@ const ArticleCard = (props) => {
                 </Link>
                 
                     
-                <CardBody className = "CardBody">
+                <div className = "CardBody">
                     <CardTitle className="CardTitle">
                     <Link to={
                     {
@@ -39,14 +44,15 @@ const ArticleCard = (props) => {
                 </Link>
                     </CardTitle>
                     <CardSubtitle className="CardSubtitle">
-                        <Badge className="ArticleLabel">
+                        <div className="ArticleLabel">
                             {props.data.categoryLabel}
-                        </Badge>
-                        <Badge className="createDate">
-                            {timeStampToString(props.data.date)}
-                        </Badge>
+                        </div>
+                        <div className="createDate">
+                            {timeStampToString(props.data.date.id)}
+                        </div>
                     </CardSubtitle>
-                </CardBody>
+                    {/* <DeleteButton /> */}
+                </div>
             </Card>
 
         );

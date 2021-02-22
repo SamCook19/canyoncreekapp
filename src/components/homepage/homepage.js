@@ -28,10 +28,12 @@ class Homepage extends Component {
             <div className='navbar'>  <Menu /> </div>
             
             </div>
-            </div>
+
             <div className='purposestatement'>
                 <CenterPiece />
             </div>
+            </div>
+            
             <div className='centerpiece'>
             <div className='homebutton-component'>
                 <HomeButtonsComponent />

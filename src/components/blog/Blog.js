@@ -8,6 +8,7 @@ import BlogHeading from "./BlogHeading";
 import * as firebase from 'firebase';
 import ButtonsComponentBlog from '../buttons/buttons-component-blog';
 
+
 const db = firebase.default.firestore()
 
 class Blog extends Component {
@@ -64,6 +65,11 @@ class Blog extends Component {
             </div>
            
                 </div>
+                <div className='page-heading'>
+               <h1><span style={{color: "#00A6A8"}}>Blog</span></h1>
+               
+              </div>
+              <div className='spacer'></div>
                 <div className='page-content'>
                 <ButtonsComponentBlog />
                 
