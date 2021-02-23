@@ -3,11 +3,18 @@ import ContactButton from './contactbutton';
 import HotlineButton from './hotline';
 import EscapeButton from './escapebutton';
 import BusinessButton from './businessbutton';
+import HeroImgButton from './heroimgbutton';
+import HeroImage from '../homepage/HeroImage';
 
 class HomeButtonsComponent extends Component {
     render() {
         return (
+            <div className='homebutton-container'>
+            <div className='hero-img-edit'>
+                <HeroImgButton />
+            </div>
             <div className='hero-img'>
+                {/* <HeroImage /> */}
             <div className='home-button-group'>
             <div className='escape-button'>
                 <EscapeButton />
@@ -21,6 +28,7 @@ class HomeButtonsComponent extends Component {
             
             <div className='contact-button'>
                 <ContactButton />
+            </div>
             </div>
             </div>
             </div>
