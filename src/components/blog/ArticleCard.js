@@ -4,15 +4,13 @@ import { Link } from "react-router-dom";
 
 
 
-export function timeStampToString() {
-    const date = new Date()
+export function timeStampToString(timestamp) {
+    const date = timestamp.toDate()
+
     return date.getFullYear() + '/' + (date.getMonth() + 1) + '/' + date.getDate()
 }
 
 const ArticleCard = (props) => {
-
-    
-
         return (
             <Link to={
                 {
@@ -20,7 +18,6 @@ const ArticleCard = (props) => {
                     state: {article: props.data}
                 }
             }>
-             
                 <div className = "CardBody">
                     
                     <CardTitle className="CardTitle">
@@ -37,7 +34,7 @@ const ArticleCard = (props) => {
                             {props.data.categoryLabel}
                         </div>
                         <div className="createDate">
-                            {timeStampToString(props.data.date)}
+                            {timeStampToString(props.data.createDate)}
                         </div>
                     </CardSubtitle>
                     

@@ -56,12 +56,15 @@ class ViewArticle extends Component {
         })
     }
 
-    timeStampToString = () => {
-        const date = new Date()
+    timeStampToString = (timestamp) => {
+        const date = timestamp.toDate()
+        console.log(date)
+
         return date.getFullYear() + '/' + (date.getMonth() + 1) + '/' + date.getDate()
     }
 
     render() {
+        console.log("article: ", this.state.article)
         
         if(this.state.isLoaded) {
             return (
