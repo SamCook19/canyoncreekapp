@@ -17,6 +17,7 @@ class NewArticle extends Component {
         this.state={
             article: {
                 title: "",
+                summary: "",
                 content: "",
                 createDate: new Date(),
                 featuredImage: '',
@@ -79,6 +80,15 @@ class NewArticle extends Component {
         })
     }
 
+    onChangeArticleSummary = (value) => {
+        this.setState({
+            article: {
+                ...this.state.article,
+                summary: value
+            }
+        })
+    }
+
     onChangePublish = (value) => {
         this.setState({
             article: {
@@ -132,6 +142,14 @@ class NewArticle extends Component {
                         onChange={(e) => this.onChangeArticleTitle(e.target.value)}
                         value={this.state.article.title}/>
                     </FormGroup>
+                    <FormGroup className='SummaryForm'>
+                        <Label className='SummaryLabel'>
+                            Summary
+                        </Label>
+                        <input type ='text' className='articleTitle' placeholder=''
+                        onChange={(e) => this.onChangeArticleSummary(e.target.value)}
+                        value={this.state.article.summary}/>
+                    </FormGroup>
                 </Col>
                 <div className='edit-blog-container'>
                     <FormGroup className='left-column'>
@@ -153,7 +171,7 @@ class NewArticle extends Component {
                                     Submit
                                 </Button>
                                 <NavLink href='/blog'>
-                                <Button>
+                                <Button className='returntoblog'>
                                     Return to Blog
                                 </Button>
                                 </NavLink> 

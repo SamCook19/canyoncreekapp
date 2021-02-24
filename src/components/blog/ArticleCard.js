@@ -48,9 +48,13 @@ const ArticleCard = (props) => {
                             {props.data.categoryLabel}
                         </div>
                         <div className="createDate">
-                            {(props.data.date)}
+                            {timeStampToString(props.data.date)}
                         </div>
                     </CardSubtitle>
+
+                    <div className= "CardSummary">
+                        {props.data.summary}
+                    </div>
                     
                 </div>
             </Card>
