@@ -20,20 +20,9 @@ const ArticleCard = (props) => {
                     state: {article: props.data}
                 }
             }>
-            <Card className = "ArticleCard">    
-                <div className="ArticleCardImg">
-                <CardImg
-                top
-                width="100px"
-                src={props.data.featuredImage}
-                alt="Card Image"
-                className="CardImage"
-                />
-                </div>
-                
-                
-                    
+             
                 <div className = "CardBody">
+                    
                     <CardTitle className="CardTitle">
                     <Link to={
                     {
@@ -51,14 +40,25 @@ const ArticleCard = (props) => {
                             {timeStampToString(props.data.date)}
                         </div>
                     </CardSubtitle>
-
+                    
+                    <div className='spacer'></div>
                     <div className= "CardSummary">
                         {props.data.summary}
                     </div>
                     
-                </div>
-            </Card>
+                </div>   
+                <div className="ArticleCardImg">
+                <CardImg
+                top
+                width="300px"
+                src={props.data.featuredImage}
+                alt="Card Image"
+                className="CardImage"
+                />
+                </div>  
+                <div className='spacer'></div>
             </Link>
+            
 
         );
     }

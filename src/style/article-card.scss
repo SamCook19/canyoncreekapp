@@ -3,49 +3,53 @@
     -webkit-box-shadow: -8px 11px 10px 5px rgba(0,0,0,0.09); 
     box-shadow: -8px 11px 10px 5px rgba(0,0,0,0.09);
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr;
     max-height: 80vh;
     overflow: scroll;
     
 }
 
 .ArticleCard {
-    width: 325px;
-    display: flex;
+    width: 100%;
+    display: grid;
     justify-content: center;
     margin: 15px;
-    background-color: #8E2f89;
     height: 200px;
     border-radius: 25px 25px 25px 25px;
 }
 
-.ArticleCard:hover {
-    background: #00A6A8;
-    transition: ease-in-out 0.5s;
-}
 
 .ArticleCardImg {
-    height: fit-content;
-    width: fit-content;
+    display: flex;
+    justify-content: center;
 }
 
 .CardImage {
-    max-height: 100px;
+
 }
 
 .CardBody {
-    padding: 10px 15px 10px 15px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr
+}
+
+.CardTitle-CardDate {
+    grid-column: 2/4;
+    display: flex;
+    justify-content: space-around;
 }
 
 .CardTitle {
-    font-size: 18px;
-    height: fit-content;
+    font-size: 32px;
     text-overflow: ellipsis;
-    
+    grid-column: 2/4;
 }
 
+
 .CardTitle a {
-    color: white;
+    color: black;
     text-decoration: none;
 }
 
@@ -55,8 +59,14 @@
 
 .CardSubtitle {
     height: fit-content;
-    font-size: 12px;
-    color: seashell;
+    font-size: 32px;
+    color: black;
     text-decoration: none;
 }
 
+.CardSummary {
+    color: black;
+    font-size: 24px;
+    grid-row: 2;
+    grid-column: 2/4;
+}

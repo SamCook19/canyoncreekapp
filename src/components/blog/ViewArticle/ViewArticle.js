@@ -89,7 +89,7 @@ class ViewArticle extends Component {
                             </h1>
                             </div>
                             <div className='ArticleDate'>
-                                {this.timeStampToString(this.state.article.lastModified)}
+                                {this.timeStampToString(this.state.article.createDate)}
                             </div>
                     
                         </div>
