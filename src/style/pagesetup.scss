@@ -176,3 +176,50 @@
   -webkit-box-shadow: -8px 11px 10px 5px rgba(0,0,0,0.09); 
 box-shadow: -8px 11px 10px 5px rgba(0,0,0,0.09);
 }
+
+.DatabasePage {
+  height: 100%;
+  display: grid;
+  grid-template-columns: 15% 1fr 15%;
+  grid-template-rows: 1fr 1fr
+}
+
+.PageTitleContent {
+  grid-column: 2/3;
+}
+
+.PageImg {
+  grid-column: 2/3;
+  grid-row: 2;
+}
+
+.PageTitle {
+  font-size: 45px;
+  font-style: bold;
+}
+
+.PageContent {
+  font-size: 28px;
+  
+}
+
+.page-spacer {
+  height: 35px;
+}
+
+.whowearespacer {
+  grid-column: 2/3;
+  grid-row: 1;
+  height: 35px;
+}
+
+.PageImg {
+  display: flex;
+  justify-content: center;
+}
+
+.AboutUsHeader {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 20px;
+}

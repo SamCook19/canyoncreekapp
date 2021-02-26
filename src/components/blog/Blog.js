@@ -27,7 +27,6 @@ class Blog extends Component {
   getMyArticles = () => {
     db
     .collection( 'Articles' )
-    .limit(8)
     .get()
     .then(docs => {
       if(!docs.empty){

@@ -2,10 +2,50 @@ import React, { Component, useState } from 'react';
 import NavigationComponent from '../navigation/NavigationBar';
 import PageLogo from '../logo/pagelogo';
 import ButtonsComponent from '../buttons/buttons-component';
+import * as firebase from 'firebase';
+import WhoWeAreContent from './WhoWeAreContent';
 
-
+const db = firebase.default.firestore()
 
 class WhoWeAre extends Component {
+    constructor(props) {
+        super(props);
+        this.state={
+            isLoaded: false,
+            articles: []
+        }
+      }
+    
+      componentDidMount() {
+        this.getMyArticles()
+      }
+    
+      getMyArticles = () => {
+        db
+        .collection( 'WhoWeAre' )
+        .get()
+        .then(docs => {
+          if(!docs.empty){
+            let allArticles = []
+            docs.forEach(function (doc) {
+              const article = {
+                id: doc.id,
+                ...doc.data()
+              }
+    
+              allArticles.push(article)
+            })
+    
+            this.setState({
+              articles: allArticles
+            }, () => {
+              this.setState ({
+                isLoaded: true
+              })
+            })
+          }
+        })
+      }
     
     render() {
         return (
@@ -19,9 +59,8 @@ class WhoWeAre extends Component {
             <div className='navbar'>  <NavigationComponent /> </div>
             </div>
            <div className='page-heading'>
-               <h1>About <span style={{color: "#00A6A8"}}>Us</span></h1>
+               <h1 className='AboutUsHeader'>About <span style={{color: "#00A6A8"}}><h2> Us</h2></span></h1>
            </div>
-           <div className='spacer'></div>
                 </div>
                 <div className='page-content'>
                 <div className='buttons-component'>
@@ -29,7 +68,19 @@ class WhoWeAre extends Component {
                 </div>
 
                     <div className='page-info'> 
-                    
+                    <div className='whowearespacer'></div>
+                    {
+                      this.state.isLoaded ?
+                        this.state.articles.map((article, index) => {
+                          return(
+                          <WhoWeAreContent className='whoweare'
+                            key={index}
+                            data={article}
+                          />
+                          )
+                        })
+                        : '' 
+                      }
                 </div>
             </div>
             </div>

@@ -4,7 +4,10 @@
     box-shadow: -8px 11px 10px 5px rgba(0,0,0,0.09);
     display: grid;
     max-height: 80vh;
-    overflow: scroll;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    
+    
 
     .blog-spacer {
         height: 5vh

@@ -1,292 +1,221 @@
 import React, { Component } from 'react';
-import DropzoneComponent from "react-dropzone-component";
+import {Container, Row, Col, Card, CardHeader, CardBody, FormGroup, Label, Input, Button, NavLink} from 'reactstrap';
+import ReactQuill from 'react-quill'
+import 'react-quill/dist/quill.snow.css'
+import history from '../../../history'
+import firebase from "firebase";
+import { v4 as uuidv4 } from 'uuid'
 
-import "../../../node_modules/react-dropzone-component/styles/filepicker.css";
-import "../../../node_modules/dropzone/dist/min/dropzone.min.css";
+const db = firebase.default.firestore()
+const storageRef = firebase.storage()
 
-class AdminForm extends Component {
+class NewArticle extends Component {
     constructor(props) {
         super(props);
-    
-        this.state = {
-          header: "",
-          description: "",
-          banner_image: "",
-          editMode: false,
-        };
-    
-        this.handleChange = this.handleChange.bind(this);
-        this.handleSubmit = this.handleSubmit.bind(this);
-        this.componentConfig = this.componentConfig.bind(this);
-        this.djsConfig = this.djsConfig.bind(this);
-        this.handleThumbDrop = this.handleThumbDrop.bind(this);
-        this.handleBannerDrop = this.handleBannerDrop.bind(this);
-        this.handleLogoDrop = this.handleLogoDrop.bind(this);
-        this.deleteImage = this.deleteImage.bind(this);
-    
-        this.thumbRef = React.createRef();
-        this.bannerRef = React.createRef();
-        this.logoRef = React.createRef();
-      }
-    
-      componentDidUpdate() {
-        if (Object.keys(this.props.portfolioToEdit).length > 0) {
-          const {
-            id,
-            name,
-            description,
-            category,
-            position,
-            url,
-            thumb_image_url,
-            banner_image_url,
-            logo_url
-          } = this.props.portfolioToEdit;
-    
-          this.props.clearPortfolioToEdit();
-    
-          this.setState({
-            id: id,
-            name: name || "",
-            description: description || "",
-            category: category || "eCommerce",
-            position: position || "",
-            url: url || "",
-            editMode: true,
-            apiUrl: `https://samcook.devcamp.space/portfolio/portfolio_items/${id}`,
-            apiAction: "patch",
-            thumb_image_url: thumb_image_url || "",
-            banner_image_url: banner_image_url || "",
-            logo_url: logo_url || ""
-          });
-        }
-      }
-    
-      handleThumbDrop() {
-        return {
-          addedfile: file => this.setState({ thumb_image: file })
-        };
-      }
-    
-      handleBannerDrop() {
-        return {
-          addedfile: file => this.setState({ banner_image: file })
-        };
-      }
-    
-      handleLogoDrop() {
-        return {
-          addedfile: file => this.setState({ logo: file })
-        };
-      }
-    
-      componentConfig() {
-        return {
-          iconFiletypes: [".jpg", ".png"],
-          showFiletypeIcon: true,
-          postUrl: "https://httpbin.org/post"
-        };
-      }
-    
-      djsConfig() {
-        return {
-          addRemoveLinks: true,
-          maxFiles: 1
-        };
-      }
-    
-      buildForm() {
-        let formData = new FormData();
-    
-        formData.append("portfolio_item[name]", this.state.name);
-        formData.append("portfolio_item[description]", this.state.description);
-        formData.append("portfolio_item[url]", this.state.url);
-        formData.append("portfolio_item[category]", this.state.category);
-        formData.append("portfolio_item[position]", this.state.position);
-    
-        if (this.state.thumb_image) {
-          formData.append("portfolio_item[thumb_image]", this.state.thumb_image);
-        }
-    
-        if (this.state.banner_image) {
-          formData.append("portfolio_item[banner_image]", this.state.banner_image);
-        }
-    
-        if (this.state.logo) {
-          formData.append("portfolio_item[logo]", this.state.logo);
-        }
-    
-        return formData;
-      }
-    
-      handleChange(event) {
-        this.setState({
-          [event.target.name]: event.target.value
-        });
-      }
-    
-      handleSubmit(event) {
-        axios({
-          method: this.state.apiAction,
-          url: this.state.apiUrl,
-          data: this.buildForm(),
-          withCredentials: true
-        })
-          .then(response => {
-            if (this.state.editMode) {
-              this.props.handleEditFormSubmission();
-            } else {
-              this.props.handleNewFormSubmission(response.data.portfolio_item);
+        
+        this.state={
+            article: {
+                title: "",
+                summary: "",
+                content: "",
+                createDate: new Date(),
+                featuredImage: '',
+                isPublished: false,
+                lastModified: new Date(),
             }
-    
-            this.setState({
-              name: "",
-              description: "",
-              category: "eCommerce",
-              position: "",
-              url: "",
-              thumb_image: "",
-              banner_image: "",
-              logo: "",
-              editMode: false,
-              apiUrl: "https://samcook.devcamp.space/portfolio/portfolio_items",
-              apiAction: "post"
-            });
-    
-            [this.thumbRef, this.bannerRef, this.logoRef].forEach(ref => {
-              ref.current.dropzone.removeAllFiles();
-            });
-          })
-          .catch(error => {
-            console.log("portfolio form handleSubmit error", error);
-          });
-    
-        event.preventDefault();
-      }
-    
-      render() {
-        return (
-          <form onSubmit={this.handleSubmit} className="portfolio-form-wrapper">
-            <div className="two-column">
-              <input
-                type="text"
-                name="name"
-                placeholder="Portfolio Item Name"
-                value={this.state.name}
-                onChange={this.handleChange}
-              />
-    
-              <input
-                type="text"
-                name="url"
-                placeholder="URL"
-                value={this.state.url}
-                onChange={this.handleChange}
-              />
-            </div>
-    
-            <div className="two-column">
-              <input
-                type="text"
-                name="position"
-                placeholder="Position"
-                value={this.state.position}
-                onChange={this.handleChange}
-              />
-    
-              <select
-                name="category"
-                value={this.state.category}
-                onChange={this.handleChange}
-                className="select-element"
-              >
-                <option value="eCommerce">eCommerce</option>
-                <option value="Scheduling">Scheduling</option>
-                <option value="Enterprise">Enterprise</option>
-              </select>
-            </div>
-    
-            <div className="one-column">
-              <textarea
-                type="text"
-                name="description"
-                placeholder="Description"
-                value={this.state.description}
-                onChange={this.handleChange}
-              />
-            </div>
-    
-            <div className="image-uploaders">
-              {this.state.thumb_image_url && this.state.editMode ? (
-                <div className="portfolio-manager-image-wrapper">
-                  <img src={this.state.thumb_image_url} />
-    
-                  <div className="image-removal-link">
-                    <a onClick={() => this.deleteImage("thumb_image")}>
-                      Remove file
-                    </a>
-                  </div>
-                </div>
-              ) : (
-                <DropzoneComponent
-                  ref={this.thumbRef}
-                  config={this.componentConfig()}
-                  djsConfig={this.djsConfig()}
-                  eventHandlers={this.handleThumbDrop()}
-                >
-                  <div className="dz-message">Thumbnail</div>
-                </DropzoneComponent>
-              )}
-    
-              {this.state.banner_image_url && this.state.editMode ? (
-                <div className="portfolio-manager-image-wrapper">
-                  <img src={this.state.banner_image_url} />
-    
-                  <div className="image-removal-link">
-                    <a onClick={() => this.deleteImage("banner_image")}>
-                      Remove file
-                    </a>
-                  </div>
-                </div>
-              ) : (
-                <DropzoneComponent
-                  ref={this.bannerRef}
-                  config={this.componentConfig()}
-                  djsConfig={this.djsConfig()}
-                  eventHandlers={this.handleBannerDrop()}
-                >
-                  <div className="dz-message">Banner</div>
-                </DropzoneComponent>
-              )}
-    
-              {this.state.logo_url && this.state.editMode ? (
-                <div className="portfolio-manager-image-wrapper">
-                  <img src={this.state.logo_url} />
-    
-                  <div className="image-removal-link">
-                    <a onClick={() => this.deleteImage("logo")}>Remove file</a>
-                  </div>
-                </div>
-              ) : (
-                <DropzoneComponent
-                  ref={this.logoRef}
-                  config={this.componentConfig()}
-                  djsConfig={this.djsConfig()}
-                  eventHandlers={this.handleLogoDrop()}
-                >
-                  <div className="dz-message">Logo</div>
-                </DropzoneComponent>
-              )}
-            </div>
-    
-            <div>
-              <button className="btn" type="submit">
-                Save
-              </button>
-            </div>
-          </form>
-        );
-      }
+        }
     }
 
-export default AdminForm;
+    modules = {
+        toolbar: {
+            container: [
+                [{'header': '1'}, {'header': '2'}, {'font': []}],
+                [{size: []}],
+                ['bold','italic', 'underline', 'strike', 'blockquote'],
+                [{'list': 'ordered'}, {'list': 'bullet'},
+                    {'indent': '-1'}, {'indent': '+1'}],
+                    ['link', 'image'],
+                    ['clean'], ['code-block']
+            ],
+        },
+        clipboard: {
+            matchvisual: false,
+        },
+    }
+
+    formats = [
+        'header',
+        'font',
+        'size',
+        'bold',
+        'italic',
+        'underline',
+        'strike',
+        'blockquote',
+        'list',
+        'bullet',
+        'indent',
+        'link',
+        'image',
+        'video',
+        'code-block'
+    ]
+
+    onChangeArticleTitle = (value) => {
+        this.setState({
+            article: {
+                ...this.state.article,
+                title: value
+            }
+        })
+    }
+
+    onChangeArticleContent = (value) => {
+        this.setState({
+            article: {
+                ...this.state.article,
+                content: value
+            }
+        })
+    }
+
+    onChangeArticleSummary = (value) => {
+        this.setState({
+            article: {
+                ...this.state.article,
+                summary: value
+            }
+        })
+    }
+
+    onChangePublish = (value) => {
+        this.setState({
+            article: {
+                ...this.state.article,
+                isPublished: value === 'True'
+            }
+        })
+    }
+
+    submitArticle = () => {
+        const article = this.state.article
+        db.collection("Articles")
+            .add(
+                article
+            )
+            .then( res => {
+                console.log(res)
+            } )
+            .catch( err => console.log(err))
+    }
+
+    uploadImageCallBack = (e) => {
+        return new Promise(async(resolve, reject) => {
+            const file = e.target.files[0]
+            const fileName = uuidv4()
+            storageRef.ref().child("Articles/" + fileName).put(file)
+            .then( async snapshot => {
+                
+                const downloadURL = await storageRef.ref().child("Articles/" +fileName).getDownloadURL()
+
+                resolve({
+                    success: true,
+                    data: {link: downloadURL}
+                })
+            })
+        })
+    }
+
+
+    render() {
+        return (
+            <Container>
+            <Row>
+                <Col >
+                    <h2 className='SectionTitle'>New Article</h2>
+                    <FormGroup className='TitleForm'>
+                        <Label className='TitleLabel'>
+                            Title
+                        </Label>
+                        <input type ='text' className='articleTitle' placeholder=''
+                        onChange={(e) => this.onChangeArticleTitle(e.target.value)}
+                        value={this.state.article.title}/>
+                    </FormGroup>
+                    <FormGroup className='SummaryForm'>
+                        <Label className='SummaryLabel'>
+                            Summary
+                        </Label>
+                        <input type ='text' className='articleTitle' placeholder=''
+                        onChange={(e) => this.onChangeArticleSummary(e.target.value)}
+                        value={this.state.article.summary}/>
+                    </FormGroup>
+                </Col>
+                <div className='edit-blog-container'>
+                    <FormGroup className='left-column'>
+                        <ReactQuill 
+                            ref={(el) => this.quill = el}
+                            value={this.state.article.content}
+                            onChange={(e) => this.onChangeArticleContent(e)}
+                            theme='snow'
+                            modules={this.modules}
+                            formats={this.formats}
+                        />
+                        <div className='spacer-newarticle'>
+
+                        </div>
+                        
+                        <FormGroup className='publish-status-button'>
+                                <Button 
+                                onClick={(e) => this.submitArticle()}>
+                                    Submit
+                                </Button>
+                                <NavLink href='/blog'>
+                                <Button className='returntoblog'>
+                                    Return to Blog
+                                </Button>
+                                </NavLink> 
+                            </FormGroup>
+                            
+                        </FormGroup>
+                <Col className='right-column'>
+                        <CardHeader className="new-article-header">
+                            Article Published?
+                        </CardHeader>
+                            <FormGroup className='publish-status'>
+                                <Input type='select' name='publish' id='publish'
+                                onChange={(e)=> this.onChangePublish(e.target.value)}>
+                                    <option>False</option>
+                                    <option>True</option>
+                                </Input>
+                            </FormGroup>
+                            
+                            <FormGroup className='featured-image'> Featured Image
+                                <Input type="file" accept='image/*' className="image-uploader"
+                                onChange={async (e) => {
+                                    const uploadState = await this.uploadImageCallBack(e)
+                                    if(uploadState.success) {
+                                        this.setState({
+                                            hasFeaturedImage: true,
+                                            article: {
+                                                ...this.state.article,
+                                                featuredImage: uploadState.data.link
+                                            }
+                                        })
+                                    }
+                                }}> 
+                                </Input>
+                                <div className='image'>
+                                {
+                                    this.state.hasFeaturedImage ?
+                                        <img src={this.state.article.featuredImage} /> : ''
+                                }</div>
+                            </FormGroup>
+                </Col>
+                </div>
+            </Row>
+            </Container>
+        );
+    }
+}
+
+export default NewArticle;

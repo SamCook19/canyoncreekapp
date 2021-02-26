@@ -15,6 +15,8 @@
 @import 'ViewArticle.scss';
 @import 'logout.scss';
 @import 'donationform.scss';
+@import 'left-column-home.scss';
+
 
 @font-face {
     font-family: "StellarLight";
@@ -22,6 +24,16 @@
     url("../../static/assets/fonts/stellar-light.woff") format("woff");
 }
 
+@font-face {
+    font-family: "StellarRegular";
+    src: local("StellarRegular"),
+    url("../../static/assets/fonts/stellar-regular.woff") format("woff");
+}
+
+@font-face {
+    font-family: "Roboto";
+    src: url('https://fonts.googleapis.com/css2?family=Roboto&display=swap')
+}
 
 html {
     font-size: 62.5%; // 1rem is 10px
@@ -48,5 +60,18 @@ body {
     -webkit-tap-highlight-color: transparent;
 }
 
+body::-webkit-scrollbar {
+    width: 1em;
+}
 
+h1 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 80px;
+    color: #3a3a3a;
+}
 
+h2 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 80px;
+    
+}
