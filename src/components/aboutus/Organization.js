@@ -4,6 +4,7 @@ import PageLogo from '../logo/pagelogo';
 import ButtonsComponent from '../buttons/buttons-component';
 import * as firebase from 'firebase';
 import OrganizationContent from './OrganizationContent';
+import LeadershipCard from './LeadershipCard';
 
 const db = firebase.default.firestore()
 
@@ -68,15 +69,18 @@ class Organization extends Component {
                 </div>
 
                     <div className='page-info'> 
-                    <div className='whowearespacer'></div>
+                    <div className='organizationalspacer'></div>
                     {
                       this.state.isLoaded ?
                         this.state.articles.map((article, index) => {
                           return(
-                          <OrganizationContent className='organization'
+                              <div className='organizationalleadership'>
+                            <OrganizationContent />
+                          <LeadershipCard className='organization'
                             key={index}
                             data={article}
                           />
+                          </div>
                           )
                         })
                         : '' 
