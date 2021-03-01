@@ -13,17 +13,47 @@ class Organization extends Component {
         super(props);
         this.state={
             isLoaded: false,
-            articles: []
+            articles: [],
+            cards: []
+
         }
       }
     
       componentDidMount() {
-        this.getMyArticles()
+        this.getMyCards()
+        this.getMyDescription()
       }
     
-      getMyArticles = () => {
+      getMyCards = () => {
         db
         .collection( 'OrganizationalLeadership' )
+        .get()
+        .then(docs => {
+          if(!docs.empty){
+            let allCards = []
+            docs.forEach(function (doc) {
+              const cards = {
+                id: doc.id,
+                ...doc.data()
+              }
+    
+              allCards.push(cards)
+            })
+    
+            this.setState({
+              cards: allCards
+            }, () => {
+              this.setState ({
+                isLoaded: true
+              })
+            })
+          }
+        })
+      }
+
+      getMyDescription = () => {
+        db
+        .collection( 'OrganizationalLeadershipDescription' )
         .get()
         .then(docs => {
           if(!docs.empty){
@@ -60,7 +90,7 @@ class Organization extends Component {
             <div className='navbar'>  <NavigationComponent /> </div>
             </div>
            <div className='page-heading'>
-               <h1 className='AboutUsHeader'>About <span style={{color: "#00A6A8"}}><h2> Us</h2></span></h1>
+               <h1 className='AboutUsHeader'>About <span style={{color: "#00A6A8", fontFamily: 'Roboto'}} > Us</span></h1>
            </div>
                 </div>
                 <div className='page-content'>
@@ -72,18 +102,30 @@ class Organization extends Component {
                     <div className='organizationalspacer'></div>
                     {
                       this.state.isLoaded ?
-                        this.state.articles.map((article, index) => {
+                        this.state.articles.map((article) => {
                           return(
                               <div className='organizationalleadership'>
-                            <OrganizationContent />
-                          <LeadershipCard className='organization'
-                            key={index}
+                          <OrganizationContent className='organization'
+                            key={article.id}
                             data={article}
                           />
                           </div>
                           )
                         })
                         : '' 
+                      }
+                      {
+                        this.state.isLoaded ?
+                        this.state.cards.map((cards) => {
+                          return(
+                          <div className='organizationcards'>
+                          <LeadershipCard className='leadership'  
+                          key={cards.id}
+                          data={cards}/>
+                          </div>
+                          )
+                        })
+                        : ''
                       }
                 </div>
             </div>

@@ -1,61 +1,9 @@
-import React, {Component} from 'react';
-import { CardImg, CardTitle } from 'reactstrap';;
-import * as firebase from 'firebase'
-
-const db = firebase.default.firestore();
-
-class OrganizationContent extends Component {
-    constructor(props) {
-        super(props);
-        this.state={
-            article: {},
-            isLoaded: false
-        }
-
-        console.log(this.props)
-    }
-
-    componentDidMount() {
-        if(this.props.location.state !== 'undefined') {
-            if(this.props.location.state.hasOwnProperty('article')){
-                this.setState({
-                    article: this.props.location.state.article
-                }, () => {
-                    this.setState({
-                        isLoaded: true
-                    })
-                })
-            }
-        }else{
-            this.getArticleByID(this.props.match.param.id)
-        }
-    }
-
-    getArticleByID = (aid) => {
-        db.collection('OrganizationalLeadershipDescription')
-        .doc(aid)
-        .get()
-        .then(doc => {
-            if(doc.exists){
-                this.setState({
-                    article: doc.data()
-                }, () => {
-                    this.setState({
-                        isLoaded: true
-                    })
-                })
-            } else {
-                this.props.history.push({pathname:'/'})
-            }
-        })
-    }
+import React from 'react';
+import { CardImg, CardTitle } from 'reactstrap';
 
 
 
-    render() {
-        console.log("article: ", this.state.article)
-        
-        if(this.state.isLoaded) {
+const OrganizationContent = (props) => {
         return (
             <div className ="DatabasePage">
                 <div className = "PageTitleContent">
@@ -67,17 +15,9 @@ class OrganizationContent extends Component {
                     <div className= "PageContent">
                         {props.data.content}
                     </div>
-                </div>   
+                </div>     
                 </div>
-        )
-       }else{
-        return (
-            <div>
-                loading...
-            </div>
         );
-        }
     }
-}
 
 export default OrganizationContent;

@@ -59,7 +59,7 @@ class WhoWeAre extends Component {
             <div className='navbar'>  <NavigationComponent /> </div>
             </div>
            <div className='page-heading'>
-               <h1 className='AboutUsHeader'>About <span style={{color: "#00A6A8"}}><h2> Us</h2></span></h1>
+               <h1 className='AboutUsHeader'>About <span style={{color: "#00A6A8", fontFamily: "Roboto"}}> Us</span></h1>
            </div>
                 </div>
                 <div className='page-content'>

@@ -4,7 +4,6 @@ import {Container} from 'reactstrap';
 import NavigationComponent from '../navigation/NavigationBar';
 import PageLogo from '../logo/pagelogo';
 import ArticleCard from "./ArticleCard";
-import BlogHeading from "./BlogHeading";
 import * as firebase from 'firebase';
 import ButtonsComponentBlog from '../buttons/buttons-component-blog';
 
@@ -65,10 +64,9 @@ class Blog extends Component {
            
                 </div>
                 <div className='page-heading'>
-               <h1><span style={{color: "#00A6A8"}}>Blog</span></h1>
+               <h1><span style={{color: "#F16022", fontFamily: "Roboto"}}>Blog</span></h1>
                
               </div>
-              <div className='spacer'></div>
                 <div className='page-content'>
                 <ButtonsComponentBlog />
                 
