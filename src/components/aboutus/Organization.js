@@ -100,13 +100,14 @@ class Organization extends Component {
 
                     <div className='page-info'> 
                     <div className='organizationalspacer'></div>
+
                     {
                       this.state.isLoaded ?
-                        this.state.articles.map((article) => {
+                        this.state.articles.map((article, index) => {
                           return(
                               <div className='organizationalleadership'>
                           <OrganizationContent className='organization'
-                            key={article.id}
+                            key={index}
                             data={article}
                           />
                           </div>
@@ -114,19 +115,21 @@ class Organization extends Component {
                         })
                         : '' 
                       }
+                      <div className='LeadershipCardsContainer'>
                       {
                         this.state.isLoaded ?
-                        this.state.cards.map((cards) => {
+                        this.state.cards.map((cards, index) => {
                           return(
                           <div className='organizationcards'>
                           <LeadershipCard className='leadership'  
-                          key={cards.id}
+                          key={index}
                           data={cards}/>
                           </div>
                           )
                         })
                         : ''
                       }
+                      </div>
                 </div>
             </div>
             </div>

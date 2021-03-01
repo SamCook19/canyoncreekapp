@@ -1,8 +1,5 @@
 import React from 'react';
-import { Card, CardImg, CardSubtitle, } from 'reactstrap';
-
-
-
+import { CardImg } from 'reactstrap';
 
 const LeadershipCard = (props) => {
         return (
@@ -16,16 +13,16 @@ const LeadershipCard = (props) => {
                 className="CardImage"
                 />
                 </div>
-                <div className = "CardBody">
+                <div className = "LeadershipCardBody">
                     
                     <div className="LeadershipTeamName">
                     {props.data.leadershipteamname}
                     </div>
-                    <CardSubtitle className="LeadershipCardSubtitle">
+                    <div className="LeadershipCardSubtitle">
                         <div className="ArticleLabel">
                             {props.data.leadershipSubtitle}
                         </div>
-                    </CardSubtitle>
+                    </div>
                     
                     <div className='spacer'></div>
                     
