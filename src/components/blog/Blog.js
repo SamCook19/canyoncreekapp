@@ -75,7 +75,8 @@ class Blog extends Component {
                   <Container className='article-container'>
                     {
                       this.state.isLoaded ?
-                        this.state.articles.map((article, index) => {
+                        this.state.articles.sort((a,b) => new Date(a.date).getTime() - new Date(b.date).getTime()
+                        ).map((article, index) => {
                           return(
                           <ArticleCard className='article-card'
                             key={index}
