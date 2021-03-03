@@ -112,7 +112,7 @@ class Menu extends React.Component {
             </div>
           </div>
           <NavLink to="/help" activeClassName="nav-link-active">
-            Help For Survivors
+            Help for Survivors
           </NavLink>
           <div
             className="nav__menu-item"

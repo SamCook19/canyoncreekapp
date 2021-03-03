@@ -28,7 +28,6 @@ class Homepage extends Component {
             <div className='navbar'>  <Menu /> </div>
             
             </div>
-
             <div className='purposestatement'>
                 <CenterPiece />
             </div>

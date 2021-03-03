@@ -53,12 +53,12 @@ class WhoWeAre extends Component {
             <div className='header'>
                 <div className='left-side-header'>
                 <div className='page-logo'> <PageLogo /> </div>
-                
             </div>
             <div className='right-side-header'>
             <div className='navbar'>  <NavigationComponent /> </div>
+            
             </div>
-           <div className='page-heading'>
+            <div className='page-heading'>
                <h1 className='AboutUsHeader'>About <span style={{color: "#00A6A8", fontFamily: "Roboto"}}> Us</span></h1>
            </div>
                 </div>
