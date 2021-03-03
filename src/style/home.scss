@@ -160,10 +160,11 @@ width: 100%;
 }
 
 .purposestatement {
-  grid-column: 1/5;
+  grid-column: 2/4;
   display: flex;
   justify-content: center;
-  font-size: 40px;
+  align-items: center;
+  font-size: 35px;
   margin-bottom: 5px;
 }
 
