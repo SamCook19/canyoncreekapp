@@ -116,14 +116,19 @@ class Organization extends Component {
                         : '' 
                       }
                       <div className='LeadershipCardsContainer'>
+                        <div className='LeadershipTeamHeading'>
+                          <h2>Leadership Team</h2>
+                        </div>
                       {
                         this.state.isLoaded ?
                         this.state.cards.map((cards, index) => {
                           return(
+                            <div className='LeadershipTeamContainer'>
                           <div className='organizationcards'>
                           <LeadershipCard className='leadership'  
                           key={index}
                           data={cards}/>
+                          </div>
                           </div>
                           )
                         })

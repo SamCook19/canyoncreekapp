@@ -4,8 +4,11 @@ import PageLogo from '../logo/pagelogo';
 import ButtonsComponent from '../buttons/buttons-component';
 import * as firebase from 'firebase';
 import WhoWeAreContent from './WhoWeAreContent';
+import SimpleModal from '../modals/admin-modal';
 
 const db = firebase.default.firestore()
+
+
 
 class WhoWeAre extends Component {
     constructor(props) {
@@ -65,6 +68,9 @@ class WhoWeAre extends Component {
                 <div className='page-content'>
                 <div className='buttons-component'>
                     <ButtonsComponent />
+                    <div className='edit-modal'>
+                      <SimpleModal />
+                    </div>
                     <div className='social-media-icons-aboutus'>
                 <a className='facebook-icon' href='https://www.facebook.com/CCreekServices/'>
                 <img  alt="ccs facebook" src="/assets/images/facebook.png"/>

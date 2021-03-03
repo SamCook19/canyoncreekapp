@@ -1,46 +1,64 @@
-import React, { Component } from 'react';
-import ReactModal from 'react-modal';
+import React from 'react';
+import { makeStyles } from '@material-ui/core/styles';
+import Modal from '@material-ui/core/Modal';
+import { useAuth } from '../../contexts/AuthContext';
+import WhoWeAreEdit from './WhoWeAreEdit';
 
-import AdminForm from "../forms/adminform";
-
-ReactModal.setAppElement(".app-wrapper");
-
-class AdminModal extends Component {
-    constructor(props) {
-        super(props);
-
-        this.customStyles = {
-            content: {
-                top: "50%",
-                left: "50%",
-                right: "auto",
-                marginRight: "-50%",
-                transform: "translate(-50%, -50%",
-                width: "800px"
-            },
-            overlay: {
-                backgroundColor: "rgba(1, 1, 1, 0.75)"
-            }
-        };
-        
-        this.handleSuccessfulFormSubmission = this.handleSuccessfulFormSubmission.bind(this);
-    }
-
-    handleSuccessfulFormSubmission(blog) {
-        this.props.handleSuccessfulNewBlogSubmission(blog);
-    }
-    
-    render() {
-        return (
-            <ReactModal 
-            style={this.customStyles}
-            onRequestClose={() => {
-                this.props.handleModalClose();
-            }} isOpen={this.props.modalIsOpen}>
-                <AdminForm handleSuccessfulFormSubmission={this.handleSuccessfulFormSubmission}/>
-            </ReactModal>
-        );
-    }
+function rand() {
+  return Math.round(Math.random() * 20) - 10;
 }
 
-export default AdminModal;
+function getModalStyle() {
+  const top = 50 + rand();
+  const left = 50 + rand();
+
+  return {
+    top: `${top}%`,
+    left: `${left}%`,
+    transform: `translate(-${top}%, -${left}%)`,
+  };
+}
+
+const useStyles = makeStyles((theme) => ({
+  paper: {
+    position: 'absolute',
+    width: 400,
+    backgroundColor: theme.palette.background.paper,
+    border: '2px solid #000',
+    boxShadow: theme.shadows[5],
+    padding: theme.spacing(2, 4, 3),
+  },
+}));
+
+export default function SimpleModal() {
+  const classes = useStyles();
+  // getModalStyle is not a pure function, we roll the style only on the first render
+  const [modalStyle] = React.useState(getModalStyle);
+  const [open, setOpen] = React.useState(false);
+
+  const handleOpen = () => {
+    setOpen(true);
+  };
+
+  const handleClose = () => {
+    setOpen(false);
+  };
+
+
+  const { currentUser } = useAuth();
+
+  return (
+      currentUser ? (
+    <div>
+      <button type="button" onClick={handleOpen}>
+        Edit Page
+      </button>
+      <Modal
+        open={open}
+        onClose={handleClose}
+      >
+    <WhoWeAreEdit />
+      </Modal>
+    </div> ) : null
+  );
+}
