@@ -165,6 +165,12 @@
   flex-direction: column;
   margin-top: 15px;
   width: 25%;
+  position: relative;
+  .social-media-icons-aboutus {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+  }
 }
 
 
