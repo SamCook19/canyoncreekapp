@@ -57,7 +57,9 @@ export default function SimpleModal() {
         open={open}
         onClose={handleClose}
       >
+    <div className='WhoWeAreEdit'>
     <WhoWeAreEdit />
+    </div>
       </Modal>
     </div> ) : null
   );

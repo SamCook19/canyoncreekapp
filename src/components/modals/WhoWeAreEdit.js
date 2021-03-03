@@ -111,18 +111,18 @@ class WhoWeAreEdit extends Component {
             <Container>
             <Row>
                 <Col >
-                    <h2 className='SectionTitle'>New Article</h2>
+                    <h2 className='SectionTitle'>Edit Article</h2>
                     <FormGroup className='TitleForm'>
                         <Label className='TitleLabel'>
-                            Title
+                            <span style={{color: "white"}}>Title</span>
                         </Label>
-                        <input type ='text' className='articleTitle' placeholder=''
+                        <input type ='text' className='editArticleTitle' placeholder=''
                         onChange={(e) => this.onChangeArticleTitle(e.target.value)}
                         value={this.state.article.title}/>
                     </FormGroup>
                    
                 </Col>
-                <div className='edit-blog-container'>
+                <div className='edit-article-container'>
                     <FormGroup className='left-column'>
                         <ReactQuill 
                             ref={(el) => this.quill = el}
@@ -132,9 +132,9 @@ class WhoWeAreEdit extends Component {
                             modules={this.modules}
                             formats={this.formats}
                         />
-                        <div className='spacer-newarticle'>
+                        
 
-                        </div>
+                        
                         
                         <FormGroup className='publish-status-button'>
                                 <Button 
@@ -146,7 +146,7 @@ class WhoWeAreEdit extends Component {
                         </FormGroup>
                 <Col className='right-column'>
                             
-                            <FormGroup className='featured-image'> Featured Image
+                            <FormGroup className='edit-featured-image'> Featured Image
                                 <Input type="file" accept='image/*' className="image-uploader"
                                 onChange={async (e) => {
                                     const uploadState = await this.uploadImageCallBack(e)

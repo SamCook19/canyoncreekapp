@@ -17,10 +17,9 @@ const WhoWeAreContent = (props) => {
                     </div>
                     
                 </div>   
-                <div className="PageImg">
+                <div className="WhoWeArePageImg">
                 <CardImg
                 top
-                width="300px"
                 src={props.data.featuredImage}
                 alt="Card Image"
                 className="CardImage"
