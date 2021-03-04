@@ -5,6 +5,7 @@ import ButtonsComponent from '../buttons/buttons-component';
 import * as firebase from 'firebase';
 import OrganizationContent from './OrganizationContent';
 import LeadershipCard from './LeadershipCard';
+import BoardCard from './BoardCards';
 
 const db = firebase.default.firestore()
 
@@ -14,13 +15,15 @@ class Organization extends Component {
         this.state={
             isLoaded: false,
             articles: [],
-            cards: []
+            cards: [],
+            BDCards: [],
 
         }
       }
     
       componentDidMount() {
         this.getMyCards()
+        this.getMyBDCards()
         this.getMyDescription()
       }
     
@@ -42,6 +45,33 @@ class Organization extends Component {
     
             this.setState({
               cards: allCards
+            }, () => {
+              this.setState ({
+                isLoaded: true
+              })
+            })
+          }
+        })
+      }
+
+      getMyBDCards = () => {
+        db
+        .collection( 'OrganizationalLeadershipBD' )
+        .get()
+        .then(docs => {
+          if(!docs.empty){
+            let allBDCards = []
+            docs.forEach(function (doc) {
+              const bdcards = {
+                id: doc.id,
+                ...doc.data()
+              }
+    
+              allBDCards.push(bdcards)
+            })
+    
+            this.setState({
+              BDCards: allBDCards
             }, () => {
               this.setState ({
                 isLoaded: true
@@ -115,10 +145,33 @@ class Organization extends Component {
                         })
                         : '' 
                       }
-                      <div className='LeadershipCardsContainer'>
-                        <div className='LeadershipTeamHeading'>
+                      <div className='BDHeading'>
+                          <h2>Board of Directors</h2>
+                        </div>
+                        <div className='BoardOfDirectorsCardsContainer'>
+                        
+                      {
+                        this.state.isLoaded ?
+                        this.state.BDCards.map((bdcards, index) => {
+                          return(
+                            <div className='BoardofDirectorsContainer'>
+                          <div className='organizationcards'>
+                          <BoardCard className='BDCards'  
+                          key={index}
+                          data={bdcards}/>
+                          </div>
+                          </div>
+                          )
+                        })
+                        : ''
+                      }
+                      </div>
+
+                      <div className='LeadershipTeamHeading'>
                           <h2>Leadership Team</h2>
                         </div>
+                      <div className='LeadershipCardsContainer'>
+                        
                       {
                         this.state.isLoaded ?
                         this.state.cards.map((cards, index) => {

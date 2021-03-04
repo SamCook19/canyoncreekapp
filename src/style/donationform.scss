@@ -1,4 +1,8 @@
 .page-content-donate {
-    display: flex;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: 20% 1fr 20%;
+    .DonationForm {
+        grid-column: 2/3;
+    }
 }
+

@@ -3,7 +3,6 @@ import React, { Component } from 'react';
 import {Container, Row, Col, Card, CardHeader, CardBody, FormGroup, Label, Input, Button, NavLink} from 'reactstrap';
 import ReactQuill from 'react-quill'
 import 'react-quill/dist/quill.snow.css'
-import history from '../../../history'
 import firebase from "firebase";
 import { v4 as uuidv4 } from 'uuid'
 
@@ -157,7 +156,6 @@ class NewArticle extends Component {
                             ref={(el) => this.quill = el}
                             value={this.state.article.content}
                             onChange={(e) => this.onChangeArticleContent(e)}
-                            theme='snow'
                             modules={this.modules}
                             formats={this.formats}
                         />
