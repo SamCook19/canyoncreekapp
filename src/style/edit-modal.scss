@@ -1,0 +1,19 @@
+.edit-article-container {
+    display: flex;
+    justify-content: center;
+}
+
+.edit-quill {
+    width: 600px;
+    background-color: white;
+}
+
+.edit-status-button {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.edit-submit-button {
+    font-size: 20px;
+}

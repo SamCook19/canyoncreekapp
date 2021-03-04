@@ -111,7 +111,7 @@ class Menu extends React.Component {
               </CSSTransitionGroup>
             </div>
           </div>
-          <NavLink to="/help" activeClassName="nav-link-active">
+          <NavLink to="/help" activeClassName="nav-link-active" className='HelpForSurvivorsLink'>
             Help for Survivors
           </NavLink>
           <div

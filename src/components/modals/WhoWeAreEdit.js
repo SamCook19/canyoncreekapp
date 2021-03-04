@@ -124,7 +124,7 @@ class WhoWeAreEdit extends Component {
                 </Col>
                 <div className='edit-article-container'>
                     <FormGroup className='left-column'>
-                        <ReactQuill 
+                        <ReactQuill className='edit-quill'
                             ref={(el) => this.quill = el}
                             value={this.state.article.content}
                             onChange={(e) => this.onChangeArticleContent(e)}
@@ -136,8 +136,8 @@ class WhoWeAreEdit extends Component {
 
                         
                         
-                        <FormGroup className='publish-status-button'>
-                                <Button 
+                        <FormGroup className='edit-status-button'>
+                                <Button className='edit-submit'
                                 onClick={(e) => this.submitEdit()}>
                                     Submit
                                 </Button> 

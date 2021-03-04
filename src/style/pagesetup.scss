@@ -16,7 +16,7 @@
         height: 100%;
        $color-blue: #00aeef;
        $color-blue-dark: #0d2035;
-       $submenu-width: 180px;
+       $submenu-width: 220px;
        grid-column: 2/5;
        .slide-enter {
          transform: translateY(-100%);
@@ -81,14 +81,14 @@
          color: black;
          text-align: left;
          display: grid;
-         justify-content: center;
+         justify-content: right;
          
          a {
            display: block;
            padding: 0 16px;
            line-height: inherit;
            cursor: pointer;
-           font-size: 20px;
+           font-size: 28px;
            font-weight: normal;
          }
        }
@@ -96,7 +96,7 @@
        .nav__menu {
          line-height: 45px;
          font-weight: 700;
-         text-transform: uppercase;
+         text-transform: none;
          width: 100%;
         display: flex;
         }
@@ -117,6 +117,11 @@
        .nav__menu-item a {
                text-decoration: none;
                color: black;
+               font-size: 28px;
+       }
+
+       .HelpForSurvivorsLink a {
+         font-size: 28px;
        }
        
        .nav__submenu-item a {
@@ -146,7 +151,7 @@
 .page-content {
   display: grid;
   grid-template-columns: 1fr 70% 1fr;
-  height: 80vh;
+  height: 82vh;
 }
 
 .page-heading {
@@ -179,6 +184,7 @@
   background-color: white;
   -webkit-box-shadow: -8px 11px 10px 5px rgba(0,0,0,0.09); 
 box-shadow: -8px 11px 10px 5px rgba(0,0,0,0.09);
+overflow: scroll;
 }
 
 .DatabasePage {
@@ -238,4 +244,10 @@ box-shadow: -8px 11px 10px 5px rgba(0,0,0,0.09);
   justify-content: center;
   height: 50%;
   width: 75%;
+}
+
+.BoardOfDirectorsCardsContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 
 }

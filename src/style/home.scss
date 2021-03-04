@@ -84,7 +84,7 @@ width: 100%;
     padding: 0 16px;
     line-height: inherit;
     cursor: pointer;
-    font-size: 20px;
+    font-size: 28px;
     font-weight: normal;
     color: black;
     text-decoration: none;
@@ -94,13 +94,14 @@ width: 100%;
 .nav__menu {
   line-height: 45px;
   font-weight: 700;
-  text-transform: uppercase;
+  text-transform: none;
   width: 100%;
 }
   
 .nav__menu-item {
   display: inline-block;
   position: relative;
+  font-size: 30px;
 
   &:hover {
           text-decoration: none;
