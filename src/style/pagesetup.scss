@@ -242,15 +242,7 @@ grid-template-columns: 10% 1fr 10%;
   width: 75%;
 }
 
-.BoardOfDirectorsCardsContainer {
-  grid-column: 2/3;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr 
-}
-
-.BDHeading {
-  grid-row: 2;
+.DatabasePage {
   grid-column: 2/3;
 }
 

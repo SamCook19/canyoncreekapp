@@ -66,12 +66,14 @@ class EmploymentOpportunities extends Component {
                 <div className='page-content'>
                 <div className='buttons-component'>
                     <ButtonsComponent />
-                </div>
-                <div className='edit-modal'>
+                    <div className='edit-modal'>
                       <SimpleModal />
                     </div>
-
+                </div>
+                
+                    
                     <div className='page-info'> 
+                    
                     <div className='EmploymentOpportunitiesspacer'></div>
                     {
                       this.state.isLoaded ?

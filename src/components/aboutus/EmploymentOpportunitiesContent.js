@@ -5,7 +5,7 @@ import parse from 'html-react-parser';
 
 const EmploymentOpportunitiesContent = (props) => {
         return (
-            <div className ="DatabasePage">
+            <div className ="DatabasePage__Employment">
                 <div className = "PageTitleContent">
                     
                     <CardTitle className="PageTitle">
@@ -17,7 +17,7 @@ const EmploymentOpportunitiesContent = (props) => {
                     </div>
                     
                 </div>   
-                <div className="PageImg+Application">
+                <div className="PageImgApplication">
                 <div className="EmploymentOppApplication">
                     <a href='https://www.indeed.com/q-Canyon-Creek-Services-jobs.html'>
                     {props.data.employmentapplication}

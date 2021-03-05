@@ -78,7 +78,7 @@ class EmploymentOppEdit extends Component {
 
     submitEdit = () => {
         const article = this.state.article
-        db.collection("Employment").doc("GtwO0NM0cj6B2GUztU9m")
+        db.collection("Employment").doc("llzfAAoO1tNcsWnyTWjJ")
             .update(
                 article
                 )
