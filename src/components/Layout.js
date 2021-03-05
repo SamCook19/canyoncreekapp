@@ -28,7 +28,7 @@ export default class Layout extends Component {
   
     render() {
       return (
-        <div className='container'>
+        <div className='site-container'>
           
           <div className='route-container'>
           <Router>

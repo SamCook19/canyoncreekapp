@@ -74,7 +74,7 @@
     "npm": "^6.14.11",
     "postcss-loader": "^2.1.6",
     "react": "16.13.1",
-    "react-bootstrap": "^1.4.3",
+    "react-bootstrap": "^1.5.1",
     "react-contenteditable": "^3.3.5",
     "react-dom": "16.13.1",
     "react-draft-wysiwyg": "^1.14.5",

@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { useAuth } from '../../contexts/AuthContext'
 import AdminButton from './adminbutton';
+import ControlledCarousel from './right-carousel';
 
 
 class RightColumn extends Component {
@@ -12,8 +13,7 @@ class RightColumn extends Component {
     render() {
         return (
             <div className='right-column'>
-                image slideshow and info
-                <AdminButton />
+                <ControlledCarousel />
             </div>
             
         );
