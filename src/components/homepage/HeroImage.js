@@ -1,15 +1,19 @@
-import React, { Component } from 'react';
+import React from 'react';
+import { CardImg, CardTitle } from 'reactstrap';
 
-class HeroImage extends Component {
-    render() {
-        const { hero_image_url } = this.props.item;
+const HeroImage = (props) => {
         return (
-            <div className="hero-image-img"
-            style={{backgroundImage: "url(" + hero_image_url + ")"
-        }}
+            <div className='hero-image-container'>
+            <div className="hero-image-img">
+            <CardImg
+            top
+            src={props.data.featuredImage}
+            alt="Card Image"
+            className="CardImage"
             />
+            </div>
+            </div>
         );
     }
-}
 
 export default HeroImage;

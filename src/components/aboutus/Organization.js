@@ -169,7 +169,7 @@ class Organization extends Component {
                       </div>
 
                       <div className='LeadershipTeamHeading'>
-                          <h2>Leadership Team</h2>
+                          <p>Leadership Team</p>
                         </div>
                       <div className='LeadershipCardsContainer'>
                         

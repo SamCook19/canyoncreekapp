@@ -4,13 +4,66 @@ import HotlineButton from './hotline';
 import EscapeButton from './escapebutton';
 import BusinessButton from './businessbutton';
 import HeroImage from '../homepage/HeroImage';
+import * as firebase from 'firebase';
+
+const db = firebase.default.firestore()
 
 class HomeButtonsComponent extends Component {
+    constructor(props) {
+        super(props);
+        this.state={
+            isLoaded: false,
+            articles: []
+        }
+      }
+    
+      componentDidMount() {
+        this.getMyArticles()
+      }
+    
+      getMyArticles = () => {
+        db
+        .collection( 'HeroImage' )
+        .get()
+        .then(docs => {
+          if(!docs.empty){
+            let allArticles = []
+            docs.forEach(function (doc) {
+              const article = {
+                id: doc.id,
+                ...doc.data()
+              }
+    
+              allArticles.push(article)
+            })
+    
+            this.setState({
+              articles: allArticles
+            }, () => {
+              this.setState ({
+                isLoaded: true
+              })
+            })
+          }
+        })
+      }
+
     render() {
         return (
             <div className='homebutton-container'>
             <div className='hero-img'>
-                {/* <HeroImage /> */}
+            {
+                      this.state.isLoaded ?
+                        this.state.articles.map((article, index) => {
+                          return(
+                          <HeroImage className='Hero'
+                            key={index}
+                            data={article}
+                          />
+                          )
+                        })
+                        : '' 
+                      }
             <div className='home-button-group'>
             <div className='escape-button'>
                 <EscapeButton />
