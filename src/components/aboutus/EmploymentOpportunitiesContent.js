@@ -17,10 +17,13 @@ const EmploymentOpportunitiesContent = (props) => {
                     </div>
                     
                 </div>   
-                <div className="PageImg">
+                <div className="PageImg+Application">
                 <div className="EmploymentOppApplication">
+                    <a href='https://www.indeed.com/q-Canyon-Creek-Services-jobs.html'>
                     {props.data.employmentapplication}
+                    </a>
                 </div>
+                <div className='PageImg'>
                 <CardImg
                 top
                 width="300px"
@@ -28,6 +31,7 @@ const EmploymentOpportunitiesContent = (props) => {
                 alt="Card Image"
                 className="CardImage"
                 />
+                </div>
                 </div>  
                 </div>
         );

@@ -4,7 +4,7 @@ import PageLogo from '../logo/pagelogo';
 import ButtonsComponent from '../buttons/buttons-component';
 import * as firebase from 'firebase';
 import WhoWeAreContent from './WhoWeAreContent';
-import SimpleModal from '../modals/admin-modal';
+import SimpleModal from '../modals/whoweare-modal';
 
 const db = firebase.default.firestore()
 

@@ -4,6 +4,7 @@ import PageLogo from '../logo/pagelogo';
 import ButtonsComponent from '../buttons/buttons-component';
 import * as firebase from 'firebase';
 import EmploymentOpportunitiesContent from './EmploymentOpportunitiesContent';
+import SimpleModal from '../modals/employmentopp-modal';
 
 const db = firebase.default.firestore()
 
@@ -66,6 +67,9 @@ class EmploymentOpportunities extends Component {
                 <div className='buttons-component'>
                     <ButtonsComponent />
                 </div>
+                <div className='edit-modal'>
+                      <SimpleModal />
+                    </div>
 
                     <div className='page-info'> 
                     <div className='EmploymentOpportunitiesspacer'></div>
