@@ -1,6 +1,6 @@
 .page-container {
                 width: 100vw;
-                height: 100vh;
+                height: 100%;
             .header {
               display: grid;
               grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
@@ -180,6 +180,10 @@ width: 100%;
   grid-template-columns: 1fr 1fr;
 }
 
+.homebutton-component {
+ height: 400px;
+}
+
 .right-side-column {
   background-color: white;
   margin-top: 25px;
@@ -189,4 +193,25 @@ width: 100%;
 
 .left-column {
   height: 100%;
+}
+
+.hero-image-img img {
+  max-height: 400px;
+  width: 100vw;
+}
+
+.hero-img {
+  position: relative;
+}
+
+.hero-image-container {
+  position: absolute;
+}
+
+.home-button-group {
+  position: absolute;
+}
+
+.homepage-img-button {
+  position: absolute;
 }
