@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import Carousel from 'react-bootstrap/Carousel';
-import Caption from 'react-bootstrap/CarouselCaption';
-import Item from 'react-bootstrap/CarouselItem';
+
 
 function ControlledCarousel() {
     const [index, setIndex] = useState(0);
@@ -14,8 +13,13 @@ function ControlledCarousel() {
         <Carousel.Item>
           <img
             className="d-block w-100"
-            src="holder.js/800x400?text=First slide&amp;bg=373940"
+            src="https://picsum.photos/960/300"
             alt="First slide"
+            style = {{
+                maxHeight: 500,
+                height: 960,
+                width:300
+            }}
           />
           <Carousel.Caption>
             <h3>First slide label</h3>
@@ -25,8 +29,13 @@ function ControlledCarousel() {
         <Carousel.Item>
           <img
             className="d-block w-100"
-            src="holder.js/800x400?text=Second slide&amp;bg=282c34"
+            src="https://picsum.photos/960/300"
             alt="Second slide"
+            style = {{
+                maxHeight: 500,
+                height: 960,
+                width:300
+            }}
           />
   
           <Carousel.Caption>
@@ -37,8 +46,13 @@ function ControlledCarousel() {
         <Carousel.Item>
           <img
             className="d-block w-100"
-            src="holder.js/800x400?text=Third slide&amp;bg=20232a"
+            src="https://picsum.photos/960/300"
             alt="Third slide"
+            style = {{
+                maxHeight: 500,
+                height: 960,
+                width:300
+            }}
           />
   
           <Carousel.Caption>
