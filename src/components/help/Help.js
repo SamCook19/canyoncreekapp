@@ -71,7 +71,6 @@ class Help extends Component {
                 </div>
 
                     <div className='help-info'> 
-                    <div className='AnnualReportspacer'></div>
                     {
                       this.state.isLoaded ?
                         this.state.articles.map((article, index) => {

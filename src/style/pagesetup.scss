@@ -259,21 +259,34 @@ grid-template-columns: 10% 1fr 10%;
 .help-page-content {
   display: grid;
   grid-template-columns: 1fr 1fr;
+  position: relative;
+  
 }
 
 .help-buttons-component {
   height: fit-content;
   grid-column: 1;
+  position: relative;
 }
 
 .help-info {
   grid-column: 1;
   display: grid;
   grid-template-columns: 1fr 1fr;
+  background-color: #f8f8ff;
 }
 
 .help-background {
   grid-row: 1/2;
   grid-column: 1/2;
+  position: absolute;
+  z-index: -1;
+  width: 100vw;
 }
+
+.help-background img {
+  max-height: 950px;
+}
+
+
 

@@ -1,5 +1,6 @@
 import React from 'react';
-import { CardImg, CardTitle } from 'reactstrap';
+
+import parse from 'html-react-parser';
 
 
 
@@ -7,13 +8,8 @@ const HelpForSurvivorsContent = (props) => {
         return (
             <div className ="DatabasePage">
                 <div className = "PageTitleContent">
-                    
-                    <CardTitle className="PageTitle">
-                        {props.data.title}
-                    </CardTitle>
-                    <div className='page-spacer'></div>
                     <div className= "PageContent">
-                        {props.data.content}
+                    {parse(props.data.content)}
                     </div>
                     
                 </div>   
