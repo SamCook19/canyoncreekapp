@@ -17,15 +17,7 @@ const HelpForSurvivorsContent = (props) => {
                     </div>
                     
                 </div>   
-                <div className="PageImg">
-                <CardImg
-                top
-                width="300px"
-                src={props.data.featuredImage}
-                alt="Card Image"
-                className="CardImage"
-                />
-                </div>  
+                
                 </div>
         );
     }

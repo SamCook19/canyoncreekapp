@@ -4,6 +4,7 @@ import PageLogo from '../logo/pagelogo';
 import ButtonsComponent from '../buttons/buttons-component';
 import * as firebase from 'firebase';
 import HelpForSurvivorsContent from './HelpForSurvivorsContent';
+import HelpBackground from './HelpBackground';
 
 const db = firebase.default.firestore()
 
@@ -62,8 +63,8 @@ class Help extends Component {
                <h1 className='HelpForSurvivorsHeader'>Help For <span style={{color: "#662D91", fontFamily: "Roboto"}}> Survivors</span></h1>
            </div>
                 </div>
-                <div className='page-content'>
-                <div className='buttons-component'>
+                <div className='help-page-content'>
+                <div className='help-buttons-component'>
                     <ButtonsComponent />
                 </div>
 
@@ -74,6 +75,20 @@ class Help extends Component {
                         this.state.articles.map((article, index) => {
                           return(
                           <HelpForSurvivorsContent className='AnnualReport'
+                            key={index}
+                            data={article}
+                          />
+                          )
+                        })
+                        : '' 
+                      }
+                </div>
+                <div className='help-background'> 
+                    {
+                      this.state.isLoaded ?
+                        this.state.articles.map((article, index) => {
+                          return(
+                          <HelpBackground className='HelpBackground'
                             key={index}
                             data={article}
                           />

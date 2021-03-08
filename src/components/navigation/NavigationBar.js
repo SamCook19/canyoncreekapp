@@ -3,6 +3,8 @@ import { withRouter } from "react-router";
 import { NavLink } from "react-router-dom";
 import { CSSTransitionGroup } from 'react-transition-group'
 import ContactButton from '../buttons/contactbutton';
+import Nav from 'react-bootstrap/Nav';
+import { Navbar, NavDropdown } from 'react-bootstrap/Navbar';
 
 class AboutUsSubmenu extends React.Component {
   render() {
@@ -93,6 +95,7 @@ class Menu extends React.Component {
   
   render() {
     return (
+      
       <nav className="nav">
         <ul className="nav__menu">
           <div
@@ -169,6 +172,7 @@ class Menu extends React.Component {
           </NavLink>
           </div>
       </nav>
+
     )
   }
 }

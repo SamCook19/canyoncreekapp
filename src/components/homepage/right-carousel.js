@@ -8,6 +8,8 @@ function ControlledCarousel() {
     const handleSelect = (selectedIndex, e) => {
       setIndex(selectedIndex);
     };
+
+
     return (
       <Carousel activeIndex={index} onSelect={handleSelect}>
         <Carousel.Item>
@@ -16,7 +18,7 @@ function ControlledCarousel() {
             src="https://picsum.photos/960/300"
             alt="First slide"
             style = {{
-                maxHeight: 500,
+                maxHeight: 450,
                 height: 960,
                 width:300
             }}
@@ -32,7 +34,7 @@ function ControlledCarousel() {
             src="https://picsum.photos/960/300"
             alt="Second slide"
             style = {{
-                maxHeight: 500,
+                maxHeight: 450,
                 height: 960,
                 width:300
             }}
@@ -49,7 +51,7 @@ function ControlledCarousel() {
             src="https://picsum.photos/960/300"
             alt="Third slide"
             style = {{
-                maxHeight: 500,
+                maxHeight: 450,
                 height: 960,
                 width:300
             }}

@@ -28,6 +28,10 @@
     justify-content: center;
 }
 
+.ArticleCardImg img {
+    width: 300px;
+}
+
 .CardImage {
 
 }
@@ -35,7 +39,7 @@
 .CardBody {
     width: 100%;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 125px 1fr 1fr 1fr 125px;
     grid-template-rows: 1fr 1fr
 }
 

@@ -156,7 +156,7 @@ width: 100%;
 }
 
 .logo-main img {
-  width: 350px;
+  width: 250px;
 }
 
 .purposestatement {
@@ -178,7 +178,7 @@ width: 100%;
 
 .home-page-content {
   display: grid;
-  height: 50%;
+  height: 55vh;
   grid-template-columns: 1fr 1fr;
 }
 
@@ -200,6 +200,7 @@ width: 100%;
 }
 
 .hero-image-img img {
+  height: 300px;
   max-height: 400px;
   width: 100vw;
 }

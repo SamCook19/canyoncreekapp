@@ -61,16 +61,17 @@ class Blog extends Component {
             <div className='right-side-header'>
             <div className='navbar'>  <NavigationComponent /> </div>
             </div>
-           
-                </div>
-                <div className='page-heading'>
+            <div className='page-heading'>
                <h1><span style={{color: "#F16022", fontFamily: "Roboto"}}>Blog</span></h1>
                
               </div>
-                <div className='page-content'>
+           
+                </div>
+                
+                <div className='blog-page-content'>
                 <ButtonsComponentBlog />
                 
-                  <Container className='article-container'>
+                  <div className='article-container'>
                     {
                       this.state.isLoaded ?
                         this.state.articles.sort((a,b) => new Date(a.date).getTime() - new Date(b.date).getTime()
@@ -84,7 +85,7 @@ class Blog extends Component {
                         })
                         : '' 
                       }
-                  </Container>
+                  </div>
                 
                 </div>
             </div>
