@@ -1,4 +1,3 @@
-
 import React, { Component } from 'react';
 import {Container, Row, Col, FormGroup, Label, Input, Button} from 'reactstrap';
 import ReactQuill from 'react-quill'
@@ -9,7 +8,7 @@ import { v4 as uuidv4 } from 'uuid'
 const db = firebase.default.firestore()
 const storageRef = firebase.storage()
 
-class WhoWeAreEdit extends Component {
+class HelpEdit extends Component {
     constructor(props) {
         super(props);
         
@@ -57,15 +56,6 @@ class WhoWeAreEdit extends Component {
         'code-block'
     ]
 
-    onChangeArticleTitle = (value) => {
-        this.setState({
-            article: {
-                ...this.state.article,
-                title: value
-            }
-        })
-    }
-
     onChangeArticleContent = (value) => {
         this.setState({
             article: {
@@ -78,7 +68,7 @@ class WhoWeAreEdit extends Component {
 
     submitEdit = () => {
         const article = this.state.article
-        db.collection("WhoWeAre").doc("GtwO0NM0cj6B2GUztU9m")
+        db.collection("HelpForSurvivors").doc("zBI9ZqSkIg8MJ0n1zT3R")
             .update(
                 article
                 )
@@ -92,10 +82,10 @@ class WhoWeAreEdit extends Component {
         return new Promise(async(resolve, reject) => {
             const file = e.target.files[0]
             const fileName = uuidv4()
-            storageRef.ref().child("WhoWeAre/" + fileName).put(file)
+            storageRef.ref().child("HelpForSurvivors/" + fileName).put(file)
             .then( async snapshot => {
                 
-                const downloadURL = await storageRef.ref().child("WhoWeAre/" +fileName).getDownloadURL()
+                const downloadURL = await storageRef.ref().child("HelpForSurvivors/" +fileName).getDownloadURL()
 
                 resolve({
                     success: true,
@@ -111,16 +101,7 @@ class WhoWeAreEdit extends Component {
             <Container>
             <Row>
                 <Col >
-                    <h2 className='SectionTitle'>Edit Article</h2>
-                    <FormGroup className='TitleForm'>
-                        <Label className='TitleLabel'>
-                            <span style={{color: "white"}}>Title</span>
-                        </Label>
-                        <input type ='text' className='editArticleTitle' placeholder=''
-                        onChange={(e) => this.onChangeArticleTitle(e.target.value)}
-                        value={this.state.article.title}/>
-                    </FormGroup>
-                   
+                    <h2 className='SectionTitle'>Edit Article</h2>            
                 </Col>
                 <div className='edit-article-container'>
                     <FormGroup className='left-column'>
@@ -175,4 +156,4 @@ class WhoWeAreEdit extends Component {
     }
 }
 
-export default WhoWeAreEdit;
+export default HelpEdit;

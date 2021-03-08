@@ -5,6 +5,7 @@ import ButtonsComponent from '../buttons/buttons-component';
 import * as firebase from 'firebase';
 import HelpForSurvivorsContent from './HelpForSurvivorsContent';
 import HelpBackground from './HelpBackground';
+import SimpleModal from '../modals/help-modal'
 
 const db = firebase.default.firestore()
 
@@ -66,6 +67,7 @@ class Help extends Component {
                 <div className='help-page-content'>
                 <div className='help-buttons-component'>
                     <ButtonsComponent />
+                    <SimpleModal />
                 </div>
 
                     <div className='help-info'> 
