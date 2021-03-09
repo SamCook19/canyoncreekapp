@@ -24,13 +24,14 @@ class Volunteer extends Component {
                 <NewVolunteer />
                 <h1>Volunteer Signin</h1>
         <iframe className="volunteer-signin-form"
-        src="https://www.volgistics.com/ex2/vicnet.dll/?from=496230&amp;embedded=on" style=
+        src="https://www.volgistics.com/ex2/vicnet.dll/?from=496230&amp;embedded=on" 
+        frameBorder='0'
+        sandbox
+        style=
         
         {{height:"400px",
         
         width:"600px"}}
-        frameborder='0'
-        sandbox='allow-forms'
         >
 
         </iframe>

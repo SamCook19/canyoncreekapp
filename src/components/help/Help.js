@@ -99,25 +99,12 @@ class Help extends Component {
                       }
                 </div>
                 <div className='request-form-heading'>
-                  If you are seeking help, please fill out this form:
+                  If you or someone you know are in need of assistance, please click on the link below. If you are in need of immediate assistance, please contact our 24 hour hotline at 435.233.5732.
                 </div>
                 <div className='request-form-container'>
-                <iframe className="volunteer-signin-form"
-                src="https://apricot.socialsolutions.com/auth/autologin/org_id/1698/hash/fe63cfb2b7190a8b89cde77419b8d89c5af6ee4e&amp;embedded=on" 
-                allowfullscreen
-                frameborder='0'
-                sandbox='allow-forms'
-                sandbox='allow-scripts'
-                style=
-        
-                {{height:"400px",
-        
-                width:"600px"}}
-
-                
-                >
-
-        </iframe>
+                      <a className='request-form-link' href='https://apricot.socialsolutions.com/auth/autologin/org_id/1698/hash/fe63cfb2b7190a8b89cde77419b8d89c5af6ee4e'>
+                        Click Here to Get Help
+                      </a>
                 </div>
             </div>
             </div>
