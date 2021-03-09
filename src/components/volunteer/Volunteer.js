@@ -28,7 +28,11 @@ class Volunteer extends Component {
         
         {{height:"400px",
         
-        width:"600px"}}>
+        width:"600px"}}
+        frameborder='0'
+        sandbox='allow-forms'
+        >
+
         </iframe>
                 </div>
             </div>
