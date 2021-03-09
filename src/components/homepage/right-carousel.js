@@ -12,7 +12,11 @@ function ControlledCarousel() {
 
     return (
       <Carousel activeIndex={index} onSelect={handleSelect} indicators>
-        <Carousel.Item>
+        <Carousel.Item className='first-carousel'>
+        <Carousel.Caption>
+            <h3>First slide label</h3>
+            <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+          </Carousel.Caption>
           <img
             className="d-block w-100"
             src="https://picsum.photos/960/300"
@@ -23,10 +27,7 @@ function ControlledCarousel() {
                 width:300
             }}
           />
-          <Carousel.Caption>
-            <h3>First slide label</h3>
-            <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-          </Carousel.Caption>
+          
         </Carousel.Item>
         <Carousel.Item>
           <img

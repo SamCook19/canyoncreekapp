@@ -20,6 +20,7 @@
 @import 'edit-modal.scss';
 @import 'EmploymentOpp.scss';
 @import "~bootstrap/scss/bootstrap";
+@import "right-side-carousel.scss";
 
 
 @font-face {
@@ -73,4 +74,8 @@ h1 {
     font-size: 80px;
     color: #3a3a3a;
     font-weight: bold;
+}
+
+h3 {
+    color: red;
 }
