@@ -9,7 +9,7 @@ import SimpleModal from '../modals/prevention-modal'
 
 const db = firebase.default.firestore()
 
-class Help extends Component {
+class Prevention extends Component {
     constructor(props) {
         super(props);
         this.state={
@@ -64,13 +64,13 @@ class Help extends Component {
                <h1 className='PreventionHeader'> <span style={{color: "#F16022", fontFamily: "Roboto"}}> Prevent</span> Violence</h1>
            </div>
                 </div>
-                <div className='help-page-content'>
-                <div className='help-buttons-component'>
+                <div className='prevention-page-content'>
+                <div className='prevention-buttons-component'>
                     <ButtonsComponent />
                     <SimpleModal />
                 </div>
 
-                    <div className='help-info'> 
+                    <div className='prevention-info'> 
                     {
                       this.state.isLoaded ?
                         this.state.articles.map((article, index) => {
@@ -84,7 +84,7 @@ class Help extends Component {
                         : '' 
                       }
                 </div>
-                <div className='help-background'> 
+                <div className='prevention-background'> 
                     {
                       this.state.isLoaded ?
                         this.state.articles.map((article, index) => {
@@ -104,4 +104,4 @@ class Help extends Component {
     }
 }
 
-export default Help;
+export default Prevention;

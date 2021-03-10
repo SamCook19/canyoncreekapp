@@ -156,7 +156,7 @@ width: 100%;
 }
 
 .logo-main {
-  margin-top: 15px;
+  margin-top: 8px;
 }
 
 .logo-main img {
@@ -187,12 +187,11 @@ width: 100%;
 }
 
 .homebutton-component {
- height: 400px;
+ height: fit-content;
 }
 
 .right-side-column {
-  max-height: 500px;
-  height: 39.5vh;
+  height: 55.5vh;
   background-color: white;
   margin-top: 25px;
   -webkit-box-shadow: -10px -2px 15px 5px rgba(0,0,0,0.19); 
