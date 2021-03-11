@@ -16,7 +16,8 @@ class CoalitionEdit extends Component {
             article: {
                 title: "",
                 content: "",
-                featuredImage: ''
+                featuredImage: "",
+                coalitionImage: ""
             }
         }
     }
@@ -65,10 +66,19 @@ class CoalitionEdit extends Component {
         })
     }
 
+    onChangeArticleTitle = (value) => {
+        this.setState({
+            article: {
+                ...this.state.article,
+                title: value
+            }
+        })
+    }
+
 
     submitEdit = () => {
         const article = this.state.article
-        db.collection("HelpForSurvivors").doc("zBI9ZqSkIg8MJ0n1zT3R")
+        db.collection("Coalition").doc("bg8ThwHltIHtLobs0eO1")
             .update(
                 article
                 )
@@ -82,10 +92,27 @@ class CoalitionEdit extends Component {
         return new Promise(async(resolve, reject) => {
             const file = e.target.files[0]
             const fileName = uuidv4()
-            storageRef.ref().child("HelpForSurvivors/" + fileName).put(file)
+            storageRef.ref().child("Coalition/" + fileName).put(file)
             .then( async snapshot => {
                 
-                const downloadURL = await storageRef.ref().child("HelpForSurvivors/" +fileName).getDownloadURL()
+                const downloadURL = await storageRef.ref().child("Coalition/" +fileName).getDownloadURL()
+
+                resolve({
+                    success: true,
+                    data: {link: downloadURL}
+                })
+            })
+        })
+    }
+
+    uploadCoalitionImageCallBack = (e) => {
+        return new Promise(async(resolve, reject) => {
+            const file = e.target.files[0]
+            const fileName = uuidv4()
+            storageRef.ref().child("CoalitionImage/" + fileName).put(file)
+            .then( async snapshot => {
+                
+                const downloadURL = await storageRef.ref().child("CoalitionImage/" +fileName).getDownloadURL()
 
                 resolve({
                     success: true,
@@ -101,7 +128,15 @@ class CoalitionEdit extends Component {
             <Container>
             <Row>
                 <Col >
-                    <h2 className='SectionTitle'>Edit Article</h2>            
+                    <h2 className='SectionTitle'>Edit Article</h2> 
+                    <FormGroup className='TitleForm'>
+                        <Label className='TitleLabel'>
+                            <span style={{color: "white"}}>Title</span>
+                        </Label>
+                        <input type ='text' className='editArticleTitle' placeholder=''
+                        onChange={(e) => this.onChangeArticleTitle(e.target.value)}
+                        value={this.state.article.title}/>
+                    </FormGroup>           
                 </Col>
                 <div className='edit-article-container'>
                     <FormGroup className='left-column'>
@@ -130,7 +165,7 @@ class CoalitionEdit extends Component {
                             <FormGroup className='edit-featured-image'> Featured Image
                                 <Input type="file" accept='image/*' className="image-uploader"
                                 onChange={async (e) => {
-                                    const uploadState = await this.uploadImageCallBack(e)
+                                    const uploadState = await this.uploadCoalitionImageCallBack(e)
                                     if(uploadState.success) {
                                         this.setState({
                                             hasFeaturedImage: true,
@@ -146,6 +181,27 @@ class CoalitionEdit extends Component {
                                 {
                                     this.state.hasFeaturedImage ?
                                         <img src={this.state.article.featuredImage} /> : ''
+                                }</div>
+                            </FormGroup>
+                            <FormGroup className='edit-coalition-image'> Coalition Image
+                                <Input type="file" accept='image/*' className="image-uploader"
+                                onChange={async (e) => {
+                                    const uploadState = await this.uploadCoalitionImageCallBack(e)
+                                    if(uploadState.success) {
+                                        this.setState({
+                                            hasCoalitionImage: true,
+                                            article: {
+                                                ...this.state.article,
+                                                coalitionImage: uploadState.data.link
+                                            }
+                                        })
+                                    }
+                                }}> 
+                                </Input>
+                                <div className='coalition-image'>
+                                {
+                                    this.state.hasCoalitionImage ?
+                                        <img src={this.state.article.coalitionImage} /> : ''
                                 }</div>
                             </FormGroup>
                 </Col>

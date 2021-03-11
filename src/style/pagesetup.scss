@@ -182,6 +182,10 @@
     position: absolute;
     bottom: 0;
     left: 0;
+    height: 25%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
   }
 }
 
@@ -191,10 +195,8 @@
   background-color: white;
   -webkit-box-shadow: -8px 11px 10px 5px rgba(0,0,0,0.09); 
 box-shadow: -8px 11px 10px 5px rgba(0,0,0,0.09);
-overflow: scroll;
 display: grid;
 grid-template-columns: 10% 1fr 10%;
-height: 86vh;
 }
 
 
@@ -246,12 +248,17 @@ height: 86vh;
   grid-column: 2;
   display: flex;
   justify-content: center;
-  height: 50%;
-  width: 75%;
+}
+
+.WhoWeArePageImg img {
+  width: 60%;
+  display: flex;
+  justify-content: center;
 }
 
 .DatabasePage {
   grid-column: 2/3;
+  height:max-content;
 }
 
 .help-page-content {
@@ -271,7 +278,7 @@ height: 86vh;
   grid-column: 1;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  background-color: #f8f8ff;
+  background-color: #f8f8f8;
 }
 
 .help-background {
@@ -284,6 +291,10 @@ height: 86vh;
 
 .help-background img {
   max-height: 900px;
+}
+
+.fixed-buttons {
+  position: fixed;
 }
 
 .request-form-heading {

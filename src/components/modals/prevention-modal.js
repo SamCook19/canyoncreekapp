@@ -57,7 +57,7 @@ export default function SimpleModal() {
         open={open}
         onClose={handleClose}
       >
-    <div className='HelpEdit'>
+    <div className='PreventionEdit'>
     <PreventionEdit />
     </div>
       </Modal>

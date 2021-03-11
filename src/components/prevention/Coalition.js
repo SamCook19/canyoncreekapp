@@ -3,13 +3,13 @@ import NavigationComponent from '../navigation/NavigationBar';
 import PageLogo from '../logo/pagelogo';
 import ButtonsComponent from '../buttons/buttons-component';
 import * as firebase from 'firebase';
-import PreventionContent from './preventioncontent';
-import PreventionBackground from './preventionbackground';
-import SimpleModal from '../modals/prevention-modal'
+import CoalitionContent from './coalitioncontent';
+import CoalitionBackground from './coalitionbackground';
+import SimpleModal from '../modals/coalition-modal'
 
 const db = firebase.default.firestore()
 
-class Prevention extends Component {
+class Coalition extends Component {
     constructor(props) {
         super(props);
         this.state={
@@ -24,7 +24,7 @@ class Prevention extends Component {
     
       getMyArticles = () => {
         db
-        .collection( 'Prevention' )
+        .collection( 'Coalition' )
         .get()
         .then(docs => {
           if(!docs.empty){
@@ -61,21 +61,21 @@ class Prevention extends Component {
             <div className='navbar'>  <NavigationComponent /> </div>
             </div>
             <div className='page-heading'>
-               <h1 className='PreventionHeader'> <span style={{color: "#F16022", fontFamily: "Roboto"}}> Prevent</span> Violence</h1>
+               <h1 className='CoalitionHeader'> <span style={{color: "#F16022", fontFamily: "Roboto"}}> Prevent</span> Violence</h1>
            </div>
                 </div>
-                <div className='prevention-page-content'>
-                <div className='prevention-buttons-component'>
+                <div className='coalition-page-content'>
+                <div className='coalition-buttons-component'>
                     <ButtonsComponent />
                     <SimpleModal />
                 </div>
 
-                    <div className='prevention-info'> 
+                    <div className='coalition-info'> 
                     {
                       this.state.isLoaded ?
                         this.state.articles.map((article, index) => {
                           return(
-                          <PreventionContent className='PreventionContent'
+                          <CoalitionContent className='CoalitionContent'
                             key={index}
                             data={article}
                           />
@@ -84,12 +84,12 @@ class Prevention extends Component {
                         : '' 
                       }
                 </div>
-                <div className='prevention-background'> 
+                <div className='coalition-background'> 
                     {
                       this.state.isLoaded ?
                         this.state.articles.map((article, index) => {
                           return(
-                          <PreventionBackground className='PreventionBackground'
+                          <CoalitionBackground className='CoalitionBackground'
                             key={index}
                             data={article}
                           />
@@ -104,4 +104,4 @@ class Prevention extends Component {
     }
 }
 
-export default Prevention;
+export default Coalition;

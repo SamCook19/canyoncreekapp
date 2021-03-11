@@ -67,9 +67,11 @@ class WhoWeAre extends Component {
                 </div>
                 <div className='page-content'>
                 <div className='buttons-component'>
+                  <div className='fixed-buttons'>
                     <ButtonsComponent />
                     <div className='edit-modal'>
                       <SimpleModal />
+                    </div>
                     </div>
                     <div className='social-media-icons-aboutus'>
                 <a className='facebook-icon' href='https://www.facebook.com/CCreekServices/'>
