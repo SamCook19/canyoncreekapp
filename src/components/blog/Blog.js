@@ -72,7 +72,10 @@ class Blog extends Component {
                 
                 <div className='page-content'>
                 <ButtonsComponentBlog />
-                
+                <div className='spiral-article-container'>
+                <div className='spiral-notebook'>
+                  <img src="/assets/images/SpiralNotebook.png"></img>
+                </div>
                   <div className='article-container'>
                     {
                       this.state.isLoaded ?
@@ -88,7 +91,7 @@ class Blog extends Component {
                         : '' 
                       }
                   </div>
-                
+                </div>
                 </div>
             </div>
     );
