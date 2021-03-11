@@ -43,7 +43,7 @@
        */
        .submenu-container-about {
         
-          height: 400px;
+          height: 340px;
           min-width: $submenu-width;
           position: absolute;
           overflow: hidden;
@@ -370,4 +370,9 @@ grid-template-columns: 10% 1fr 10%;
 .BottomStatBackground {
   background-color: white;
   max-width: 200px;
+}
+
+.ApplyButton {
+  display: flex;
+  justify-content: center;
 }
