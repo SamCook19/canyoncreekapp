@@ -1,19 +1,28 @@
+.social-media-container {
+    display: flex;
+    justify-content: center;
+}
+
 .social-media-icons {
-    height: 50%;
+    display: flex;
+    justify-content: space-evenly;
+    width: 40%;
+    height: fit-content;
 }
 
 .facebook-icon img {
-    height: 120px;
+    width: 60px;
 }
 
+
 .linkedin-icon img {
-    height: 120px;
+    width: 60px;
 }
 
 .twitter-icon img {
-    height: 120px;
+    width: 60px;
 }
 
 .instagram-icon img {
-    height: 120px;
+    width: 60px;
 }
