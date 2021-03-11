@@ -54,7 +54,9 @@ class Blog extends Component {
   render() {
     return (
       <div className='page-container'>
-            <div className='header'>
+            <div className='header' style = {{
+              marginBottom: "15px"
+            }}>
                 <div className='left-side-header'>
                 <div className='page-logo'> <PageLogo /> </div>
             </div>
@@ -68,13 +70,14 @@ class Blog extends Component {
            
                 </div>
                 
-                <div className='blog-page-content'>
+                <div className='page-content'>
                 <ButtonsComponentBlog />
                 
                   <div className='article-container'>
                     {
                       this.state.isLoaded ?
-                        this.state.articles.map((article, index) => {
+                        this.state.articles.sort((a,b) => new Date(a.date).getTime() - new Date(b.date).getTime()
+                        ).map((article, index) => {
                           return(
                           <ArticleCard className='article-card'
                             key={index}

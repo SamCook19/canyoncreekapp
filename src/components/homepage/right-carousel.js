@@ -12,10 +12,12 @@ function ControlledCarousel() {
 
     return (
       <Carousel activeIndex={index} onSelect={handleSelect} indicators>
-        <Carousel.Item className='first-carousel'>
+        <Carousel.Item>
         <Carousel.Caption>
+          <div className="carousel-caption">
             <h3>First slide label</h3>
             <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+            </div>
           </Carousel.Caption>
           <img
             className="d-block w-100"

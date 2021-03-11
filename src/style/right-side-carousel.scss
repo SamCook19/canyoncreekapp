@@ -1,2 +1,14 @@
 
 @import "~bootstrap/scss/bootstrap";
+
+.carousel-control-next-icon {
+    background-image: url("../../static/assets/images/next.png")!important;
+    height: 100px;
+    width: 100px;
+}
+
+.carousel-control-prev-icon {
+    background-image: url("../../static/assets/images/prev.png")!important;
+    height: 100px;
+    width: 100px;
+}

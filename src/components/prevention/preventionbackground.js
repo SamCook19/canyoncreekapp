@@ -23,6 +23,7 @@ const PreventionBackground = (props) => {
             {parse(props.data.bottomStatistic)}  
             </div>
             </div>
+            
         </div>
     );
 }

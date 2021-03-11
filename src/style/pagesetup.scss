@@ -340,15 +340,23 @@ height: 86vh;
 
 .PreventionStats {
   position: relative;
-  width: fit-content;
-  background-color: white;
   grid-column: 2;
-  height: fit-content;
   grid-row: 1;
+  font-size: 22px;
 }
 
 .prevention-info {
   width: 100vw;
   display: grid;
   grid-template-columns: 20% 1fr 20%;
+}
+
+.TopStatBackground {
+  background-color: white;
+  max-width: 200px;
+}
+
+.BottomStatBackground {
+  background-color: white;
+  max-width: 200px;
 }

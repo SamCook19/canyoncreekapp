@@ -132,7 +132,7 @@ class HelpEdit extends Component {
                             modules={this.modules}
                             formats={this.formats}
                         />
-
+                            <h2 className='TopStatistic'>Change Top Statistic</h2>
                         <ReactQuill className='edit-quill-topstat'
                             ref0={(el) => this.quill = el}
                             valueTop={this.state.article.content}
@@ -175,6 +175,7 @@ class HelpEdit extends Component {
                                     this.state.hasFeaturedImage ?
                                         <img src={this.state.article.featuredImage} /> : ''
                                 }</div>
+                                <h2 className='TopStatistic'>Change Bottom Statistic</h2>
                                 <ReactQuill className='edit-quill-bottomstat'
                             ref0={(el) => this.quill = el}
                             valueBottom={this.state.article.content}
