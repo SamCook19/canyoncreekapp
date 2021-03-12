@@ -199,6 +199,9 @@ display: grid;
 grid-template-columns: 10% 1fr 10%;
 }
 
+.spiral-notebook {
+  box-shadow: -12px 50px 15px 5px rgba(0, 0, 0, 0.09) ;
+}
 
 .PageTitleContent {
   grid-column: 2/3;
@@ -315,6 +318,25 @@ grid-template-columns: 10% 1fr 10%;
   grid-column: 1/3;
   display: flex;
   justify-content: center;
+}
+
+.coalition-page-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+
+.coalition-background {
+  grid-column: 1/3;
+  grid-row: 1/2;
+}
+
+.coalition-buttons-component {
+  grid-row: 1;
+  grid-column: 1;
+  position: fixed;
+  height: fit-content;
+  width: fit-content;
 }
 
 .prevention-page-content {

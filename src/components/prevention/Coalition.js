@@ -70,7 +70,7 @@ class Coalition extends Component {
                     <SimpleModal />
                 </div>
 
-                    <div className='coalition-info'> 
+                    <div className='prevention-info'> 
                     {
                       this.state.isLoaded ?
                         this.state.articles.map((article, index) => {
