@@ -16,10 +16,13 @@ class BoardCardEdit extends Component {
             article: {
                 boardname: "",
                 boardSubtitle: "",
-                featuredImage: ''
+                featuredImage: '',
             }
         }
+
+
     }
+
 
     modules = {
         toolbar: {
@@ -59,7 +62,7 @@ class BoardCardEdit extends Component {
     onChangeCardSub = (value) => {
         this.setState({
             article: {
-                ...this.state.article,
+                ...this.state.boardSubtitle,
                 boardSubtitle: value
             }
         })
@@ -68,17 +71,19 @@ class BoardCardEdit extends Component {
     onChangeCardName = (value) => {
         this.setState({
             article: {
-                ...this.state.article,
+                ...this.state.boardname,
                 boardname: value
             }
         })
     }
 
 
-    submitEdit = (aid) => {
+    submitEdit = () => {
         const article = this.state.article
         db.collection("OrganizationalLeadershipBD")
-        .doc(aid)
+        .doc(
+            "4neqoSqF4EHMtWFJzeHU"
+            )
             .update(
                 article
                 )
@@ -114,18 +119,21 @@ class BoardCardEdit extends Component {
                 <h2 className='SectionTitle'>Edit Card</h2>
                     <FormGroup className='TitleForm'>
                         <Label className='TitleLabel'>
-                            <span style={{color: "white"}}>Title</span>
+                            <span style={{color: "white"}}>Name</span>
                         </Label>
                         <input type ='text' className='editArticleTitle' placeholder=''
                         onChange={(e) => this.onChangeCardName(e.target.value)}
-                        value={this.state.article.title}/>
+                        value={this.state.article.boardname}/>
                     </FormGroup>            
                 </Col>
                 <div className='edit-article-container'>
                     <FormGroup className='left-column'>
+                        <Label className='BoardSubtitle'>
+                            <span style={{color:"white"}}>Subtitle</span>
+                        </Label>
                         <ReactQuill className='edit-quill'
                             ref0={(el) => this.quill = el}
-                            value={this.state.article.content}
+                            value={this.state.article.boardSubtitle}
                             onChange={(e) => this.onChangeCardSub(e)}
                             theme='snow'
                             modules={this.modules}

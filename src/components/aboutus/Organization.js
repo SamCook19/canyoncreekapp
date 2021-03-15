@@ -54,6 +54,10 @@ class Organization extends Component {
         })
       }
 
+      handleEditBDSubmission() {
+        this.getMyBDCards();
+      }
+
       getMyBDCards = () => {
         db
         .collection( 'OrganizationalLeadershipBD' )
@@ -157,7 +161,7 @@ class Organization extends Component {
                           return(
                             <div className='BoardofDirectorsContainer'>
                           <div className='organizationcards'>
-                          <BoardCard className='BDCards'  
+                          <BoardCard className='BDCards' 
                           key={index}
                           data={bdcards}/>
                           </div>

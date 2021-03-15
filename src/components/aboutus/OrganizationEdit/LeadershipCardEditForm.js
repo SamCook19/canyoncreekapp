@@ -8,7 +8,7 @@ import { v4 as uuidv4 } from 'uuid'
 const db = firebase.default.firestore()
 const storageRef = firebase.storage()
 
-class BoardCardEdit extends Component {
+class LeadershipCardEdit extends Component {
     constructor(props) {
         super(props);
         
@@ -174,4 +174,4 @@ class BoardCardEdit extends Component {
     }
 }
 
-export default BoardCardEdit;
+export default LeadershipCardEdit;

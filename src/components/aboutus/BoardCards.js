@@ -1,14 +1,24 @@
-import React from 'react';
+import React, { Component } from 'react';
+import { render } from 'react-dom';
 import { CardImg } from 'reactstrap';
+import BoardCardModal from './OrganizationEdit/BoardCardModal';
 
-const BoardCard = (props) => {
+class BoardCard extends Component {
+    constructor(props) {
+        super(props);
+
+    }
+    
+    
+
+    render() {
         return (
             <div className = "LeadershipCardContainer">
                 <div className="LeadershipCardImg">
                 <CardImg
                 top
                 width="300px"
-                src={props.data.featuredImage}
+                src={this.props.data.featuredImage}
                 alt="Card Image"
                 className="CardImage"
                 />
@@ -16,12 +26,15 @@ const BoardCard = (props) => {
                 <div className = "LeadershipCardBody">
                     
                     <div className="LeadershipTeamName">
-                    {props.data.boardname}
+                    {this.props.data.boardname}
                     </div>
                     <div className="LeadershipCardSubtitle">
                         <div className="ArticleLabel">
-                            {props.data.boardSubtitle}
+                            {this.props.data.boardSubtitle}
                         </div>
+                    </div>
+                    <div className="BoardCardEdit">
+                        <BoardCardModal />
                     </div>
                     
                     <div className='spacer'></div>
@@ -35,5 +48,6 @@ const BoardCard = (props) => {
 
         );
     }
+}
 
 export default BoardCard;
