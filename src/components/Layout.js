@@ -23,6 +23,7 @@ import ViewArticle from "./blog/ViewArticle/ViewArticle";
 import NewArticle from "./blog/NewArticle/NewArticle";
 import Logout from "./otherpages/logout";
 import PrivateRoute from './PrivateRoute';
+import DonationFormPage from './donate/DonationFormPage';
 
 export default class Layout extends Component {
   
@@ -41,6 +42,7 @@ export default class Layout extends Component {
             <Route exact path="/help" component={Help}/>
             <Route exact path="/prevention" component={Prevention}/>
             <Route exact path="/donate" component={Donate}/>
+            <Route exact path="/donationform" component={DonationFormPage}/>
             <Route exact path="/volunteer" component={Volunteer}/>
             <Route exact path="/annualreport" component={AnnualReport}/>
             <Route exact path="/blog" component={Blog}/>

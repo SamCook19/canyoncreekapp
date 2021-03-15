@@ -5,7 +5,7 @@ import HotlineButton from '../buttons/hotline';
 import PageLogo from '../logo/pagelogo';
 import DonationForm from './donationform';
 
-class Donate extends Component {
+class DonationFormPage extends Component {
     render() {
         return (
             <div className='page-container'>
@@ -21,11 +21,11 @@ class Donate extends Component {
            
                 </div>
                 <div className='page-content-donate'>
-                
+                <DonationForm />
                 </div>
             </div>
         );
     }
 }
 
-export default Donate;
+export default DonationFormPage;

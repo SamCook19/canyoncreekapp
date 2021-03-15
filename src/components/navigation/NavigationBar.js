@@ -67,7 +67,7 @@ class DonateSubmenu extends React.Component {
           </NavLink>
         </div>
         <div className="nav__submenu-item ">
-        <NavLink to="/donate" activeClassName="nav-link-active">
+        <NavLink to="/donationform" activeClassName="nav-link-active">
            Donation Form
           </NavLink>
         </div>
@@ -137,8 +137,8 @@ class Menu extends React.Component {
             className="nav__menu-item"
             onMouseLeave={this.handleLeave}
           >
-            <a onMouseEnter={this.handleHover}>
-              Donate</a>
+            <NavLink to="/donate"  onMouseEnter={this.handleHover}>
+              Donate </NavLink>
               <div className="submenu-container">
               <CSSTransitionGroup
                 transitionName="slide"
