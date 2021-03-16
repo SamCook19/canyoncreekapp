@@ -406,13 +406,20 @@ grid-template-columns: 10% 1fr 10%;
   .DonateLeftColumn {
     grid-row: 1;
     grid-column: 1/2;
+    height: 100%;
+  }
+
+  .DonateLeftColumn img {
+    height: 85.5vh;
   }
 
   .DonateRightColumn {
     grid-column: 2/3;
+    font-size: 28px;
   }
 }
 
 .DonateContainer {
   background-color: white;
+  height: 85.5vh;
 }
