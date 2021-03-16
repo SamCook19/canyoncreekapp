@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Quotes from './quotes';
 
 class LeftColumn extends Component {
     render() {
@@ -6,7 +7,7 @@ class LeftColumn extends Component {
         return (
             <div className='left-column'>
                <div className='quote-slide-show'>
-                Cycling quotes 
+                    <Quotes />
                 </div>
                 <div className='social-media-container'>
                 <div className='social-media-icons'>
