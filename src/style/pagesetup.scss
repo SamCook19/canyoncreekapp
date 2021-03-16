@@ -398,3 +398,21 @@ grid-template-columns: 10% 1fr 10%;
   display: flex;
   justify-content: center;
 }
+
+.DatabasePage__Donate {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  .DonateLeftColumn {
+    grid-row: 1;
+    grid-column: 1/2;
+  }
+
+  .DonateRightColumn {
+    grid-column: 2/3;
+  }
+}
+
+.DonateContainer {
+  background-color: white;
+}

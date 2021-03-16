@@ -8,21 +8,19 @@ import { v4 as uuidv4 } from 'uuid'
 const db = firebase.default.firestore()
 const storageRef = firebase.storage()
 
-class BoardCardEdit extends Component {
+class DonateEdit extends Component {
     constructor(props) {
         super(props);
         
         this.state={
             article: {
-                boardname: "",
-                boardSubtitle: "",
-                featuredImage: '',
+                title: "",
+                contentTop: "",
+                featuredImage: "",
+                contentBottom: ""
             }
         }
-
-
     }
-
 
     modules = {
         toolbar: {
@@ -59,20 +57,29 @@ class BoardCardEdit extends Component {
         'code-block'
     ]
 
-    onChangeCardSub = (value) => {
+    onChangeArticleTitle = (value) => {
         this.setState({
             article: {
-                ...this.state.boardSubtitle,
-                boardSubtitle: value
+                ...this.state.article,
+                title: value
             }
         })
     }
 
-    onChangeCardName = (value) => {
+    onChangeTopContent = (value) => {
         this.setState({
             article: {
-                ...this.state.boardname,
-                boardname: value
+                ...this.state.article,
+                contentTop: value
+            }
+        })
+    }
+
+    onChangeBottomContent = (value) => {
+        this.setState({
+            article: {
+                ...this.state.article,
+                contentBottom: value
             }
         })
     }
@@ -80,10 +87,7 @@ class BoardCardEdit extends Component {
 
     submitEdit = () => {
         const article = this.state.article
-        db.collection("OrganizationalLeadershipBD")
-        .doc(
-            `${id}`
-            )
+        db.collection("Donate").doc("O7mGnOee7pVK6ONcJ33R")
             .update(
                 article
                 )
@@ -97,10 +101,10 @@ class BoardCardEdit extends Component {
         return new Promise(async(resolve, reject) => {
             const file = e.target.files[0]
             const fileName = uuidv4()
-            storageRef.ref().child("Board/" + fileName).put(file)
+            storageRef.ref().child("Donate/" + fileName).put(file)
             .then( async snapshot => {
                 
-                const downloadURL = await storageRef.ref().child("Board/" +fileName).getDownloadURL()
+                const downloadURL = await storageRef.ref().child("Donate/" +fileName).getDownloadURL()
 
                 resolve({
                     success: true,
@@ -116,33 +120,37 @@ class BoardCardEdit extends Component {
             <Container>
             <Row>
                 <Col >
-                <h2 className='SectionTitle'>Edit Card</h2>
+                    <h2 className='SectionTitle'>Edit Page</h2>
                     <FormGroup className='TitleForm'>
                         <Label className='TitleLabel'>
-                            <span style={{color: "white"}}>Name</span>
+                            <span style={{color: "white"}}>Middle Title</span>
                         </Label>
                         <input type ='text' className='editArticleTitle' placeholder=''
-                        onChange={(e) => this.onChangeCardName(e.target.value)}
-                        value={this.state.article.boardname}/>
-                    </FormGroup>            
+                        onChange={(e) => this.onChangeArticleTitle(e.target.value)}
+                        value={this.state.article.title}/>
+                    </FormGroup>
+                   
                 </Col>
                 <div className='edit-article-container'>
-                    <FormGroup className='left-column'>
-                        <Label className='BoardSubtitle'>
-                            <span style={{color:"white"}}>Subtitle</span>
-                        </Label>
+                    <FormGroup className='left-column'> Change Top and Bottom Content
                         <ReactQuill className='edit-quill'
-                            ref0={(el) => this.quill = el}
-                            value={this.state.article.boardSubtitle}
-                            onChange={(e) => this.onChangeCardSub(e)}
+                            ref={(el) => this.quill = el}
+                            value={this.state.article.contentTop}
+                            onChange={(e) => this.onChangeTopContent(e)}
                             theme='snow'
                             modules={this.modules}
                             formats={this.formats}
                         />
-                        
 
-                        
-                        
+                            <ReactQuill className='edit-quill'
+                            ref={(el) => this.quill = el}
+                            value={this.state.article.contentBottom}
+                            onChange={(e) => this.onChangeBottomContent(e)}
+                            theme='snow'
+                            modules={this.modules}
+                            formats={this.formats}
+                        />
+
                         <FormGroup className='edit-status-button'>
                                 <Button className='edit-submit'
                                 onClick={(e) => this.submitEdit()}>
@@ -182,4 +190,4 @@ class BoardCardEdit extends Component {
     }
 }
 
-export default BoardCardEdit;
+export default DonateEdit;

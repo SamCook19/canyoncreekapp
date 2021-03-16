@@ -2,7 +2,7 @@ import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Modal from '@material-ui/core/Modal';
 import { useAuth } from '../../contexts/AuthContext';
-import EmploymentOppEdit from './employmentopp-edit';
+import DonateEdit from './donate-edit';
 
 function rand() {
   return Math.round(Math.random() * 20) - 10;
@@ -57,8 +57,8 @@ export default function SimpleModal() {
         open={open}
         onClose={handleClose}
       >
-    <div className='WhoWeAreEdit'>
-    <EmploymentOppEdit />
+    <div className='DonateEdit'>
+    <DonateEdit />
     </div>
       </Modal>
     </div> ) : null
