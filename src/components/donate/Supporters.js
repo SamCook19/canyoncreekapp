@@ -1,32 +1,97 @@
 import React, { Component } from 'react';
 import NavigationComponent from '../navigation/NavigationBar';
-import EscapeButton from '../buttons/escapebutton';
-import HotlineButton from '../buttons/hotline';
 import PageLogo from '../logo/pagelogo';
+import ButtonsComponent from '../buttons/buttons-component';
+import * as firebase from 'firebase';
+import SupportersContent from './SupportersContent';
+import SimpleModal from '../modals/supporters-modal';
 
+const db = firebase.default.firestore()
 
 class Supporters extends Component {
+    constructor(props) {
+        super(props);
+        this.state={
+            isLoaded: false,
+            articles: []
+        }
+      }
+    
+      componentDidMount() {
+        this.getMyArticles()
+      }
+    
+      getMyArticles = () => {
+        db
+        .collection( 'OurSupporters' )
+        .get()
+        .then(docs => {
+          if(!docs.empty){
+            let allArticles = []
+            docs.forEach(function (doc) {
+              const article = {
+                id: doc.id,
+                ...doc.data()
+              }
+    
+              allArticles.push(article)
+            })
+    
+            this.setState({
+              articles: allArticles
+            }, () => {
+              this.setState ({
+                isLoaded: true
+              })
+            })
+          }
+        })
+      }
+    
     render() {
         return (
         <div className='page-container'>
             <div className='header'>
                 <div className='left-side-header'>
                 <div className='page-logo'> <PageLogo /> </div>
-                <div className='escape-button'> <EscapeButton /> </div>
-                <div className='hotline-button'> <HotlineButton /></div>
+                
             </div>
             <div className='right-side-header'>
             <div className='navbar'>  <NavigationComponent /> </div>
             </div>
-           
+           <div className='page-heading'>
+               <h1 className='DonateHeader'><span style={{color: "#00A6A8", fontFamily: "Roboto"}}> Donate </span></h1>
+           </div>
                 </div>
                 <div className='page-content'>
-                <h1>page content</h1>
+                <div className='buttons-component'>
+                    <ButtonsComponent />
+                    <div className='edit-modal'>
+                      <SimpleModal />
+                    </div>
+                </div>
+                
+                    
+                    <div className='DonateContainer'> 
+                    
+                    <div className='DonateSpacer'></div>
+                    {
+                      this.state.isLoaded ?
+                        this.state.articles.map((article, index) => {
+                          return(
+                          <SupportersContent className='SupportersContent'
+                            key={index}
+                            data={article}
+                          />
+                          )
+                        })
+                        : '' 
+                      }
                 </div>
             </div>
-                
-        );
+            </div>
+        )
     }
 }
 
-export default Supporters;
+export default Supporters
