@@ -17,6 +17,7 @@ class Organization extends Component {
             articles: [],
             cards: [],
             BDCards: [],
+            cardToEdit: {}
 
         }
       }
@@ -52,10 +53,6 @@ class Organization extends Component {
             })
           }
         })
-      }
-
-      handleEditBDSubmission() {
-        this.getMyBDCards();
       }
 
       getMyBDCards = () => {

@@ -14,6 +14,14 @@ const LeadershipCard = (props) => {
                 style={{width:300, height: 300, borderRadius: 300/ 2}}
                 />
                 </div>
+
+                <div className = "test-button">
+                    <a className="button__test"  onClick={(e) => {
+                        console.log(props.data.id)
+                    }}>
+                    test for id
+            </a>
+                </div>
                 <div className = "LeadershipCardBody">
                     
                     <div className="LeadershipTeamName">

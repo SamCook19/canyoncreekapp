@@ -6,6 +6,7 @@ import parse from 'html-react-parser';
 const OrganizationContent = (props) => {
         return (
             <div className ="DatabasePage">
+
                 <div className = "PageTitleContent">
                     
                     <CardTitle className="PageTitle">

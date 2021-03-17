@@ -16,7 +16,7 @@ class BoardCardEdit extends Component {
             article: {
                 boardname: "",
                 boardSubtitle: "",
-                featuredImage: '',
+                featuredImage: "",
             }
         }
 
@@ -82,7 +82,7 @@ class BoardCardEdit extends Component {
         const article = this.state.article
         db.collection("OrganizationalLeadershipBD")
         .doc(
-            `${id}`
+            `${this.props.data.id}`
             )
             .update(
                 article

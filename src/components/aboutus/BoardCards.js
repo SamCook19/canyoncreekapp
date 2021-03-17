@@ -1,15 +1,16 @@
 import React, { Component } from 'react';
 import { render } from 'react-dom';
 import { CardImg } from 'reactstrap';
-import BoardCardModal from './OrganizationEdit/BoardCardModal';
+import SimpleModal from './OrganizationEdit/BoardCardModal';
+import * as firebase from 'firebase';
+
+const db = firebase.default.firestore()
 
 class BoardCard extends Component {
     constructor(props) {
         super(props);
-
     }
-    
-    
+
 
     render() {
         return (
@@ -34,7 +35,7 @@ class BoardCard extends Component {
                         </div>
                     </div>
                     <div className="BoardCardEdit">
-                        <BoardCardModal />
+                   <SimpleModal data={this.props.data} />
                     </div>
                     
                     <div className='spacer'></div>
