@@ -24,6 +24,7 @@ import NewArticle from "./blog/NewArticle/NewArticle";
 import Logout from "./otherpages/logout";
 import PrivateRoute from './PrivateRoute';
 import DonationFormPage from './donate/DonationFormPage';
+import BoardCardEdit from '../components/aboutus/OrganizationEdit/BoardCardEditForm';
 
 export default class Layout extends Component {
   
@@ -55,6 +56,7 @@ export default class Layout extends Component {
             <Route exact path="/contact" component={Contact}/>
             <Route path='/article/:id'> <ViewArticle/> </Route>
             <PrivateRoute path='/newarticle' component={NewArticle}/>
+            <PrivateRoute path ='/boardcardeditor' component={BoardCardEdit} />
             <PrivateRoute path='/logout' component={Logout}/>
             <Route component={NoMatch} />
           </Switch>

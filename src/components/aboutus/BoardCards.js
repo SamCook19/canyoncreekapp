@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-import { render } from 'react-dom';
 import { CardImg } from 'reactstrap';
 import SimpleModal from './OrganizationEdit/BoardCardModal';
 import * as firebase from 'firebase';
+import parse from 'html-react-parser';
 
 const db = firebase.default.firestore()
 
@@ -27,11 +27,11 @@ class BoardCard extends Component {
                 <div className = "LeadershipCardBody">
                     
                     <div className="LeadershipTeamName">
-                    {this.props.data.boardname}
+                    {parse(this.props.data.boardname)}
                     </div>
                     <div className="LeadershipCardSubtitle">
                         <div className="ArticleLabel">
-                            {this.props.data.boardSubtitle}
+                            {parse(this.props.data.boardSubtitle)}
                         </div>
                     </div>
                     <div className="BoardCardEdit">

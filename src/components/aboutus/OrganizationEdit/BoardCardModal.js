@@ -4,10 +4,13 @@ import Modal from '@material-ui/core/Modal';
 import { useAuth } from '../../../contexts/AuthContext';
 import BoardCardEdit from './BoardCardEditForm';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import BoardCard from '../BoardCards';
 
 function rand() {
   return Math.round(Math.random() * 20) - 10;
 }
+
+
 
 function getModalStyle() {
   const top = 50 + rand();
@@ -20,6 +23,7 @@ function getModalStyle() {
   };
 }
 
+
 const useStyles = makeStyles((theme) => ({
   paper: {
     position: 'absolute',
@@ -31,7 +35,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function SimpleModal(props) {
+export default function SimpleModal (props)  {
 
 
 
@@ -39,8 +43,6 @@ export default function SimpleModal(props) {
   // getModalStyle is not a pure function, we roll the style only on the first render
   const [modalStyle] = React.useState(getModalStyle);
   const [open, setOpen] = React.useState(false);
-  
-
   const handleOpen = () => {
     setOpen(true);
   };
@@ -59,9 +61,11 @@ export default function SimpleModal(props) {
       </button>
       <Modal
         open={open}
-        onClose={handleClose}>
+        onClose={handleClose}
+        >
     <div className='WhoWeAreEdit'>
-    <BoardCardEdit data={this.props.data}/>
+    <BoardCardEdit data={props.data}
+    />
     </div>
       </Modal>
     </div> ) : null

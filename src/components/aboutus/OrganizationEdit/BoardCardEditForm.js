@@ -59,6 +59,15 @@ class BoardCardEdit extends Component {
         'code-block'
     ]
 
+    onChangeCardName = (value) => {
+        this.setState({
+            article: {
+                ...this.state.boardname,
+                boardname: value
+            }
+        })
+    }
+
     onChangeCardSub = (value) => {
         this.setState({
             article: {
@@ -68,14 +77,7 @@ class BoardCardEdit extends Component {
         })
     }
 
-    onChangeCardName = (value) => {
-        this.setState({
-            article: {
-                ...this.state.boardname,
-                boardname: value
-            }
-        })
-    }
+   
 
 
     submitEdit = () => {
@@ -117,14 +119,14 @@ class BoardCardEdit extends Component {
             <Row>
                 <Col >
                 <h2 className='SectionTitle'>Edit Card</h2>
-                    <FormGroup className='TitleForm'>
+                <FormGroup className='TitleForm'>
                         <Label className='TitleLabel'>
-                            <span style={{color: "white"}}>Name</span>
+                            <span style={{color: "white"}}>Middle Title</span>
                         </Label>
                         <input type ='text' className='editArticleTitle' placeholder=''
                         onChange={(e) => this.onChangeCardName(e.target.value)}
                         value={this.state.article.boardname}/>
-                    </FormGroup>            
+                    </FormGroup>      
                 </Col>
                 <div className='edit-article-container'>
                     <FormGroup className='left-column'>
