@@ -26,6 +26,7 @@ class Blog extends Component {
   getMyArticles = () => {
     db
     .collection( 'Articles' )
+    .orderBy("createDate", "desc")
     .get()
     .then(docs => {
       if(!docs.empty){
@@ -79,7 +80,7 @@ class Blog extends Component {
                   <div className='article-container'>
                     {
                       this.state.isLoaded ?
-                        this.state.articles.sort((a,b) => new Date(a.date).getTime() - new Date(b.date).getTime()
+                        this.state.articles.sort((a,b) => new Date(a.createDate).getTime() - new Date(b.createDate).getTime()
                         ).map((article, index) => {
                           return(
                           <ArticleCard className='article-card'
