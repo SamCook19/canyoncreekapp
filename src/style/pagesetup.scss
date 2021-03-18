@@ -423,3 +423,22 @@ grid-template-columns: 10% 1fr 10%;
   background-color: white;
   height: 85.5vh;
 }
+
+.LeadershipCardImg {
+  display: flex;
+  justify-content: center;
+}
+
+.LeadershipCardBody {
+  display: grid;
+  justify-content: center;
+  font-size: 24px;
+}
+
+.buttons-component__organization {
+  display: fixed;
+}
+
+.BDHeading {
+  margin-top: 18px;
+}

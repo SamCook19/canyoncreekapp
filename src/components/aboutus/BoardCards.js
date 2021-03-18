@@ -18,7 +18,7 @@ class BoardCard extends Component {
                 <div className="LeadershipCardImg">
                 <CardImg
                 top
-                width="300px"
+                style={{width: 150, height: 150, borderRadius: 150/ 2}}
                 src={this.props.data.featuredImage}
                 alt="Card Image"
                 className="CardImage"

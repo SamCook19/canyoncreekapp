@@ -125,7 +125,7 @@ class Organization extends Component {
            </div>
                 </div>
                 <div className='page-content'>
-                <div className='buttons-component'>
+                <div className='buttons-component__organization'>
                     <ButtonsComponent />
                 </div>
 
