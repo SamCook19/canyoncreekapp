@@ -14,9 +14,9 @@ class LeadershipCardEdit extends Component {
         
         this.state={
             article: {
-                leadershipteamname: "",
                 leadershipSubtitle: "",
-                featuredImage: ''
+                leadershipteamname: "",
+                featuredImage: ""
             }
         }
     }
@@ -56,16 +56,7 @@ class LeadershipCardEdit extends Component {
         'code-block'
     ]
 
-    onChangeCardSub = (value) => {
-        this.setState({
-            article: {
-                ...this.state.article,
-                leaedershipSubtitle: value
-            }
-        })
-    }
-
-    onChangeCardName = (value) => {
+    onChangeName = (value) => {
         this.setState({
             article: {
                 ...this.state.article,
@@ -74,11 +65,19 @@ class LeadershipCardEdit extends Component {
         })
     }
 
+    onChangeSubtitle = (value) => {
+        this.setState({
+            article: {
+                ...this.state.article,
+                leadershipSubtitle: value
+            }
+        })
+    }
 
-    submitEdit = (aid) => {
+
+    submitEdit = () => {
         const article = this.state.article
-        db.collection("OrganizationalLeadership")
-        .doc(aid)
+        db.collection("OrganizationalLeadership").doc(`${this.props.data.id}`)
             .update(
                 article
                 )
@@ -111,30 +110,28 @@ class LeadershipCardEdit extends Component {
             <Container>
             <Row>
                 <Col >
-                <h2 className='SectionTitle'>Edit Card</h2>
+                    <h2 className='SectionTitle'>Edit Card</h2>
                     <FormGroup className='TitleForm'>
                         <Label className='TitleLabel'>
-                            <span style={{color: "white"}}>Title</span>
+                            <span style={{color: "white"}}>Change Name</span>
                         </Label>
                         <input type ='text' className='editArticleTitle' placeholder=''
-                        onChange={(e) => this.onChangeCardName(e.target.value)}
-                        value={this.state.article.title}/>
-                    </FormGroup>            
+                        onChange={(e) => this.onChangeName(e.target.value)}
+                        value={this.state.article.leadershipteamname}/>
+                    </FormGroup>
+                   
                 </Col>
                 <div className='edit-article-container'>
-                    <FormGroup className='left-column'>
+                    <FormGroup className='left-column'>  Change Subtitle
                         <ReactQuill className='edit-quill'
-                            ref0={(el) => this.quill = el}
-                            value={this.state.article.content}
-                            onChange={(e) => this.onChangeCardSub(e)}
+                            ref={(el) => this.quill = el}
+                            value={this.state.article.leadershipSubtitle}
+                            onChange={(e) => this.onChangeSubtitle(e)}
                             theme='snow'
                             modules={this.modules}
                             formats={this.formats}
                         />
-                        
 
-                        
-                        
                         <FormGroup className='edit-status-button'>
                                 <Button className='edit-submit'
                                 onClick={(e) => this.submitEdit()}>

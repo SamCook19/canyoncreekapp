@@ -1,5 +1,6 @@
 import React from 'react';
 import { CardImg } from 'reactstrap';
+import LeadershipCardModal from './OrganizationEdit/LeadershipCardModal';
 
 const LeadershipCard = (props) => {
         return (
@@ -14,14 +15,6 @@ const LeadershipCard = (props) => {
                 style={{width:300, height: 300, borderRadius: 300/ 2}}
                 />
                 </div>
-
-                <div className = "test-button">
-                    <a className="button__test"  onClick={(e) => {
-                        console.log(props.data.id)
-                    }}>
-                    test for id
-            </a>
-                </div>
                 <div className = "LeadershipCardBody">
                     
                     <div className="LeadershipTeamName">
@@ -32,8 +25,11 @@ const LeadershipCard = (props) => {
                             {props.data.leadershipSubtitle}
                         </div>
                     </div>
+
+                    <div className="LeadershipCardEdit">
+                   <LeadershipCardModal data={props.data} />
+                    </div>
                     
-                    <div className='spacer'></div>
                     
                 </div>   
                   

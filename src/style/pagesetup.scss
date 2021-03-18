@@ -293,7 +293,7 @@ grid-template-columns: 10% 1fr 10%;
 }
 
 .help-background img {
-  max-height: 900px;
+  max-height: 865px;
 }
 
 .fixed-buttons {
@@ -435,8 +435,18 @@ grid-template-columns: 10% 1fr 10%;
   font-size: 24px;
 }
 
+.LeadershipTeamName {
+  display: flex;
+  justify-content: center;
+}
+
+.LeadershipCardSubtitle {
+  display: flex;
+  justify-content: center;
+}
+
 .buttons-component__organization {
-  display: fixed;
+  position: fixed;
 }
 
 .BDHeading {

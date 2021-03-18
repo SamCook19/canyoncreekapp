@@ -1,13 +1,15 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Modal from '@material-ui/core/Modal';
-import { useAuth } from '../../contexts/AuthContext';
-import LeadershipCardEdit from './employmentopp-edit';
+import { useAuth } from '../../../contexts/AuthContext';
+import LeadershipCardEdit from './LeadershipCardEditForm';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 function rand() {
   return Math.round(Math.random() * 20) - 10;
 }
+
+
 
 function getModalStyle() {
   const top = 50 + rand();
@@ -20,6 +22,7 @@ function getModalStyle() {
   };
 }
 
+
 const useStyles = makeStyles((theme) => ({
   paper: {
     position: 'absolute',
@@ -31,12 +34,14 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function SimpleModal() {
+export default function LeadershipCardModal (props)  {
+
+
+
   const classes = useStyles();
   // getModalStyle is not a pure function, we roll the style only on the first render
   const [modalStyle] = React.useState(getModalStyle);
   const [open, setOpen] = React.useState(false);
-
   const handleOpen = () => {
     setOpen(true);
   };
@@ -44,7 +49,6 @@ export default function SimpleModal() {
   const handleClose = () => {
     setOpen(false);
   };
-
 
   const { currentUser } = useAuth();
 
@@ -57,9 +61,10 @@ export default function SimpleModal() {
       <Modal
         open={open}
         onClose={handleClose}
-      >
-    <div className='LeadershipEdit'>
-    <LeadershipCardEdit />
+        >
+    <div className='WhoWeAreEdit'>
+    <LeadershipCardEdit data={props.data}
+    />
     </div>
       </Modal>
     </div> ) : null

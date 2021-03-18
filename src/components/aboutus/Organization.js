@@ -148,7 +148,7 @@ class Organization extends Component {
                       }
                       <div className='organizational-spacer'></div>
                       <div className='BDHeading'>
-                          <p>Board of Directors</p>
+                          <h4>Board of Directors</h4>
                         </div>
                         <div className='BoardOfDirectorsCardsContainer'>
                         
@@ -170,7 +170,7 @@ class Organization extends Component {
                       </div>
 
                       <div className='LeadershipTeamHeading'>
-                          <p>Leadership Team</p>
+                          <h4>Leadership Team</h4>
                         </div>
                       <div className='LeadershipCardsContainer'>
                         
