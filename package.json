@@ -53,6 +53,7 @@
     "copy-webpack-plugin": "^4.5.2",
     "cross-env": "^5.2.0",
     "css-loader": "^1.0.0",
+    "dotenv": "^6.2.0",
     "draftjs-to-html": "^0.9.1",
     "dropzone": "^5.7.2",
     "emailjs-com": "^2.6.4",

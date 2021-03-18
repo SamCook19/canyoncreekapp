@@ -113,26 +113,7 @@ class Menu extends React.Component {
                 { this.state.showAboutMenu && <AboutUsSubmenu /> }
               </CSSTransitionGroup>
             </div>
-          </div>
-          <NavLink to="/help" activeClassName="nav-link-active" className='HelpForSurvivorsLink'>
-            Help for Survivors
-          </NavLink>
-          <div
-            className="nav__menu-item"
-            onMouseLeave={this.handleLeave}
-          >
-            <a onMouseEnter={this.handleHover}>
-              Prevent Violence</a>
-              <div className="submenu-container">
-              <CSSTransitionGroup
-                transitionName="slide"
-                transitionEnterTimeout={300}
-                transitionLeaveTimeout={300}
-              >
-                { this.state.showAboutMenu && <PreventSubmenu /> }
-              </CSSTransitionGroup>
-            </div>
-          </div>
+          </div> 
           <div
             className="nav__menu-item"
             onMouseLeave={this.handleLeave}
@@ -149,6 +130,26 @@ class Menu extends React.Component {
               </CSSTransitionGroup>
             </div>
           </div>
+          
+          <div
+            className="nav__menu-item"
+            onMouseLeave={this.handleLeave}
+          >
+            <a onMouseEnter={this.handleHover}>
+              Prevent Violence</a>
+              <div className="submenu-container">
+              <CSSTransitionGroup
+                transitionName="slide"
+                transitionEnterTimeout={300}
+                transitionLeaveTimeout={300}
+              >
+                { this.state.showAboutMenu && <PreventSubmenu /> }
+              </CSSTransitionGroup>
+            </div>
+          </div>
+          <NavLink to="/help" activeClassName="nav-link-active" className='HelpForSurvivorsLink'>
+            Help for Survivors
+          </NavLink>
           
           <div className="nav__menu-item">
           <NavLink to="/volunteer" activeClassName="nav-link-active">

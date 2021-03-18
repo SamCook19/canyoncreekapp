@@ -233,3 +233,28 @@ width: 100%;
   justify-content: center;
   align-items: center;
 }
+
+.quote-container {
+  font-size: 25px;
+  height: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  color: lightslategray;
+    .first-quote {
+      grid-column: 2/5;
+      grid-row: 1;
+    }
+    .second-quote {
+      grid-column: 3/6;
+      grid-row: 2;
+    }
+
+    .third-quote {
+      grid-column: 2/5;
+      grid-row: 3;
+    }
+
+
+
+}

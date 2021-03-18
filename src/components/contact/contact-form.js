@@ -1,14 +1,21 @@
-import React from "react";
-import { useForm } from "react-hook-form";
+import React from 'react';
+import { useForm } from 'react-hook-form';
+import emailjs from 'emailjs-com';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.min.css';
 
-const ContactForm = () => {
-  const { register, errors, handleSubmit, reset } = useForm();
+export default function ContactForm() { 
 
-  const onSubmit = async (data) => {
-    console.log('Name: ', data.name);
-    console.log('Email: ', data.email);
-    console.log('Subject: ', data.subject);
-    console.log('Message: ', data.message);
+  function sendEmail(e) {
+    e.preventDefault();
+
+    emailjs.sendForm('service_513nv6e', 'template_t241g0h', e.target, 'user_VfVWKG6WCJ4vDEdQkClCo')
+      .then((result) => {
+          console.log(result.text);
+      }, (error) => {
+          console.log(error.text);
+      });
+      e.target.reset()
   }
 
 
@@ -18,35 +25,24 @@ const ContactForm = () => {
         <div className='row'>
           <div className='col-12 text-center'>
             <div className='contactForm'>
-              <form id='contact-form' onSubmit={handleSubmit(onSubmit)} noValidate>
+              <form id='contact-form' onSubmit={sendEmail}>
                 {/* Row 1 of form */}
                 <div className='row formRow'>
                   <div className='col-6'>
                     <input
                       type='text'
                       name='name'
-                      ref={register({
-                        required: { value:true,message: 'Please enter your name'},
-                      })}
                       className='form-control formInput'
                       placeholder='Name'
                     ></input>
-                     {errors.name && <span className='errorMessage'>{errors.name.message}</span>}
                   </div>
                   <div className='col-6'>
                     <input
                       type='email'
                       name='email'
-                      ref={register({
-                        required: true,
-                        pattern: /^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/
-                      })}
                       className='form-control formInput'
                       placeholder='Email address'
                     ></input>
-                    {errors.email && (
-                      <span className='errorMessage'>Please enter a valid email address</span>
-                    )}
                   </div>
                 </div>
                 {/* Row 2 of form */}
@@ -58,6 +54,7 @@ const ContactForm = () => {
                       className='form-control formInput'
                       placeholder='Subject'
                     ></input>
+                    
                   </div>
                 </div>
                 {/* Row 3 of form */}
@@ -71,16 +68,17 @@ const ContactForm = () => {
                     ></textarea>
                   </div>
                 </div>
+                <div className='submit-contact'>
                 <button className='submit-btn' type='submit'>
                   Submit
                 </button>
+                </div>
               </form>
             </div>
+            <ToastContainer />
           </div>
         </div>
       </div>
     </div>
   );
 };
-
-export default ContactForm;
