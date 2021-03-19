@@ -4,10 +4,11 @@ import PageLogo from '../logo/pagelogo';
 import ButtonsComponent from '../buttons/buttons-component';
 import * as firebase from 'firebase';
 import VolunteerModal from './VolunteerModal';
-import VolunteerSignin from './VolunteerSignin';
+import VolunteerSigninModal from './VolunteerSigninModal';
+import VolunteerContent from './VolunteerContent';
+import VolunteerEditModal from '../modals/volunteer-edit-modal';
 
-
-// const db = firebase.default.firestore()
+const db = firebase.default.firestore()
 
 
 class Volunteer extends Component {
@@ -19,36 +20,36 @@ class Volunteer extends Component {
         }
       }
     
-    //   componentDidMount() {
-    //     this.getMyVolunteer()
-    //   }
+      componentDidMount() {
+        this.getMyVolunteer()
+      }
     
-    //   getMyVolunteer = () => {
-    //     db
-    //     .collection( 'Volunteer' )
-    //     .get()
-    //     .then(docs => {
-    //       if(!docs.empty){
-    //         let allArticles = []
-    //         docs.forEach(function (doc) {
-    //           const article = {
-    //             id: doc.id,
-    //             ...doc.data()
-    //           }
+      getMyVolunteer = () => {
+        db
+        .collection( 'Volunteer' )
+        .get()
+        .then(docs => {
+          if(!docs.empty){
+            let allArticles = []
+            docs.forEach(function (doc) {
+              const article = {
+                id: doc.id,
+                ...doc.data()
+              }
     
-    //           allArticles.push(article)
-    //         })
+              allArticles.push(article)
+            })
     
-    //         this.setState({
-    //           articles: allArticles
-    //         }, () => {
-    //           this.setState ({
-    //             isLoaded: true
-    //           })
-    //         })
-    //       }
-    //     })
-    //   }
+            this.setState({
+              articles: allArticles
+            }, () => {
+              this.setState ({
+                isLoaded: true
+              })
+            })
+          }
+        })
+      }
     
       render() {
         return (
@@ -62,7 +63,7 @@ class Volunteer extends Component {
             
             </div>
             <div className='page-heading'>
-               <h1 className='AboutUsHeader'> <span style={{color: "#00A6A8", fontFamily: "Roboto"}}> Volunteer </span></h1>
+               <h1 className='AboutUsHeader'> <span style={{color: "rgb(102, 45, 145)", fontFamily: "Roboto"}}> Volunteer </span></h1>
            </div>
                 </div>
                 <div className='page-content'>
@@ -70,7 +71,7 @@ class Volunteer extends Component {
                   <div className='fixed-buttons'>
                     <ButtonsComponent />
                     <div className='edit-modal'>
-                      
+                      <VolunteerEditModal />
                     </div>
                     </div>
                     <div className='social-media-icons-page'>
@@ -91,24 +92,24 @@ class Volunteer extends Component {
                 
 
                     <div className='page-info'> 
-                    {/* <div className='whowearespacer'></div>
+                    <div className='whowearespacer'></div>
                     {
                       this.state.isLoaded ?
                         this.state.articles.map((article, index) => {
                           return(
-                          <WhoWeAreContent className='whoweare'
+                          <VolunteerContent className='volunteer'
                             key={index}
                             data={article}
                           />
                           )
                         })
                         : '' 
-                      } */}
+                      }
                       <div className='signup-modal'>
                           <VolunteerModal />
                       </div>
                       <div className='volunteer-signin'>
-                          <VolunteerSignin />
+                          <VolunteerSigninModal />
                       </div>
                 </div>
                 
