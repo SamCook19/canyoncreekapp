@@ -185,8 +185,18 @@
     height: 25%;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: flex-end;
   }
+}
+
+.social-media-icons-volunteer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  height: 25%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
 }
 
 
@@ -197,6 +207,7 @@
 box-shadow: -8px 11px 10px 5px rgba(0,0,0,0.09);
 display: grid;
 grid-template-columns: 10% 1fr 10%;
+
 }
 
 .spiral-notebook {
@@ -466,3 +477,80 @@ grid-template-columns: 10% 1fr 10%;
     height: 200px;
   }
 }
+
+.volunteer-page-content {
+  height: 84.5vh;
+}
+
+.volunteer-page-info {
+  height: 84.5vh;
+}
+
+.TopVolunteerContent {
+  font-size: 24px;
+}
+
+.BottomVolunteerContent {
+  font-size: 24px;
+  background-color: white;
+}
+
+.VolunteerPageImg {
+  max-height: 400px;
+}
+
+.VolunteerPageImg img {
+  max-height: 400px;
+}
+
+.VolunteerDatabasePage {
+  height: 93%;
+  grid-column: 1/4;
+  display: grid;
+  grid-template-columns: 15% 1fr 15%;
+  grid-template-rows: 20% 1fr 41%;
+}
+
+.VolunteerContent {
+  grid-column: 2/3;
+  background-color: white;
+  box-shadow: -8px 11px 10px 5px rgba(0,0,0,0.09);
+}
+
+.VolunteerPageImg {
+  grid-column: 1/4;
+  grid-row: 2;
+}
+
+.BottomVolunteerContent {
+  grid-column: 2/3;
+  background-color: white;
+  box-shadow: -8px 11px 10px 5px rgba(0,0,0,0.09);
+}
+
+.signup-modal {
+  position: absolute;
+  right: 40%;
+  bottom: 50%;
+}
+
+.signup-button {
+  font-size: 30px;
+  width: 400px;
+  height: 80px;
+  background-color: white;
+  border: none;
+}
+
+.volunteer-signin {
+  display: flex;
+  justify-content: center;
+}
+
+.signin-button {
+  font-size: 20px;
+    border: none;
+    width: 100px;
+}
+
+

@@ -66,7 +66,7 @@ class Volunteer extends Component {
                <h1 className='AboutUsHeader'> <span style={{color: "rgb(102, 45, 145)", fontFamily: "Roboto"}}> Volunteer </span></h1>
            </div>
                 </div>
-                <div className='page-content'>
+                <div className='volunteer-page-content'>
                 <div className='buttons-component'>
                   <div className='fixed-buttons'>
                     <ButtonsComponent />
@@ -74,7 +74,7 @@ class Volunteer extends Component {
                       <VolunteerEditModal />
                     </div>
                     </div>
-                    <div className='social-media-icons-page'>
+                    <div className='social-media-icons-volunteer'>
                 <a className='facebook-icon' href='https://www.facebook.com/CCreekServices/'>
                 <img  alt="ccs facebook" src="/assets/images/facebook.png"/>
                 </a>
@@ -91,8 +91,8 @@ class Volunteer extends Component {
                 </div>
                 
 
-                    <div className='page-info'> 
-                    <div className='whowearespacer'></div>
+                    <div className='volunteer-page-info'> 
+                    
                     {
                       this.state.isLoaded ?
                         this.state.articles.map((article, index) => {
@@ -105,9 +105,7 @@ class Volunteer extends Component {
                         })
                         : '' 
                       }
-                      <div className='signup-modal'>
-                          <VolunteerModal />
-                      </div>
+                      
                       <div className='volunteer-signin'>
                           <VolunteerSigninModal />
                       </div>

@@ -35,8 +35,8 @@ const useStyles = makeStyles((theme) => ({
   
     return (
       <div>
-        <button type="button" onClick={handleOpen}>
-          Sign Up to Volunteer!
+        <button type="button" onClick={handleOpen} className='signin-button'>
+          Sign In
         </button>
         <Modal
           aria-labelledby="transition-modal-title"
