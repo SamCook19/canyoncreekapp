@@ -1,5 +1,6 @@
 import React from 'react';
 import { CardImg, CardTitle } from 'reactstrap';
+import AnnualReportPDFReader from './AnnualReportPDFReader';
 
 
 
@@ -22,7 +23,7 @@ const AnnualReportContent = (props) => {
                     {props.data.employmentapplication}
                 </div>
                 <div className="AnnualReportLink">
-                    {props.data.annualreport}
+                    <AnnualReportPDFReader />
                 </div>
                 </div>  
                 </div>
