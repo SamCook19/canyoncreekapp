@@ -456,3 +456,13 @@ grid-template-columns: 10% 1fr 10%;
 .submit-contact {
   display: flex;
 }
+
+.contact-page-content {
+  margin-top: 25px;
+}
+
+.contactForm {
+  .message-area {
+    height: 200px;
+  }
+}

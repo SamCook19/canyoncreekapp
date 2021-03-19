@@ -60,7 +60,7 @@ export default function ContactForm() {
                 {/* Row 3 of form */}
                 <div className='row formRow'>
                   <div className='col'>
-                    <textarea
+                    <textarea className='message-area'
                       rows={3}
                       name='message'
                       className='form-control formInput'
