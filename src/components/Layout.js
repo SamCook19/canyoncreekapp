@@ -3,7 +3,6 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 import { AuthProvider } from "../contexts/AuthContext"
 import Homepage from './homepage/homepage.js';
-import AboutUs from './aboutus/AboutUs';
 import Donate from './donate/Donate';
 import Help from './help/Help';
 import Volunteer from './volunteer/Volunteer';
@@ -39,7 +38,6 @@ export default class Layout extends Component {
             <Route exact path="/" component={Homepage}/>
             <Route exact path="/home" component={Homepage}/>
             <Route exact path='/login' component={Login}/>
-            <Route exact path="/about" component={AboutUs}/>
             <Route exact path="/help" component={Help}/>
             <Route exact path="/prevention" component={Prevention}/>
             <Route exact path="/donate" component={Donate}/>

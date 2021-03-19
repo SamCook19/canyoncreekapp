@@ -73,7 +73,7 @@ class WhoWeAre extends Component {
                       <SimpleModal />
                     </div>
                     </div>
-                    <div className='social-media-icons-aboutus'>
+                    <div className='social-media-icons-page'>
                 <a className='facebook-icon' href='https://www.facebook.com/CCreekServices/'>
                 <img  alt="ccs facebook" src="/assets/images/facebook.png"/>
                 </a>

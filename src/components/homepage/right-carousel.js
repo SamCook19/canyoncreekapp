@@ -25,7 +25,7 @@ function ControlledCarousel() {
             alt="First slide"
             style = {{
                 maxHeight: 450,
-                height: 960,
+                height: 450,
                 width:300
             }}
           />
@@ -38,8 +38,8 @@ function ControlledCarousel() {
             alt="Second slide"
             style = {{
                 maxHeight: 450,
-                height: 960,
-                width:300
+                height: 450,
+                width: 100
             }}
           />
   
@@ -55,8 +55,8 @@ function ControlledCarousel() {
             alt="Third slide"
             style = {{
                 maxHeight: 450,
-                height: 960,
-                width:300
+                height: 450,
+                width:100
             }}
           />
   
