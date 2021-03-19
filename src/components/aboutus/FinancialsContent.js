@@ -1,6 +1,7 @@
 import React from 'react';
 import { CardImg, CardTitle } from 'reactstrap';
 import parse from 'html-react-parser';
+import FinancialsPDFReader from './FinancialsPDFReader';
 
 
 const FinancialsContent = (props) => {
@@ -22,13 +23,9 @@ const FinancialsContent = (props) => {
                 <div className = "FinancialsYearHeading">
                     {props.data.financialyear}    
                 </div>
-                <CardImg
-                top
-                width="300px"
-                src={props.data.featuredImage}
-                alt="Card Image"
-                className="CardImage"
-                />
+                <div className='FinancialsPDFReader'>
+                    <FinancialsPDFReader />
+                </div>
                 </div>  
                 </div>
         );
