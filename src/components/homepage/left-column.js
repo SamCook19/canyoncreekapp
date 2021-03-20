@@ -11,9 +11,8 @@ class LeftColumn extends Component {
                     <Quotes />
                 </div>
                 <div className='social-media-container'>
-                <div className='social-media-icons'>
+                
                     <HomepageSocialMedia />
-                </div>
                 </div>
             </div>
         );

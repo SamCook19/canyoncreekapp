@@ -5,7 +5,8 @@ import ButtonsComponent from '../buttons/buttons-component';
 import * as firebase from 'firebase';
 import PreventionContent from './preventioncontent';
 import PreventionBackground from './preventionbackground';
-import SimpleModal from '../modals/prevention-modal'
+import SimpleModal from '../modals/prevention-modal';
+import PageSocialMedia from '../pagesocialmedia';
 
 const db = firebase.default.firestore()
 
@@ -69,7 +70,9 @@ class Prevention extends Component {
                     <ButtonsComponent />
                     <SimpleModal />
                 </div>
-
+                <div className='social-media-icons-page'>
+               <PageSocialMedia />
+                </div>
                     <div className='prevention-info'> 
                     {
                       this.state.isLoaded ?

@@ -6,7 +6,7 @@ import PageLogo from '../logo/pagelogo';
 import ArticleCard from "./ArticleCard";
 import * as firebase from 'firebase';
 import ButtonsComponentBlog from '../buttons/buttons-component-blog';
-
+import PageSocialMedia from '../pagesocialmedia';
 
 const db = firebase.default.firestore()
 
@@ -72,7 +72,14 @@ class Blog extends Component {
                 </div>
                 
                 <div className='page-content'>
-                <ButtonsComponentBlog />
+                <div className='buttons-component'>
+                  <div className='fixed-buttons'>
+                    <ButtonsComponentBlog />
+                    </div>
+                    <div className='social-media-icons-page'>
+               <PageSocialMedia />
+                </div>
+                </div>
                 <div className='spiral-article-container'>
                 <div className='spiral-notebook'>
                   <img src="/assets/images/SpiralNotebook.png"></img>

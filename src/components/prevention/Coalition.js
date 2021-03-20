@@ -5,7 +5,8 @@ import ButtonsComponent from '../buttons/buttons-component';
 import * as firebase from 'firebase';
 import CoalitionContent from './coalitioncontent';
 import CoalitionBackground from './coalitionbackground';
-import SimpleModal from '../modals/coalition-modal'
+import SimpleModal from '../modals/coalition-modal';
+import PageSocialMedia from '../pagesocialmedia';
 
 const db = firebase.default.firestore()
 
@@ -68,9 +69,13 @@ class Coalition extends Component {
                 <div className='coalition-buttons-component'>
                     <ButtonsComponent />
                     <SimpleModal />
+                    
                 </div>
-
+                <div className='social-media-icons-page'>
+               <PageSocialMedia />
+                </div>
                     <div className='prevention-info'> 
+                  
                     {
                       this.state.isLoaded ?
                         this.state.articles.map((article, index) => {

@@ -6,12 +6,14 @@
 .social-media-icons {
     display: flex;
     justify-content: space-evenly;
-    width: 50%;
+    width: 45%;
     height: fit-content;
 }
 
 
-
+.facebook-icon img {
+    width: 200px;
+}
 
 .linkedin-icon img {
     width: 200px;

@@ -180,25 +180,41 @@
   position: relative;
   .social-media-icons-page {
     position: absolute;
+    height: 500px;
+    width: 150px;
     bottom: 0;
     left: 0;
-    height: 25%;
     display: flex;
     flex-direction: column;
-    justify-content: flex-end;
+    justify-content: flex-end
   }
+
+  .facebook-main-page {
+    width: 170px;
+  }
+  .instagram-main-page {
+    width: 170px;
+  }
+  .twitter-main-page {
+    width: 170px;
+  }
+  .linkedin-main-page {
+    width: 170px;
+  }
+
 }
 
-.social-media-icons-volunteer {
-  position: fixed;
+.social-media-icons-page {
+  position: absolute;
+  height: 500px;
+  width: 150px;
   bottom: 0;
   left: 0;
-  height: 25%;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
+  z-index: 5;
 }
-
 
 .page-info {
   grid-column: 2/3;

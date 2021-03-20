@@ -5,6 +5,7 @@ import ButtonsComponent from '../buttons/buttons-component';
 import * as firebase from 'firebase';
 import DonateContent from './DonateContent';
 import SimpleModal from '../modals/donate-modal';
+import PageSocialMedia from '../pagesocialmedia';
 
 const db = firebase.default.firestore()
 
@@ -69,6 +70,9 @@ class Donate extends Component {
                     <div className='edit-modal'>
                       <SimpleModal />
                     </div>
+                    <div className='social-media-icons-page'>
+               <PageSocialMedia />
+                </div>
                 </div>
                 
                     

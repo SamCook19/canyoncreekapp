@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-class HomepageSocialMedia extends Component {
+class PageSocialMedia extends Component {
     state = {
         facebook: "/assets/images/facebook.png",
         instagram: "/assets/images/instagram.png",
@@ -11,10 +11,10 @@ class HomepageSocialMedia extends Component {
     render() {
         
         return (
-            <div className='social-media-icons'>
-                <div className='facebook-home'>
-                <a className='facebook-icon' href='https://www.facebook.com/CCreekServices/'>
-                <img class='facebook-main' alt="ccs facebook" src={this.state.facebook} onMouseEnter={() => {
+            <div className='social-media-icons-page'>
+                <div className='facebook-page'>
+                <a className='facebook-icon-page' href='https://www.facebook.com/CCreekServices/'>
+                <img class='facebook-main-page' alt="ccs facebook" src={this.state.facebook} onMouseEnter={() => {
                     this.setState({
                         facebook:"/assets/images/facebookalt.png"
                     })
@@ -28,9 +28,9 @@ class HomepageSocialMedia extends Component {
                 />
                 </a>
                 </div>
-                <div className='instagram-home'>
-                <a className='instagram-icon' href='https://www.instagram.com/ccreekservices/?hl=en'>
-                <img class='instagram-main' alt="ccs instagram" src={this.state.instagram} onMouseEnter={() => {
+                <div className='instagram-page'>
+                <a className='instagram-icon-page' href='https://www.instagram.com/ccreekservices/?hl=en'>
+                <img class='instagram-main-page' alt="ccs instagram" src={this.state.instagram} onMouseEnter={() => {
                     this.setState({
                         instagram:"/assets/images/instagramalt.png"
                     })
@@ -45,9 +45,9 @@ class HomepageSocialMedia extends Component {
                 </a>
                 </div>
 
-                <div className='linkedin-home'>
-                <a className='linkedin-icon' href='https://www.linkedin.com/company/canyon-creek-services/'>
-                <img class='linkedin-main' alt="ccs linkedin" src={this.state.linkedin} onMouseEnter={() => {
+                <div className='linkedin-page'>
+                <a className='linkedin-icon-page' href='https://www.linkedin.com/company/canyon-creek-services/'>
+                <img class='linkedin-main-page' alt="ccs linkedin" src={this.state.linkedin} onMouseEnter={() => {
                     this.setState({
                         linkedin:"/assets/images/linkedinalt.png"
                     })
@@ -62,9 +62,9 @@ class HomepageSocialMedia extends Component {
                 </a>
                 </div>
 
-                <div className='twitter-home'>
-                <a className='twitter-icon' href='https://twitter.com/ccreekservices?lang=en'>
-                <img class='twitter-main' alt="ccs twitter" src={this.state.twitter} onMouseEnter={() => {
+                <div className='twitter-page'>
+                <a className='twitter-icon-page' href='https://twitter.com/ccreekservices?lang=en'>
+                <img class='twitter-main-page' alt="ccs twitter" src={this.state.twitter} onMouseEnter={() => {
                     this.setState({
                         twitter:"/assets/images/twitteralt.png"
                     })
@@ -84,4 +84,4 @@ class HomepageSocialMedia extends Component {
     }
 }
 
-export default HomepageSocialMedia;
+export default PageSocialMedia;
