@@ -1,18 +1,30 @@
 
 @import "~bootstrap/scss/bootstrap";
 
+.right-column {
+    height: 100%;
+}
+
 .carousel-control-next-icon {
     background-image: url("../../static/assets/images/next.png")!important;
-    height: 100px;
-    width: 100px;
+    height: 200px;
+    width: 300px;
 }
 
 .carousel-control-prev-icon {
     background-image: url("../../static/assets/images/prev.png")!important;
-    height: 100px;
-    width: 100px;
+    height: 200px;
+    width: 300px;
 }
 
-ol.carousel-indicators {
-    color: orange;
+.right-side-carousel {
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr 70% 1fr;
+    grid-template-rows: 1fr 70% 1fr;
+}
+
+.carousel-inner {
+    grid-column: 2/3;
+    grid-row: 2;
 }
