@@ -405,18 +405,19 @@ grid-template-columns: 10% 1fr 10%;
 
 .TopStatBackground {
   background-color: white;
-  max-width: 200px;
+  max-width: 300px;
+  margin-top: 75px;
 }
 
 .BottomStatBackground {
+  margin-top: 75px;
+    display: flex;
+    justify-content: center;
   background-color: white;
   max-width: 200px;
 }
 
-.ApplyButton {
-  display: flex;
-  justify-content: center;
-}
+
 
 .DatabasePage__Donate {
   display: grid;

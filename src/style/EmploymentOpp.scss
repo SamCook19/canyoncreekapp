@@ -1,7 +1,6 @@
 .EmploymentOppApplication {
-    color: black;
-    text-decoration: none;
-    font-size: 25px;
+    display: flex;
+    justify-content: center;
 }
 
 .edit-modal {
@@ -17,3 +16,16 @@
 .PageImgApplication {
     margin-top: 50px;
 }
+
+.ApplyButton {
+    display: flex;
+    justify-content: center;
+    background: url("../../static/assets/images/ApplyButton.png") no-repeat;
+    width: 300px;
+    height: 100px;
+  }
+
+  .ApplyButton:hover {
+      transition: ease-in-out 0.5s;
+      background: url("../../static/assets/images/ApplyButtonAlt.png") no-repeat
+  }

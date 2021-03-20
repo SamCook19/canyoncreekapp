@@ -14,10 +14,10 @@ function ControlledCarousel() {
       <Carousel activeIndex={index} onSelect={handleSelect} indicators className='right-side-carousel'>
         <Carousel.Item>
         <Carousel.Caption className='carousel-caption'>
-          <div className="carousel-caption">
+          
             <h3>First slide label</h3>
             <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-            </div>
+            
           </Carousel.Caption >
           <img
             className="d-block w-100 carouselimg"

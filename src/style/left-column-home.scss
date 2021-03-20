@@ -14,6 +14,19 @@
     width: 75px;
 }
 
+.facebook-icon{
+    width: 130px;
+    height: 195px;
+    display: inline-block;
+    background:url("../../static/assets/images/facebook.png") no-repeat
+}
+
+.facebook-icon:hover {
+    width: 130px;
+    height: 195px;
+    background:url("../../static/assets/images/facebookalt.png")
+}
+
 
 .linkedin-icon img {
     width: 75px;

@@ -13,7 +13,7 @@ class LeftColumn extends Component {
                 <div className='social-media-icons'>
                 <div className='facebook-home'>
                 <a className='facebook-icon' href='https://www.facebook.com/CCreekServices/'>
-                <img  alt="ccs facebook" src="/assets/images/facebook.png"/>
+        
                 </a>
                 </div>
                 <div className='instagram-home'>
