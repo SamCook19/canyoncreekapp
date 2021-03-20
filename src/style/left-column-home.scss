@@ -6,38 +6,23 @@
 .social-media-icons {
     display: flex;
     justify-content: space-evenly;
-    width: 40%;
+    width: 50%;
     height: fit-content;
 }
 
-.facebook-icon img {
-    width: 75px;
-}
 
-.facebook-icon{
-    width: 130px;
-    height: 195px;
-    display: inline-block;
-    background:url("../../static/assets/images/facebook.png") no-repeat
-}
-
-.facebook-icon:hover {
-    width: 130px;
-    height: 195px;
-    background:url("../../static/assets/images/facebookalt.png")
-}
 
 
 .linkedin-icon img {
-    width: 75px;
+    width: 200px;
 }
 
 .twitter-icon img {
-    width: 75px;
+    width: 200px;
 }
 
 .instagram-icon img {
-    width: 75px;
+    width: 200px;
 }
 
 .quote-slide-show {
