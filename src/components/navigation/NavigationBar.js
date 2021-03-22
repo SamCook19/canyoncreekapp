@@ -1,10 +1,8 @@
 import React from "react";
-import { withRouter } from "react-router";
 import { NavLink } from "react-router-dom";
-import { CSSTransitionGroup } from 'react-transition-group'
-import ContactButton from '../buttons/contactbutton';
-import Nav from 'react-bootstrap/Nav';
-import { Navbar, NavDropdown } from 'react-bootstrap/Navbar';
+import { CSSTransitionGroup } from 'react-transition-group';
+import MediaQuery from 'react-responsive';
+
 
 class AboutUsSubmenu extends React.Component {
   render() {
@@ -96,9 +94,11 @@ class Menu extends React.Component {
   render() {
     return (
       
+        
       <nav className="nav">
         <ul className="nav__menu">
-          <div
+          <MediaQuery maxWidth={1900} minWidth={1500}>
+          <div 
             className="nav__menu-item"
             onMouseLeave={this.handleLeave}
           >
@@ -113,7 +113,9 @@ class Menu extends React.Component {
                 { this.state.showAboutMenu && <AboutUsSubmenu /> }
               </CSSTransitionGroup>
             </div>
+            
           </div> 
+          
           <div
             className="nav__menu-item"
             onMouseLeave={this.handleLeave}
@@ -147,9 +149,11 @@ class Menu extends React.Component {
               </CSSTransitionGroup>
             </div>
           </div>
+          <div className='nav__menu-item'>
           <NavLink to="/help" activeClassName="nav-link-active" className='HelpForSurvivorsLink'>
             Help for Survivors
           </NavLink>
+          </div>
           
           <div className="nav__menu-item">
           <NavLink to="/volunteer" activeClassName="nav-link-active">
@@ -159,20 +163,88 @@ class Menu extends React.Component {
           <div className="nav__menu-item">
          
           </div>
-          
-          {/* <div className="blog-link">
-          <NavLink to="/blog" activeClassName="nav-link-active">
-            Blog
-          </NavLink>
-          </div> */}
-          
+        
+        </MediaQuery>  
         </ul>
+
+        <ul className="nav__menu-medium">
+          <MediaQuery maxWidth={1499} minWidth={900}>
+          <div 
+            className="nav__menu-item-medium"
+            onMouseLeave={this.handleLeave}
+          >
+            <a onMouseEnter={this.handleHover}>
+              About Us</a>
+            <div className="submenu-container-about-medium">
+              <CSSTransitionGroup
+                transitionName="slide"
+                transitionEnterTimeout={300}
+                transitionLeaveTimeout={300}
+              >
+                { this.state.showAboutMenu && <AboutUsSubmenu /> }
+              </CSSTransitionGroup>
+            </div>
+            
+          </div> 
+          
+          <div
+            className="nav__menu-item-medium"
+            onMouseLeave={this.handleLeave}
+          >
+            <NavLink to="/donate"  onMouseEnter={this.handleHover}>
+              Donate </NavLink>
+              <div className="submenu-container-medium">
+              <CSSTransitionGroup
+                transitionName="slide"
+                transitionEnterTimeout={300}
+                transitionLeaveTimeout={300}
+              >
+                { this.state.showAboutMenu && <DonateSubmenu /> }
+              </CSSTransitionGroup>
+            </div>
+          </div>
+          
+          <div
+            className="nav__menu-item-medium"
+            onMouseLeave={this.handleLeave}
+          >
+            <a onMouseEnter={this.handleHover}>
+              Prevent Violence</a>
+              <div className="submenu-container-medium">
+              <CSSTransitionGroup
+                transitionName="slide"
+                transitionEnterTimeout={300}
+                transitionLeaveTimeout={300}
+              >
+                { this.state.showAboutMenu && <PreventSubmenu /> }
+              </CSSTransitionGroup>
+            </div>
+          </div>
+          <div className='nav__menu-item-medium'>
+          <NavLink to="/help" activeClassName="nav-link-active" className='HelpForSurvivorsLink'>
+            Help for Survivors
+          </NavLink>
+          </div>
+          
+          <div className="nav__menu-item-medium">
+          <NavLink to="/volunteer" activeClassName="nav-link-active">
+            Volunteer
+          </NavLink>
+          </div>
+          <div className="nav__menu-item-medium">
+         
+          </div>
+        
+        </MediaQuery>  
+        </ul>
+        
         <div className="blog-link">
           <NavLink to="/blog" activeClassName="nav-link-active">
             Blog
           </NavLink>
           </div>
       </nav>
+      
 
     )
   }

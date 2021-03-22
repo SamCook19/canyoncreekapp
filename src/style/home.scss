@@ -97,6 +97,8 @@ width: 100%;
   text-transform: none;
   width: 100%;
 }
+
+
   
 .nav__menu-item {
   display: inline-block;
@@ -170,6 +172,24 @@ width: 100%;
   align-items: center;
   font-size: 35px;
   margin-bottom: 5px;
+}
+
+.purposestatement-midsize {
+  grid-column: 2/4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  margin-bottom: 5px;
+}
+
+.purposestatement-smallsize {
+  grid-column: 2/4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 17px;
+ 
 }
 
 .home-button-group {
