@@ -17,6 +17,8 @@
  width: 90%;
  height: 100%;
  grid-column: 2/5; 
+ display: flex;
+ justify-content: flex-end;
 $submenu-width: 180px;
 .logout {
   display: flex;
@@ -97,7 +99,6 @@ width: 100%;
   text-transform: none;
   width: 100%;
 }
-
 
   
 .nav__menu-item {

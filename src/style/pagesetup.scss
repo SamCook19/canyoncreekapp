@@ -17,7 +17,7 @@
         height: 100%;
        $color-blue: #00aeef;
        $color-blue-dark: #0d2035;
-       $submenu-width: 180px;
+       $submenu-width: 220px;
        grid-column: 2/5;
        .slide-enter {
          transform: translateY(-100%);
@@ -44,7 +44,7 @@
        .submenu-container-about {
         
           height: 340px;
-          min-width: 180px;
+          min-width: $submenu-width;
           position: absolute;
           overflow: hidden;
           z-index: 2;  
@@ -52,29 +52,11 @@
        }
        .submenu-container {
          height: 200px;
-         min-width: 180px;
+         min-width: $submenu-width;
          position: absolute;
          overflow: hidden;
          z-index: 2;  
        }
-
-       .submenu-container-about-medium {
-        
-        height: 340px;
-        min-width: 180px;
-        position: absolute;
-        overflow: hidden;
-        z-index: 2;  
-      
-     }
-     .submenu-container-medium {
-       height: 200px;
-       min-width: 180px;
-       position: absolute;
-       overflow: hidden;
-       z-index: 2;  
-     }
-
        body {
          margin: 0;
          font-family: 'Stellar Light', sans-serif;
@@ -119,14 +101,6 @@
          width: 100%;
         display: flex;
         }
-
-        .nav__menu-medium {
-          line-height: 45px;
-          font-weight: 700;
-          text-transform: none;
-          width: 100%;
-         display: flex;
-         }
          
        .nav__menu-item {
          display: inline-block;
@@ -140,31 +114,11 @@
            }
          }
        }
-
-       .nav__menu-item-medium {
-        display: inline-block;
-        position: relative;
-      
-        &:hover {
-                text-decoration: underline;
-      
-          .nav__submenu {
-            display: block;
-          }
-        }
-      }
        
        .nav__menu-item a {
                text-decoration: none;
                color: black;
                font-size: 28px;
-       }
-
-       .nav__menu-item-medium a {
-        text-decoration: none;
-        color: black;
-        font-size: 20px;
-}
        }
 
        .HelpForSurvivorsLink a {
@@ -180,7 +134,7 @@
          text-transform: none;
          display: none;
          position: absolute;
-         width: 180px;
+         width: $submenu-width;
          background-color: rgba(0,0,0,0.5);
          color: white;
        }
@@ -193,7 +147,7 @@
     }
 }
 
-
+}
 
 .page-content {
   display: grid;

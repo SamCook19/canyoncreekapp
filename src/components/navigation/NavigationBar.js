@@ -93,11 +93,12 @@ class Menu extends React.Component {
   
   render() {
     return (
-      
-        
+      <div className='navmediacontainer'>
+      <div className='navlargecontainer'>
+      <MediaQuery  minWidth={1500}>
       <nav className="nav">
         <ul className="nav__menu">
-          <MediaQuery maxWidth={1900} minWidth={1500}>
+          
           <div 
             className="nav__menu-item"
             onMouseLeave={this.handleLeave}
@@ -164,11 +165,25 @@ class Menu extends React.Component {
          
           </div>
         
-        </MediaQuery>  
+         
         </ul>
 
-        <ul className="nav__menu-medium">
-          <MediaQuery maxWidth={1499} minWidth={900}>
+        
+        
+        <div className="blog-link">
+          <NavLink to="/blog" activeClassName="nav-link-active">
+            Blog
+          </NavLink>
+          </div>
+      </nav>
+      </MediaQuery> 
+      </div>
+
+      <div className='navmediacontainer'>
+      <MediaQuery maxWidth={1499} minWidth={900}>
+      <nav className="nav-medium">
+      <ul className="nav__menu-medium">
+          
           <div 
             className="nav__menu-item-medium"
             onMouseLeave={this.handleLeave}
@@ -235,8 +250,10 @@ class Menu extends React.Component {
          
           </div>
         
-        </MediaQuery>  
-        </ul>
+          
+        </ul> 
+
+        
         
         <div className="blog-link">
           <NavLink to="/blog" activeClassName="nav-link-active">
@@ -244,10 +261,13 @@ class Menu extends React.Component {
           </NavLink>
           </div>
       </nav>
-      
-
+      </MediaQuery> 
+      </div>
+      </div>
     )
   }
 }
+
+ 
 
 export default Menu;
