@@ -64,7 +64,7 @@ class Volunteer extends Component {
             
             </div>
             <div className='page-heading'>
-               <h1 className='AboutUsHeader'> <span style={{color: "rgb(102, 45, 145)", fontFamily: "Roboto"}}> Volunteer </span></h1>
+               <h1 className='VolunteerHeader'> <span style={{color: "rgb(102, 45, 145)", fontFamily: "Roboto"}}> Volunteer </span></h1>
            </div>
                 </div>
                 <div className='volunteer-page-content'>

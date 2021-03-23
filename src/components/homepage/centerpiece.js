@@ -10,12 +10,12 @@ class CenterPiece extends Component {
                 Communities Free of Domestic Violence and Sexual Assault
             </div>
             </MediaQuery>
-            <MediaQuery maxWidth={1699} minWidth={1000}>
+            <MediaQuery maxWidth={1699} minWidth={1182}>
             <div className='purposestatement-midsize'>
                 Communities Free of Domestic Violence and Sexual Assault
             </div>
             </MediaQuery>
-            <MediaQuery maxWidth={999} minWidth={320}>
+            <MediaQuery maxWidth={1181} minWidth={320}>
             <div className='purposestatement-smallsize'>
                 Communities Free of Domestic Violence and Sexual Assault
             </div>
