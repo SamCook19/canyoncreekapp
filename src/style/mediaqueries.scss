@@ -189,7 +189,7 @@
 }
 
 .PageContent-medium {
-  font-size: 20px;
+  font-size: 22px;
   
 }
 
@@ -202,5 +202,32 @@
   justify-content: center;
   .AboutUsHeader {
     font-size: 70px;
+  }
+}
+
+.MediaContainer-help {
+  grid-column: 2;
+}
+
+
+@media (max-width: 1501px)
+{
+  div.page-heading {
+    grid-column: 2/4;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+  }
+  h1.HelpForSurvivorsHeader {
+    font-size: 60px;
+    margin-right: 0;
+  }
+  div.request-form-heading {
+    margin-right: 90px;
+    margin-left: 110px;
+    text-align: center;
+  }
+  div.social-media-icons-page {
+    width: 130px;
   }
 }

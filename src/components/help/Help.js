@@ -82,7 +82,7 @@ class Help extends Component {
                       this.state.isLoaded ?
                         this.state.articles.map((article, index) => {
                           return(
-                          <HelpForSurvivorsContent className='AnnualReport'
+                          <HelpForSurvivorsContent className='HelpForSurvivors'
                             key={index}
                             data={article}
                           />
@@ -105,6 +105,7 @@ class Help extends Component {
                         : '' 
                       }
                 </div>
+                <div className='request-form'>
                 <div className='request-form-heading'>
                   If you or someone you know are in need of assistance, please click on the link below. If you are in need of immediate assistance, please contact our 24 hour hotline at 435.233.5732.
                 </div>
@@ -112,6 +113,7 @@ class Help extends Component {
                       <a className='request-form-link' href='https://apricot.socialsolutions.com/auth/autologin/org_id/1698/hash/fe63cfb2b7190a8b89cde77419b8d89c5af6ee4e'>
                         Click Here to Get Help
                       </a>
+                </div>
                 </div>
             </div>
             </div>
