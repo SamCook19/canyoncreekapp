@@ -96,13 +96,12 @@ class ViewArticle extends Component {
                             </div>
                     
                         </div>
-                        <div className='blog-spacer'></div>
+                        
                     <div className='ArticleMain'>
                         <div className='ArticleContent'>
                             {parse(this.state.article.content)}
                             </div>
                     </div>
-                    <div className='blog-spacer'></div>
                     <div className='ImageContainer'>
                         <img className='Image' 
                             src={this.state.article.featuredImage}
