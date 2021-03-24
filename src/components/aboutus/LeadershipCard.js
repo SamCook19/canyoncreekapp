@@ -12,7 +12,7 @@ const LeadershipCard = (props) => {
                 src={props.data.featuredImage}
                 alt="Card Image"
                 className="CardImage"
-                style={{width:300, height: 300, borderRadius: 300/ 2}}
+                style={{width:150, height: 150, borderRadius: 150/ 2}}
                 />
                 </div>
                 <div className = "LeadershipCardBody">

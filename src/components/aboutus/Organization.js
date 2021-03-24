@@ -138,7 +138,7 @@ class Organization extends Component {
                 </div>
                 </div>
 
-                    <div className='page-info'> 
+                    <div className='page-info-org'> 
                     <div className='organizationalspacer'></div>
 
                     {

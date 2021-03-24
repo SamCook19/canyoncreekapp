@@ -65,7 +65,7 @@ class Blog extends Component {
             <div className='navbar'>  <NavigationComponent /> </div>
             </div>
             <div className='page-heading'>
-               <h1><span style={{color: "#F16022", fontFamily: "Roboto"}}>Blog</span></h1>
+               <h1 className='blogheading'><span style={{color: "#F16022", fontFamily: "Roboto"}}>Blog</span></h1>
                
               </div>
            

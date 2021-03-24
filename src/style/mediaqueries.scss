@@ -140,6 +140,7 @@
         grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
         grid-template-rows: 1fr 1fr 1fr;
         color: lightslategray;
+        text-align: center;
           .first-quote {
             grid-column: 2/5;
             grid-row: 1;
@@ -201,7 +202,7 @@
   display: flex;
   justify-content: center;
   .AboutUsHeader {
-    font-size: 70px;
+    font-size: 60px;
   }
 }
 
@@ -229,5 +230,53 @@
   }
   div.social-media-icons-page {
     width: 130px;
+  }
+  a.button__escape {
+    font-size: 16px;
+    width: 150px;
+    align-items: center;
+  }
+  div.button__hotline{
+    font-size: 16px;
+    width: 150px;
+    align-items: center;
+  }div.business-button {
+    font-size: 16px;
+    width: 150px;
+    align-items: center;
+  }
+  .PageContent {
+    font-size: 22px;
+  }
+
+  .PageTitle {
+    font-size: 35px;
+  }
+  .page-content {
+    grid-template-columns: 1fr 75% 90px;
+  }
+  .AboutUsHeader {
+    font-size: 60px;
+  }
+  .PreventionHeader {
+    font-size: 60px;
+  }
+  .PreventionBackgroundStatsImg {
+    grid-template-columns: 1fr 40%;
+  }
+  .CoalitionHeader {
+    font-size: 60px;
+  }
+  h1.blogheading{
+    font-size: 60px;
+  }
+  div.page-info-org{
+    grid-template-columns: 1fr 90% 1fr
+  }
+  div.LeadershipTeamName {
+    font-size: 20px;
+  }
+  div.ArticleLabel {
+    font-size: 18px;
   }
 }
