@@ -155,3 +155,52 @@
           }
       
 }
+
+.quote-slide-show {
+    .media-quotecontainer {
+        height: 100%;
+        .media-querycontainer {
+            height: 100%;
+        }
+    }
+}
+
+.media-quotecontainer {
+  display: flex;
+}
+
+.page-content-medium {
+  display: grid;
+  grid-template-columns: 1fr 83%;
+  height: 82vh;
+}
+
+.page-mediacontainer {
+  display: flex;
+}
+
+.DatabasePageMedium {
+  grid-column: 2/3;
+  height:max-content;
+}
+
+.PageTitleContent {
+  grid-column: 2/3;
+}
+
+.PageContent-medium {
+  font-size: 20px;
+  
+}
+
+.headingmedia {
+  grid-column: 2/4;
+}
+
+.page-heading-medium {
+  display: flex;
+  justify-content: center;
+  .AboutUsHeader {
+    font-size: 70px;
+  }
+}

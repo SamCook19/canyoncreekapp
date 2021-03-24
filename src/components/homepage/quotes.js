@@ -5,8 +5,8 @@ class Quotes extends Component {
     render() {
         return (
             <div className='media-quotecontainer'>
-            <div className='media-querycontainer'>
-                <MediaQuery minWidth={1501}>
+            <div className='media-querycontainer-large'>
+                <MediaQuery minWidth={1500}>
             <div className="quote-container">
             <div className="first-quote">
                 "Canyon Creek taught my class about what consent is and helped me create healthy boundaries."
@@ -21,7 +21,7 @@ class Quotes extends Component {
             </MediaQuery>
             </div>
 
-            <div className='media-querycontainer'>
+            <div className='media-querycontainer-medium'>
                 <MediaQuery maxWidth={1499} minWidth={900}>
             <div className="quote-container-medium">
             <div className="first-quote">

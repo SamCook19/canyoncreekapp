@@ -1,12 +1,9 @@
-.social-media-container {
-    display: flex;
-    justify-content: center;
-}
+
 
 .social-media-icons {
     display: flex;
     justify-content: space-evenly;
-    width: 45%;
+    width: 65%;
     height: fit-content;
 }
 
@@ -34,5 +31,5 @@
   .social-media-container {
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: baseline;
   }

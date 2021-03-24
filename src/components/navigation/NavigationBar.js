@@ -180,7 +180,7 @@ class Menu extends React.Component {
       </div>
 
       <div className='navmediacontainer'>
-      <MediaQuery maxWidth={1499} minWidth={900}>
+      <MediaQuery maxWidth={1499} minWidth={1035}>
       <nav className="nav-medium">
       <ul className="nav__menu-medium">
           
