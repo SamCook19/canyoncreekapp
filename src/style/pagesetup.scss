@@ -604,4 +604,15 @@ grid-template-columns: 10% 1fr 10%;
     width: 100px;
 }
 
+.clickhere {
+  color: rgb(241, 96, 34);
+}
+
+.clickhere:hover {
+  color: rgb(0, 166, 168);
+  transition: ease-in-out 0.3s;
+}
+
+
+
 

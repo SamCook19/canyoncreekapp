@@ -111,7 +111,7 @@ class Help extends Component {
                 </div>
                 <div className='request-form-container'>
                       <a className='request-form-link' href='https://apricot.socialsolutions.com/auth/autologin/org_id/1698/hash/fe63cfb2b7190a8b89cde77419b8d89c5af6ee4e'>
-                        Click Here to Get Help
+                        <div className='clickhere'>Click Here to Get Help</div>
                       </a>
                 </div>
                 </div>
