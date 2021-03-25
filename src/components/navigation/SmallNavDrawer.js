@@ -7,8 +7,10 @@ import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemText from '@material-ui/core/ListItemText';
 import { Link } from "react-router-dom";
-import AboutUsNested from "../navigation/NestedMenus/AboutUsNested"
-
+import AboutUsNested from "../navigation/NestedMenus/AboutUsNested";
+import DonateNested from "../navigation/NestedMenus/DonateNestedMenu";
+import PreventViolenceNested from "../navigation/NestedMenus/PreventViolenceNestedMenu";
+import MenuIcon from '@material-ui/icons/Menu';
 
 
 const useStyles = makeStyles({
@@ -46,12 +48,8 @@ export default function TemporaryDrawer() {
     >
       <List>
           <AboutUsNested />
-        <ListItem button>
-          <ListItemText primary="Donate"/>
-        </ListItem>
-        <ListItem button>
-          <ListItemText primary="Prevent Violence"/>
-        </ListItem>
+          <DonateNested />
+          <PreventViolenceNested />
         <ListItem button component={Link} to="/help">
           <ListItemText primary="Help for Survivors"/>
         </ListItem>
@@ -67,7 +65,7 @@ export default function TemporaryDrawer() {
   );
 
   return (
-    <div>
+    <div className='mobile-menu-div'>
       {['Menu'].map((anchor) => (
         <React.Fragment key={anchor}>
           <Button onClick={toggleDrawer(anchor, true)}>{anchor}</Button>

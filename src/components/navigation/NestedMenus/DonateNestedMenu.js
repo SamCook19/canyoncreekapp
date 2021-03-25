@@ -19,7 +19,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function AboutUsNested() {
+export default function DonateNested() {
   const classes = useStyles();
   const [open, setOpen] = React.useState(true);
 
@@ -30,25 +30,19 @@ export default function AboutUsNested() {
   return (
     <List>
       <ListItem button onClick={handleClick}>
-        <ListItemText primary="About Us" />
+        <ListItemText primary="Donate" />
         {open ? <ExpandLess /> : <ExpandMore />}
       </ListItem>
       <Collapse in={!open} timeout="auto" unmountOnExit>
         <List component="div" disablePadding>
-          <ListItem button className={classes.nested} >
-            <ListItemText primary="Who We Are" component={Link} to='/whoweare'/>
+        <ListItem button className={classes.nested}>
+            <ListItemText primary="Donate Information" component={Link} to='/donate' />
           </ListItem>
-          <ListItem button className={classes.nested} component={Link} to='/organization'>
-            <ListItemText primary="Organizational Leadership" />
+          <ListItem button className={classes.nested} component={Link} to='/supporters'>
+            <ListItemText primary="Our Supporters" />
           </ListItem>
-          <ListItem button className={classes.nested} component={Link} to='/financials'>
-            <ListItemText primary="Financials" />
-          </ListItem>
-          <ListItem button className={classes.nested} component={Link} to ='/employmentopportunities'>
-            <ListItemText primary="Employment Opportunities" />
-          </ListItem>
-          <ListItem button className={classes.nested} component={Link} to ='/annualreport'>
-            <ListItemText primary="Annual Report" />
+          <ListItem button className={classes.nested} component={Link} to='/donationform'>
+            <ListItemText primary="Donation Form" />
           </ListItem>
         </List>
       </Collapse>

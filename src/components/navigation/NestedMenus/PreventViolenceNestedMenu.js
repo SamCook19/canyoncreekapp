@@ -19,7 +19,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function AboutUsNested() {
+export default function PreventViolenceNested() {
   const classes = useStyles();
   const [open, setOpen] = React.useState(true);
 
@@ -30,26 +30,18 @@ export default function AboutUsNested() {
   return (
     <List>
       <ListItem button onClick={handleClick}>
-        <ListItemText primary="About Us" />
+        <ListItemText primary="Prevent Violence" />
         {open ? <ExpandLess /> : <ExpandMore />}
       </ListItem>
       <Collapse in={!open} timeout="auto" unmountOnExit>
         <List component="div" disablePadding>
-          <ListItem button className={classes.nested} >
-            <ListItemText primary="Who We Are" component={Link} to='/whoweare'/>
+          <ListItem button className={classes.nested}  component={Link} to='/coalition'>
+            <ListItemText primary="Coalition"/>
           </ListItem>
-          <ListItem button className={classes.nested} component={Link} to='/organization'>
-            <ListItemText primary="Organizational Leadership" />
+          <ListItem button className={classes.nested}  component={Link} to='/prevention'>
+            <ListItemText primary="Prevention" />
           </ListItem>
-          <ListItem button className={classes.nested} component={Link} to='/financials'>
-            <ListItemText primary="Financials" />
-          </ListItem>
-          <ListItem button className={classes.nested} component={Link} to ='/employmentopportunities'>
-            <ListItemText primary="Employment Opportunities" />
-          </ListItem>
-          <ListItem button className={classes.nested} component={Link} to ='/annualreport'>
-            <ListItemText primary="Annual Report" />
-          </ListItem>
+          
         </List>
       </Collapse>
     </List>
