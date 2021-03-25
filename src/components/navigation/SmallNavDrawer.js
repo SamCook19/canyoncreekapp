@@ -7,6 +7,8 @@ import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemText from '@material-ui/core/ListItemText';
 import { Link } from "react-router-dom";
+import AboutUsNested from "../navigation/NestedMenus/AboutUsNested"
+
 
 
 const useStyles = makeStyles({
@@ -20,9 +22,10 @@ const useStyles = makeStyles({
 
 export default function TemporaryDrawer() {
   const classes = useStyles();
-  const [state, setState] = React.useState({
+  const [state, setState, open, setOpen] = React.useState({
     right: false,
   });
+
 
   const toggleDrawer = (anchor, open) => (event) => {
     if (event.type === 'keydown' && (event.key === 'Tab' || event.key === 'Shift')) {
@@ -38,20 +41,18 @@ export default function TemporaryDrawer() {
         [classes.fullList]: anchor === 'top' || anchor === 'bottom',
       })}
       role="presentation"
-      onClick={toggleDrawer(anchor, false)}
+     
       onKeyDown={toggleDrawer(anchor, false)}
     >
       <List>
-        <ListItem button >
-          <ListItemText primary="About Us"/>
-        </ListItem>
+          <AboutUsNested />
         <ListItem button>
           <ListItemText primary="Donate"/>
         </ListItem>
         <ListItem button>
           <ListItemText primary="Prevent Violence"/>
         </ListItem>
-        <ListItem button>
+        <ListItem button component={Link} to="/help">
           <ListItemText primary="Help for Survivors"/>
         </ListItem>
         <ListItem button component={Link} to="/volunteer">
