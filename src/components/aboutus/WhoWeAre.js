@@ -7,6 +7,7 @@ import WhoWeAreContent from './WhoWeAreContent';
 import SimpleModal from '../modals/whoweare-modal';
 import PageSocialMedia from '../pagesocialmedia';
 import MediaQuery from 'react-responsive';
+import SmallNavDrawer from '../navigation/SmallNavDrawer';
 
 const db = firebase.default.firestore()
 
@@ -61,7 +62,9 @@ class WhoWeAre extends Component {
                 <div className='page-logo'> <PageLogo /> </div>
             </div>
             <div className='right-side-header'>
-            <div className='navbar'>  <NavigationComponent /> </div>
+            <div className='navbar'>  <NavigationComponent /> <div className='small-drawer'>
+            <SmallNavDrawer />
+            </div></div>
             
             </div>
            <div className='headingmedia'>

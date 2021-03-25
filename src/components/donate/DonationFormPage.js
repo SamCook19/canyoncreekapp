@@ -2,8 +2,9 @@ import React, { Component } from 'react';
 import NavigationComponent from '../navigation/NavigationBar';
 import PageLogo from '../logo/pagelogo';
 import DonationForm from './donationform';
-import ButtonsComponent from '../buttons/buttons-component'
-import PageSocialMedia from '../pagesocialmedia'
+import ButtonsComponent from '../buttons/buttons-component';
+import PageSocialMedia from '../pagesocialmedia';
+import SmallNavDrawer from '../navigation/SmallNavDrawer';
 
 class DonationFormPage extends Component {
     render() {
@@ -15,7 +16,9 @@ class DonationFormPage extends Component {
                 
             </div>
             <div className='right-side-header'>
-            <div className='navbar'>  <NavigationComponent /> </div>
+            <div className='navbar'>  <NavigationComponent /> <div className='small-drawer'>
+            <SmallNavDrawer />
+            </div></div>
             </div>
            <div className='page-heading'>
                <h1 className='DonateHeader'><span style={{color: "#00A6A8", fontFamily: "Roboto"}}> Donate </span></h1>

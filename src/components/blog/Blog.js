@@ -7,6 +7,7 @@ import ArticleCard from "./ArticleCard";
 import * as firebase from 'firebase';
 import ButtonsComponentBlog from '../buttons/buttons-component-blog';
 import PageSocialMedia from '../pagesocialmedia';
+import SmallNavDrawer from '../navigation/SmallNavDrawer';
 
 const db = firebase.default.firestore()
 
@@ -62,7 +63,9 @@ class Blog extends Component {
                 <div className='page-logo'> <PageLogo /> </div>
             </div>
             <div className='right-side-header'>
-            <div className='navbar'>  <NavigationComponent /> </div>
+            <div className='navbar'>  <NavigationComponent /> <div className='small-drawer'>
+            <SmallNavDrawer />
+            </div></div>
             </div>
             <div className='page-heading'>
                <h1 className='blogheading'><span style={{color: "#F16022", fontFamily: "Roboto"}}>Blog</span></h1>

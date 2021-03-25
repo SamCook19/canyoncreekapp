@@ -7,6 +7,7 @@ import HelpForSurvivorsContent from './HelpForSurvivorsContent';
 import HelpBackground from './HelpBackground';
 import SimpleModal from '../modals/help-modal';
 import PageSocialMedia from "../pagesocialmedia";
+import SmallNavDrawer from "../navigation/SmallNavDrawer";
 
 const db = firebase.default.firestore()
 
@@ -59,7 +60,9 @@ class Help extends Component {
                 
             </div>
             <div className='right-side-header'>
-            <div className='navbar'>  <NavigationComponent /> </div>
+            <div className='navbar'>  <NavigationComponent /> <div className='small-drawer'>
+            <SmallNavDrawer />
+            </div></div>
             </div>
            <div className='page-heading'>
                <h1 className='HelpForSurvivorsHeader'>Help For <span style={{color: "#662D91", fontFamily: "Roboto"}}> Survivors</span></h1>

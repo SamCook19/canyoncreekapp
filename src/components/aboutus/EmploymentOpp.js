@@ -6,6 +6,7 @@ import * as firebase from 'firebase';
 import EmploymentOpportunitiesContent from './EmploymentOpportunitiesContent';
 import SimpleModal from '../modals/employmentopp-modal';
 import PageSocialMedia from '../pagesocialmedia';
+import SmallNavDrawer from '../navigation/SmallNavDrawer';
 
 const db = firebase.default.firestore()
 
@@ -58,7 +59,9 @@ class EmploymentOpportunities extends Component {
                 
             </div>
             <div className='right-side-header'>
-            <div className='navbar'>  <NavigationComponent /> </div>
+            <div className='navbar'>  <NavigationComponent /> <div className='small-drawer'>
+            <SmallNavDrawer />
+            </div></div>
             </div>
            <div className='page-heading'>
                <h1 className='AboutUsHeader'>About <span style={{color: "#00A6A8", fontFamily: "Roboto"}}> Us</span></h1>

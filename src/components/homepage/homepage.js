@@ -1,5 +1,5 @@
 import React, { Component, useState } from 'react';
-import Menu from '../navigation/NavigationBar';
+import NavigationComponent from '../navigation/NavigationBar';
 import PageLogo from '../logo/pagelogo';
 import RightColumn from './right-column';
 import LeftColumn from './left-column';
@@ -26,7 +26,7 @@ class Homepage extends Component {
                 <div className='page-logo'> <PageLogo /> </div>
             </div>
             <div className='right-side-header'>
-            <div className='navbar'>  <Menu />
+            <div className='navbar'>  <NavigationComponent />
             <div className='small-drawer'>
             <SmallNavDrawer />
             </div>

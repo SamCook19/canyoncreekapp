@@ -7,6 +7,7 @@ import PreventionContent from './preventioncontent';
 import PreventionBackground from './preventionbackground';
 import SimpleModal from '../modals/prevention-modal';
 import PageSocialMedia from '../pagesocialmedia';
+import SmallNavDrawer from '../navigation/SmallNavDrawer';
 
 const db = firebase.default.firestore()
 
@@ -59,7 +60,9 @@ class Prevention extends Component {
                 
             </div>
             <div className='right-side-header'>
-            <div className='navbar'>  <NavigationComponent /> </div>
+            <div className='navbar'>  <NavigationComponent /> <div className='small-drawer'>
+            <SmallNavDrawer />
+            </div></div>
             </div>
             <div className='page-heading'>
                <h1 className='PreventionHeader'> <span style={{color: "#F16022", fontFamily: "Roboto"}}> Prevent</span> Violence</h1>
