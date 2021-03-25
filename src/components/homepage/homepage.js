@@ -6,7 +6,7 @@ import LeftColumn from './left-column';
 import HomeButtonsComponent from '../buttons/homebuttons-component';
 import CenterPiece from './centerpiece';
 import SimpleModal from '../modals/heroimage-modal';
-
+import SmallNavDrawer from '../navigation/SmallNavDrawer';
 
 // import HeroImage from './HeroImage';
 
@@ -26,7 +26,11 @@ class Homepage extends Component {
                 <div className='page-logo'> <PageLogo /> </div>
             </div>
             <div className='right-side-header'>
-            <div className='navbar'>  <Menu /> </div>
+            <div className='navbar'>  <Menu />
+            <div className='small-drawer'>
+            <SmallNavDrawer />
+            </div>
+             </div>
             
             </div>
             <div className='purposestatement'>

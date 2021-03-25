@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 
+
 class HomepageSocialMedia extends Component {
     state = {
         facebook: "/assets/images/facebook.png",
@@ -7,12 +8,13 @@ class HomepageSocialMedia extends Component {
         linkedin: "/assets/images/linkedin.png",
         twitter: "/assets/images/twitter.png"
       }
-
+      
     render() {
         
         return (
             <div className='social-media-icons'>
                 <div className='facebook-home'>
+                   
                 <a className='facebook-icon' href='https://www.facebook.com/CCreekServices/'>
                 <img class='facebook-main' alt="ccs facebook" src={this.state.facebook} onMouseEnter={() => {
                     this.setState({
@@ -27,6 +29,7 @@ class HomepageSocialMedia extends Component {
 
                 />
                 </a>
+                
                 </div>
                 <div className='instagram-home'>
                 <a className='instagram-icon' href='https://www.instagram.com/ccreekservices/?hl=en'>
