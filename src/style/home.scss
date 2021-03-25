@@ -173,6 +173,7 @@ width: 100%;
   align-items: flex-end;
   font-size: 35px;
   margin-bottom: 5px;
+  text-align: center;
 }
 
 .purposestatement-midsize {
@@ -182,6 +183,7 @@ width: 100%;
   align-items: flex-end;
   font-size: 24px;
   margin-bottom: 5px;
+  text-align: center;
 }
 
 .purposestatement-smallsize {
@@ -190,7 +192,7 @@ width: 100%;
   justify-content: center;
   align-items: center;
   font-size: 21px;
- 
+ text-align: center;
 }
 
 .home-button-group {
@@ -279,4 +281,9 @@ width: 100%;
 
 
 
+}
+
+.mobile-menu-div {
+  border: solid thin;
+  color: slategray;
 }

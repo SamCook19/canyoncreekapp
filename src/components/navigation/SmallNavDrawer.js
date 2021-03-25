@@ -11,14 +11,30 @@ import AboutUsNested from "../navigation/NestedMenus/AboutUsNested";
 import DonateNested from "../navigation/NestedMenus/DonateNestedMenu";
 import PreventViolenceNested from "../navigation/NestedMenus/PreventViolenceNestedMenu";
 import MenuIcon from '@material-ui/icons/Menu';
+import { createMuiTheme } from '@material-ui/core/styles';
+import { ThemeProvider } from '@material-ui/core/styles';
 
+const theme = createMuiTheme({
+  typography: {
+    body1: {
+      fontFamily: "StellarLight",
+      fontSize: 14
+    }
+  }
+})
 
 const useStyles = makeStyles({
   list: {
-    width: 250,
+    width: 125,
+    
   },
   fullList: {
-    width: 'auto',
+    width: 'auto'
+  },
+
+  menu: {
+    height:25,
+    width: 45
   },
 });
 
@@ -46,7 +62,7 @@ export default function TemporaryDrawer() {
      
       onKeyDown={toggleDrawer(anchor, false)}
     >
-      <List>
+      <List >
           <AboutUsNested />
           <DonateNested />
           <PreventViolenceNested />
@@ -66,14 +82,15 @@ export default function TemporaryDrawer() {
 
   return (
     <div className='mobile-menu-div'>
-      {['Menu'].map((anchor) => (
+      <ThemeProvider theme={theme}>
+      {[''].map((anchor) => (
         <React.Fragment key={anchor}>
-          <Button onClick={toggleDrawer(anchor, true)}>{anchor}</Button>
+          <Button className={classes.root} onClick={toggleDrawer(anchor, true)}><MenuIcon className={classes.menu}/> {anchor}</Button>
           <Drawer anchor={'right'} open={state[anchor]} onClose={toggleDrawer(anchor, false)}>
             {list(anchor)}
           </Drawer>
         </React.Fragment>
-      ))}
+      ))}</ThemeProvider>
     </div>
   );
 }
