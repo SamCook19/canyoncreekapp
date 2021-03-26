@@ -32,9 +32,16 @@ const useStyles = makeStyles({
     width: 'auto'
   },
 
+  root: {
+    border: 'solid thin',
+    width: 80,
+    height: 40,
+    borderRadius: 20
+  },
+
   menu: {
-    height:25,
-    width: 45
+    height:15,
+    width: 35
   },
 });
 
@@ -85,7 +92,7 @@ export default function TemporaryDrawer() {
       <ThemeProvider theme={theme}>
       {[''].map((anchor) => (
         <React.Fragment key={anchor}>
-          <Button className={classes.root} onClick={toggleDrawer(anchor, true)}><MenuIcon className={classes.menu}/> {anchor}</Button>
+          <Button className={classes.root} onClick={toggleDrawer(anchor, true)}> Menu <MenuIcon className={classes.menu}/> {anchor}</Button>
           <Drawer anchor={'right'} open={state[anchor]} onClose={toggleDrawer(anchor, false)}>
             {list(anchor)}
           </Drawer>

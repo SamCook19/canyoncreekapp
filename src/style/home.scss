@@ -2,8 +2,6 @@
                 width: 100vw;
                 height: 100vh;
             .header {
-              display: grid;
-              grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
                 .left-side-header {
                     display: grid;
                     grid-template-columns: 1fr;
@@ -281,9 +279,4 @@ width: 100%;
 
 
 
-}
-
-.mobile-menu-div {
-  border: solid thin;
-  color: slategray;
 }

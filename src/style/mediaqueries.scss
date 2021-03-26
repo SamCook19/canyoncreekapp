@@ -296,3 +296,10 @@
       display: none;
     }
 }
+
+@media (max-width: 600px) {
+  div.home-page-content {
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+  }
+}
