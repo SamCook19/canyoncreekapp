@@ -298,6 +298,41 @@
 }
 
 @media (max-width: 600px) {
+  div.header {
+    display: unset !important;
+  }
+
+  div.purposestatement-smallsize {
+    font-size: 14px;
+  }
+  div.page-container {
+    div.header {
+      div.right-side-header {
+        height: unset;
+        width: unset;
+        position: absolute;
+        right: 0;
+        top: 0;
+        div.navbar {
+          position: unset;
+          display: unset;
+          flex-wrap: unset;
+          align-items: unset;
+          justify-content: unset;
+          padding: unset;
+          margin-right: unset;
+          div.mobile-menu-div {
+            width: 80px;
+            height: 40px;
+            border-radius: 20px;
+            background-color: white;
+          }
+        }
+      }
+    }
+  }
+  
+  
   div.home-page-content {
     display: grid;
     grid-template-rows: 1fr 1fr 1fr;
