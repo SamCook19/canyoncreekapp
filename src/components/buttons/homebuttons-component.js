@@ -4,6 +4,8 @@ import HotlineButton from './hotline';
 import EscapeButton from './escapebutton';
 import BusinessButton from './businessbutton';
 import HeroImage from '../homepage/HeroImage';
+import BusinessButtonMobile from './BusinessButtonMobile';
+import HotlineButtonMobile from './HotlineButtonMobile';
 import * as firebase from 'firebase';
 
 const db = firebase.default.firestore()
@@ -73,6 +75,22 @@ class HomeButtonsComponent extends Component {
             </div>
             <div className='business-button'>
                 <BusinessButton />
+            </div>
+            
+            <div className='contact-button'>
+                <ContactButton />
+            </div>
+            </div>
+            <div className='mobile-button-group'>
+            <div className='escape-button-mobile'>
+                <EscapeButton />
+            </div>
+            
+            <div className='hotline-button-mobile'>
+                  <HotlineButtonMobile />
+            </div>
+            <div className='business-button-mobile'>
+                      <BusinessButtonMobile />
             </div>
             
             <div className='contact-button'>

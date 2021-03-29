@@ -38,6 +38,20 @@
     margin-top: 10px;
 }
 
+.business-button-mobile {
+        @include base-btn();
+        display: flex;
+        justify-content: center;
+        margin-top: 10px;
+        width: 50px;
+        font-size: 16px;
+        align-items: center;
+}
+
+.button__business a {
+    color: black;
+}
+
 .business-button:hover {
     color: white;
     background-color: rgb(0, 166, 168);

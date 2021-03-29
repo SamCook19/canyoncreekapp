@@ -7,6 +7,7 @@ import HomeButtonsComponent from '../buttons/homebuttons-component';
 import CenterPiece from './centerpiece';
 import SimpleModal from '../modals/heroimage-modal';
 import SmallNavDrawer from '../navigation/SmallNavDrawer';
+import HomepageSocialMedia from '../homepage/homepage-socialmedia';
 
 // import HeroImage from './HeroImage';
 
@@ -52,7 +53,11 @@ class Homepage extends Component {
                 <div className='right-side-column'>
                     <RightColumn />
                 </div>
+                <div className='mobile-social-home'>
+                    <HomepageSocialMedia />
                 </div>
+                </div>
+                
                 </div>
         );
     }
