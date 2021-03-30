@@ -430,6 +430,26 @@
   div.whowearespacer {
     height: 10px;
   }
+  div.page-content {
+    grid-template-columns: 13% 1fr;
+  }
+  div.BoardOfDirectorsCardsContainer {
+    grid-template-rows: unset;
+    grid-template-columns: 150px 150px;
+  }
+  div.BoardTeamName {
+    font-size: 16px;
+  }
+  div.LeadershipTeamName {
+    font-size: 16px;
+  }
+  div.ArticleLabel {
+    font-size: 14px;
+  }
+  div.LeadershipCardsContainer {
+    grid-template-columns: 150px 150px;
+    grid-template-rows: unset;
+  }
 }
 
 @media (min-width: 600px) {

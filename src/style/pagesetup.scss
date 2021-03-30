@@ -233,7 +233,7 @@ grid-template-columns: 10% 1fr 10%;
     -webkit-box-shadow: -8px 11px 10px 5px rgba(0,0,0,0.09); 
   box-shadow: -8px 11px 10px 5px rgba(0,0,0,0.09);
   display: grid;
-  grid-template-columns: 10% 1fr 10%;
+  grid-template-columns: 8% 1fr 5%;
 }
 
 .spiral-notebook {
@@ -613,6 +613,23 @@ grid-template-columns: 10% 1fr 10%;
   transition: ease-in-out 0.3s;
 }
 
+.BoardCardContainer {
+  display: grid;
+  justify-content: center;
+}
+
+.BoardCardBody {
+  text-align: center;
+}
+
+.BoardCardImg {
+  display: flex;
+  justify-content: center;
+}
+
+.BoardTeamName {
+  font-size: 22px;
+}
 
 
 

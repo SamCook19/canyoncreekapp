@@ -110,10 +110,10 @@ class BoardCardEdit extends Component {
             <Container>
             <Row>
                 <Col >
-                    <h2 className='SectionTitle'>Edit Page</h2>
+                    <h2 className='SectionTitle'>Edit Card</h2>
                     <FormGroup className='TitleForm'>
                         <Label className='TitleLabel'>
-                            <span style={{color: "white"}}>Middle Title</span>
+                            <span style={{color: "white"}}>Name</span>
                         </Label>
                         <input type ='text' className='editArticleTitle' placeholder=''
                         onChange={(e) => this.onChangeName(e.target.value)}
@@ -122,7 +122,7 @@ class BoardCardEdit extends Component {
                    
                 </Col>
                 <div className='edit-article-container'>
-                    <FormGroup className='left-column'> Change Top and Bottom Content
+                    <FormGroup className='left-column'> Change Subtitle
                         <ReactQuill className='edit-quill'
                             ref={(el) => this.quill = el}
                             value={this.state.article.boardSubtitle}

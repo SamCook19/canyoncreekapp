@@ -110,7 +110,6 @@ class WhoWeAre extends Component {
             
             
             <div className='media-querycontainermedium'>
-            <MediaQuery maxWidth={1500} >
             <div className='page-content-medium'>
             
                 <div className='buttons-component'>
@@ -143,7 +142,6 @@ class WhoWeAre extends Component {
                 </div>
                 
             </div>
-            </MediaQuery>
             </div>
             </div>
             

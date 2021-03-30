@@ -3,6 +3,7 @@ import { CardImg } from 'reactstrap';
 import SimpleModal from './OrganizationEdit/BoardCardModal';
 import * as firebase from 'firebase';
 import parse from 'html-react-parser';
+import MediaQuery from 'react-responsive';
 
 const db = firebase.default.firestore()
 
@@ -14,8 +15,10 @@ class BoardCard extends Component {
 
     render() {
         return (
-            <div className = "LeadershipCardContainer">
-                <div className="LeadershipCardImg">
+            <div className = "BoardCardContainer">
+               <div className='BoardImgMediaContainer'>
+                    <MediaQuery minWidth={600}>
+                <div className="BoardCardImg">
                 <CardImg
                 top
                 style={{width: 150, height: 150, borderRadius: 150/ 2}}
@@ -24,12 +27,28 @@ class BoardCard extends Component {
                 className="CardImage"
                 />
                 </div>
-                <div className = "LeadershipCardBody">
+                    </MediaQuery>
+                </div>
+                
+                <div className='BoardImgMediaContainer'>
+                    <MediaQuery maxWidth={600}>
+                    <div className="BoardCardImg">
+                    <CardImg
+                    top
+                    style={{width: 90, height: 90, borderRadius: 90/ 2}}
+                    src={this.props.data.featuredImage}
+                    alt="Card Image"
+                    className="CardImage"
+                    />
+                </div>
+                </MediaQuery>
+                </div>
+                <div className = "BoardCardBody">
                     
-                    <div className="LeadershipTeamName">
+                    <div className="BoardTeamName">
                     {parse(this.props.data.boardname)}
                     </div>
-                    <div className="LeadershipCardSubtitle">
+                    <div className="BoardCardSubtitle">
                         <div className="ArticleLabel">
                             {parse(this.props.data.boardSubtitle)}
                         </div>
