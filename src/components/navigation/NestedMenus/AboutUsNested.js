@@ -35,8 +35,8 @@ export default function AboutUsNested() {
       </ListItem>
       <Collapse in={!open} timeout="auto" unmountOnExit>
         <List component="div" disablePadding>
-          <ListItem button className={classes.nested} >
-            <ListItemText primary="Who We Are" component={Link} to='/whoweare'/>
+        <ListItem button className={classes.nested} component={Link} to='/whoweare'>
+            <ListItemText primary="Who We Are" />
           </ListItem>
           <ListItem button className={classes.nested} component={Link} to='/organization'>
             <ListItemText primary="Organizational Leadership" />

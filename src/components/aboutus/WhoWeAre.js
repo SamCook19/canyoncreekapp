@@ -67,25 +67,8 @@ class WhoWeAre extends Component {
             </div></div>
             
             </div>
-           <div className='headingmedia'>
-           <MediaQuery minWidth={1501}>
-             <div className='page-heading-large'>
-               
            <div className='page-heading'>
-              
                <h1 className='AboutUsHeader'>About <span style={{color: "#00A6A8", fontFamily: "Roboto"}}> Us</span></h1>
-           </div>
-           
-           </div>
-           </MediaQuery>
-           <div className='page-heading-medium'>
-             <MediaQuery maxWidth={1500}>
-           <div className='page-heading-medium'>
-              
-               <h1 className='AboutUsHeader'>About <span style={{color: "#00A6A8", fontFamily: "Roboto"}}> Us</span></h1>
-           </div>
-           </MediaQuery>
-           </div>
            </div>
                 </div>
                 <div className='page-mediacontainer'>

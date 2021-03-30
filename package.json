@@ -79,6 +79,7 @@
     "postcss-loader": "^2.1.6",
     "react": "16.13.1",
     "react-bootstrap": "^1.5.1",
+    "react-cloudimage-responsive": "^3.3.2",
     "react-contenteditable": "^3.3.5",
     "react-dom": "16.13.1",
     "react-draft-wysiwyg": "^1.14.5",

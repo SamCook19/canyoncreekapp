@@ -20,11 +20,6 @@ class CenterPiece extends Component {
                 Communities Free of Domestic Violence and Sexual Assault
             </div>
             </MediaQuery>
-            <MediaQuery maxWidth={320}>
-            <div className='purposestatement-mobilesize'>
-                Communities Free of Domestic Violence and Sexual Assault
-            </div>
-            </MediaQuery>
             </div>
         );
     }

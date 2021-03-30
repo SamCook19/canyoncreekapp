@@ -1,6 +1,7 @@
 import React from 'react';
 import { CardImg, CardTitle } from 'reactstrap';
 import parse from 'html-react-parser';
+import PageSocialMedia from '../../components/pagesocialmedia';
 
 
 const WhoWeAreContent = (props) => {
@@ -24,7 +25,11 @@ const WhoWeAreContent = (props) => {
                 alt="Card Image"
                 className="CardImage"
                 />
-                </div>  
+                </div>
+                <div className='mobile-social-page'>
+                    <PageSocialMedia />
+                </div>
+
                 </div>
         );
     }

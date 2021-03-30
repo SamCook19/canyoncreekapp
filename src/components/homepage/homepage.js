@@ -9,8 +9,6 @@ import SimpleModal from '../modals/heroimage-modal';
 import SmallNavDrawer from '../navigation/SmallNavDrawer';
 import HomepageSocialMedia from '../homepage/homepage-socialmedia';
 
-// import HeroImage from './HeroImage';
-
 class Homepage extends Component {
     constructor(props) {
         super(props);
