@@ -93,6 +93,9 @@ class AnnualReport extends Component {
                         })
                         : '' 
                       }
+                      <div className='mobile-social-page-about'>
+                    <PageSocialMedia />
+                      </div>
                 </div>
             </div>
             </div>

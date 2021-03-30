@@ -35,8 +35,8 @@ export default function DonateNested() {
       </ListItem>
       <Collapse in={!open} timeout="auto" unmountOnExit>
         <List component="div" disablePadding>
-        <ListItem button className={classes.nested}>
-            <ListItemText primary="Donate Information" component={Link} to='/donate' />
+        <ListItem button className={classes.nested} component={Link} to='/donate' >
+            <ListItemText primary="Donate Information" />
           </ListItem>
           <ListItem button className={classes.nested} component={Link} to='/supporters'>
             <ListItemText primary="Our Supporters" />

@@ -26,6 +26,9 @@ const FinancialsContent = (props) => {
                 <div className='FinancialsPDFReader'>
                     <FinancialsPDFReader />
                 </div>
+                <div className="MobileFinancials">
+                    <a href='https://arxiv.org/pdf/quant-ph/0410100.pdf'>Click Here for Report</a>
+                </div>
                 </div>  
                 </div>
         );

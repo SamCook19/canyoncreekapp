@@ -272,6 +272,7 @@ grid-template-columns: 10% 1fr 10%;
 .PageImg {
   display: flex;
   justify-content: center;
+  flex-direction: column;
 }
 
 
@@ -629,6 +630,32 @@ grid-template-columns: 10% 1fr 10%;
 
 .BoardTeamName {
   font-size: 22px;
+}
+
+.FinancialsYearHeading {
+  display: flex;
+  justify-content: center;
+  font-size: 15px;
+  margin-top: 10px;
+}
+
+.MobileAnnualReport {
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  font-size: 15px;
+}
+
+.MobileFinancials {
+  display: flex;
+  justify-content: center;
+  font-size: 15px;
+}
+
+.mobile-social-page-about {
+  grid-row: 4;
+  grid-column: 2;
+  margin-top: 25px;
 }
 
 

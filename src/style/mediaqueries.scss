@@ -260,12 +260,14 @@
   }
   .PreventionHeader {
     font-size: 60px;
+    text-align: center;
   }
   .PreventionBackgroundStatsImg {
     grid-template-columns: 1fr 40%;
   }
   .CoalitionHeader {
     font-size: 60px;
+    text-align: center;
   }
   h1.blogheading{
     font-size: 60px;
@@ -461,6 +463,20 @@
   div.AnnualReportLink {
     display: none;
   }
+  div.FinancialsPDFReader {
+    display: none;
+  }
+  div.page-heading {
+  div.CoalitionHeader {
+    font-size: 60px;
+    text-align: center;
+  }
+  div.PreventionHeader {
+    font-size: 60px;
+    text-align: center;
+  }
+}
+  
 }
 
 @media (min-width: 600px) {
@@ -473,9 +489,15 @@
   div.mobile-social-page-org {
     display: none;
   }
+  div.mobile-social-page-about {
+    display: none;
+  }
  div.MobileAnnualReport{
    display: none;
    margin-top: 15px;
    font-size: 22px;
+ }
+ div.MobileFinancials {
+   display: none;
  }
 }
