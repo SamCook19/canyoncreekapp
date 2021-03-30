@@ -455,6 +455,12 @@
     grid-template-columns: 150px 150px;
     grid-template-rows: unset;
   }
+  div.DatabasePage__Employment {
+    margin-top: unset;
+  }
+  div.AnnualReportLink {
+    display: none;
+  }
 }
 
 @media (min-width: 600px) {
@@ -467,4 +473,9 @@
   div.mobile-social-page-org {
     display: none;
   }
+ div.MobileAnnualReport{
+   display: none;
+   margin-top: 15px;
+   font-size: 22px;
+ }
 }

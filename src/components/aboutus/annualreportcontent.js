@@ -25,6 +25,9 @@ const AnnualReportContent = (props) => {
                 <div className="AnnualReportLink">
                     <AnnualReportPDFReader />
                 </div>
+                <div className="MobileAnnualReport">
+                    <a href='https://arxiv.org/pdf/quant-ph/0410100.pdf'>Click Here for Report</a>
+                </div>
                 </div>  
                 </div>
         );
