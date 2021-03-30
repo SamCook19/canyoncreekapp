@@ -421,6 +421,11 @@
   div.mobile-social-page {
     margin-top: 20px;
   }
+  div.mobile-social-page-org {
+    margin-top: 20px;
+    grid-row: 6;
+    grid-column: 2;
+  }
   div.social-media-icons-page {
     position: unset;
     flex-direction: unset;
@@ -457,6 +462,9 @@
     display: none;
   }
   div.mobile-social-page {
+    display: none;
+  }
+  div.mobile-social-page-org {
     display: none;
   }
 }

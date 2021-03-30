@@ -1,6 +1,7 @@
 import React from 'react';
-import { CardImg, CardTitle } from 'reactstrap';
+import { CardTitle } from 'reactstrap';
 import parse from 'html-react-parser';
+
 
 
 const OrganizationContent = (props) => {
@@ -16,7 +17,8 @@ const OrganizationContent = (props) => {
                     <div className= "PageContent">
                     {parse(props.data.content)}
                     </div>
-                </div>     
+                </div> 
+                  
                 </div>
         );
     }

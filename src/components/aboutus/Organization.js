@@ -9,6 +9,7 @@ import BoardCard from './BoardCards';
 import PageSocialMedia from '../pagesocialmedia';
 import SmallNavDrawer from '../navigation/SmallNavDrawer';
 
+
 const db = firebase.default.firestore()
 
 class Organization extends Component {
@@ -202,6 +203,9 @@ class Organization extends Component {
                         : ''
                       }
                       </div>
+                    <div className='mobile-social-page-org'>
+                    <PageSocialMedia />
+                      </div>  
                 </div>
             </div>
             </div>
