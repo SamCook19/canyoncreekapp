@@ -475,11 +475,27 @@
     font-size: 60px;
     text-align: center;
   }
-}
-  
+}  
+  div.PreventionStats {
+    font-size: 16px;
+    right: 75%;
+    bottom: 10%;
+  }
+  div.prevent-edit {
+    position: fixed;
+    top: 70%;
+  }
+  div.mobile-social-page-prevention {
+    width: 100%;
+    grid-column: 2;
+  }
 }
 
 @media (min-width: 600px) {
+  
+  div.mobile-social-page-prevention {
+    display: none;
+  }
   div.mobile-button-group {
     display: none;
   }

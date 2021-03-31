@@ -71,7 +71,9 @@ class Prevention extends Component {
                 <div className='prevention-page-content'>
                 <div className='prevention-buttons-component'>
                     <ButtonsComponent />
+                    <div className='prevent-edit'>
                     <SimpleModal />
+                    </div>
                 </div>
                 <div className='social-media-icons-page'>
                <PageSocialMedia />
@@ -103,7 +105,11 @@ class Prevention extends Component {
                         })
                         : '' 
                       }
+                      
                 </div>
+                <div className='mobile-social-page-prevention'>
+                    <PageSocialMedia />
+                      </div>
             </div>
             </div>
         )

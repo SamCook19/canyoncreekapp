@@ -72,7 +72,9 @@ class Coalition extends Component {
                 <div className='coalition-page-content'>
                 <div className='coalition-buttons-component'>
                     <ButtonsComponent />
+                    <div className='prevent-edit'>
                     <SimpleModal />
+                    </div>
                     
                 </div>
                 <div className='social-media-icons-page'>
@@ -106,7 +108,11 @@ class Coalition extends Component {
                         })
                         : '' 
                       }
+                      
                 </div>
+                <div className='mobile-social-page-prevention'>
+                    <PageSocialMedia />
+                      </div>
             </div>
             </div>
         )

@@ -4,6 +4,7 @@ import parse from 'html-react-parser';
 
 
 
+
 const PreventionContent = (props) => {
         return (
             <div className ="DatabasePage">
