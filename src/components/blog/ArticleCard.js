@@ -38,7 +38,7 @@ const ArticleCard = (props) => {
                         </div>
                     </CardSubtitle>
                     
-                    <div className='spacer'></div>
+                    <div className='blog-spacer'></div>
                     <div className= "CardSummary">
                         {props.data.summary}
                     </div>
