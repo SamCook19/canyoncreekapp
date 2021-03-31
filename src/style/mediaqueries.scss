@@ -359,6 +359,29 @@
 }
 
 @media (max-width: 600px) {
+  div.spacer {
+    height: 10px;
+  }
+  div.article-view-container {
+    grid-template-rows: 50px 1fr 35%;
+    div.Article {
+      justify-content: space-between;
+    }
+    div.ArticleMain {
+      grid-template-columns: unset;
+      display: unset;
+    }
+    
+  }
+  h1.Title {
+    font-size: 22px;
+  }
+  div.ArticleDate {
+    font-size: 22px;
+  }
+  div.ArticleMain {
+    font-size: 18px;
+  }
   div.new-article-button {
     position: absolute;
     bottom: 10%;

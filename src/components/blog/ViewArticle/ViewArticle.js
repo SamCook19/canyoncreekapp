@@ -4,9 +4,10 @@ import parse from 'html-react-parser';
 import {Container} from 'reactstrap';
 import NavigationComponent from '../../navigation/NavigationBar';
 import ButtonsComponent from '../../buttons/buttons-component';
+import SmallNavDrawer from '../../navigation/SmallNavDrawer';
 import PageLogo from '../../logo/pagelogo';
 import firebaseConfig from '../../../Config/firebase';
-import * as firebase from 'firebase'
+import * as firebase from 'firebase';
 
 const db = firebase.default.firestore();
 
@@ -69,13 +70,16 @@ class ViewArticle extends Component {
         if(this.state.isLoaded) {
             return (
                 <div className='page-container'>
-            <div className='header'>
+            <div className='header' style = {{
+              marginBottom: "15px"
+            }}>
                 <div className='left-side-header'>
                 <div className='page-logo'> <PageLogo /> </div>
-                
             </div>
             <div className='right-side-header'>
-            <div className='navbar'>  <NavigationComponent /> </div>
+            <div className='navbar'>  <NavigationComponent /> <div className='small-drawer'>
+            <SmallNavDrawer />
+            </div></div>
             </div>
            <div className='spacer'></div>
                 </div>
