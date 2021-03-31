@@ -75,7 +75,7 @@ class Prevention extends Component {
                     <SimpleModal />
                     </div>
                 </div>
-                <div className='social-media-icons-page'>
+                <div className='social-media-icons-prevent'>
                <PageSocialMedia />
                 </div>
                     <div className='prevention-info'> 

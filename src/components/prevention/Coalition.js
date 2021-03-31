@@ -77,7 +77,7 @@ class Coalition extends Component {
                     </div>
                     
                 </div>
-                <div className='social-media-icons-page'>
+                <div className='social-media-icons-prevent'>
                <PageSocialMedia />
                 </div>
                     <div className='prevention-info'> 

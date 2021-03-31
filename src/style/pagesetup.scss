@@ -652,6 +652,10 @@ grid-template-columns: 10% 1fr 10%;
   font-size: 15px;
 }
 
+.social-media-icons-prevent {
+  position: relative;
+}
+
 .mobile-social-page-about {
   grid-row: 4;
   grid-column: 2;
