@@ -359,6 +359,19 @@
 }
 
 @media (max-width: 600px) {
+  div.DatabasePage__Donate {
+    div.DonateLeftColumn img {
+      height: 68.5vh;
+    }
+    div.DonateRightColumn {
+      font-size: 20px;
+    }
+  }
+  div.DonateContainer {
+    height: 68.5vh;
+    grid-column: 1/3;
+  }
+  
   div.spacer {
     height: 10px;
   }
@@ -422,6 +435,10 @@
 }
 
 @media (max-width: 600px) {
+  
+  div.page-content {
+    display: unset;
+  }
   div.desk-button-group {
     display: none;
   }
