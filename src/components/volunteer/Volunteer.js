@@ -3,8 +3,6 @@ import NavigationComponent from '../navigation/NavigationBar';
 import PageLogo from '../logo/pagelogo';
 import ButtonsComponent from '../buttons/buttons-component';
 import * as firebase from 'firebase';
-import VolunteerModal from './VolunteerModal';
-import VolunteerSigninModal from './VolunteerSigninModal';
 import VolunteerContent from './VolunteerContent';
 import VolunteerEditModal from '../modals/volunteer-edit-modal';
 import PageSocialMedia from '../pagesocialmedia';
@@ -80,7 +78,7 @@ class Volunteer extends Component {
                     </div>
                     
                 </div>
-                <div className='social-media-icons-page'>
+                <div className='social-media-icons-page-volunteer'>
                <PageSocialMedia />
                 </div>
                 
@@ -100,9 +98,7 @@ class Volunteer extends Component {
                         : '' 
                       }
                       
-                      <div className='volunteer-signin'>
-                          <VolunteerSigninModal />
-                      </div>
+                      
                 </div>
                 
             </div>

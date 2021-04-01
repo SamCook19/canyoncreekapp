@@ -34,7 +34,7 @@ const useStyles = makeStyles((theme) => ({
     };
   
     return (
-      <div>
+      <div className='signin-button-container'>
         <button type="button" onClick={handleOpen} className='signin-button'>
           Sign In
         </button>

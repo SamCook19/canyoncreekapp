@@ -435,10 +435,26 @@
 }
 
 @media (max-width: 600px) {
-  
-  div.page-content {
-    display: unset;
+  div.mobile-social-page-volunteer {
+    margin-top: 25px;
   }
+  div.VolunteerDatabasePage {
+    grid-template-rows: 1fr 1fr 1fr
+  }
+  div.social-media-icons-page-volunteer {
+    display: none;
+  }
+      button.signup-button {
+        width: 200px;
+        font-size: 18px;
+        height: 40px;
+      }
+  div.volunteer-page-content {
+    display: grid;
+  }
+ div.TopVolunteerContent {
+  font-size: 16px;
+ }
   div.desk-button-group {
     display: none;
   }
@@ -556,10 +572,16 @@
     width: 100%;
     grid-column: 2;
   }
+  div.BottomVolunteerContent {
+    font-size: 16px;
+  }
 }
 
 @media (min-width: 600px) {
-  
+ 
+  div.media-querycontainermedium {
+    display: none;
+  }
   div.mobile-social-page-prevention {
     display: none;
   }

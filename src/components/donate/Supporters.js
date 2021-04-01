@@ -67,7 +67,7 @@ class Supporters extends Component {
                <h1 className='DonateHeader'><span style={{color: "#00A6A8", fontFamily: "Roboto"}}> Donate </span></h1>
            </div>
                 </div>
-                <div className='page-content'>
+                <div className='donate-page-content'>
                 <div className='buttons-component'>
                     <ButtonsComponent />
                     <div className='edit-modal'>
