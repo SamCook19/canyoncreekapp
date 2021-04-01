@@ -149,6 +149,14 @@
 
 }
 
+.donate-page-content {
+  
+    display: grid;
+    grid-template-columns: 1fr 80% 90px;
+    height: 82vh;
+  
+}
+
 .page-content {
   display: grid;
   grid-template-columns: 1fr 80% 90px;

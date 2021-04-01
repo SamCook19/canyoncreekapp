@@ -435,6 +435,53 @@
 }
 
 @media (max-width: 600px) {
+  .help-page-content {
+    display: grid;
+    position: relative;
+    .help-buttons-component {
+      .mobile-button-group {
+        position: fixed;
+        top: 30%;
+      }
+    }
+    .help-info {
+    display: unset;
+    z-index: unset;
+    background-color: #f8f8f8;
+    grid-column: 1/3;
+    grid-row: 2;
+    height: fit-content;
+    .DatabasePage {
+      grid-column: 1/3;
+      display: grid;
+      grid-template-columns: 15% 1fr 15%;
+    }
+    }
+    .help-background {
+      position: unset;
+      grid-row: 1/2;
+      grid-column: 1/2;
+      z-index: 0;
+      width: 100vw;
+    }
+    .request-form {
+      z-index: unset;
+      grid-row: 3;
+      grid-column: 1/3;
+      display: grid;
+      justify-content: center;
+      font-size: 16px;
+      background-color: #f8f8f8;
+      .request-form-heading {
+        margin-right: unset;
+        margin-left: unset;
+        font-size: 16px;
+      }
+    }
+  }
+  h1.HelpForSurvivorsHeader {
+    font-size: 40px;
+  }
   div.mobile-social-page-volunteer {
     margin-top: 25px;
   }
