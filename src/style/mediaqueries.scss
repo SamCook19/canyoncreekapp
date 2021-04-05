@@ -435,11 +435,6 @@
 }
 
 @media (max-width: 600px) {
-  div.page-logo {
-    div.logo-main img {
-      width: 150px;
-    }
-  }
   .DatabasePage__Donate {
     .mobile-social-page {
       grid-column: 1/4;
@@ -493,7 +488,7 @@
     }
   }
   h1.HelpForSurvivorsHeader {
-    font-size: 35px;
+    font-size: 40px;
   }
   div.mobile-social-page-volunteer {
     margin-top: 25px;
