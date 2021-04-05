@@ -435,6 +435,9 @@
 }
 
 @media (max-width: 600px) {
+ .logo-img img {
+    width: 150px;
+  }
   .DatabasePage__Donate {
     .mobile-social-page {
       grid-column: 1/4;

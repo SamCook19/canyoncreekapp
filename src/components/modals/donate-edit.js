@@ -91,9 +91,7 @@ class DonateEdit extends Component {
             .update(
                 article
                 )
-            .then( res => {
-                console.log(res)
-            } )
+            .then( window.location.reload() )
             .catch( err => console.log(err))
     }
 
@@ -157,6 +155,7 @@ class DonateEdit extends Component {
                                     Submit
                                 </Button> 
                             </FormGroup>
+
                             
                         </FormGroup>
                 <Col className='right-column'>

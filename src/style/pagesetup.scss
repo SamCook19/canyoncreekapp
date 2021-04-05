@@ -154,20 +154,25 @@
   
     display: grid;
     grid-template-columns: 1fr 80% 90px;
-    height: 82vh;
+    height: 100%;
   
 }
 
 .page-content {
   display: grid;
   grid-template-columns: 1fr 80% 90px;
-  height: 82vh;
+  height: 100%;
+  background-color: #f8f8f8;
 }
 
 .blog-page-content {
   display: grid;
   grid-template-columns: 1fr 80% 15px;
   height: 82vh;
+}
+
+.ArticleLabel {
+  font-size: 22px;
 }
 
 
@@ -392,6 +397,8 @@ grid-template-columns: 10% 1fr 10%;
 .coalition-page-content {
   display: grid;
   grid-template-columns: 1fr 1fr;
+  height: 100%;
+  background-color: #f8f8f8;
 }
 
 
@@ -411,6 +418,8 @@ grid-template-columns: 10% 1fr 10%;
 .prevention-page-content {
   display: grid;
   grid-template-columns: 1fr 1fr;
+  height: 100%;
+  background-color: #f8f8f8;
 }
 
 .prevention-background {
@@ -540,7 +549,8 @@ grid-template-columns: 10% 1fr 10%;
 }
 
 .volunteer-page-content {
-  height: 84.5vh;
+  height: 100%;
+  background-color: #f8f8f8;
 }
 
 .volunteer-page-info {

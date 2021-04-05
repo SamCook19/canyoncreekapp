@@ -82,10 +82,9 @@ class EmploymentOppEdit extends Component {
             .update(
                 article
                 )
-            .then( res => {
-                console.log(res)
-            } )
-            .catch( err => console.log(err))
+            .then( window.location.reload())
+            .catch( err => console.log(err));
+            
     }
 
     uploadImageCallBack = (e) => {
@@ -103,6 +102,10 @@ class EmploymentOppEdit extends Component {
                 })
             })
         })
+    }
+
+    refreshPage() {
+        window.location.reload();
     }
 
 
@@ -142,6 +145,8 @@ class EmploymentOppEdit extends Component {
                                     Submit
                                 </Button> 
                             </FormGroup>
+
+                            
                             
                         </FormGroup>
                 <Col className='right-column'>

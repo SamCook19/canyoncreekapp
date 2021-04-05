@@ -32678,9 +32678,8 @@ table.is-completely-borderless td, table.is-completely-borderless th, table.is-c
   }
 }
 .page-container {
-  width: 100vw;
-  height: 100vh;
-  overflow-y: scroll;
+  width: 100%;
+  height: 100%;
 }
 
 .page-container .header .left-side-header {
@@ -32958,9 +32957,8 @@ table.is-completely-borderless td, table.is-completely-borderless th, table.is-c
 }
 
 .page-container {
-  width: 100vw;
-  height: 100vh;
-  overflow-y: scroll;
+  width: 100%;
+  height: 100%;
 }
 
 .page-container .header {
@@ -54178,7 +54176,7 @@ a.text-dark:hover, a.text-dark:focus {
   }
   div.home-page-content {
     display: grid;
-    grid-template-rows: 35% 1fr 25%;
+    grid-template-rows: 1fr;
     grid-template-columns: unset;
     height: unset;
   }
@@ -54354,6 +54352,7 @@ a.text-dark:hover, a.text-dark:focus {
   }
   div.mobile-button-group {
     position: fixed;
+    z-index: 10;
   }
   div.mobile-button-group div.escape-button-mobile a.button__escape {
     font-size: 10px;
@@ -54548,8 +54547,7 @@ html {
 }
 
 body {
-  overflow-x: hidden;
-  overflow-y: hidden;
+  height: 100vh;
   font-weight: normal;
   background-color: #f8f8f8;
   -webkit-font-smoothing: antialiased;
@@ -54578,4 +54576,4 @@ a:hover {
   color: inherit;
 }
 
-/*# sourceMappingURL=app-fa8e54af4bce0a1651c5.map*/
+/*# sourceMappingURL=app-e6078cb153a48495f7ca.map*/

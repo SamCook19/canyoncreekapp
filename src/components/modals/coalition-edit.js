@@ -74,18 +74,15 @@ class CoalitionEdit extends Component {
             }
         })
     }
-
-
     submitEdit = () => {
         const article = this.state.article
         db.collection("Coalition").doc("bg8ThwHltIHtLobs0eO1")
             .update(
                 article
                 )
-            .then( res => {
-                console.log(res)
-            } )
+            .then( window.location.reload() )
             .catch( err => console.log(err))
+            
     }
 
     uploadImageCallBack = (e) => {

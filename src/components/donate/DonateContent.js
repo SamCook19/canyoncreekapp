@@ -2,7 +2,7 @@ import React from 'react';
 import { CardImg, CardTitle } from 'reactstrap';
 import parse from 'html-react-parser';
 import { Picture } from 'react-responsive-picture';
-import PageSocialMedia from '../pagesocialmedia';
+import PageSocialMedia from '../pagesocialmedia'
 
 
 const DonateContent = (props) => {
@@ -23,7 +23,7 @@ const DonateContent = (props) => {
                 </div>   
                 <div className='DonateLeftColumn'>
                     <Picture src={props.data.featuredImage}
-                    sizes="(min-width: 36em) 33.3vw, 100vw"
+                    
                 />
                 </div>
                 <div className='mobile-social-page'>

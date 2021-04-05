@@ -24,9 +24,7 @@ class HeroImageEdit extends Component {
             .update(
                 article
                 )
-            .then( res => {
-                console.log(res)
-            } )
+            .then( window.location.reload() )
             .catch( err => console.log(err))
     }
 
