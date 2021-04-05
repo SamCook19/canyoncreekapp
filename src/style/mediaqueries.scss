@@ -338,7 +338,7 @@
   
   div.home-page-content {
     display: grid;
-    grid-template-rows: 35% 1fr 25%;
+    grid-template-rows: 1fr;
     grid-template-columns: unset;
     height: unset;
     div.quote-container {
@@ -435,6 +435,16 @@
 }
 
 @media (max-width: 600px) {
+  div.page-logo {
+    div.logo-main img {
+      width: 150px;
+    }
+  }
+  .DatabasePage__Donate {
+    .mobile-social-page {
+      grid-column: 1/4;
+    }
+  }
   .donate-page-content {
     display: unset;
   }
@@ -483,7 +493,7 @@
     }
   }
   h1.HelpForSurvivorsHeader {
-    font-size: 40px;
+    font-size: 35px;
   }
   div.mobile-social-page-volunteer {
     margin-top: 25px;
@@ -513,6 +523,7 @@
   }
   div.mobile-button-group {
     position: fixed;
+    z-index: 10;
     div.escape-button-mobile {
       a.button__escape {
         font-size: 10px;
@@ -661,4 +672,35 @@
  div.MobileFinancials {
    display: none;
  }
+}
+
+@media (max-width: 350px) {
+  div.edit-modal {
+    top: 70%;
+  }
+  div.mobile-button-group {
+    div.hotline-button-mobile {
+      div.button__hotline {
+        width: 35px;
+      }
+    }
+    div.escape-button-mobile {
+      a.button__escape {
+        width: 35px;
+      }
+    }
+    div.contact-button {
+      width: 35px;
+      a.contact-button {
+        width: 35px;
+      }
+    }
+    div.business-button-mobile {
+      width: 35px;
+    }
+    a.contact-link {
+      width: 35px;
+    }
+  }
+
 }

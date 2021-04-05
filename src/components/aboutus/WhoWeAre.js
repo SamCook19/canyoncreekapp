@@ -73,7 +73,6 @@ class WhoWeAre extends Component {
                 </div>
                 <div className='page-mediacontainer'>
                 <div className='media-querycontainer'>
-                <MediaQuery minWidth={1501}>
                 <div className='page-content'>
                 
                 <div className='buttons-component'>
@@ -105,44 +104,8 @@ class WhoWeAre extends Component {
                       }
                 </div>
                 </div>
-                </MediaQuery>
+               
                 </div>
-            
-            
-            <div className='media-querycontainermedium'>
-            <div className='page-content-medium'>
-            
-                <div className='buttons-component'>
-                  <div className='fixed-buttons'>
-                    <ButtonsComponent />
-                    <div className='edit-modal'>
-                      <SimpleModal />
-                    </div>
-                    </div>
-                    <div className='social-media-icons-page'>
-               <PageSocialMedia />
-                </div>
-                
-                </div>
-
-                    <div className='page-info'> 
-                    <div className='whowearespacer'></div>
-                    {
-                      this.state.isLoaded ?
-                        this.state.articles.map((article, index) => {
-                          return(
-                          <WhoWeAreContent className='whoweare'
-                            key={index}
-                            data={article}
-                          />
-                          )
-                        })
-                        : '' 
-                      }
-                </div>
-                
-            </div>
-            </div>
             </div>
             
             </div>

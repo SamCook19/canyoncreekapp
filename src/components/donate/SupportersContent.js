@@ -1,7 +1,7 @@
 import React from 'react';
 import { CardImg, CardTitle } from 'reactstrap';
 import parse from 'html-react-parser';
-
+import PageSocialMedia from '../pagesocialmedia';
 
 const SupportersContent = (props) => {
         return (
@@ -24,6 +24,9 @@ const SupportersContent = (props) => {
                 alt="Card Image"
                 className="CardImage"
                 />
+                </div>
+                <div className='mobile-social-page'>
+                    <PageSocialMedia />
                 </div>
                 </div>  
         );

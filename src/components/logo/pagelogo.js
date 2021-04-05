@@ -7,7 +7,7 @@ class PageLogo extends Component {
        
         return (
             <div className="logo-main">
-                <Link to="/">
+                <Link to="/" className='logo-container'>
                     <img alt="ccs logo home" src="/assets/images/ccslogo.png"/>
                 </Link>
             </div>
