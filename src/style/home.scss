@@ -204,8 +204,9 @@ width: 100%;
 
 .home-page-content {
   display: grid;
-  height: 55vh;
+  height: 100%;
   grid-template-columns: 1fr 40%;
+  background-color: #f8f8f8;
 }
 
 .homebutton-component {

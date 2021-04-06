@@ -18,7 +18,7 @@ activities throughout our service area. We work to
 prevent violence.</div>
 
 <div className='carousel-media-container'>
-  <MediaQuery minWidth={600}>
+  <MediaQuery minWidth={1000}>
       <Carousel activeIndex={index} onSelect={handleSelect} className='right-side-carousel'>
         
         <Carousel.Item>
@@ -61,6 +61,51 @@ prevent violence.</div>
       </Carousel>
 
       </MediaQuery>
+
+      <MediaQuery maxWidth={1000} minWidth={601}>
+      <Carousel activeIndex={index} onSelect={handleSelect} className='right-side-carousel'>
+        
+        <Carousel.Item>
+        
+          <img
+            className="d-block w-100 carouselimg"
+            src="https://picsum.photos/960/300"
+            alt="First slide"
+            style = {{
+                maxHeight: 450,
+                height: 300,
+                width:40
+            }}
+          />
+        </Carousel.Item>
+        <Carousel.Item>
+          <img
+            className="d-block w-100 carouselimg"
+            src="https://picsum.photos/960/300"
+            alt="Second slide"
+            style = {{
+                maxHeight: 450,
+                height: 300,
+                width:40
+            }}
+          />
+        </Carousel.Item>
+        <Carousel.Item>
+          <img
+            className="d-block w-100 carouselimg"
+            src="https://picsum.photos/960/300"
+            alt="Third slide"
+            style = {{
+                maxHeight: 450,
+                height: 300,
+                width:40
+            }}
+          />
+        </Carousel.Item>
+      </Carousel>
+
+      </MediaQuery>
+
       <MediaQuery maxWidth={600}>
       <Carousel activeIndex={index} onSelect={handleSelect} className='right-side-carousel'>
         
