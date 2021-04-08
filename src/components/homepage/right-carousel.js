@@ -72,7 +72,7 @@ prevent violence.</div>
             src="https://picsum.photos/960/300"
             alt="First slide"
             style = {{
-                maxHeight: 450,
+                maxHeight: 300,
                 height: 300,
                 width:40
             }}
@@ -84,7 +84,7 @@ prevent violence.</div>
             src="https://picsum.photos/960/300"
             alt="Second slide"
             style = {{
-                maxHeight: 450,
+                maxHeight: 300,
                 height: 300,
                 width:40
             }}
@@ -96,7 +96,7 @@ prevent violence.</div>
             src="https://picsum.photos/960/300"
             alt="Third slide"
             style = {{
-                maxHeight: 450,
+                maxHeight: 300,
                 height: 300,
                 width:40
             }}
@@ -116,7 +116,7 @@ prevent violence.</div>
             src="https://picsum.photos/960/300"
             alt="First slide"
             style = {{
-                maxHeight: 450,
+                maxHeight: 200,
                 height: 200,
                 width:40
             }}
@@ -128,7 +128,7 @@ prevent violence.</div>
             src="https://picsum.photos/960/300"
             alt="Second slide"
             style = {{
-                maxHeight: 450,
+                maxHeight: 200,
                 height: 200,
                 width:40
             }}
@@ -140,7 +140,7 @@ prevent violence.</div>
             src="https://picsum.photos/960/300"
             alt="Third slide"
             style = {{
-                maxHeight: 450,
+                maxHeight: 200,
                 height: 200,
                 width:40
             }}
