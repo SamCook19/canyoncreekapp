@@ -30,9 +30,9 @@ import { Carousel } from 'react-responsive-carousel';
 class Quotes extends Component {
     render() {
         return (
-            <Carousel showThumbs={false} animationHandler='fade' swipeable={false} >
+            <Carousel showThumbs={false} showIndicators={false} animationHandler='fade' swipeable={false} className='quote-container' >
                 
-                <div key="slide1" style={{ padding: 20, height: 500 }}>
+                <div className='first-slide' key="slide1" style={{ padding: 20, height: 500, display: 'grid' }}>
                     <div className="first-quote">
                 "Canyon Creek taught my class about what consent is and helped me create healthy boundaries."
                 </div>
