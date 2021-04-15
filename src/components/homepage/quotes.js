@@ -1,39 +1,61 @@
 
-import React, { Component } from 'react';
-import ReactDOM from 'react-dom';
-import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
-import { Carousel } from 'react-responsive-carousel';
+import React, { useState } from 'react';
+import Carousel from 'react-bootstrap/Carousel';
+
+function Quotes() {
+    const [index, setIndex] = useState(0);
+  
+    const handleSelect = (selectedIndex, e) => {
+      setIndex(selectedIndex);
+    };
 
 
-class Quotes extends Component {
+    return (
+      <div className='quote-carousel'>
 
-    
+<div className='carousel-media-container-quotes'>
+  
+      <Carousel activeIndex={index} onSelect={handleSelect} indicators={false} controls={false} className='left-side-carousel' fade interval={4000}>
+      
+        <Carousel.Item className="first-slide">
+           <div className="first-quote">
+           "Canyon Creek taught my class about what consent is and helped me create healthy boundaries."
+           </div>
+           <div className="second-quote">
+           "Volunteering at Canyon Creek is the best decision I ever made."
+           </div>
+           <div className="third-quote">
+           "The advocates here supported me in court when I had no other support system"
+           </div>
 
-    render() {
-        return (
-            <Carousel showThumbs={false} showIndicators={false} animationHandler="fade" swipeable={false} className='quote-container' >
-                
-                <div className='first-slide' key="slide1" style={{ padding: 20, height: 500, display: 'grid' }}>
-                <div className="first-quote">
-                "Canyon Creek taught my class about what consent is and helped me create healthy boundaries."
-                </div>
-                <div className="second-quote">
-                "Volunteering at Canyon Creek is the best decision I ever made."
-                </div>
-                <div className="third-quote">
-                "The advocates here supported me in court when I had no other support system."
-                </div>
-        </div>
-        <div key="slide2" style={{ padding: 20, height: 500 }}>
-            Text 02
-        </div>
-        <div key="slide3" style={{padding: 20, height: 500}}>
-            Text 03
-        </div>
-               
-            </Carousel>
-        );
-    }
-};
+        </Carousel.Item>
+        <Carousel.Item className="second-slide">
+        <div className="first-quote">
+           "Canyon Creek taught my class about what consent is and helped me create healthy boundaries."
+           </div>
+           <div className="second-quote">
+           "Another quote"
+           </div>
+           <div className="third-quote">
+           "Canyon Creek taught my class about what consent is and helped me create healthy boundaries."
+           </div>
+        </Carousel.Item>
+        <Carousel.Item className="third-slide">
+        <div className="first-quote">
+           "Canyon Creek taught my class about what consent is and helped me create healthy boundaries."
+           </div>
+           <div className="second-quote">
+           "Quote again."
+           </div>
+           <div className="third-quote">
+           "Canyon Creek taught my class about what consent is and helped me create healthy boundaries."
+           </div>
+        </Carousel.Item>
+      </Carousel>
+      </div>
+      
+      </div>
+    );
+  }
 
-export default Quotes;
+  export default Quotes;
