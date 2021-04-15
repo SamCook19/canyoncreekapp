@@ -262,18 +262,22 @@ width: 100%;
   font-size: 20px;
   height: 100%;
   display: grid;
+  
  .first-slide {
    grid-template-columns: 1fr 1fr 1fr 1fr 35px;
    grid-template-rows: 1fr 1fr 1fr;
+
+   .second-quote {
+     grid-row: 2;
+    grid-column: 2/6;
+  }
 
    .first-quote {
     grid-column: 1/4;
     grid-row: 1;
   }
 
-  .second-quote {
-   grid-column: 3/5;
-  }
+  
 
   .third-quote {
     grid-column: 1/4;
@@ -281,3 +285,4 @@ width: 100%;
   }
  }
 }
+

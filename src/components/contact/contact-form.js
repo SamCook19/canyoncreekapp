@@ -1,7 +1,6 @@
 import React from 'react';
 import { useForm } from 'react-hook-form';
 import emailjs from 'emailjs-com';
-import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.min.css';
 
 export default function ContactForm() { 
@@ -43,6 +42,22 @@ export default function ContactForm() {
                       className='form-control formInput'
                       placeholder='Email address'
                     ></input>
+                    
+                  </div>
+                  <div className='emaildropdown'>
+                  <label for="emails">Who Would You Like To Reach?</label>
+                    <select id='emails'
+                    type='to'
+                    name='recipient'
+                    className='form-dropdown'
+                    placeholder='recipient address'>
+                      <option value="prevention@canyoncreekservices.org">prevention@canyoncreekservices.org</option>
+                      <option value="administration@canyoncreekservices.org">administration@canyoncreekservices.org</option>
+                      <option value="development@canyoncreekservices.org">development@canyoncreekservices.org</option>
+                      <option value="volunteers@canyoncreekservices.org">volunteers@canyoncreekservices.org</option>
+                      <option value="business@canyoncreekservices.org">business@canyoncreekservices.org</option>
+                      <option value="board@canyoncreekservices.org">board@canyoncreekservices.org</option>
+                    </select>
                   </div>
                 </div>
                 {/* Row 2 of form */}
@@ -56,6 +71,7 @@ export default function ContactForm() {
                     ></input>
                     
                   </div>
+                 
                 </div>
                 {/* Row 3 of form */}
                 <div className='row formRow'>
@@ -75,7 +91,7 @@ export default function ContactForm() {
                 </div>
               </form>
             </div>
-            <ToastContainer />
+            
           </div>
         </div>
       </div>
