@@ -1,8 +1,9 @@
 
 import React, { useState } from 'react';
 import Carousel from 'react-bootstrap/Carousel';
+import parse from 'html-react-parser';
 
-function Quotes() {
+const Quotes = (props) =>{
     const [index, setIndex] = useState(0);
   
     const handleSelect = (selectedIndex, e) => {
@@ -19,36 +20,36 @@ function Quotes() {
       
         <Carousel.Item className="first-slide">
            <div className="first-quote">
-           "Canyon Creek taught my class about what consent is and helped me create healthy boundaries."
+           {parse(props.data.firstslideFirst)}
            </div>
            <div className="second-quote">
-           "Volunteering at Canyon Creek is the best decision I ever made."
+           {parse(props.data.firstslideSecond)}
            </div>
            <div className="third-quote">
-           "The advocates here supported me in court when I had no other support system"
+           {parse(props.data.firstslideThird)}
            </div>
 
         </Carousel.Item>
         <Carousel.Item className="second-slide">
         <div className="first-quote">
-           "Canyon Creek taught my class about what consent is and helped me create healthy boundaries."
+        {parse(props.data.secondslideFirst)}
            </div>
            <div className="second-quote">
-           "Another quote"
+           {parse(props.data.secondslideSecond)}
            </div>
            <div className="third-quote">
-           "Canyon Creek taught my class about what consent is and helped me create healthy boundaries."
+           {parse(props.data.secondslideThird)}
            </div>
         </Carousel.Item>
         <Carousel.Item className="third-slide">
         <div className="first-quote">
-           "Canyon Creek taught my class about what consent is and helped me create healthy boundaries."
+        {parse(props.data.thirdslideFirst)}
            </div>
            <div className="second-quote">
-           "Quote again."
+           {parse(props.data.thirdslideSecond)}
            </div>
            <div className="third-quote">
-           "Canyon Creek taught my class about what consent is and helped me create healthy boundaries."
+           {parse(props.data.thirdslideThird)}
            </div>
         </Carousel.Item>
       </Carousel>
