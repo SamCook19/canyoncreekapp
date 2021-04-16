@@ -1,8 +1,11 @@
 import React, { Component } from 'react';
 import { Card, CardImg, CardTitle, CardSubtitle, CardBody, Badge } from 'reactstrap';
 import { Link } from "react-router-dom";
+import { useAuth } from '../../contexts/AuthContext';
+import ArticleDelete from './ArticleDelete';
+import * as firebase from 'firebase';
 
-
+const db = firebase.default.firestore()
 
 export function timeStampToString(timestamp) {
     const date = timestamp.toDate()
@@ -10,12 +13,25 @@ export function timeStampToString(timestamp) {
     return date.getFullYear() + '/' + (date.getMonth() + 1) + '/' + date.getDate()
 }
 
-const ArticleCard = (props) => {
-        return (
+// const { currentUser } = useAuth();
+
+class ArticleCard extends Component {
+
+    constructor(props) {
+        super(props);
+        
+    }
+
+     
+    render () {
+
+
+        return ( 
+            <div>
             <Link to={
                 {
-                    pathname: 'article/' + props.data.id,
-                    state: {article: props.data}
+                    pathname: 'article/' + this.props.data.id,
+                    state: {article: this.props.data}
                 }
             }>
                 <div className = "CardBody">
@@ -23,24 +39,24 @@ const ArticleCard = (props) => {
                     <CardTitle className="CardTitle">
                     <Link to={
                     {
-                        pathname: 'article/' + props.data.id,
-                        state: {article: props.data}
+                        pathname: 'article/' + this.props.data.id,
+                        state: {article: this.props.data}
                     }
-                }>{props.data.title}
+                }>{this.props.data.title}
                 </Link>
                     </CardTitle>
                     <CardSubtitle className="CardSubtitle">
                         <div className="ArticleLabel">
-                            {props.data.categoryLabel}
+                            {this.props.data.categoryLabel}
                         </div>
                         <div className="createDate">
-                            {timeStampToString(props.data.createDate)}
+                            {timeStampToString(this.props.data.createDate)}
                         </div>
                     </CardSubtitle>
                     
                     <div className='blog-spacer'></div>
                     <div className= "CardSummary">
-                        {props.data.summary}
+                        {this.props.data.summary}
                     </div>
                     
                 </div>   
@@ -48,16 +64,24 @@ const ArticleCard = (props) => {
                 <CardImg
                 top
                 width="300px"
-                src={props.data.featuredImage}
+                src={this.props.data.featuredImage}
                 alt="Card Image"
                 className="CardImage"
                 />
                 </div>  
                 <div className='spacer'></div>
+
             </Link>
             
-
-        );
+            <div className='article-delete'>
+            <ArticleDelete data={this.props.data} />
+            </div>
+            
+            </div>
+        
+            
+            
+        );}
     }
 
 export default ArticleCard;
