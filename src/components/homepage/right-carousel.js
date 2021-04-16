@@ -1,206 +1,227 @@
-import React, { useState } from 'react';
-import Carousel from 'react-bootstrap/Carousel';
-import MediaQuery from 'react-responsive';
+// import React, { useState } from 'react';
+// import Carousel from 'react-bootstrap/Carousel';
+// import MediaQuery from 'react-responsive';
 
 
-function ControlledCarousel() {
-    const [index, setIndex] = useState(0);
+// function ControlledCarousel() {
+//     const [index, setIndex] = useState(0);
   
-    const handleSelect = (selectedIndex, e) => {
-      setIndex(selectedIndex);
-    };
+//     const handleSelect = (selectedIndex, e) => {
+//       setIndex(selectedIndex);
+//     };
 
 
-    return (
-      <div className='carousel'>
-        <div className='carousel-quote'>We engage in evidence-based primary prevention
-activities throughout our service area. We work to
-prevent violence.</div>
+//     return (
+//       <div className='carousel'>
+//         <div className='carousel-quote'>We engage in evidence-based primary prevention
+// activities throughout our service area. We work to
+// prevent violence.</div>
 
-<div className='carousel-media-container'>
-  <MediaQuery minWidth={1000}>
+// <div className='carousel-media-container'>
+//   <MediaQuery minWidth={1000}>
   
-      <Carousel activeIndex={index} onSelect={handleSelect} indicators={true} className='right-side-carousel'>
+//       <Carousel activeIndex={index} onSelect={handleSelect} indicators={true} className='right-side-carousel'>
       
-        <Carousel.Item>
+//         <Carousel.Item>
         
-          <img
-            className="d-block w-100 carouselimg"
-            src="https://picsum.photos/960/300"
-            alt="First slide"
-            style = {{
-                maxHeight: 450,
-                height: 450,
-                width:40
-            }}
-          />
-        </Carousel.Item>
-        <Carousel.Item>
-          <img
-            className="d-block w-100 carouselimg"
-            src="https://picsum.photos/960/300"
-            alt="Second slide"
-            style = {{
-                maxHeight: 450,
-                height: 450,
-                width:40
-            }}
-          />
-        </Carousel.Item>
-        <Carousel.Item>
-          <img
-            className="d-block w-100 carouselimg"
-            src="https://picsum.photos/960/300"
-            alt="Third slide"
-            style = {{
-                maxHeight: 450,
-                height: 450,
-                width:40
-            }}
-          />
-        </Carousel.Item>
-      </Carousel>
+//           <img
+//             className="d-block w-100 carouselimg"
+//             src="https://picsum.photos/960/300"
+//             alt="First slide"
+//             style = {{
+//                 maxHeight: 450,
+//                 height: 450,
+//                 width:40
+//             }}
+//           />
+//         </Carousel.Item>
+//         <Carousel.Item>
+//           <img
+//             className="d-block w-100 carouselimg"
+//             src="https://picsum.photos/960/300"
+//             alt="Second slide"
+//             style = {{
+//                 maxHeight: 450,
+//                 height: 450,
+//                 width:40
+//             }}
+//           />
+//         </Carousel.Item>
+//         <Carousel.Item>
+//           <img
+//             className="d-block w-100 carouselimg"
+//             src="https://picsum.photos/960/300"
+//             alt="Third slide"
+//             style = {{
+//                 maxHeight: 450,
+//                 height: 450,
+//                 width:40
+//             }}
+//           />
+//         </Carousel.Item>
+//       </Carousel>
       
-      </MediaQuery>
+//       </MediaQuery>
 
-      <MediaQuery maxWidth={1000} minWidth={601}>
-      <Carousel activeIndex={index} onSelect={handleSelect} className='right-side-carousel'>
+//       <MediaQuery maxWidth={1000} minWidth={601} maxHeight={900}>
+//       <Carousel activeIndex={index} onSelect={handleSelect} className='right-side-carousel'>
         
-        <Carousel.Item>
+//         <Carousel.Item>
         
-          <img
-            className="d-block w-100 carouselimg"
-            src="https://picsum.photos/960/300"
-            alt="First slide"
-            style = {{
-                maxHeight: 300,
-                height: 300,
-                width:40
-            }}
-          />
-        </Carousel.Item>
-        <Carousel.Item>
-          <img
-            className="d-block w-100 carouselimg"
-            src="https://picsum.photos/960/300"
-            alt="Second slide"
-            style = {{
-                maxHeight: 300,
-                height: 300,
-                width:40
-            }}
-          />
-        </Carousel.Item>
-        <Carousel.Item>
-          <img
-            className="d-block w-100 carouselimg"
-            src="https://picsum.photos/960/300"
-            alt="Third slide"
-            style = {{
-                maxHeight: 300,
-                height: 300,
-                width:40
-            }}
-          />
-        </Carousel.Item>
-      </Carousel>
+//           <img
+//             className="d-block w-100 carouselimg"
+//             src="https://picsum.photos/960/300"
+//             alt="First slide"
+//             style = {{
+//                 maxHeight: 300,
+//                 height: 300,
+//                 width:40
+//             }}
+//           />
+//         </Carousel.Item>
+//         <Carousel.Item>
+//           <img
+//             className="d-block w-100 carouselimg"
+//             src="https://picsum.photos/960/300"
+//             alt="Second slide"
+//             style = {{
+//                 maxHeight: 300,
+//                 height: 300,
+//                 width:40
+//             }}
+//           />
+//         </Carousel.Item>
+//         <Carousel.Item>
+//           <img
+//             className="d-block w-100 carouselimg"
+//             src="https://picsum.photos/960/300"
+//             alt="Third slide"
+//             style = {{
+//                 maxHeight: 300,
+//                 height: 300,
+//                 width:40
+//             }}
+//           />
+//         </Carousel.Item>
+//       </Carousel>
 
-      </MediaQuery>
+//       </MediaQuery>
 
-      <MediaQuery maxWidth={600}>
-      <Carousel activeIndex={index} onSelect={handleSelect} className='right-side-carousel'>
+//       <MediaQuery maxWidth={600} maxHeight={300}>
+//       <Carousel activeIndex={index} onSelect={handleSelect} className='right-side-carousel'>
         
-        <Carousel.Item>
+//         <Carousel.Item>
         
-          <img
-            className="d-block w-100 carouselimg"
-            src="https://picsum.photos/960/300"
-            alt="First slide"
-            style = {{
-                maxHeight: 200,
-                height: 200,
-                width:40
-            }}
-          />
-        </Carousel.Item>
-        <Carousel.Item>
-          <img
-            className="d-block w-100 carouselimg"
-            src="https://picsum.photos/960/300"
-            alt="Second slide"
-            style = {{
-                maxHeight: 200,
-                height: 200,
-                width:40
-            }}
-          />
-        </Carousel.Item>
-        <Carousel.Item>
-          <img
-            className="d-block w-100 carouselimg"
-            src="https://picsum.photos/960/300"
-            alt="Third slide"
-            style = {{
-                maxHeight: 200,
-                height: 200,
-                width:40
-            }}
-          />
-        </Carousel.Item>
-      </Carousel>
-      </MediaQuery>
-      </div>
+//           <img
+//             className="d-block w-100 carouselimg"
+//             src="https://picsum.photos/960/300"
+//             alt="First slide"
+//             style = {{
+//                 maxHeight: 200,
+//                 height: 200,
+//                 width:40
+//             }}
+//           />
+//         </Carousel.Item>
+//         <Carousel.Item>
+//           <img
+//             className="d-block w-100 carouselimg"
+//             src="https://picsum.photos/960/300"
+//             alt="Second slide"
+//             style = {{
+//                 maxHeight: 200,
+//                 height: 200,
+//                 width:40
+//             }}
+//           />
+//         </Carousel.Item>
+//         <Carousel.Item>
+//           <img
+//             className="d-block w-100 carouselimg"
+//             src="https://picsum.photos/960/300"
+//             alt="Third slide"
+//             style = {{
+//                 maxHeight: 200,
+//                 height: 200,
+//                 width:40
+//             }}
+//           />
+//         </Carousel.Item>
+//       </Carousel>
+//       </MediaQuery>
+//       </div>
       
-      </div>
-    );
+//       </div>
+//     );
+//   }
+
+//   export default ControlledCarousel;
+
+import React from 'react'
+import * as firebase from 'firebase';
+import CarouselImages from './right-carouselimages';
+
+const db = firebase.default.firestore()
+
+class ControlledCarousel extends React.Component {
+  constructor(props) {
+    super(props)
+
+    this.state = {
+      isLoaded: false,
+      articles: []
+    }
   }
 
-  export default ControlledCarousel;
+  componentDidMount() {
+    this.getMyArticles()
+  }
 
-// import React from 'react'
-// import * as firebase from 'firebase';
-// import { Carousel } from 'react-responsive-carousel'
+  getMyArticles = () => {
+    db
+    .collection( 'Carousel' )
+    .get()
+    .then(docs => {
+      if(!docs.empty){
+        let allArticles = []
+        docs.forEach(function (doc) {
+          const article = {
+            id: doc.id,
+            ...doc.data()
+          }
 
-// const db = firebase.default.firestore()
+          allArticles.push(article)
+        })
 
-// class ControlledCarousel extends React.Component {
-//   constructor(props) {
-//     super(props)
+        this.setState({
+          articles: allArticles
+        }, () => {
+          this.setState ({
+            isLoaded: true
+          })
+        })
+      }
+    })
+  }
+  
+  render() {
+    return (
+      <div className='CarouselContainer'>
+         {
+                      this.state.isLoaded ?
+                        this.state.articles.map((article, index) => {
+                          return(
+                          <CarouselImages className='Carousel'
+                            key={index}
+                            data={article}
+                          />
+                          )
+                        })
+                        : '' 
+                      }
+          </div>
+      )
+  }
+}
 
-//     this.state = {
-//       images: null
-//     }
-//   }
-
-//   componentDidMount() {
-//     this.getMyCarousel()
-//   }
-
-//   getMyCarousel = () => {
-//     db
-//         .collection( 'Carousel' )
-//         .get()
-//         .then(response => response.json()) // If it's a JSON response, you have to parse it firstly
-//         .then(images => this.setState({ images })) // #2. After that you have to keep the images in the component's state.
-//       }
-
-//   render () {
-//     const { images } = this.state
-
-//     if (!images) return <div>Images are not fetched yet!</div>
-
-//     // #3. Finally, render the `<Carousel />` with the state's images.
-//     return <Carousel autoPlay infiniteLoop='true'>
-//       {
-//         images.map( image => {
-//           return <div>
-//             <img src={ image.path } />
-//             <p className="legend">{ image.name }</p>
-//           </div>
-//         })
-//       }
-//     </Carousel>
-//   }
-// }
-
-// export default ControlledCarousel;
+export default ControlledCarousel;

@@ -1,6 +1,8 @@
 import React from 'react';
 import { CardImg, CardTitle } from 'reactstrap';
 import Image from 'react-bootstrap/Image';
+import MediaQuery from 'react-responsive';
+
 
 const HeroImage = (props) => {
         return (
