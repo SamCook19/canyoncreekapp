@@ -6,7 +6,6 @@ import firebase from "firebase";
 import { v4 as uuidv4 } from 'uuid'
 
 const db = firebase.default.firestore()
-const storageRef = firebase.storage()
 
 class QuoteEdit extends Component {
     constructor(props) {

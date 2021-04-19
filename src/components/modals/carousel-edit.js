@@ -122,7 +122,7 @@
                             
                             <FormGroup className='edit-status-button'>
                                     <Button className='edit-submit'
-                                    onClick={(e) => this.submitEdit()}>
+                                    onClick={(e) => this.submitArticle()}>
                                         Submit
                                     </Button> 
                                 </FormGroup>
