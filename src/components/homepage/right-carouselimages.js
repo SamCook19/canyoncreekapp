@@ -18,10 +18,6 @@ activities throughout our service area. We work to
 prevent violence.</div>
 
 <div className='carousel-media-container'>
-  
-      <Carousel activeIndex={index} onSelect={handleSelect} indicators={true} className='right-side-carousel'>
-      
-        <Carousel.Item>
         
           <img
             className="d-block w-100 carouselimg"
@@ -33,32 +29,7 @@ prevent violence.</div>
                 width:40
             }}
           />
-        </Carousel.Item>
-        <Carousel.Item>
-          <img
-            className="d-block w-100 carouselimg"
-            src={props.data.secondLarge}
-            alt="Second slide"
-            style = {{
-                maxHeight: 450,
-                height: 450,
-                width:40
-            }}
-          />
-        </Carousel.Item>
-        <Carousel.Item>
-          <img
-            className="d-block w-100 carouselimg"
-            src={props.data.thirdLarge}
-            alt="Third slide"
-            style = {{
-                maxHeight: 450,
-                height: 450,
-                width:40
-            }}
-          />
-        </Carousel.Item>
-      </Carousel>
+        
      </div>
      </div>
     );

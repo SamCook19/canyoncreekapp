@@ -160,6 +160,7 @@
 import React from 'react'
 import * as firebase from 'firebase';
 import CarouselImages from './right-carouselimages';
+import Carousel from 'react-bootstrap/Carousel';
 
 const db = firebase.default.firestore()
 
@@ -171,13 +172,15 @@ class ControlledCarousel extends React.Component {
       isLoaded: false,
       articles: []
     }
+
+    
   }
 
   componentDidMount() {
-    this.getMyArticles()
+    this.getMyCarousel()
   }
 
-  getMyArticles = () => {
+  getMyCarousel = () => {
     db
     .collection( 'Carousel' )
     .get()
@@ -203,25 +206,32 @@ class ControlledCarousel extends React.Component {
       }
     })
   }
+
+  
   
   render() {
     return (
       <div className='CarouselContainer'>
+        <Carousel  
+        indicators="true"
+        className='right-side-carousel'>
          {
-                      this.state.isLoaded ?
-                        this.state.articles.map((article, index) => {
-                          return(
-                          <CarouselImages className='Carousel'
-                            key={index}
+                    
+                        this.state.articles.map((article, index) => 
+                          
+                          <Carousel.Item>
+                         
+                            <CarouselImages
+                            key={index} 
                             data={article}
-                          />
-                          )
-                        })
-                        : '' 
-                      }
+                            />
+                        </Carousel.Item>
+                        )
+                }
+                    </Carousel>
           </div>
       )
-  }
+}
 }
 
 export default ControlledCarousel;
