@@ -31,7 +31,7 @@ export default function ContactForm() {
                     <input
                       type='text'
                       name='name'
-                      className='form-control formInput'
+                      className='name-area'
                       placeholder='Name'
                     ></input>
                   </div>
@@ -39,7 +39,7 @@ export default function ContactForm() {
                     <input
                       type='email'
                       name='email'
-                      className='form-control formInput'
+                      className='email-area'
                       placeholder='Email address'
                     ></input>
                     
@@ -66,7 +66,7 @@ export default function ContactForm() {
                     <input
                       type='text'
                       name='subject'
-                      className='form-control formInput'
+                      className='subject-area'
                       placeholder='Subject'
                     ></input>
                     
@@ -79,7 +79,6 @@ export default function ContactForm() {
                     <textarea className='message-area'
                       rows={3}
                       name='message'
-                      className='form-control formInput'
                       placeholder='Message'
                     ></textarea>
                   </div>

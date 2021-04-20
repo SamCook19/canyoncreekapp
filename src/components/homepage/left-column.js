@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import Quotes from './quotes';
 import HomepageSocialMedia from './homepage-socialmedia';
 import * as firebase from 'firebase';
-import SimpleModal from '../modals/quote-modal';
+
 
 const db = firebase.default.firestore()
 
@@ -64,9 +64,7 @@ class LeftColumn extends Component {
                         : '' 
                       }
                 </div>
-                <div className="quote-edit-button">
-                      <SimpleModal />
-                </div>
+               
                 <div className='social-media-container'>
                 
                     <HomepageSocialMedia />

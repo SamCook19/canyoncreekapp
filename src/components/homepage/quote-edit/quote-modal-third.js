@@ -1,8 +1,8 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Modal from '@material-ui/core/Modal';
-import { useAuth } from '../../contexts/AuthContext';
-import QuoteEdit from './quote-edit-first';
+import { useAuth } from '../../../contexts/AuthContext';
+import QuoteEdit from './quote-edit-third';
 
 function rand() {
   return Math.round(Math.random() * 20) - 10;
@@ -30,7 +30,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function QuoteModal() {
+export default function QuoteModalThird() {
   const classes = useStyles();
   // getModalStyle is not a pure function, we roll the style only on the first render
   const [modalStyle] = React.useState(getModalStyle);
@@ -51,7 +51,7 @@ export default function QuoteModal() {
       currentUser ? (
     <div>
       <button type="button" onClick={handleOpen}>
-        Edit First Set of Quotes
+        Edit Third Set of Quotes
       </button>
       <Modal
         open={open}

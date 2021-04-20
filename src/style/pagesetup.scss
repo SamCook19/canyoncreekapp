@@ -536,6 +536,7 @@ grid-template-columns: 10% 1fr 10%;
 
 .submit-contact {
   display: flex;
+  justify-content: center;
 }
 
 .contact-page-content {
@@ -690,5 +691,57 @@ grid-template-columns: 10% 1fr 10%;
   margin-top: 25px;
 }
 
+.message-area {
+  height: 300px;
+  margin-top: 15px;;
+  width: 100%;
+}
 
+.submit-btn {
+  width: 100px;
+  margin-top: 25px;
+}
 
+.emaildropdown {
+  margin: 15px;
+  font-size: 15px;
+}
+
+.contactForm {
+  font-size: 15px;
+}
+
+.subject-area {
+  width: 100%;
+}
+
+.name-area {
+  width: 100%;
+}
+
+.email-area {
+  width: 100%;
+}
+
+.quote-edit-button {
+  font-size: 12px;
+  position: absolute;
+  bottom: 0;
+}
+
+.quote-row {
+  display: flex;
+}
+
+.SectionTitle {
+  color: white;
+}
+
+.quote-label {
+  color: white;
+  font-size: 20px;
+}
+
+.quote-edit-container {
+  display: grid;
+}

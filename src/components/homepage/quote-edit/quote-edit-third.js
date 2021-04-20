@@ -13,15 +13,11 @@ class QuoteEdit extends Component {
         
         this.state={
             article: {
-                firstslideFirst: "",
-                firstslideSecond: "",
-                firstslideThird: "",
+                
                 secondslideFirst: "",
                 secondslideSecond: "",
                 secondslideThird: "",
-                thirdslideFirst: "",
-                thirdslideSecond: "",
-                thirdslideThird: ""
+               
             }
         }
     }
@@ -65,7 +61,7 @@ class QuoteEdit extends Component {
         this.setState({
             article: {
                 ...this.state.article,
-                firstslideFirst: value
+                secondslideFirst: value
             }
         })
     }
@@ -74,7 +70,7 @@ class QuoteEdit extends Component {
         this.setState({
             article: {
                 ...this.state.article,
-                firstslideSecond: value
+                secondslideSecond: value
             }
         })
     }
@@ -82,7 +78,7 @@ class QuoteEdit extends Component {
         this.setState({
             article: {
                 ...this.state.article,
-                firstslideThird: value
+                secondslideThird: value
             }
         })
     }
@@ -102,13 +98,14 @@ class QuoteEdit extends Component {
     render() {
         return (
             <Container>
-            <Row>
-                <Col >
+                
                     <h2 className='SectionTitle'>Edit Quotes</h2>
                    
-                </Col>
+                
                 <div className='edit-article-container'>
-                    <FormGroup className='left-column'> 
+                    <FormGroup className='quote-row'> 
+                    <div className='quote-edit-container'>
+                    <div className='quote-label'>First Quote</div>
                         <ReactQuill className='edit-quill'
                             ref={(el) => this.quill = el}
                             value={this.state.article.firstslideFirst}
@@ -116,8 +113,9 @@ class QuoteEdit extends Component {
                             theme='snow'
                             modules={this.modules}
                             formats={this.formats}
-                        />
-
+                        /></div>
+                        <div className='quote-edit-container'>
+                        <div className='quote-label'>Second Quote</div>
                             <ReactQuill className='edit-quill'
                             ref={(el) => this.quill = el}
                             value={this.state.article.firstslideSecond}
@@ -126,7 +124,9 @@ class QuoteEdit extends Component {
                             modules={this.modules}
                             formats={this.formats}
                         />
-
+                        </div>
+                        <div className='quote-edit-container'>
+                            <div className='quote-label'>Third Quote</div>
                             <ReactQuill className='edit-quill'
                             ref={(el) => this.quill = el}
                             value={this.state.article.firstslideThird}
@@ -135,6 +135,7 @@ class QuoteEdit extends Component {
                             modules={this.modules}
                             formats={this.formats}
                         />
+                        </div>
 
                         <FormGroup className='edit-status-button'>
                                 <Button className='edit-submit'
@@ -145,11 +146,9 @@ class QuoteEdit extends Component {
 
                             
                         </FormGroup>
-                <Col className='right-column'>
-                            
-                </Col>
+                
                 </div>
-            </Row>
+            
             </Container>
         );
     }

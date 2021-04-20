@@ -2,6 +2,9 @@
 import React, { useState } from 'react';
 import Carousel from 'react-bootstrap/Carousel';
 import parse from 'html-react-parser';
+import QuoteModal from '../modals/quote-modal';
+import QuoteModalSecond from './quote-edit/quote-modal-second';
+import QuoteModalThird from './quote-edit/quote-modal-third';
 
 const Quotes = (props) =>{
     const [index, setIndex] = useState(0);
@@ -16,7 +19,7 @@ const Quotes = (props) =>{
 
 <div className='carousel-media-container-quotes'>
   
-      <Carousel activeIndex={index} onSelect={handleSelect} indicators={false} controls={false} className='left-side-carousel' fade interval={4000}>
+      <Carousel activeIndex={index} onSelect={handleSelect} indicators={false} controls={false} className='left-side-carousel' fade interval={6000}>
       
         <Carousel.Item className="first-slide">
            <div className="first-quote">
@@ -28,7 +31,9 @@ const Quotes = (props) =>{
            <div className="third-quote">
            {parse(props.data.firstslideThird)}
            </div>
-
+           <div className="quote-edit-button">
+                      <QuoteModal />
+                </div>
         </Carousel.Item>
         <Carousel.Item className="second-slide">
         <div className="first-quote">
@@ -40,6 +45,9 @@ const Quotes = (props) =>{
            <div className="third-quote">
            {parse(props.data.secondslideThird)}
            </div>
+           <div className="quote-edit-button">
+                      <QuoteModalSecond />
+                </div>
         </Carousel.Item>
         <Carousel.Item className="third-slide">
         <div className="first-quote">
@@ -51,6 +59,9 @@ const Quotes = (props) =>{
            <div className="third-quote">
            {parse(props.data.thirdslideThird)}
            </div>
+           <div className="quote-edit-button">
+                      <QuoteModalThird />
+                </div>
         </Carousel.Item>
       </Carousel>
       </div>
