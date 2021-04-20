@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { Card, CardImg, CardTitle, CardSubtitle, CardBody, Badge } from 'reactstrap';
 import { Link } from "react-router-dom";
-import { useAuth } from '../../contexts/AuthContext';
 import ArticleDelete from './ArticleDelete';
 import * as firebase from 'firebase';
 

@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import parse from 'html-react-parser';
+import RemoveImage from './carousel-delete';
 
 
 
@@ -29,7 +30,9 @@ const CarouselImages = (props) => {
                 width:40
             }}
           />
-        
+        <div className='article-delete'>
+            <RemoveImage data={props.data} />
+            </div>
      </div>
      </div>
     );

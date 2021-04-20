@@ -51,7 +51,7 @@ export default function SimpleModal() {
       currentUser ? (
     <div>
       <button type="button" onClick={handleOpen}>
-        Edit Carousel Images
+        Add New Carousel Images
       </button>
       <Modal
         open={open}
