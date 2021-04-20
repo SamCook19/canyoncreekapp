@@ -9,10 +9,8 @@ const db = firebase.default.firestore()
 function removeImage() {
     db.collection("Carousel").doc(`${props.data.id}`)
         .delete()
-        .then( res => {
-            console.log(res)
-        } )
-        .catch( err => console.log(err))
+        .then( window.location.reload() )
+            .catch( err => console.log(err))
 }
 
   const { currentUser } = useAuth();

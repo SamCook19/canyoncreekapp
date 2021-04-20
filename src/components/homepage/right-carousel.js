@@ -55,9 +55,10 @@ class ControlledCarousel extends React.Component {
   render() {
     return (
       <div className='CarouselContainer'>
-        <Carousel  
-        indicators="true"
+        <Carousel  id="slide"
+        indicators={false}
         className='right-side-carousel'>
+          
          {
                     
                         this.state.articles.map((article, index) => 
@@ -71,6 +72,7 @@ class ControlledCarousel extends React.Component {
                         </Carousel.Item>
                         )
                 }
+               
                     </Carousel>
                     <div className='carousel-edit-button'>
                 <SimpleModal />

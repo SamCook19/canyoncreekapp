@@ -1,6 +1,6 @@
 import React from 'react';
 import { CardImg, CardTitle } from 'reactstrap';
-import AnnualReportPDFReader from './AnnualReportPDFReader';
+import PDFViewer from 'pdf-viewer-reactjs'
 
 
 
@@ -23,10 +23,14 @@ const AnnualReportContent = (props) => {
                     {props.data.employmentapplication}
                 </div>
                 <div className="AnnualReportLink">
-                    <AnnualReportPDFReader />
+                <PDFViewer
+                    document={{
+                url: `${props.data.link}`,
+            }}
+        />
                 </div>
                 <div className="MobileAnnualReport">
-                    <a href='https://arxiv.org/pdf/quant-ph/0410100.pdf'>Click Here for Report</a>
+                <a href={props.data.link}>Click Here for Report</a>
                 </div>
                 </div>  
                 </div>

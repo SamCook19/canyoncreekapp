@@ -74,10 +74,8 @@
                 .add(
                     article
                 )
-                .then( res => {
-                    console.log(res)
-                } )
-                .catch( err => console.log(err))
+                .then( window.location.reload() )
+            .catch( err => console.log(err))
         }
     
         uploadImageCallBack = (e) => {

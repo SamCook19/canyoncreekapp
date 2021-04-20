@@ -1,7 +1,9 @@
 import React from 'react';
 import { CardImg, CardTitle } from 'reactstrap';
 import parse from 'html-react-parser';
-import FinancialsPDFReader from './FinancialsPDFReader';
+
+import PDFViewer from 'pdf-viewer-reactjs'
+
 
 
 const FinancialsContent = (props) => {
@@ -24,10 +26,14 @@ const FinancialsContent = (props) => {
                     {props.data.financialyear}    
                 </div>
                 <div className='FinancialsPDFReader'>
-                    <FinancialsPDFReader />
+                <PDFViewer
+                    document={{
+                    url: `${props.data.link}`,
+            }}
+        />
                 </div>
                 <div className="MobileFinancials">
-                    <a href='https://arxiv.org/pdf/quant-ph/0410100.pdf'>Click Here for Report</a>
+                    <a href={props.data.link}>Click Here for Financials</a>
                 </div>
                 </div>  
                 </div>
