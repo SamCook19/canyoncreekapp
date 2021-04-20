@@ -115,7 +115,7 @@ class QuoteEdit extends Component {
                         <ReactQuill className='edit-quill'
                             ref={(el) => this.quill = el}
                             value={this.state.article.firstslideFirst}
-                            onChange={(e) => this.onChangeFirstContent(e)}
+                            onChange={(e) => this.onChangeFirstQuote(e)}
                             theme='snow'
                             modules={this.modules}
                             formats={this.formats}

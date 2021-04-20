@@ -61,7 +61,7 @@ class QuoteEdit extends Component {
         this.setState({
             article: {
                 ...this.state.article,
-                secondslideFirst: value
+                thirdslideFirst: value
             }
         })
     }
@@ -70,7 +70,7 @@ class QuoteEdit extends Component {
         this.setState({
             article: {
                 ...this.state.article,
-                secondslideSecond: value
+                thirdslideSecond: value
             }
         })
     }
@@ -78,7 +78,7 @@ class QuoteEdit extends Component {
         this.setState({
             article: {
                 ...this.state.article,
-                secondslideThird: value
+                thirdslideThird: value
             }
         })
     }
@@ -108,8 +108,8 @@ class QuoteEdit extends Component {
                     <div className='quote-label'>First Quote</div>
                         <ReactQuill className='edit-quill'
                             ref={(el) => this.quill = el}
-                            value={this.state.article.firstslideFirst}
-                            onChange={(e) => this.onChangeFirstContent(e)}
+                            value={this.state.article.thirdslideFirst}
+                            onChange={(e) => this.onChangeFirstQuote(e)}
                             theme='snow'
                             modules={this.modules}
                             formats={this.formats}
@@ -118,7 +118,7 @@ class QuoteEdit extends Component {
                         <div className='quote-label'>Second Quote</div>
                             <ReactQuill className='edit-quill'
                             ref={(el) => this.quill = el}
-                            value={this.state.article.firstslideSecond}
+                            value={this.state.article.thirdslideSecond}
                             onChange={(e) => this.onChangeSecondQuote(e)}
                             theme='snow'
                             modules={this.modules}
@@ -129,7 +129,7 @@ class QuoteEdit extends Component {
                             <div className='quote-label'>Third Quote</div>
                             <ReactQuill className='edit-quill'
                             ref={(el) => this.quill = el}
-                            value={this.state.article.firstslideThird}
+                            value={this.state.article.thirdslideThird}
                             onChange={(e) => this.onChangeThirdQuote(e)}
                             theme='snow'
                             modules={this.modules}
