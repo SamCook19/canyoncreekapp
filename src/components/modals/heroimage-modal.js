@@ -49,7 +49,7 @@ export default function SimpleModal() {
 
   return (
       currentUser ? (
-    <div>
+    <div className='banner-button-container'>
       <button type="button" className='homepage-img-button' onClick={handleOpen}>
         Edit Image
       </button>

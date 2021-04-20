@@ -360,6 +360,13 @@ width: 100%;
   }
 }
 
+.banner-button-container {
+  z-index: 5;
+  .homepage-img-button {
+    z-index: 5;
+  }
+}
+
 .carousel-item {
   transition: opacity 1s ease-in-out !important;
 }
