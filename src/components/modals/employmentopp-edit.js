@@ -82,8 +82,9 @@ class EmploymentOppEdit extends Component {
             .update(
                 article
                 )
+            
+            .catch( err => console.log(err))
             .then( window.location.reload())
-            .catch( err => console.log(err));
             
     }
 

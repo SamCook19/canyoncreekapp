@@ -91,8 +91,9 @@ class HelpEdit extends Component {
             .update(
                 article
                 )
-            .then( window.location.reload() )
+            
             .catch( err => console.log(err))
+            .then( window.location.reload() )
     }
 
     uploadImageCallBack = (e) => {
