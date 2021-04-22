@@ -13,10 +13,15 @@ class QuoteEdit extends Component {
         
         this.state={
             article: {
-                
+                firstslideFirst: "",
+                firstslideSecond: "",
+                firstslideThird: "",
                 secondslideFirst: "",
                 secondslideSecond: "",
                 secondslideThird: "",
+                thirdslideFirst: "",
+                thirdslideSecond: "",
+                thirdslideThird: ""
                
             }
         }
@@ -86,7 +91,7 @@ class QuoteEdit extends Component {
 
     submitEdit = () => {
         const article = this.state.article
-        db.collection("Quotes").doc("Jmt5yQaJ7oA4iNXurUyf")
+        db.collection("Quotes").doc("nEqBnrSCPdcDDl3O9rgd")
             .update(
                 article
                 )

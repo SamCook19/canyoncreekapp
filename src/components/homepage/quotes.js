@@ -1,73 +1,111 @@
 
-import React, { useState } from 'react';
+import React from 'react'
+import * as firebase from 'firebase';
 import Carousel from 'react-bootstrap/Carousel';
-import parse from 'html-react-parser';
-import QuoteModal from '../modals/quote-modal';
-import QuoteModalSecond from './quote-edit/quote-modal-second';
-import QuoteModalThird from './quote-edit/quote-modal-third';
+import SimpleModal from '../modals/carousel-modal';
 
-const Quotes = (props) =>{
-    const [index, setIndex] = useState(0);
+const db = firebase.default.firestore()
+
+class QuoteCarousel extends React.Component {
+  constructor(props) {
+    super(props)
+
+    this.state = {
+      isLoaded: false,
+      articles: []
+    }
+
+    
+  }
+
+  componentDidMount() {
+    this.getMyCarousel()
+  }
+
+  getMyCarousel = () => {
+    db
+    .collection( 'Quotes' )
+    .get()
+    .then(docs => {
+      if(!docs.empty){
+        let allArticles = []
+        docs.forEach(function (doc) {
+          const article = {
+            id: doc.id,
+            ...doc.data()
+          }
+
+          allArticles.push(article)
+        })
+
+        this.setState({
+          articles: allArticles
+        }, () => {
+          this.setState ({
+            isLoaded: true
+          })
+        })
+      }
+    })
+  }
+
   
-    const handleSelect = (selectedIndex, e) => {
-      setIndex(selectedIndex);
-    };
+  
+  render() {
+    return (
+      <div className='CarouselContainer'>
+        <Carousel  indicators={false} controls={false} className='left-side-carousel' fade interval={4000}>
+          
+         {
+                    
+                        this.state.articles.map((article, index) => 
+                          
+                          <Carousel.Item>
+                         
+                            <QuoteContainer
+                            key={index} 
+                            data={article}
+                            />
+                        </Carousel.Item>
+                        )
+                }
+               
+                    </Carousel>
+                    {/* <div className='carousel-edit-button'>
+                <SimpleModal />
+          </div> */}
+          </div>
+          
+      )
+}
+}
+
+export default QuoteCarousel;
+
+import parse from 'html-react-parser';
+
+
+const QuoteContainer = (props) => {
+    // const [index, setIndex] = useState(0);
+  
+    // const handleSelect = (selectedIndex, e) => {
+    //   setIndex(selectedIndex);
+    // };
 
 
     return (
-      <div className='quote-carousel'>
-
-<div className='carousel-media-container-quotes'>
-  
-      <Carousel activeIndex={index} onSelect={handleSelect} indicators={false} controls={false} className='left-side-carousel' fade interval={6000}>
       
-        <Carousel.Item className="first-slide">
-           <div className="first-quote">
-           {parse(props.data.firstslideFirst)}
-           </div>
-           <div className="second-quote">
-           {parse(props.data.firstslideSecond)}
-           </div>
-           <div className="third-quote">
-           {parse(props.data.firstslideThird)}
-           </div>
-           <div className="quote-edit-button">
-                      <QuoteModal />
-                </div>
-        </Carousel.Item>
-        <Carousel.Item className="second-slide">
+        <div className='first-slide'>
         <div className="first-quote">
-        {parse(props.data.secondslideFirst)}
+           {parse(props.data.firstslide)}
            </div>
            <div className="second-quote">
-           {parse(props.data.secondslideSecond)}
+           {parse(props.data.secondslide)}
            </div>
            <div className="third-quote">
-           {parse(props.data.secondslideThird)}
+           {parse(props.data.thirdslide)}
            </div>
-           <div className="quote-edit-button">
-                      <QuoteModalSecond />
-                </div>
-        </Carousel.Item>
-        <Carousel.Item className="third-slide">
-        <div className="first-quote">
-        {parse(props.data.thirdslideFirst)}
-           </div>
-           <div className="second-quote">
-           {parse(props.data.thirdslideSecond)}
-           </div>
-           <div className="third-quote">
-           {parse(props.data.thirdslideThird)}
-           </div>
-           <div className="quote-edit-button">
-                      <QuoteModalThird />
-                </div>
-        </Carousel.Item>
-      </Carousel>
-      </div>
-      
-      </div>
+     </div>
+     
     );
-  }
-
-  export default Quotes;
+    }

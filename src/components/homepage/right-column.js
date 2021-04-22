@@ -1,6 +1,4 @@
 import React, { Component } from 'react';
-import { useAuth } from '../../contexts/AuthContext'
-import AdminButton from './adminbutton';
 import ControlledCarousel from './right-carousel';
 
 

@@ -10,7 +10,7 @@ const WhoWeAreContent = (props) => {
                 <div className = "PageTitleContent">
                     
                     <CardTitle className="PageTitle">
-                        {props.data.title}
+                        {parse(props.data.title)}
                     </CardTitle>
                     <div className='page-spacer'></div>
                     <div className= "PageContent">

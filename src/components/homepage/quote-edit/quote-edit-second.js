@@ -90,7 +90,7 @@ class QuoteEdit extends Component {
 
     submitEdit = () => {
         const article = this.state.article
-        db.collection("Quotes").doc("Jmt5yQaJ7oA4iNXurUyf")
+        db.collection("Quotes").doc("AUUL1snuFJK34vHyxkLJ")
             .update(
                 article
                 )
