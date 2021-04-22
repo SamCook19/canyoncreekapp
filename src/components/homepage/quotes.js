@@ -71,7 +71,9 @@ class QuoteCarousel extends React.Component {
                         </Carousel.Item>
                         )
                 }
-               
+               {/* <div className='quote-edit-modal'>
+            <QuoteModal data={this.props.data}/>
+          </div> */}
                     </Carousel>
                     
           </div>
@@ -106,7 +108,7 @@ const QuoteContainer = (props) => {
            <div className="third-quote">
            {parse(props.data.thirdslide)}
            </div>
-          
+           
      </div>
      
     );

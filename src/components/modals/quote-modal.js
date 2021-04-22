@@ -58,7 +58,7 @@ export default function QuoteModal() {
         onClose={handleClose}
       >
     <div className='DonateEdit'>
-    <QuoteEdit />
+    <QuoteEdit data={props.data}/>
     </div>
       </Modal>
     </div> ) : null

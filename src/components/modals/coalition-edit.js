@@ -80,8 +80,9 @@ class CoalitionEdit extends Component {
             .update(
                 article
                 )
-            .then( window.location.reload() )
+            
             .catch( err => console.log(err))
+            .then( window.location.reload() )
             
     }
 
