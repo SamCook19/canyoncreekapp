@@ -307,3 +307,9 @@ width: 100%;
 li{
 transition: opacity 1s ease !important;
 }
+
+.quote-edit-modal {
+  position: absolute;
+  bottom: 0;
+  z-index: 5;
+}

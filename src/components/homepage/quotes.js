@@ -1,5 +1,5 @@
 
-import React from 'react'
+import React, { Component } from 'react'
 import * as firebase from 'firebase';
 import Carousel from 'react-bootstrap/Carousel';
 import QuoteModal from '../modals/quote-modal';
@@ -88,28 +88,27 @@ export default QuoteCarousel;
 import parse from 'html-react-parser';
 
 
-const QuoteContainer = (props) => {
-    // const [index, setIndex] = useState(0);
-  
-    // const handleSelect = (selectedIndex, e) => {
-    //   setIndex(selectedIndex);
-    // };
+class QuoteContainer extends Component {
+   
 
-
+render () {
     return (
       
         <div className='first-slide'>
         <div className="first-quote">
-           {parse(props.data.firstslide)}
+           {parse(this.props.data.firstslide)}
            </div>
            <div className="second-quote">
-           {parse(props.data.secondslide)}
+           {parse(this.props.data.secondslide)}
            </div>
            <div className="third-quote">
-           {parse(props.data.thirdslide)}
+           {parse(this.props.data.thirdslide)}
            </div>
-           
+           <div className='quote-edit-modal'>
+             <QuoteModal data={this.props.data}/>
+           </div>
      </div>
      
     );
-    }
+    }  
+  }
