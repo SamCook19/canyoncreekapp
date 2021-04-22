@@ -47,12 +47,10 @@ class Homepage extends Component {
                 <div className='home-page-content'>
                 <div className='left-side-column'>
                     <LeftColumn />
+                    
                 </div>
                 <div className='right-side-column'>
                     <RightColumn />
-                </div>
-                <div className='mobile-social-home'>
-                    <HomepageSocialMedia />
                 </div>
                 </div>
                 

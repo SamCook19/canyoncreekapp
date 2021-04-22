@@ -3,6 +3,7 @@ import React from 'react'
 import * as firebase from 'firebase';
 import Carousel from 'react-bootstrap/Carousel';
 import SimpleModal from '../modals/carousel-modal';
+import HomepageSocialMedia from './homepage-socialmedia'
 
 const db = firebase.default.firestore()
 
@@ -53,14 +54,15 @@ class QuoteCarousel extends React.Component {
   
   render() {
     return (
-      <div className='CarouselContainer'>
+      <div className='quote-carousel'>
+        <div className='left-side-carousel-container'>
         <Carousel  indicators={false} controls={false} className='left-side-carousel' fade interval={4000}>
           
          {
                     
                         this.state.articles.map((article, index) => 
                           
-                          <Carousel.Item>
+                          <Carousel.Item className='quote-item'>
                          
                             <QuoteContainer
                             key={index} 
@@ -74,6 +76,7 @@ class QuoteCarousel extends React.Component {
                     {/* <div className='carousel-edit-button'>
                 <SimpleModal />
           </div> */}
+          </div>
           </div>
           
       )

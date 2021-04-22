@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import QuoteCarousel from './quotes';
-
+import HomepageSocialMedia from './homepage-socialmedia';
 
 class LeftColumn extends Component {
     constructor(props) {
@@ -10,8 +10,13 @@ class LeftColumn extends Component {
 
     render() {
         return (
-            <div className='right-column'>
+            <div className='left-column'>
+              <div className='quote-slide-show'>
                 <QuoteCarousel />
+                </div>
+                <div className='social-media-container'>
+                  <HomepageSocialMedia />
+                </div>
             </div>
             
         );
