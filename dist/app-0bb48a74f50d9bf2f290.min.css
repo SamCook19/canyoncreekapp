@@ -32933,117 +32933,47 @@ table.is-completely-borderless td, table.is-completely-borderless th, table.is-c
 }
 
 .quote-carousel {
-  font-size: 20px;
+  height: 100%;
+}
+
+.quote-carousel .left-side-carousel-container {
+  height: 100%;
+}
+
+.quote-carousel .left-side-carousel-container .left-side-carousel {
+  height: 100%;
+}
+
+.quote-carousel .left-side-carousel-container .left-side-carousel .carousel-inner {
+  height: 100%;
+}
+
+.quote-carousel .left-side-carousel-container .left-side-carousel .carousel-inner .quote-item {
+  height: 100%;
+}
+
+.quote-carousel .left-side-carousel-container .left-side-carousel .carousel-inner .quote-item .first-slide {
+  font-size: 24px;
   height: 100%;
   display: grid;
-}
-
-.quote-carousel .left-side-carousel {
-  height: 100%;
-}
-
-.quote-carousel .left-side-carousel .carousel-inner {
-  height: 100%;
-}
-
-.quote-carousel .left-side-carousel .carousel-inner .first-slide {
-  height: 100%;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 38px;
+  grid-template-columns: 1fr 1fr 1fr 1fr 35px;
   grid-template-rows: 1fr 1fr 1fr;
-}
-
-.quote-carousel .left-side-carousel .carousel-inner .first-slide .first-quote {
-  display: flex;
-  text-align: center;
   justify-content: center;
   align-items: center;
+  text-align: center;
+}
+
+.quote-carousel .left-side-carousel-container .left-side-carousel .carousel-inner .quote-item .first-slide .first-quote {
   grid-column: 2/5;
   grid-row: 1;
 }
 
-.quote-carousel .left-side-carousel .carousel-inner .first-slide .second-quote {
-  display: flex;
-  text-align: center;
-  justify-content: center;
-  align-items: center;
+.quote-carousel .left-side-carousel-container .left-side-carousel .carousel-inner .quote-item .first-slide .second-quote {
   grid-column: 3/6;
   grid-row: 2;
 }
 
-.quote-carousel .left-side-carousel .carousel-inner .first-slide .third-quote {
-  display: flex;
-  text-align: center;
-  justify-content: center;
-  align-items: center;
-  grid-column: 2/5;
-  grid-row: 3;
-}
-
-.quote-carousel .left-side-carousel .carousel-inner .second-slide {
-  height: 100%;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 38px;
-  grid-template-rows: 1fr 1fr 1fr;
-}
-
-.quote-carousel .left-side-carousel .carousel-inner .second-slide .first-quote {
-  display: flex;
-  text-align: center;
-  justify-content: center;
-  align-items: center;
-  grid-column: 2/5;
-  grid-row: 1;
-}
-
-.quote-carousel .left-side-carousel .carousel-inner .second-slide .second-quote {
-  display: flex;
-  text-align: center;
-  justify-content: center;
-  align-items: center;
-  grid-column: 3/6;
-  grid-row: 2;
-}
-
-.quote-carousel .left-side-carousel .carousel-inner .second-slide .third-quote {
-  display: flex;
-  text-align: center;
-  justify-content: center;
-  align-items: center;
-  grid-column: 2/5;
-  grid-row: 3;
-}
-
-.quote-carousel .left-side-carousel .carousel-inner .third-slide {
-  height: 100%;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 38px;
-  grid-template-rows: 1fr 1fr 1fr;
-}
-
-.quote-carousel .left-side-carousel .carousel-inner .third-slide .first-quote {
-  display: flex;
-  text-align: center;
-  justify-content: center;
-  align-items: center;
-  grid-column: 2/5;
-  grid-row: 1;
-}
-
-.quote-carousel .left-side-carousel .carousel-inner .third-slide .second-quote {
-  display: flex;
-  text-align: center;
-  justify-content: center;
-  align-items: center;
-  grid-column: 3/6;
-  grid-row: 2;
-}
-
-.quote-carousel .left-side-carousel .carousel-inner .third-slide .third-quote {
-  display: flex;
-  text-align: center;
-  justify-content: center;
-  align-items: center;
+.quote-carousel .left-side-carousel-container .left-side-carousel .carousel-inner .quote-item .first-slide .third-quote {
   grid-column: 2/5;
   grid-row: 3;
 }
@@ -33594,6 +33524,7 @@ li {
 
 .submit-contact {
   display: flex;
+  justify-content: center;
 }
 
 .contact-page-content {
@@ -33743,6 +33674,61 @@ li {
   grid-row: 4;
   grid-column: 2;
   margin-top: 25px;
+}
+
+.message-area {
+  height: 300px;
+  margin-top: 15px;
+  width: 100%;
+}
+
+.submit-btn {
+  width: 100px;
+  margin-top: 25px;
+}
+
+.emaildropdown {
+  margin: 15px;
+  font-size: 15px;
+}
+
+.contactForm {
+  font-size: 15px;
+}
+
+.subject-area {
+  width: 100%;
+}
+
+.name-area {
+  width: 100%;
+}
+
+.email-area {
+  width: 100%;
+}
+
+.quote-edit-button {
+  font-size: 12px;
+  position: absolute;
+  bottom: 0;
+}
+
+.quote-row {
+  display: flex;
+}
+
+.SectionTitle {
+  color: white;
+}
+
+.quote-label {
+  color: white;
+  font-size: 20px;
+}
+
+.quote-edit-container {
+  display: grid;
 }
 
 .button__hotline {
@@ -54702,4 +54688,4 @@ a:hover {
   color: inherit;
 }
 
-/*# sourceMappingURL=app-29c27630bd6216278efc.map*/
+/*# sourceMappingURL=app-7f1ede6348fdeaddc897.map*/

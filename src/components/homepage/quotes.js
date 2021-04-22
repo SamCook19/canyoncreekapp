@@ -2,7 +2,7 @@
 import React from 'react'
 import * as firebase from 'firebase';
 import Carousel from 'react-bootstrap/Carousel';
-import SimpleModal from '../modals/carousel-modal';
+import QuoteModal from '../modals/quote-modal';
 import HomepageSocialMedia from './homepage-socialmedia'
 
 const db = firebase.default.firestore()
@@ -73,9 +73,7 @@ class QuoteCarousel extends React.Component {
                 }
                
                     </Carousel>
-                    {/* <div className='carousel-edit-button'>
-                <SimpleModal />
-          </div> */}
+                    
           </div>
           </div>
           
@@ -108,6 +106,7 @@ const QuoteContainer = (props) => {
            <div className="third-quote">
            {parse(props.data.thirdslide)}
            </div>
+          
      </div>
      
     );

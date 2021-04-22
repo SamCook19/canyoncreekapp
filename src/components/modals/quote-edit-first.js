@@ -13,15 +13,12 @@ class QuoteEdit extends Component {
         
         this.state={
             article: {
-                firstslideFirst: "",
-                firstslideSecond: "",
-                firstslideThird: "",
-                secondslideFirst: "",
-                secondslideSecond: "",
-                secondslideThird: "",
-                thirdslideFirst: "",
-                thirdslideSecond: "",
-                thirdslideThird: ""
+                firstslide: "",
+                
+                secondslide: "",
+                
+                thirdslide: "",
+                
             }
         }
     }
@@ -65,7 +62,7 @@ class QuoteEdit extends Component {
         this.setState({
             article: {
                 ...this.state.article,
-                firstslideFirst: value
+                firstslide: value
             }
         })
     }
@@ -74,7 +71,7 @@ class QuoteEdit extends Component {
         this.setState({
             article: {
                 ...this.state.article,
-                firstslideSecond: value
+                secondslide: value
             }
         })
     }
@@ -82,7 +79,7 @@ class QuoteEdit extends Component {
         this.setState({
             article: {
                 ...this.state.article,
-                firstslideThird: value
+                thirdslide: value
             }
         })
     }
@@ -90,7 +87,7 @@ class QuoteEdit extends Component {
 
     submitEdit = () => {
         const article = this.state.article
-        db.collection("Quotes").doc("i0pYlSW3nE9LkdvdREPh")
+        db.collection("Quotes").doc(`${this.props.data.id}`)
             .update(
                 article
                 )
@@ -114,7 +111,7 @@ class QuoteEdit extends Component {
                     <div className='quote-label'>First Quote</div>
                         <ReactQuill className='edit-quill'
                             ref={(el) => this.quill = el}
-                            value={this.state.article.firstslideFirst}
+                            value={this.state.article.firstslide}
                             onChange={(e) => this.onChangeFirstQuote(e)}
                             theme='snow'
                             modules={this.modules}
@@ -126,7 +123,7 @@ class QuoteEdit extends Component {
                             <ReactQuill className='edit-quill'
                             
                             ref={(el) => this.quill = el}
-                            value={this.state.article.firstslideSecond}
+                            value={this.state.article.secondslide}
                             onChange={(e) => this.onChangeSecondQuote(e)}
                             theme='snow'
                             modules={this.modules}
@@ -137,7 +134,7 @@ class QuoteEdit extends Component {
                             <div className='quote-label'>Third Quote</div>
                             <ReactQuill className='edit-quill'
                             ref={(el) => this.quill = el}
-                            value={this.state.article.firstslideThird}
+                            value={this.state.article.thirdslide}
                             onChange={(e) => this.onChangeThirdQuote(e)}
                             theme='snow'
                             modules={this.modules}

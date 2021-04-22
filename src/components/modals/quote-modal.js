@@ -51,7 +51,7 @@ export default function QuoteModal() {
       currentUser ? (
     <div>
       <button type="button" onClick={handleOpen}>
-        Edit First Set of Quotes
+        Edit Displayed Set of Quotes
       </button>
       <Modal
         open={open}
