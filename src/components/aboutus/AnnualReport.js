@@ -6,6 +6,7 @@ import * as firebase from 'firebase';
 import AnnualReportContent from './annualreportcontent';
 import PageSocialMedia from '../pagesocialmedia';
 import SmallNavDrawer from '../navigation/SmallNavDrawer';
+import SimpleModal from '../modals/AnnualReportModal';
 
 const db = firebase.default.firestore()
 
@@ -71,7 +72,7 @@ class AnnualReport extends Component {
                   <div className='fixed-buttons'>
                     <ButtonsComponent />
                     <div className='edit-modal'>
-                      
+                      <SimpleModal />
                     </div>
                     </div>
                     <div className='social-media-icons-page'>

@@ -53,7 +53,9 @@ class Homepage extends Component {
                     <RightColumn />
                 </div>
                 </div>
-                
+                <div className='mobile-social-home'>
+                    <HomepageSocialMedia />
+                </div>
                 </div>
         );
     }

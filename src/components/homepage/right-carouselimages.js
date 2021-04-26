@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import parse from 'html-react-parser';
 import RemoveImage from './carousel-delete';
+import MediaQuery from 'react-responsive';
 
 
 
@@ -13,7 +14,9 @@ const CarouselImages = (props) => {
 
 
     return (
+      
       <div className='carousel'>
+        <MediaQuery minWidth={1500}>
         <div className='carousel-quote'>
         {parse(props.data.quote)}
           </div>
@@ -30,10 +33,58 @@ const CarouselImages = (props) => {
                 width:40
             }}
           />
+          
         <div className='article-delete'>
             <RemoveImage data={props.data} />
             </div>
      </div>
+     </MediaQuery>
+     <MediaQuery maxWidth={1499} minWidth={1035}>
+        <div className='carousel-quote'>
+        {parse(props.data.quote)}
+          </div>
+
+<div className='carousel-media-container'>
+        
+          <img
+            className="d-block w-100 carouselimg"
+            src={props.data.featuredImage}
+            alt="Slide"
+            style = {{
+                maxHeight: 350,
+                height: 350,
+                width:40
+            }}
+          />
+          
+        <div className='article-delete'>
+            <RemoveImage data={props.data} />
+            </div>
+     </div>
+     </MediaQuery>
+     <MediaQuery maxWidth={1034} minWidth={200}>
+        <div className='carousel-quote'>
+        {parse(props.data.quote)}
+          </div>
+
+<div className='carousel-media-container'>
+        
+          <img
+            className="d-block w-100 carouselimg"
+            src={props.data.featuredImage}
+            alt="Slide"
+            style = {{
+                maxHeight: 200,
+                height: 200,
+                width:40
+            }}
+          />
+          
+        <div className='article-delete'>
+            <RemoveImage data={props.data} />
+            </div>
+     </div>
+     </MediaQuery>
      </div>
     );
     }
