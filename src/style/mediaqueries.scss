@@ -176,6 +176,9 @@
 
 @media (max-width: 1501px)
 {
+  div.article-view-container {
+    min-height: 1000px;
+  }
   div.page-heading {
     grid-column: 2/4;
     display: flex;
@@ -283,10 +286,14 @@
       }
     }
   }
+ 
 }
 
 @media (min-width: 1035px)
  {
+  div.article-view-container {
+    min-height: 700px;
+  }
     div.small-drawer {
       display: none;
     }
@@ -346,12 +353,16 @@
 }
 
 @media (min-width: 600px) {
+  
   div.mobile-social-home {
     display: none;
   }
 }
 
 @media (max-width: 600px) {
+  div.article-view-container  {
+    min-height: 500px;
+  }
   div.DatabasePage__Donate {
     div.DonateLeftColumn img {
       height: 73vh;
