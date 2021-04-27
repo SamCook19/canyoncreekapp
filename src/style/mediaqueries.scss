@@ -489,6 +489,15 @@
 }
 
 @media (max-width: 600px) {
+.volunteer-link {
+  font-size: 12px;
+  height: 40px;
+  width: 120px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
  .logo-img img {
     width: 150px;
   }
