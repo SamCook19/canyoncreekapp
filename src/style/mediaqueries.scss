@@ -338,7 +338,7 @@
   
   div.home-page-content {
     display: grid;
-    grid-template-rows: 1fr 1fr;
+    grid-template-rows: 200px 1fr;
     grid-template-columns: unset;
     height: unset;
     div.quote-container {
@@ -347,6 +347,9 @@
       margin-top: 25px;
     }
     div.social-media-container {
+      display: none;
+    }
+    div.sub-form {
       display: none;
     }
   }
@@ -360,6 +363,12 @@
 }
 
 @media (max-width: 600px) {
+  div.hero-img {
+    height: 200px;
+  }
+  div.hero-image-img img {
+    height: 180px;
+  }
   div.ArticleCardImg {
     max-height: 150px;
   }
@@ -432,6 +441,7 @@
     height: fit-content;
     display: flex;
     height: 50%;
+    background-color: #f8f8f8;
   }
   div.social-media-icons {
     margin-top: 15px;

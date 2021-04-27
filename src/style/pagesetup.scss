@@ -761,3 +761,17 @@ grid-template-columns: 10% 1fr 10%;
   color: white;
   transition: ease-in-out 0.3s;
 }
+
+.sub-form {
+  text-align: center;
+  font-size: 25px;
+}
+
+.sub-form a {
+  color:  rgb(0, 166, 168);
+}
+
+.sub-form a:hover {
+  color: #E77A54;
+  transition: ease-in-out 0.3s;
+}
