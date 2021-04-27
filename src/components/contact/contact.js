@@ -27,9 +27,9 @@ class Contact extends Component {
                   <div className='fixed-buttons'>
                     <ButtonsComponent />
                     </div>
-                    <div className='social-media-icons-page'>
+                    {/* <div className='social-media-icons-page'>
                <PageSocialMedia />
-                </div>
+                </div> */}
                 
                 </div>
             <div className='contact-page-content'>
