@@ -745,3 +745,19 @@ grid-template-columns: 10% 1fr 10%;
 .quote-edit-container {
   display: grid;
 }
+
+.volunteer-link {
+  font-size: 50px;
+  height: 100px;
+  width: 600px;
+  text-align: center;
+  background-color: rgb(102, 45, 145);
+  border-radius: 82px;
+  color: white;
+}
+
+.volunteer-link:hover {
+  background-color: #E77A54;
+  color: white;
+  transition: ease-in-out 0.3s;
+}

@@ -360,6 +360,9 @@
 }
 
 @media (max-width: 600px) {
+  div.ArticleCardImg {
+    max-height: 150px;
+  }
   div.article-view-container  {
     min-height: 500px;
   }
