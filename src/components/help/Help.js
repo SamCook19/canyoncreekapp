@@ -70,10 +70,12 @@ class Help extends Component {
                 </div>
                 <div className='help-page-content'>
                 <div className='help-buttons-component'>
+                 
                     <ButtonsComponent />
                     <div className='edit-modal'>
                       <SimpleModal />
                     </div>
+                    
                 </div>
                 <div className='social-media-icons-page'>
                <PageSocialMedia />

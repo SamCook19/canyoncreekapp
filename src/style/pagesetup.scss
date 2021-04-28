@@ -330,8 +330,8 @@ grid-template-columns: 10% 1fr 10%;
 .help-buttons-component {
   height: fit-content;
   grid-column: 1;
-  position: relative;
-  z-index: 2;
+  position: fixed;
+  z-index: 5;
 }
 
 .help-info {
@@ -341,6 +341,7 @@ grid-template-columns: 10% 1fr 10%;
   background-color: #f8f8f8;
   z-index: 2;
   height: 600px;
+  margin-top: 200px;
 }
 
 .help-background {

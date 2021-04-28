@@ -709,6 +709,9 @@
 }
 
 @media (min-width: 600px) {
+  div.mobile-social-page-help {
+    display: none;
+  }
  div.mobile-social-page-volunteer {
    display: none;
  }
