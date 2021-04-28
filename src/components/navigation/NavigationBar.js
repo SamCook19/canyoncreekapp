@@ -162,7 +162,9 @@ class NavigationComponent extends React.Component {
           </NavLink>
           </div>
           <div className="nav__menu-item">
-         
+          <NavLink to="/blog" activeClassName="nav-link-active">
+            Blog
+          </NavLink>
           </div>
         
          
@@ -170,11 +172,11 @@ class NavigationComponent extends React.Component {
 
         
         
-        <div className="blog-link">
+        {/* <div className="blog-link">
           <NavLink to="/blog" activeClassName="nav-link-active">
             Blog
           </NavLink>
-          </div>
+          </div> */}
       </nav>
       </MediaQuery> 
       </div>
@@ -247,19 +249,13 @@ class NavigationComponent extends React.Component {
           </NavLink>
           </div>
           <div className="nav__menu-item-medium">
-         
-          </div>
-        
-          
-        </ul> 
-
-        
-        
-        <div className="blog-link">
           <NavLink to="/blog" activeClassName="nav-link-active">
             Blog
           </NavLink>
           </div>
+        
+          
+        </ul>
       </nav>
       </MediaQuery> 
       </div>

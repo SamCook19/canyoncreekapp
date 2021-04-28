@@ -5,6 +5,7 @@ import 'react-quill/dist/quill.snow.css'
 import firebase from "firebase";
 import { v4 as uuidv4 } from 'uuid'
 
+
 const db = firebase.default.firestore()
 const storageRef = firebase.storage()
 
@@ -113,6 +114,8 @@ class HelpEdit extends Component {
         })
     }
 
+    
+
 
     render() {
         return (
@@ -133,7 +136,8 @@ class HelpEdit extends Component {
                         />
                         <FormGroup className='edit-status-button'>
                                 <Button className='edit-submit' type='submit'
-                                onClick={(e) => this.submitEdit()}>
+                                onClick={() => this.submitEdit()}>
+                                
                                     Submit
                                 </Button> 
                             </FormGroup>

@@ -65,7 +65,7 @@ class Prevention extends Component {
             </div></div>
             </div>
             <div className='page-heading'>
-               <h1 className='PreventionHeader'> <span style={{color: "#F16022", fontFamily: "Roboto"}}> Prevent</span> Violence</h1>
+               <h1 className='PreventionHeader'> <span style={{color: "#E77A54", fontFamily: "Roboto"}}> Prevent</span> Violence</h1>
            </div>
                 </div>
                 <div className='prevention-page-content'>
