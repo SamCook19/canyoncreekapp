@@ -93,7 +93,7 @@ class HelpEdit extends Component {
                 )
             
             .catch( err => console.log(err))
-            .then( window.location.reload() )
+            
     }
 
     uploadImageCallBack = (e) => {
@@ -131,21 +131,8 @@ class HelpEdit extends Component {
                             modules={this.modules}
                             formats={this.formats}
                         />
-                            <h2 className='TopStatistic'>Change Top Statistic</h2>
-                        <ReactQuill className='edit-quill-topstat'
-                            ref0={(el) => this.quill = el}
-                            valueTop={this.state.article.content}
-                            onChange={(e) => this.onChangeTopStatistic(e)}
-                            theme='snow'
-                            modules={this.modules}
-                            formats={this.formats}
-                        />
-
-                        
-
-                        
                         <FormGroup className='edit-status-button'>
-                                <Button className='edit-submit'
+                                <Button className='edit-submit' type='submit'
                                 onClick={(e) => this.submitEdit()}>
                                     Submit
                                 </Button> 
@@ -174,15 +161,18 @@ class HelpEdit extends Component {
                                     this.state.hasFeaturedImage ?
                                         <img src={this.state.article.featuredImage} /> : ''
                                 }</div>
-                                <h2 className='TopStatistic'>Change Bottom Statistic</h2>
-                                <ReactQuill className='edit-quill-bottomstat'
-                            ref0={(el) => this.quill = el}
-                            valueBottom={this.state.article.content}
-                            onChange={(e) => this.onChangeBottomStatistic(e)}
-                            theme='snow'
-                            modules={this.modules}
-                            formats={this.formats}
-                        />
+                                 <h2 className='BottomStatistic'>Change Bottom Statistic</h2>
+                                 <Label className='TitleLabel'>
+                        </Label>
+                        <input type ='text' className='editArticleTitle' placeholder=''
+                        onChange={(e) => this.onChangeBottomStatistic(e.target.value)}
+                        value={this.state.article.bottomStatistic}/>
+                         <h2 className='BottomStatistic'>Change Top Statistic</h2>
+                                 <Label className='TitleLabel'>
+                        </Label>
+                        <input type ='text' className='editArticleTitle' placeholder=''
+                        onChange={(e) => this.onChangeTopStatistic(e.target.value)}
+                        value={this.state.article.topStatistic}/>
                             </FormGroup>
                 </Col>
                 </div>

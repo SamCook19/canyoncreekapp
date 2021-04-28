@@ -71,8 +71,7 @@ class WhoWeAre extends Component {
                <h1 className='AboutUsHeader'>About <span style={{color: "#00A6A8", fontFamily: "Roboto"}}> Us</span></h1>
            </div>
                 </div>
-                <div className='page-mediacontainer'>
-                <div className='media-querycontainer'>
+                
                 <div className='page-content'>
                 
                 <div className='buttons-component'>
@@ -106,9 +105,7 @@ class WhoWeAre extends Component {
                 </div>
                
                 </div>
-            </div>
             
-            </div>
         )
     }
 }

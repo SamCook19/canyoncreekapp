@@ -82,7 +82,7 @@ class CoalitionEdit extends Component {
                 )
             
             .catch( err => console.log(err))
-            .then( window.location.reload() )
+            
             
     }
 

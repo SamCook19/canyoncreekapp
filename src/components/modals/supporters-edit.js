@@ -83,7 +83,7 @@ class SupportersEdit extends Component {
                 )
             
             .catch( err => console.log(err))
-            .then( window.location.reload() )
+            
     }
 
     uploadImageCallBack = (e) => {

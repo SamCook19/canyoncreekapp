@@ -33433,6 +33433,7 @@ li {
 
 .PreventionBackgroundStatsImg {
   display: grid;
+  grid-template-columns: 1fr 1fr;
 }
 
 .PreventionPageImg {
@@ -54764,4 +54765,4 @@ a:hover {
   color: inherit;
 }
 
-/*# sourceMappingURL=app-c207f10dd8f7756257cc.map*/
+/*# sourceMappingURL=app-1bd0b1efb43888844b17.map*/

@@ -95,7 +95,7 @@ class AnnualReportEdit extends Component {
                 )
             
             .catch( err => console.log(err))
-            .then( window.location.reload() )
+            
     }
 
    

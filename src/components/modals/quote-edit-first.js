@@ -92,7 +92,7 @@ class QuoteEdit extends Component {
                 article
                 )
             .then( window.location.reload() )
-            .catch( err => console.log(err))
+            
     }
 
 

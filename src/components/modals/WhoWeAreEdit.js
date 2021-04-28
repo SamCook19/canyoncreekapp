@@ -84,8 +84,10 @@ class WhoWeAreEdit extends Component {
                 )
             
             .catch( err => console.log(err))
-            .then( window.location.reload() )
+           
     }
+
+
 
     uploadImageCallBack = (e) => {
         return new Promise(async(resolve, reject) => {
@@ -136,7 +138,7 @@ class WhoWeAreEdit extends Component {
                         
                         
                         <FormGroup className='edit-status-button'>
-                                <Button className='edit-submit'
+                        <Button className='edit-submit'
                                 onClick={(e) => this.submitEdit()}>
                                     Submit
                                 </Button> 
