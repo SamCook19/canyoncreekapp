@@ -560,7 +560,11 @@ grid-template-columns: 10% 1fr 10%;
 }
 
 .volunteer-page-info {
-  height: 84.5vh;
+  height: 100%;
+}
+
+.social-media-icons-page-volunteer {
+  position: absolute;
 }
 
 .TopVolunteerContent {

@@ -198,7 +198,7 @@
     width: 130px;
   }
   a.button__escape {
-    font-size: 10px;
+    font-size: 16px;
     width: 150px;
     align-items: center;
   }
@@ -709,7 +709,9 @@
 }
 
 @media (min-width: 600px) {
- 
+ div.mobile-social-page-volunteer {
+   display: none;
+ }
   div.media-querycontainermedium {
     display: none;
   }

@@ -78,9 +78,7 @@ class Volunteer extends Component {
                     </div>
                     
                 </div>
-                <div className='social-media-icons-page-volunteer'>
-               <PageSocialMedia />
-                </div>
+                
                 
 
                     <div className='volunteer-page-info'> 
@@ -101,8 +99,11 @@ class Volunteer extends Component {
                       
                 </div>
                 
+                
             </div>
-            
+            <div className='social-media-icons-page-volunteer'>
+               <PageSocialMedia />
+                </div>
             </div>
         )
     }
