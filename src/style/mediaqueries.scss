@@ -198,18 +198,20 @@
     width: 130px;
   }
   a.button__escape {
-    font-size: 16px;
-    width: 150px;
+    font-size: 14px;
+    width: 100px;
     align-items: center;
   }
   div.button__hotline{
-    font-size: 16px;
-    width: 150px;
+    font-size: 14px;
+    width: 100px;
     align-items: center;
+    text-align: center;
   }div.business-button {
-    font-size: 16px;
-    width: 150px;
+    font-size: 14px;
+    width: 100px;
     align-items: center;
+    text-align: center;
   }
   .PageContent {
     font-size: 22px;
@@ -290,6 +292,10 @@
 }
 
 @media (max-width: 1035px) {
+  div.BoardCardImg {
+    width: 110px;
+    height: 110px;
+  }
   div.mobile-menu-div {
     width: 80px;
     height: 40px;
