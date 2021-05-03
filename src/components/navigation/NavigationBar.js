@@ -123,7 +123,7 @@ class NavigationComponent extends React.Component {
           >
             <NavLink to="/donate"  onMouseEnter={this.handleHover}>
               Donate </NavLink>
-              <div className="submenu-container">
+              <div className="submenu-container-donate">
               <CSSTransitionGroup
                 transitionName="slide"
                 transitionEnterTimeout={300}
@@ -140,7 +140,7 @@ class NavigationComponent extends React.Component {
           >
             <a onMouseEnter={this.handleHover}>
               Prevent Violence</a>
-              <div className="submenu-container">
+              <div className="submenu-container-prevent">
               <CSSTransitionGroup
                 transitionName="slide"
                 transitionEnterTimeout={300}

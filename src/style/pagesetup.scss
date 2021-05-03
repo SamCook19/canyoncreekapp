@@ -52,12 +52,28 @@
         
        }
        .submenu-container {
-         height: 200px;
+         height: 100px;
          min-width: $submenu-width;
          position: absolute;
          overflow: hidden;
          z-index: 2;  
        }
+
+       .submenu-container-prevent {
+        height: 100px;
+        min-width: $submenu-width;
+        position: absolute;
+        overflow: hidden;
+        z-index: 2;  
+      }
+
+      .submenu-container-donate {
+        height: 100px;
+        min-width: $submenu-width;
+        position: absolute;
+        overflow: hidden;
+        z-index: 2;  
+      }
        body {
          margin: 0;
          font-family: 'Stellar Light', sans-serif;
