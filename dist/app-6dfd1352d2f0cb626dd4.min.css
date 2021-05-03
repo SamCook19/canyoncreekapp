@@ -32801,6 +32801,7 @@ table.is-completely-borderless td, table.is-completely-borderless th, table.is-c
 
 .page-container .header .right-side-header .nav__submenu-item a {
   color: white;
+  font-size: 16px;
 }
 
 .page-container .header .right-side-header .nav__submenu {
@@ -33055,7 +33056,23 @@ li {
 }
 
 .page-container .header .right-side-header .submenu-container {
-  height: 200px;
+  height: 100px;
+  min-width: 220px;
+  position: absolute;
+  overflow: hidden;
+  z-index: 2;
+}
+
+.page-container .header .right-side-header .submenu-container-prevent {
+  height: 100px;
+  min-width: 220px;
+  position: absolute;
+  overflow: hidden;
+  z-index: 2;
+}
+
+.page-container .header .right-side-header .submenu-container-donate {
+  height: 100px;
   min-width: 220px;
   position: absolute;
   overflow: hidden;
@@ -33130,6 +33147,7 @@ li {
 
 .page-container .header .right-side-header .nav__submenu-item a {
   color: white;
+  font-size: 16px;
 }
 
 .page-container .header .right-side-header .nav__submenu {
@@ -33248,7 +33266,7 @@ li {
 }
 
 .spiral-notebook {
-  box-shadow: -12px 50px 15px 5px rgba(0, 0, 0, 0.09);
+  box-shadow: -10px 23px 15px 5px rgba(0, 0, 0, 0.06);
 }
 
 .PageTitleContent {
@@ -33384,6 +33402,10 @@ li {
   background-color: #f8f8f8;
 }
 
+.app-wrapper {
+  background-color: #f8f8f8;
+}
+
 .coalition-page-content {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -33462,7 +33484,7 @@ li {
 
 .TopStatBackground {
   background-color: white;
-  max-width: 300px;
+  max-width: 200px;
   margin-top: 75px;
   text-align: center;
 }
@@ -33489,11 +33511,13 @@ li {
 
 .DatabasePage__Donate .DonateLeftColumn img {
   height: 85.5vh;
+  width: 100%;
 }
 
 .DatabasePage__Donate .DonateRightColumn {
   grid-column: 2/3;
   font-size: 28px;
+  margin-left: 25px;
 }
 
 .DonateContainer {
@@ -53987,7 +54011,7 @@ a.text-dark:hover, a.text-dark:focus {
   font-size: 19px;
   text-align: center;
   align-items: center;
-  margin-bottom: 50px;
+  margin-bottom: 15px;
   color: black;
 }
 
@@ -54110,7 +54134,7 @@ a.text-dark:hover, a.text-dark:focus {
 .right-side-header .nav__menu-item-medium a {
   text-decoration: none;
   color: black;
-  font-size: 20px;
+  font-size: 16px;
 }
 
 .right-side-header .HelpForSurvivorsLink a {
@@ -54200,19 +54224,21 @@ a.text-dark:hover, a.text-dark:focus {
     width: 130px;
   }
   a.button__escape {
-    font-size: 16px;
-    width: 150px;
+    font-size: 14px;
+    width: 100px;
     align-items: center;
   }
   div.button__hotline {
-    font-size: 16px;
-    width: 150px;
+    font-size: 14px;
+    width: 100px;
     align-items: center;
+    text-align: center;
   }
   div.business-button {
-    font-size: 16px;
-    width: 150px;
+    font-size: 14px;
+    width: 100px;
     align-items: center;
+    text-align: center;
   }
   .PageContent {
     font-size: 22px;
@@ -54275,6 +54301,23 @@ a.text-dark:hover, a.text-dark:focus {
   .quote-carousel .left-side-carousel-container .left-side-carousel .carousel-inner .quote-item .first-slide .third-quote {
     grid-column: 2/5;
     grid-row: 3;
+  }
+}
+
+@media (max-width: 1035px) {
+  div.BoardCardImg {
+    width: 110px;
+    height: 110px;
+  }
+  div.mobile-menu-div {
+    width: 80px;
+    height: 40px;
+    border-radius: 20px;
+    background-color: #8c62ac;
+  }
+  div.mobile-menu-div .label {
+    color: white;
+    font-size: 18px;
   }
 }
 
@@ -54784,4 +54827,4 @@ a:hover {
   color: inherit;
 }
 
-/*# sourceMappingURL=app-eb4ab8d54dfbdcaf3065.map*/
+/*# sourceMappingURL=app-ccac2a636ea4ca9dcb4d.map*/
