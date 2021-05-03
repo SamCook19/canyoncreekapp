@@ -507,10 +507,12 @@ grid-template-columns: 10% 1fr 10%;
     grid-row: 1;
     grid-column: 1/2;
     height: 100%;
+    
   }
 
   .DonateLeftColumn img {
     height: 85.5vh;
+    width: 100%;
   }
 
   .DonateRightColumn {
