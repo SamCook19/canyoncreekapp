@@ -66,7 +66,7 @@ class Coalition extends Component {
             </div> </div>
             </div>
             <div className='page-heading'>
-               <h1 className='CoalitionHeader'> <span style={{color: "#E77A54", fontFamily: "Roboto"}}> Prevent</span> Violence</h1>
+               <h1 className='CoalitionHeader'> <span style={{color: "#8c62ac", fontFamily: "Roboto"}}> Prevent</span> Violence</h1>
            </div>
                 </div>
                 <div className='coalition-page-content'>

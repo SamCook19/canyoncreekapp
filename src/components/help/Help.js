@@ -65,7 +65,7 @@ class Help extends Component {
             </div></div>
             </div>
            <div className='page-heading'>
-               <h1 className='HelpForSurvivorsHeader'>Help For <span style={{color: "#662D91", fontFamily: "Roboto"}}> Survivors</span></h1>
+               <h1 className='HelpForSurvivorsHeader'>Help For <span style={{color: "#00A6A8", fontFamily: "Roboto"}}> Survivors</span></h1>
            </div>
                 </div>
                 <div className='help-page-content'>

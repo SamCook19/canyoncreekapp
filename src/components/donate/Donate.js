@@ -64,7 +64,7 @@ class Donate extends Component {
             </div></div>
             </div>
            <div className='page-heading'>
-               <h1 className='DonateHeader'><span style={{color: "#00A6A8", fontFamily: "Roboto"}}> Donate </span></h1>
+               <h1 className='DonateHeader'><span style={{color: "#E77A54", fontFamily: "Roboto"}}> Donate </span></h1>
            </div>
                 </div>
                 <div className='donate-page-content'>

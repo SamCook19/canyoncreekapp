@@ -68,7 +68,7 @@ class Blog extends Component {
             </div></div>
             </div>
             <div className='page-heading'>
-               <h1 className='blogheading'><span style={{color: "#E77A54", fontFamily: "Roboto"}}>Blog</span></h1>
+               <h1 className='blogheading'><span style={{color: "#8c62ac", fontFamily: "Roboto"}}>Blog</span></h1>
                
               </div>
            
