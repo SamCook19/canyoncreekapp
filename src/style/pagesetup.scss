@@ -274,7 +274,7 @@ grid-template-columns: 10% 1fr 10%;
 }
 
 .spiral-notebook {
-  box-shadow: -12px 50px 15px 5px rgba(0, 0, 0, 0.09) ;
+  box-shadow: -10px 23px 15px 5px rgba(0, 0, 0, 0.06) ;
 }
 
 .PageTitleContent {
@@ -412,6 +412,10 @@ grid-template-columns: 10% 1fr 10%;
   background-color: #f8f8f8;
 }
 
+.app-wrapper {
+  background-color: #f8f8f8;
+}
+
 .coalition-page-content {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -518,6 +522,7 @@ grid-template-columns: 10% 1fr 10%;
   .DonateRightColumn {
     grid-column: 2/3;
     font-size: 28px;
+    margin-left: 25px;
   }
 }
 
