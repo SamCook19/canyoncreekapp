@@ -263,6 +263,10 @@ grid-template-columns: 10% 1fr 10%;
 
 }
 
+.organizationalleadership {
+  margin-top:35px
+}
+
 .page-info-org {
   
     grid-column: 2/3;
@@ -278,6 +282,7 @@ grid-template-columns: 10% 1fr 10%;
 }
 
 .PageTitleContent {
+  margin-top: 35px;
   grid-column: 2/3;
 }
 
@@ -335,6 +340,8 @@ grid-template-columns: 10% 1fr 10%;
 .DatabasePage {
   grid-column: 2/3;
   height:max-content;
+  max-width: 900px;
+  margin-top: 35px;
 }
 
 .help-page-content {
