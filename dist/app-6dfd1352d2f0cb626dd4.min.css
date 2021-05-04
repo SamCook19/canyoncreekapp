@@ -54362,7 +54362,6 @@ a.text-dark:hover, a.text-dark:focus {
   .label {
     color: white;
     font-size: 18px;
-    margin-bottom: 5px;
   }
   div.home-page-content {
     display: grid;
@@ -54707,6 +54706,9 @@ a.text-dark:hover, a.text-dark:focus {
   div.right-side-column {
     margin-top: unset;
   }
+  div.CarouselContainer {
+    height: 100%;
+  }
 }
 
 @media (min-width: 600px) {
@@ -54826,4 +54828,4 @@ a:hover {
   color: inherit;
 }
 
-/*# sourceMappingURL=app-64c1f56dddc4f2d5389a.map*/
+/*# sourceMappingURL=app-bc3b09c42f5f33715d97.map*/

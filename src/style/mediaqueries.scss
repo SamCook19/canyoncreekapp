@@ -359,7 +359,7 @@
   .label {
     color: white;
     font-size: 18px;
-    margin-bottom: 5px;
+    
   }
   
   
@@ -736,7 +736,11 @@
   div.right-side-column {
     margin-top: unset;
   }
-}
+  div.CarouselContainer {
+    height: 100%;
+  }
+  }
+
 
 @media (min-width: 600px) {
   div.mobile-social-page-help {
