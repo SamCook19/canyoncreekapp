@@ -337,6 +337,10 @@ grid-template-columns: 10% 1fr 10%;
   justify-content: center;
 }
 
+.button-group {
+  position: fixed;
+}
+
 .DatabasePage {
   grid-column: 2/3;
   height:max-content;
