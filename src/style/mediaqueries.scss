@@ -517,6 +517,12 @@
 }
 
 @media (max-width: 600px) {
+  div.PageTitleContent {
+    margin-top: unset;
+  }
+  div.DatabasePage {
+    margin-top: unset;
+  }
   .contactForm {
     font-size: 10px;
   }
@@ -744,6 +750,7 @@
 
 
 @media (min-width: 600px) {
+  
   div.mobile-social-page-help {
     display: none;
   }
