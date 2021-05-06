@@ -54413,7 +54413,7 @@ a.text-dark:hover, a.text-dark:focus {
     min-height: 500px;
   }
   div.DatabasePage__Donate div.DonateLeftColumn img {
-    height: 73vh;
+    height: 300px;
   }
   div.DatabasePage__Donate div.DonateRightColumn {
     font-size: 20px;
@@ -54509,6 +54509,12 @@ a.text-dark:hover, a.text-dark:focus {
 }
 
 @media (max-width: 600px) {
+  div.DonateTopContent {
+    font-size: 14px;
+  }
+  div.DonateBottomContent {
+    font-size: 14px;
+  }
   div.PageTitleContent {
     margin-top: unset;
   }
@@ -54845,4 +54851,4 @@ a:hover {
   color: inherit;
 }
 
-/*# sourceMappingURL=app-301d00fd1c7f2274c7c8.map*/
+/*# sourceMappingURL=app-3282c491d9308b5b2cbb.map*/
