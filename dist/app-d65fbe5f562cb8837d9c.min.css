@@ -54509,6 +54509,12 @@ a.text-dark:hover, a.text-dark:focus {
 }
 
 @media (max-width: 600px) {
+  div.PageTitleContent {
+    margin-top: unset;
+  }
+  div.DatabasePage {
+    margin-top: unset;
+  }
   .contactForm {
     font-size: 10px;
   }
@@ -54839,4 +54845,4 @@ a:hover {
   color: inherit;
 }
 
-/*# sourceMappingURL=app-3c6a0daad071cd0c6efe.map*/
+/*# sourceMappingURL=app-301d00fd1c7f2274c7c8.map*/
