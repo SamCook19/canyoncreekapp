@@ -54582,7 +54582,7 @@ a.text-dark:hover, a.text-dark:focus {
     margin-top: 25px;
   }
   div.VolunteerDatabasePage {
-    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-rows: unset;
   }
   div.social-media-icons-page-volunteer {
     display: none;
@@ -54839,4 +54839,4 @@ a:hover {
   color: inherit;
 }
 
-/*# sourceMappingURL=app-f1a788c428a5db35dc20.map*/
+/*# sourceMappingURL=app-63b6826b0d129ec3fea5.map*/
