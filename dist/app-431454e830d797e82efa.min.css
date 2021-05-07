@@ -32879,7 +32879,7 @@ table.is-completely-borderless td, table.is-completely-borderless th, table.is-c
 .home-page-content {
   display: grid;
   height: 100%;
-  grid-template-columns: 1fr 40%;
+  grid-template-columns: 1fr 550px;
   background-color: #f8f8f8;
 }
 
@@ -32893,17 +32893,22 @@ table.is-completely-borderless td, table.is-completely-borderless th, table.is-c
   height: 55.5vh;
   background-color: white;
   margin-top: 25px;
-  box-shadow: -10px -2px 15px 5px rgba(0, 0, 0, 0.19);
+  box-shadow: -10px -2px 15px 5px rgba(0, 0, 0, 0.07);
 }
 
 .left-column {
   height: 100%;
 }
 
+.hero-image-img {
+  position: absolute;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
 .hero-image-img img {
-  height: 300px;
-  max-height: 400px;
-  width: 100vw;
+  max-height: 300px;
 }
 
 .hero-img {
@@ -33810,6 +33815,19 @@ li {
 .sub-form a:hover {
   color: #E77A54;
   transition: ease-in-out 0.3s;
+}
+
+.home-addresses {
+  display: flex;
+  justify-content: center;
+}
+
+.home-addresses .first-address-icon {
+  height: 70px;
+}
+
+.home-addresses .second-address-icon {
+  height: 70px;
 }
 
 .button__hotline {
@@ -54004,22 +54022,34 @@ a.text-dark:hover, a.text-dark:focus {
   height: 100%;
 }
 
+.CarouselContainer {
+  padding-top: 40px;
+}
+
 .carousel-control-next-icon {
   background-image: url(/static/assets/images/next.png) !important;
-  height: 200px;
-  width: 300px;
+  height: 90px;
+  width: 65px;
 }
 
 .carousel-control-prev-icon {
   background-image: url(/static/assets/images/prev.png) !important;
-  height: 200px;
-  width: 300px;
+  height: 90px;
+  width: 65px;
+}
+
+.carousel-control-prev {
+  opacity: unset;
+}
+
+.carousel-control-next {
+  opacity: unset;
 }
 
 .carousel-quote {
   display: flex;
   justify-content: center;
-  font-size: 19px;
+  font-size: 17px;
   text-align: center;
   align-items: center;
   margin-bottom: 15px;
@@ -54029,7 +54059,7 @@ a.text-dark:hover, a.text-dark:focus {
 .right-side-carousel {
   height: 100%;
   display: grid;
-  grid-template-columns: 1fr 70% 1fr;
+  grid-template-columns: 1fr 59% 1fr;
 }
 
 .carousel-inner {
@@ -54316,6 +54346,24 @@ a.text-dark:hover, a.text-dark:focus {
 }
 
 @media (max-width: 1035px) {
+  .quote-carousel {
+    height: 100%;
+  }
+  .quote-carousel .left-side-carousel-container .left-side-carousel .carousel-inner .quote-item .first-slide {
+    font-size: 20px;
+  }
+  .quote-carousel .left-side-carousel-container .left-side-carousel .carousel-inner .quote-item .first-slide .first-quote {
+    grid-column: 2/5;
+    grid-row: 1;
+  }
+  .quote-carousel .left-side-carousel-container .left-side-carousel .carousel-inner .quote-item .first-slide .second-quote {
+    grid-column: 2/5;
+    grid-row: 2;
+  }
+  .quote-carousel .left-side-carousel-container .left-side-carousel .carousel-inner .quote-item .first-slide .third-quote {
+    grid-column: 2/5;
+    grid-row: 3;
+  }
   div.BoardCardImg {
     width: 110px;
     height: 110px;
@@ -54341,7 +54389,13 @@ a.text-dark:hover, a.text-dark:focus {
   }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 700px) {
+  div.carousel-control-prev {
+    padding-top: 50px;
+  }
+  div.carousel-control-next {
+    padding-top: 50px;
+  }
   div.header {
     display: unset !important;
   }
@@ -54851,4 +54905,4 @@ a:hover {
   color: inherit;
 }
 
-/*# sourceMappingURL=app-3282c491d9308b5b2cbb.map*/
+/*# sourceMappingURL=app-af31737bdc964111b8d0.map*/
