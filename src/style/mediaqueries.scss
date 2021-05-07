@@ -429,11 +429,17 @@
 }
 
 @media (max-width: 600px) {
+ div.carousel-inner {
+   grid-row: unset;
+ }
+  div.home-addresses {
+    display: none;
+  }
   div.hero-img {
     height: 200px;
   }
-  div.hero-image-img img {
-    height: 180px;
+  div.hero-image-img  {
+    height: 150px;
   }
   div.ArticleCardImg {
     max-height: 150px;
@@ -506,7 +512,6 @@
   div.mobile-social-home {
     height: fit-content;
     display: flex;
-    height: 50%;
     background-color: #f8f8f8;
   }
   div.social-media-icons {

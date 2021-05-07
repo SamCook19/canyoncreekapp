@@ -52,7 +52,6 @@ const CarouselImages = (props) => {
             alt="Slide"
             style = {{
                 maxHeight: 330,
-                height: 330,
                 width:40
             }}
           />
