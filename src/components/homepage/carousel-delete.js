@@ -11,7 +11,7 @@ function removeImage() {
         .delete()
         
             .catch( err => console.log(err))
-            .then( window.location.reload() )
+            
 }
 
   const { currentUser } = useAuth();

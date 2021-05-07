@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import QuoteCarousel from './quotes';
 import HomepageSocialMedia from './homepage-socialmedia';
+import HomepageAddress from './homepage-address';
 
 class LeftColumn extends Component {
     constructor(props) {
@@ -18,6 +19,9 @@ class LeftColumn extends Component {
                 <div className='social-media-container'>
                   <HomepageSocialMedia />
                 </div>
+                {/* <div className='home-address-container'>
+                    <HomepageAddress/>
+                </div> */}
                 <div className='sub-form'>
                 <a href='https://canyoncreekservices.salsalabs.org/SubscriptionForm'>Join Our Email List</a>
                 </div>

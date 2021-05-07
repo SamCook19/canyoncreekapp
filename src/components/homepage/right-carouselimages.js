@@ -16,30 +16,7 @@ const CarouselImages = (props) => {
     return (
       
       <div className='carousel'>
-        <MediaQuery minWidth={1500}>
-        <div className='carousel-quote'>
-        {parse(props.data.quote)}
-          </div>
-
-<div className='carousel-media-container'>
-        
-          <img
-            className="d-block w-100 carouselimg"
-            src={props.data.featuredImage}
-            alt="Slide"
-            style = {{
-                maxHeight: 450,
-                height: 450,
-                width:40
-            }}
-          />
-          
-        <div className='article-delete'>
-            <RemoveImage data={props.data} />
-            </div>
-     </div>
-     </MediaQuery>
-     <MediaQuery maxWidth={1499} minWidth={1035}>
+     <MediaQuery  minWidth={1035}>
         <div className='carousel-quote'>
         {parse(props.data.quote)}
           </div>
