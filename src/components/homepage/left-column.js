@@ -19,12 +19,13 @@ class LeftColumn extends Component {
                 <div className='social-media-container'>
                   <HomepageSocialMedia />
                 </div>
-                {/* <div className='home-address-container'>
+                <div className='home-address-container'>
                     <HomepageAddress/>
-                </div> */}
-                <div className='sub-form'>
+                {/* <div className='sub-form'>
                 <a href='https://canyoncreekservices.salsalabs.org/SubscriptionForm'>Join Our Email List</a>
+                </div> */}
                 </div>
+                
                 </div>
             </div>
             
