@@ -33830,6 +33830,30 @@ li {
   height: 70px;
 }
 
+.app-wrapper {
+  height: 100vh;
+}
+
+.app-container {
+  height: 100%;
+}
+
+.site-container {
+  height: 100%;
+}
+
+.route-container {
+  height: 100%;
+}
+
+.home-page-content {
+  height: 55%;
+}
+
+.home-addresses {
+  background-color: #f8f8f8;
+}
+
 .button__hotline {
   cursor: pointer;
   font-size: 20px;
@@ -54454,11 +54478,17 @@ a.text-dark:hover, a.text-dark:focus {
 }
 
 @media (max-width: 600px) {
+  div.carousel-inner {
+    grid-row: unset;
+  }
+  div.home-addresses {
+    display: none;
+  }
   div.hero-img {
     height: 200px;
   }
-  div.hero-image-img img {
-    height: 180px;
+  div.hero-image-img {
+    height: 150px;
   }
   div.ArticleCardImg {
     max-height: 150px;
@@ -54529,7 +54559,6 @@ a.text-dark:hover, a.text-dark:focus {
     height: -moz-fit-content;
     height: fit-content;
     display: flex;
-    height: 50%;
     background-color: #f8f8f8;
   }
   div.social-media-icons {
@@ -54905,4 +54934,4 @@ a:hover {
   color: inherit;
 }
 
-/*# sourceMappingURL=app-af31737bdc964111b8d0.map*/
+/*# sourceMappingURL=app-e596ec3bdc1f83ac97c3.map*/
