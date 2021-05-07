@@ -350,6 +350,14 @@
 }
 
 @media (max-width: 700px) {
+
+  div.carousel-control-prev {
+    padding-top: 50px;
+  }
+
+  div.carousel-control-next {
+    padding-top: 50px;
+  }
   
   div.header {
     display: unset !important;

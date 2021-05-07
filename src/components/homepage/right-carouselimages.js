@@ -51,8 +51,8 @@ const CarouselImages = (props) => {
             src={props.data.featuredImage}
             alt="Slide"
             style = {{
-                maxHeight: 200,
-                height: 200,
+                maxHeight: 330,
+                height: 330,
                 width:40
             }}
           />
