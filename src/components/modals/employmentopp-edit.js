@@ -105,9 +105,7 @@ class EmploymentOppEdit extends Component {
         })
     }
 
-    refreshPage() {
-        window.location.reload();
-    }
+    
 
 
     render() {

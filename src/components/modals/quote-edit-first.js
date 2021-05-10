@@ -91,7 +91,7 @@ class QuoteEdit extends Component {
             .update(
                 article
                 )
-            .then( window.location.reload() )
+            
             
     }
 
