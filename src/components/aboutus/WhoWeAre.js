@@ -81,7 +81,9 @@ class WhoWeAre extends Component {
                       <SimpleModal />
                     </div>
                     </div>
+                    
                     <div className='social-media-icons-page'>
+                    
                <PageSocialMedia />
                 </div>
                 

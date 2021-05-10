@@ -7,6 +7,7 @@ import OrganizationContent from './OrganizationContent';
 import LeadershipCard from './LeadershipCard';
 import BoardCard from './BoardCards';
 import PageSocialMedia from '../pagesocialmedia';
+import SimpleModal from '../modals/OrgModal';
 import SmallNavDrawer from '../navigation/SmallNavDrawer';
 
 
@@ -133,8 +134,9 @@ class Organization extends Component {
                 <div className='buttons-component'>
                   <div className='fixed-buttons'>
                     <ButtonsComponent />
+                
                     <div className='edit-modal'>
-                      
+                      <SimpleModal />
                     </div>
                     </div>
                     <div className='social-media-icons-page'>
