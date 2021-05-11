@@ -54448,6 +54448,9 @@ a.text-dark:hover, a.text-dark:focus {
 }
 
 @media (max-width: 600px) {
+  div.quote-carousel {
+    height: 200px;
+  }
   div.carousel-inner {
     grid-row: unset;
   }
@@ -54910,4 +54913,4 @@ a:hover {
   color: inherit;
 }
 
-/*# sourceMappingURL=app-55e8ca5f3786335a98b4.map*/
+/*# sourceMappingURL=app-e97ef058969d19bf8f92.map*/
