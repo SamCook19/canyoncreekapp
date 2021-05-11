@@ -259,7 +259,7 @@
     font-size: 60px;
   }
   .quote-carousel {
-    height: 100%; .left-side-carousel-container {
+    height: 320px; .left-side-carousel-container {
       
       .left-side-carousel {
         
@@ -293,7 +293,7 @@
 
 @media (max-width: 1035px) {
   .quote-carousel {
-    height: 100%; .left-side-carousel-container {
+    height: 400px; .left-side-carousel-container {
       
       .left-side-carousel {
         
@@ -863,4 +863,10 @@
     }
   }
 
+}
+
+@media (max-width: 900px) {
+  div.home-address-container {
+    display: none;
+  }
 }
