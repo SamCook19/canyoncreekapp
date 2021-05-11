@@ -291,6 +291,12 @@
  
 }
 
+@media (max-width: 750px) {
+  .quote-carousel {
+    height: 300px;
+  }
+}
+
 @media (max-width: 1035px) {
   .quote-carousel {
     height: 400px; .left-side-carousel-container {
