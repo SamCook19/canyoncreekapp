@@ -429,6 +429,9 @@
 }
 
 @media (max-width: 600px) {
+  div.quote-carousel {
+    height: 200px;
+  }
  div.carousel-inner {
    grid-row: unset;
  }
