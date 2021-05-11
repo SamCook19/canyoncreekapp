@@ -54328,7 +54328,7 @@ a.text-dark:hover, a.text-dark:focus {
     font-size: 60px;
   }
   .quote-carousel {
-    height: 100%;
+    height: 320px;
   }
   .quote-carousel .left-side-carousel-container .left-side-carousel .carousel-inner .quote-item .first-slide {
     font-size: 20px;
@@ -54349,7 +54349,7 @@ a.text-dark:hover, a.text-dark:focus {
 
 @media (max-width: 1035px) {
   .quote-carousel {
-    height: 100%;
+    height: 400px;
   }
   .quote-carousel .left-side-carousel-container .left-side-carousel .carousel-inner .quote-item .first-slide {
     font-size: 20px;
@@ -54854,6 +54854,12 @@ a.text-dark:hover, a.text-dark:focus {
   }
 }
 
+@media (max-width: 900px) {
+  div.home-address-container {
+    display: none;
+  }
+}
+
 @font-face {
   font-family: "StellarLight";
   src: local("StellarLight"), url(/static/assets/fonts/stellar-light.woff) format("woff");
@@ -54912,4 +54918,4 @@ a:hover {
   color: inherit;
 }
 
-/*# sourceMappingURL=app-92b4163510f1a30a4cf6.map*/
+/*# sourceMappingURL=app-85bf284a1fd6d786898d.map*/
