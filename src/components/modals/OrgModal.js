@@ -2,7 +2,7 @@ import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Modal from '@material-ui/core/Modal';
 import { useAuth } from '../../contexts/AuthContext';
-import OrgEdit from './FinancialsEdit';
+import OrgEdit from './OrgEdit';
 
 function rand() {
   return Math.round(Math.random() * 20) - 10;

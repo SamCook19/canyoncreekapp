@@ -65,14 +65,6 @@ class OrgEdit extends Component {
         })
     }
 
-    onChangeArticleLink = (value) => {
-        this.setState({
-            article: {
-                ...this.state.article,
-                link: value
-            }
-        })
-    }
 
     onChangeArticleContent = (value) => {
         this.setState({
