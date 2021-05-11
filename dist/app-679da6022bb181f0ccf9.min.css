@@ -54447,6 +54447,12 @@ a.text-dark:hover, a.text-dark:focus {
   }
 }
 
+@media (max-width: 700px) {
+  div.quote-carousel {
+    height: 200px;
+  }
+}
+
 @media (max-width: 600px) {
   div.quote-carousel {
     height: 200px;
@@ -54913,4 +54919,4 @@ a:hover {
   color: inherit;
 }
 
-/*# sourceMappingURL=app-e97ef058969d19bf8f92.map*/
+/*# sourceMappingURL=app-4f3bfa9a53594a0d0919.map*/
