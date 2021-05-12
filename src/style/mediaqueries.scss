@@ -299,7 +299,8 @@
 
 @media (max-width: 1035px) {
   .quote-carousel {
-    height: 400px; .left-side-carousel-container {
+    height: 400px; 
+    .left-side-carousel-container {
       
       .left-side-carousel {
         
@@ -356,6 +357,10 @@
 }
 
 @media (max-width: 700px) {
+
+  div.quote-carousel {
+    height: 300px;
+  }
 
   div.carousel-control-prev {
     padding-top: 50px;
@@ -434,16 +439,16 @@
   }
 }
 
-@media (max-width: 700px) {
-  div.quote-carousel {
-    height: 200px;
-  }
-}
+// @media (max-width: 700px) {
+//   div.quote-carousel {
+//     height: 200px;
+//   }
+// }
 
 @media (max-width: 600px) {
-  div.quote-carousel {
-    height: 200px;
-  }
+  // div.quote-carousel {
+  //   height: 200px;
+  // }
  div.carousel-inner {
    grid-row: unset;
  }

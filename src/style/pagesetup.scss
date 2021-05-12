@@ -829,3 +829,12 @@ grid-template-columns: 10% 1fr 10%;
 .home-addresses {
   background-color: #f8f8f8;
 }
+
+.carousel-media-container {
+  height: 300px;
+}
+
+.prevent-edit {
+  position: fixed;
+  bottom: 60%;
+}
