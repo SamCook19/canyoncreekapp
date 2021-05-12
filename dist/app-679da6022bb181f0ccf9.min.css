@@ -33822,6 +33822,15 @@ li {
   background-color: #f8f8f8;
 }
 
+.carousel-media-container {
+  height: 300px;
+}
+
+.prevent-edit {
+  position: fixed;
+  bottom: 60%;
+}
+
 .button__hotline {
   cursor: pointer;
   font-size: 20px;
@@ -54390,6 +54399,9 @@ a.text-dark:hover, a.text-dark:focus {
 }
 
 @media (max-width: 700px) {
+  div.quote-carousel {
+    height: 300px;
+  }
   div.carousel-control-prev {
     padding-top: 50px;
   }
@@ -54453,16 +54465,7 @@ a.text-dark:hover, a.text-dark:focus {
   }
 }
 
-@media (max-width: 700px) {
-  div.quote-carousel {
-    height: 200px;
-  }
-}
-
 @media (max-width: 600px) {
-  div.quote-carousel {
-    height: 200px;
-  }
   div.carousel-inner {
     grid-row: unset;
   }
@@ -54925,4 +54928,4 @@ a:hover {
   color: inherit;
 }
 
-/*# sourceMappingURL=app-0bd422999622ebd3658d.map*/
+/*# sourceMappingURL=app-915023fcc461677cf750.map*/
