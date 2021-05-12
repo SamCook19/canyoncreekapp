@@ -451,6 +451,7 @@
   // }
  div.carousel-inner {
    grid-row: unset;
+   height: 60%;
  }
   div.home-addresses {
     display: none;
@@ -547,7 +548,7 @@
       .left-side-carousel {
         
         .carousel-inner {
-          
+          height: 60%;
           .quote-item {
             
             .first-slide {
