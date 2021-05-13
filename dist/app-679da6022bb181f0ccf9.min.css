@@ -33617,7 +33617,6 @@ li {
   grid-column: 1/4;
   display: grid;
   grid-template-columns: 15% 1fr 15%;
-  grid-template-rows: 1fr 1fr 350px;
 }
 
 .VolunteerContent {
@@ -54931,4 +54930,4 @@ a:hover {
   color: inherit;
 }
 
-/*# sourceMappingURL=app-76e26577634ae7945bc3.map*/
+/*# sourceMappingURL=app-055791fa290285205ec7.map*/
