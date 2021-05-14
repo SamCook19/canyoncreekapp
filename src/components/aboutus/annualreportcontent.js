@@ -1,6 +1,7 @@
 import React from 'react';
 import { CardImg, CardTitle } from 'reactstrap';
-import PDFViewer from 'pdf-viewer-reactjs'
+import PDFViewer from 'pdf-viewer-reactjs';
+import parse from 'html-react-parser';
 
 
 
@@ -10,11 +11,11 @@ const AnnualReportContent = (props) => {
                 <div className = "PageTitleContent">
                     
                     <CardTitle className="PageTitle">
-                        {props.data.title}
+                    {parse(props.data.title)}
                     </CardTitle>
                     <div className='page-spacer'></div>
                     <div className= "PageContent">
-                        {props.data.content}
+                    {parse(props.data.content)}
                     </div>
                     
                 </div>   
