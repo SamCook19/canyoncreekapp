@@ -275,7 +275,7 @@
                 grid-row: 1;
               }
               .second-quote {
-                grid-column: 3/6;
+                grid-column: 2/5;
                 grid-row: 2;
               }
               .third-quote {
@@ -322,6 +322,40 @@
               .third-quote {
                 grid-column: 2/5;
                 grid-row: 3;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  @media (max-width: 1200px) {
+    .quote-carousel {
+      height: 400px; 
+      .left-side-carousel-container {
+        
+        .left-side-carousel {
+          
+          .carousel-inner {
+            
+            .quote-item {
+             
+              .first-slide {
+                font-size: 20px;
+                
+                .first-quote {
+                  grid-column: 2/5;
+                  grid-row: 1;
+                }
+                .second-quote {
+                  grid-column: 2/5;
+                  grid-row: 2;
+                }
+                .third-quote {
+                  grid-column: 2/5;
+                  grid-row: 3;
+                }
               }
             }
           }
