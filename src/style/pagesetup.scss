@@ -834,3 +834,15 @@ grid-template-columns: 10% 1fr 10%;
   position: fixed;
   bottom: 60%;
 }
+
+.DatabasePage-Financials {
+  grid-column: 2/3;
+  height: 655px;
+  max-width: 900px;
+}
+
+.DatabasePage-AnnualReport {
+  grid-column: 2/3;
+  height: 655px;
+  max-width: 900px;
+}

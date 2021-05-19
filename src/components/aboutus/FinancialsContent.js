@@ -8,7 +8,7 @@ import PDFViewer from 'pdf-viewer-reactjs'
 
 const FinancialsContent = (props) => {
         return (
-            <div className ="DatabasePage">
+            <div className ="DatabasePage-Financials">
                 <div className = "PageTitleContent">
                     
                     <CardTitle className="PageTitle">
@@ -25,13 +25,7 @@ const FinancialsContent = (props) => {
                 <div className = "FinancialsYearHeading">
                     {props.data.financialyear}    
                 </div>
-                <div className='FinancialsPDFReader'>
-                <PDFViewer
-                    document={{
-                    url: `${props.data.link}`,
-            }}
-        />
-                </div>
+                
                 <div className="MobileFinancials">
                     <a href={props.data.link}>Click Here for Financials</a>
                 </div>

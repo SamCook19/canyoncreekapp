@@ -7,7 +7,7 @@ import parse from 'html-react-parser';
 
 const AnnualReportContent = (props) => {
         return (
-            <div className ="DatabasePage">
+            <div className ="DatabasePage-AnnualReport">
                 <div className = "PageTitleContent">
                     
                     <CardTitle className="PageTitle">
@@ -23,13 +23,7 @@ const AnnualReportContent = (props) => {
                 <div className="EmploymentOppApplication">
                     {props.data.employmentapplication}
                 </div>
-                <div className="AnnualReportLink">
-                <PDFViewer
-                    document={{
-                url: `${props.data.link}`,
-            }}
-        />
-                </div>
+                
                 <div className="MobileAnnualReport">
                 <a href={props.data.link}>Click Here for Report</a>
                 </div>
