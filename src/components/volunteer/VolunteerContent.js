@@ -31,10 +31,11 @@ const VolunteerContent = (props) => {
                       <div className = "VolunteerContent">
                 <div className= "BottomVolunteerContent">
                         {parse(props.data.bottomContent)}
-                    </div>
-                    <div className='volunteer-signin'>
+                        <div className='volunteer-signin'>
                           <VolunteerSigninModal />
                       </div>
+                    </div>
+                    
                       <div className='mobile-social-page-volunteer'>
                <PageSocialMedia />
                 </div>

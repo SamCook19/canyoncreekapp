@@ -8,7 +8,7 @@ const HelpForSurvivorsContent = (props) => {
                 
             <div className ="DatabasePage">
                 <div className = "PageTitleContent">
-                    <div className= "PageContent">
+                    <div className= "PageContentHelp">
                     {parse(props.data.content)}
                     </div>
                     

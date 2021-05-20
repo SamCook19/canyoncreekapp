@@ -80,7 +80,7 @@ class Financials extends Component {
                 </div>
                 </div>
 
-                    <div className='page-info'> 
+                    <div className='page-info-finances'> 
                     <div className='Financialsspacer'></div>
                     {
                       this.state.isLoaded ?

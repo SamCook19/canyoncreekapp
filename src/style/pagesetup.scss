@@ -602,6 +602,7 @@ grid-template-columns: 10% 1fr 10%;
 
 .TopVolunteerContent {
   font-size: 24px;
+  grid-column: 2/3;
 }
 
 .BottomVolunteerContent {
@@ -625,6 +626,8 @@ grid-template-columns: 10% 1fr 10%;
 }
 
 .VolunteerContent {
+  display: grid;
+  grid-template-columns: 35px 1fr 35px;
   grid-column: 2/3;
   background-color: white;
   box-shadow: -8px 11px 10px 5px rgba(0,0,0,0.09);
@@ -837,12 +840,28 @@ grid-template-columns: 10% 1fr 10%;
 
 .DatabasePage-Financials {
   grid-column: 2/3;
-  height: 85vh;
   max-width: 900px;
 }
 
 .DatabasePage-AnnualReport {
   grid-column: 2/3;
-  height: 85vh;
   max-width: 900px;
+}
+
+.page-info-finances {
+  grid-column: 2/3;
+  background-color: white;
+  box-shadow: -8px 11px 10px 5px rgba(0,0,0,0.09);
+  display: grid;
+  grid-template-columns: 10% 1fr 10%;
+  height: 85.5vh;
+}
+
+.page-info-report {
+  grid-column: 2/3;
+  background-color: white;
+  box-shadow: -8px 11px 10px 5px rgba(0,0,0,0.09);
+  display: grid;
+  grid-template-columns: 10% 1fr 10%;
+  height: 85.5vh;
 }

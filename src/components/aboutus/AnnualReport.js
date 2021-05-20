@@ -80,7 +80,7 @@ class AnnualReport extends Component {
                 </div>
                 </div>
 
-                    <div className='page-info'> 
+                    <div className='page-info-report'> 
                     <div className='AnnualReportspacer'></div>
                     {
                       this.state.isLoaded ?
