@@ -175,7 +175,24 @@
 
 
 @media (max-width: 1501px)
+
 {
+  div.MobileFinancials {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    font-size: 35px;
+    background-color: #E77A54;
+    width: 400px;
+  }
+  div.MobileAnnualReport {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    font-size: 35px;
+    background-color: #E77A54;
+    width: 400px;
+  }
   div.article-view-container {
     min-height: 1000px;
   }
@@ -331,6 +348,25 @@
   }
 
   @media (max-width: 1200px) {
+    div.MobileFinancials {
+      
+        margin-top: 10px;
+        display: flex;
+        justify-content: center;
+        font-size: 35px;
+        background-color: #E77A54;
+        width: 400px;
+    }
+    .MobileAnnualReport {
+      div.MobileAnnualReport {
+        margin-top: 10px;
+        display: flex;
+        justify-content: center;
+        font-size: 35px;
+        background-color: #E77A54;
+        width: 400px;
+      }
+    }
     .quote-carousel {
       height: 400px; 
       .left-side-carousel-container {
@@ -613,6 +649,22 @@
 }
 
 @media (max-width: 600px) {
+  div.MobileFinancials {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    font-size: 15px;
+    background-color: #E77A54;
+    width: 150px;
+  }
+  div.MobileAnnualReport {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    font-size: 15px;
+    background-color: #E77A54;
+    width: 150px;
+  }
   div.DonateTopContent {
     font-size: 14px;
   }

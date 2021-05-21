@@ -23,9 +23,10 @@ const AnnualReportContent = (props) => {
                 <div className="EmploymentOppApplication">
                     {props.data.employmentapplication}
                 </div>
-                
+                <div className="AnnualReportContainer">
                 <div className="MobileAnnualReport">
                 <a href={props.data.link}>Click Here for Report</a>
+                </div>
                 </div>
                 </div>  
                 </div>

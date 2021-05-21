@@ -26,8 +26,10 @@ const FinancialsContent = (props) => {
                     {props.data.financialyear}    
                 </div>
                 
+                <div className="FinancialsContainer">
                 <div className="MobileFinancials">
                     <a href={props.data.link}>Click Here for Financials</a>
+                    </div>
                 </div>
                 </div>  
                 </div>
