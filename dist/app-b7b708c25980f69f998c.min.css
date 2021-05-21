@@ -33212,7 +33212,9 @@ li {
 
 .buttons-component .social-media-icons-page {
   position: absolute;
-  height: 500px;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
   width: 150px;
   bottom: 0;
   left: 0;
@@ -55061,4 +55063,4 @@ a:hover {
   color: inherit;
 }
 
-/*# sourceMappingURL=app-99e2f38d2ef94da1a955.map*/
+/*# sourceMappingURL=app-19d428978d58628f9ead.map*/

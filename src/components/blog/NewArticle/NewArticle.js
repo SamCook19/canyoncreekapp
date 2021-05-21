@@ -107,7 +107,7 @@ class NewArticle extends Component {
                 console.log(res)
             } )
             .catch( err => console.log(err))
-            .then( window.location.reload() )
+            
     }
 
     uploadImageCallBack = (e) => {
