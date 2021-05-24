@@ -23,10 +23,12 @@
 
 .carousel-control-prev {
     opacity: unset;
+    margin-top: 90px;
 }
 
 .carousel-control-next {
     opacity: unset;
+    margin-top: 90px;
 }
 
 
@@ -38,6 +40,8 @@
     align-items: center;
     margin-bottom: 25px;
     color: black;
+    min-height: 100px;
+    max-height: 150px;
 }
 
 .right-side-carousel {
