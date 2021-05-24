@@ -34367,6 +34367,7 @@ div.FinancialsContainer {
   display: flex;
   justify-content: space-around;
   align-items: center;
+  margin-top: 40px;
 }
 
 .article-view-container .ArticleTitle {
@@ -54444,7 +54445,7 @@ a.text-dark:hover, a.text-dark:focus {
     font-size: 18px;
   }
   .Title {
-    font-size: 35px;
+    font-size: 25px;
   }
   div.ArticleContainer {
     margin-bottom: 25px;
@@ -55075,4 +55076,4 @@ a:hover {
   color: inherit;
 }
 
-/*# sourceMappingURL=app-9f3ff97852011c1c065d.map*/
+/*# sourceMappingURL=app-0629379e603f73a9c640.map*/
