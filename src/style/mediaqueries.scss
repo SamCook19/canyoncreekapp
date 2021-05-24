@@ -308,8 +308,27 @@
  
 }
 
+@media(max-width:1200px) {
+  .CreateDate {
+    font-size: 25px;
+  }
+  .CardTitle {
+    font-size: 25px;
+  }
+  .CardSummary {
+    font-size: 18px;
+  }
+  .Title {
+    font-size: 35px;
+  }
+  div.ArticleContainer {
+    margin-bottom: 25px;
+  }
+}
+
 
 @media (max-width: 1035px) {
+  
   .quote-carousel {
     .left-side-carousel-container {
       
@@ -421,6 +440,19 @@
 }
 
 @media (max-width: 700px) {
+  .CreateDate {
+    font-size: 20px;
+  }
+  .CardTitle {
+    font-size: 20px;
+  }
+  .CardSummary {
+    font-size: 16px;
+  }
+  .Title {
+    font-size: 25px;
+  }
+  
 
   div.carousel-control-prev {
     padding-top: 50px;

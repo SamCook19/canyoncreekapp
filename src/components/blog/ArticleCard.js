@@ -26,7 +26,7 @@ class ArticleCard extends Component {
 
 
         return ( 
-            <div>
+            <div className="ArticleContainer">
             <Link to={
                 {
                     pathname: 'article/' + this.props.data.id,
