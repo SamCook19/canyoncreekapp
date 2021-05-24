@@ -56,7 +56,7 @@ class ControlledCarousel extends React.Component {
     return (
       <div className='CarouselContainer'>
         <Carousel  id="slide"
-        indicators={false}
+        indicators={true}
         className='right-side-carousel'>
           
          {

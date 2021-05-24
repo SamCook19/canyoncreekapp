@@ -34286,6 +34286,10 @@ div.FinancialsContainer {
   margin-bottom: 5%;
 }
 
+.Title {
+  font-size: 40px;
+}
+
 .TitleForm {
   font-size: 18px;
   display: flex;
@@ -55076,4 +55080,4 @@ a:hover {
   color: inherit;
 }
 
-/*# sourceMappingURL=app-0629379e603f73a9c640.map*/
+/*# sourceMappingURL=app-1323f9d6cd09ba8569b7.map*/

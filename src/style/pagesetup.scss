@@ -495,18 +495,24 @@ grid-template-columns: 10% 1fr 10%;
 
 .TopStatBackground {
   background-color: white;
-  max-width: 200px;
+  max-width: 300px;
   margin-top: 75px;
   text-align: center;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .BottomStatBackground {
-  margin-top: 75px;
-    display: flex;
-    justify-content: center;
   background-color: white;
-  max-width: 200px;
+  max-width: 300px;
+  margin-top: 75px;
   text-align: center;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 
