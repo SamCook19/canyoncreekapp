@@ -256,8 +256,8 @@
 .page-info {
   grid-column: 2/3;
   background-color: white;
-  -webkit-box-shadow: -8px 11px 10px 5px rgba(0,0,0,0.09); 
-box-shadow: -8px 11px 10px 5px rgba(0,0,0,0.09);
+  
+  box-shadow: -10px 23px 15px 5px rgba(0, 0, 0, 0.04) ;
 display: grid;
 grid-template-columns: 10% 1fr 10%;
 
@@ -271,14 +271,13 @@ grid-template-columns: 10% 1fr 10%;
   
     grid-column: 2/3;
     background-color: white;
-    -webkit-box-shadow: -8px 11px 10px 5px rgba(0,0,0,0.09); 
-  box-shadow: -8px 11px 10px 5px rgba(0,0,0,0.09);
+    box-shadow: -10px 23px 15px 5px rgba(0, 0, 0, 0.04) ;
   display: grid;
   grid-template-columns: 8% 1fr 5%;
 }
 
 .spiral-notebook {
-  box-shadow: -10px 23px 15px 5px rgba(0, 0, 0, 0.06) ;
+  box-shadow: -10px 23px 15px 5px rgba(0, 0, 0, 0.04) ;
 }
 
 .PageTitleContent {
@@ -637,7 +636,7 @@ grid-template-columns: 10% 1fr 10%;
   grid-template-columns: 35px 1fr 35px;
   grid-column: 2/3;
   background-color: white;
-  box-shadow: -8px 11px 10px 5px rgba(0,0,0,0.09);
+  box-shadow: -8px 11px 10px 5px rgba(0,0,0,0.04);
 }
 
 .VolunteerPageImg {
@@ -902,7 +901,7 @@ div.FinancialsContainer {
 .page-info-finances {
   grid-column: 2/3;
   background-color: white;
-  box-shadow: -8px 11px 10px 5px rgba(0,0,0,0.09);
+  box-shadow: -8px 11px 10px 5px rgba(0,0,0,0.04);
   display: grid;
   grid-template-columns: 10% 1fr 10%;
   height: 85.5vh;
@@ -911,7 +910,7 @@ div.FinancialsContainer {
 .page-info-report {
   grid-column: 2/3;
   background-color: white;
-  box-shadow: -8px 11px 10px 5px rgba(0,0,0,0.09);
+  box-shadow: -8px 11px 10px 5px rgba(0,0,0,0.04);
   display: grid;
   grid-template-columns: 10% 1fr 10%;
   height: 85.5vh;
