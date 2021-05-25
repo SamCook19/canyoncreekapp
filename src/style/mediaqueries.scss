@@ -309,6 +309,14 @@
 }
 
 @media(max-width:1200px) {
+  .TopStatBackground {
+    max-width: 250px;
+    height: 150px;
+  }
+  .BottomStatBackground {
+    max-width: 250px;
+    height: 150px;
+  }
   .CreateDate {
     font-size: 25px;
   }
@@ -440,6 +448,16 @@
 }
 
 @media (max-width: 700px) {
+  .TopStatBackground {
+    height: 100px;
+    width: 150px;
+    font-size: 12px;
+  }
+  .BottomStatBackground {
+    height: 100px;
+    width: 150px;
+    font-size: 12px;
+  }
   .CreateDate {
     font-size: 20px;
   }
