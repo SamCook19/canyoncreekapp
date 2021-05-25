@@ -33484,6 +33484,7 @@ li {
   grid-column: 2;
   grid-row: 1;
   font-size: 22px;
+  bottom: 10%;
 }
 
 .prevention-info {
@@ -54454,6 +54455,14 @@ a.text-dark:hover, a.text-dark:focus {
 }
 
 @media (max-width: 1200px) {
+  .TopStatBackground {
+    max-width: 250px;
+    height: 150px;
+  }
+  .BottomStatBackground {
+    max-width: 250px;
+    height: 150px;
+  }
   .CreateDate {
     font-size: 25px;
   }
@@ -54550,6 +54559,16 @@ a.text-dark:hover, a.text-dark:focus {
 }
 
 @media (max-width: 700px) {
+  .TopStatBackground {
+    height: 100px;
+    width: 150px;
+    font-size: 12px;
+  }
+  .BottomStatBackground {
+    height: 100px;
+    width: 150px;
+    font-size: 12px;
+  }
   .CreateDate {
     font-size: 20px;
   }
@@ -55092,4 +55111,4 @@ a:hover {
   color: inherit;
 }
 
-/*# sourceMappingURL=app-62a643a8bbbdda2cf9ee.map*/
+/*# sourceMappingURL=app-071b4cd3a5cd4d0ec8de.map*/
