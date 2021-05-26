@@ -35,11 +35,11 @@ export default function PreventViolenceNested() {
       </ListItem>
       <Collapse in={!open} timeout="auto" unmountOnExit>
         <List component="div" disablePadding>
-          <ListItem button className={classes.nested}  component={Link} to='/coalition'>
-            <ListItemText primary="Coalition"/>
-          </ListItem>
           <ListItem button className={classes.nested}  component={Link} to='/prevention'>
-            <ListItemText primary="Prevention" />
+            <ListItemText primary="Prevention"/>
+          </ListItem>
+          <ListItem button className={classes.nested}  component={Link} to='/coalition'>
+            <ListItemText primary="Coalition" />
           </ListItem>
           
         </List>

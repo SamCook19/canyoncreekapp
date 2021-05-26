@@ -336,6 +336,21 @@
 
 
 @media (max-width: 1035px) {
+
+  .hero-image-img img {
+    height: 225px;
+  }
+
+  .BoardOfDirectorsCardsContainer {
+    grid-template-rows: unset;
+    grid-template-columns: 250px 250px
+  }
+
+  .BoardCardImg img {
+    height: unset;
+    width: 110px;
+    border-radius: 75px;
+  }
   
   .quote-carousel {
     .left-side-carousel-container {
@@ -420,7 +435,7 @@
       }
     }
   }
-  div.BoardCardImg {
+  div.BoardCardImg img {
     width: 110px;
     height: 110px;
   }
@@ -448,6 +463,10 @@
 }
 
 @media (max-width: 700px) {
+  .BoardOfDirectorsCardsContainer {
+    grid-template-rows: unset;
+    grid-template-columns: 150px 150px;
+  }
   .TopStatBackground {
     height: 100px;
     width: 150px;

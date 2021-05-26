@@ -24,7 +24,7 @@ const FinancialsContent = (props) => {
                 
                 <div className="FinancialsContainer">
                 <div className="MobileFinancials">
-                    <a href={props.data.link}>Click Here for Financials</a>
+                    <a href={props.data.link}>Click Here To View Our Latest Financial Report</a>
                     </div>
                 </div>
                 </div>

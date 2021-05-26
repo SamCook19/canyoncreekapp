@@ -25,7 +25,7 @@ const AnnualReportContent = (props) => {
                 </div>
                 <div className="AnnualReportContainer">
                 <div className="MobileAnnualReport">
-                <a href={props.data.link}>Click Here for Report</a>
+                <a href={props.data.link}>Click Here To View Our Latest Annual Report</a>
                 </div>
                 </div>
                 </div>  

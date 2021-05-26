@@ -41,13 +41,13 @@ class PreventSubmenu extends React.Component {
     return (
       <ul className="nav__submenu">
         <div className="nav__submenu-item ">
-        <NavLink to="/coalition" activeClassName="nav-link-active">
-            Coalition
+        <NavLink to="/prevention" activeClassName="nav-link-active">
+            Prevention
           </NavLink>
         </div>
         <div className="nav__submenu-item ">
-        <NavLink to="/prevention" activeClassName="nav-link-active">
-            Prevention
+        <NavLink to="/coalition" activeClassName="nav-link-active">
+            Coalition
           </NavLink>
         </div>
       </ul>
