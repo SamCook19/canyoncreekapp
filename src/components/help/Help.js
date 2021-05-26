@@ -110,6 +110,7 @@ class Help extends Component {
                         : '' 
                       }
                 </div>
+              
                 <div className='mobile-social-page-help'>
                     <PageSocialMedia />
                       </div>

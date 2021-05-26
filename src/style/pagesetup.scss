@@ -730,6 +730,7 @@ div.AnnualReportContainer {
 }
 
 div.MobileAnnualReport {
+  text-align: center;
   margin-top: 10px;
   display: flex;
   justify-content: center;
@@ -762,6 +763,24 @@ div.FinancialsContainer {
   justify-content: center;
 }
 
+.help-link {
+  display: flex;
+  justify-content: center;
+  background-color: #E77A54;
+  border-radius: 99px;
+}
+
+.help-link:hover {
+  background-color: rgb(0, 166, 168);
+  color: white;
+  transition: ease-in-out 0.3s;
+}
+
+.help-link a {
+  font-size: 28px;
+  color: white;
+}
+
 .MobileFinancials {
   display: flex;
   justify-content: center;
@@ -769,6 +788,7 @@ div.FinancialsContainer {
   background-color: #E77A54;
   border-radius: 100px;
   width: 500px;
+  text-align: center;
 }
 
 .MobileFinancials:hover {
