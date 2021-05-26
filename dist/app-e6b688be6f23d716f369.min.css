@@ -33722,6 +33722,7 @@ div.AnnualReportContainer {
 }
 
 div.MobileAnnualReport {
+  text-align: center;
   margin-top: 10px;
   display: flex;
   justify-content: center;
@@ -33753,6 +33754,25 @@ div.FinancialsContainer {
   justify-content: center;
 }
 
+.help-link {
+  display: flex;
+  justify-content: center;
+  background-color: #E77A54;
+  border-radius: 99px;
+  margin-top: 20px;
+}
+
+.help-link:hover {
+  background-color: #00a6a8;
+  color: white;
+  transition: ease-in-out 0.3s;
+}
+
+.help-link a {
+  font-size: 28px;
+  color: white;
+}
+
 .MobileFinancials {
   display: flex;
   justify-content: center;
@@ -33760,6 +33780,7 @@ div.FinancialsContainer {
   background-color: #E77A54;
   border-radius: 100px;
   width: 500px;
+  text-align: center;
 }
 
 .MobileFinancials:hover {
@@ -54495,6 +54516,18 @@ a.text-dark:hover, a.text-dark:focus {
 }
 
 @media (max-width: 1035px) {
+  .hero-image-img img {
+    height: 225px;
+  }
+  .BoardOfDirectorsCardsContainer {
+    grid-template-rows: unset;
+    grid-template-columns: 250px 250px;
+  }
+  .BoardCardImg img {
+    height: unset;
+    width: 110px;
+    border-radius: 75px;
+  }
   .quote-carousel .left-side-carousel-container .left-side-carousel .carousel-inner .quote-item .first-slide {
     font-size: 20px;
   }
@@ -54547,7 +54580,7 @@ a.text-dark:hover, a.text-dark:focus {
 }
 
 @media (max-width: 1035px) {
-  div.BoardCardImg {
+  div.BoardCardImg img {
     width: 110px;
     height: 110px;
   }
@@ -54573,6 +54606,10 @@ a.text-dark:hover, a.text-dark:focus {
 }
 
 @media (max-width: 700px) {
+  .BoardOfDirectorsCardsContainer {
+    grid-template-rows: unset;
+    grid-template-columns: 150px 150px;
+  }
   .TopStatBackground {
     height: 100px;
     width: 150px;
@@ -55125,4 +55162,4 @@ a:hover {
   color: inherit;
 }
 
-/*# sourceMappingURL=app-a47386b9cf6d1c82050f.map*/
+/*# sourceMappingURL=app-9488b4beaf8e3a6a6364.map*/
