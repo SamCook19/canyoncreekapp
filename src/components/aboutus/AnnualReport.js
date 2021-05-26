@@ -67,7 +67,7 @@ class AnnualReport extends Component {
                <h1 className='AboutUsHeader'>About <span style={{color: "#00A6A8", fontFamily: "Roboto"}}> Us</span></h1>
            </div>
                 </div>
-                <div className='page-content'>
+                <div className='page-content-report'>
                 <div className='buttons-component'>
                   <div className='fixed-buttons'>
                     <ButtonsComponent />

@@ -17,11 +17,7 @@ const FinancialsContent = (props) => {
                     <div className='page-spacer'></div>
                     <div className= "PageContent">
                     {parse(props.data.content)}
-                    </div>
-                    
-                </div>
-                   
-                <div className="PageImg">
+                    <div className="PageImg">
                 <div className = "FinancialsYearHeading">
                     {props.data.financialyear}    
                 </div>
@@ -31,7 +27,12 @@ const FinancialsContent = (props) => {
                     <a href={props.data.link}>Click Here for Financials</a>
                     </div>
                 </div>
-                </div>  
+                </div>
+                    </div>
+                    
+                </div>
+                   
+                  
                 </div>
         );
     }
