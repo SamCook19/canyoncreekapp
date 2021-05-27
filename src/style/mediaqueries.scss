@@ -713,6 +713,9 @@
 
 
 @media (max-width: 600px) {
+  div.right-side-carousel {
+    grid-template-rows: 10px;
+  }
   div.MobileFinancials {
     margin-top: 10px;
     display: flex;
