@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
@@ -19,6 +19,8 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
+
+
 export default function DonateNested() {
   const classes = useStyles();
   const [open, setOpen] = React.useState(true);
@@ -26,6 +28,10 @@ export default function DonateNested() {
   const handleClick = () => {
     setOpen(!open);
   };
+
+  const donate = () => {
+    window.location.href = "https://canyoncreekservices.salsalabs.org/2021websitegeneraldonationform"
+  }
 
   return (
     <List>
@@ -41,7 +47,7 @@ export default function DonateNested() {
           <ListItem button className={classes.nested} component={Link} to='/supporters'>
             <ListItemText primary="Our Supporters" />
           </ListItem>
-          <ListItem button className={classes.nested} component={Link} to='/donationform'>
+          <ListItem button onClick={donate} className={classes.nested} >
             <ListItemText primary="Donate Here" />
           </ListItem>
         </List>

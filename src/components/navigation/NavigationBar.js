@@ -65,9 +65,9 @@ class DonateSubmenu extends React.Component {
           </NavLink>
         </div>
         <div className="nav__submenu-item ">
-        <NavLink to="/donationform" activeClassName="nav-link-active">
+        <a href ="https://canyoncreekservices.salsalabs.org/2021websitegeneraldonationform" activeClassName="nav-link-active">
            Donate Here
-          </NavLink>
+          </a>
         </div>
       </ul>
     )
