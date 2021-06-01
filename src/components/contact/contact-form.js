@@ -51,12 +51,12 @@ export default function ContactForm() {
                     name='recipient'
                     className='form-dropdown'
                     placeholder='recipient address'>
-                      <option value="prevention@canyoncreekservices.org">prevention@canyoncreekservices.org</option>
-                      <option value="administration@canyoncreekservices.org">administration@canyoncreekservices.org</option>
-                      <option value="development@canyoncreekservices.org">development@canyoncreekservices.org</option>
-                      <option value="volunteers@canyoncreekservices.org">volunteers@canyoncreekservices.org</option>
-                      <option value="business@canyoncreekservices.org">business@canyoncreekservices.org</option>
-                      <option value="board@canyoncreekservices.org">board@canyoncreekservices.org</option>
+                      <option value="prevention@canyoncreekservices.org">prevention@canyoncreekservices.org - General Organizational Information/ Administration/Executive Director</option>
+                      <option value="administration@canyoncreekservices.org">administration@canyoncreekservices.org - Community Outreach/ Education/Awareness/Prevention</option>
+                      <option value="development@canyoncreekservices.org">development@canyoncreekservices.org - Fundraising/Donations</option>
+                      <option value="volunteers@canyoncreekservices.org">volunteers@canyoncreekservices.org - Volunteering/Internships/Service Projects</option>
+                      <option value="business@canyoncreekservices.org">business@canyoncreekservices.org - Human Resources/Billing/Accounts/Grant Reporting</option>
+                      <option value="board@canyoncreekservices.org">board@canyoncreekservices.org - Board of Directors</option>
                     </select>
                   </div>
                 </div>
@@ -89,6 +89,9 @@ export default function ContactForm() {
                 </button>
                 </div>
               </form>
+              <div className="disclaimer">
+              If you or someone you know is in need of supportive services related to domestic violence or sexual assault, please either contact our 24 hour hotline for immediate assistance or complete <a href="https://apricot.socialsolutions.com/auth/autologin/org_id/1698/hash/fe63cfb2b7190a8b89cde77419b8d89c5af6ee4e">this</a> form and a member of our team will contact you as soon as possible.
+              </div>
             </div>
             
           </div>
