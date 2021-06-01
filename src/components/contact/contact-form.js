@@ -51,8 +51,8 @@ export default function ContactForm() {
                     name='recipient'
                     className='form-dropdown'
                     placeholder='recipient address'>
-                      <option value="prevention@canyoncreekservices.org">prevention@canyoncreekservices.org - General Organizational Information/ Administration/Executive Director</option>
-                      <option value="administration@canyoncreekservices.org">administration@canyoncreekservices.org - Community Outreach/ Education/Awareness/Prevention</option>
+                      <option value="prevention@canyoncreekservices.org">prevention@canyoncreekservices.org - Community Outreach/ Education/Awareness/Prevention</option>
+                      <option value="administration@canyoncreekservices.org">administration@canyoncreekservices.org - General Organizational Information/ Administration/Executive Director</option>
                       <option value="development@canyoncreekservices.org">development@canyoncreekservices.org - Fundraising/Donations</option>
                       <option value="volunteers@canyoncreekservices.org">volunteers@canyoncreekservices.org - Volunteering/Internships/Service Projects</option>
                       <option value="business@canyoncreekservices.org">business@canyoncreekservices.org - Human Resources/Billing/Accounts/Grant Reporting</option>
@@ -90,7 +90,7 @@ export default function ContactForm() {
                 </div>
               </form>
               <div className="disclaimer">
-              If you or someone you know is in need of supportive services related to domestic violence or sexual assault, please either contact our 24 hour hotline for immediate assistance or complete <a href="https://apricot.socialsolutions.com/auth/autologin/org_id/1698/hash/fe63cfb2b7190a8b89cde77419b8d89c5af6ee4e">this</a> form and a member of our team will contact you as soon as possible.
+              If you or someone you know is in need of supportive services related to domestic violence or sexual assault, please either contact our 24 hour hotline at 435-233-5732 for immediate assistance or complete <a href="https://apricot.socialsolutions.com/auth/autologin/org_id/1698/hash/fe63cfb2b7190a8b89cde77419b8d89c5af6ee4e">this</a> form and a member of our team will contact you as soon as possible.
               </div>
             </div>
             
