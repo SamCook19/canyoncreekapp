@@ -32898,11 +32898,14 @@ table.is-completely-borderless td, table.is-completely-borderless th, table.is-c
 .hero-image-img {
   position: absolute;
   width: 100%;
+  height: 300px;
   display: flex;
   justify-content: center;
+  overflow: hidden;
 }
 
 .hero-image-img img {
+  position: absolute;
   height: 300px;
 }
 
@@ -33477,10 +33480,6 @@ li {
   max-height: 750px;
 }
 
-.WhoWeArePageImg {
-  max-height: 180px;
-}
-
 .PreventionStats {
   position: relative;
   grid-column: 2;
@@ -33517,6 +33516,31 @@ li {
   align-items: center;
 }
 
+.DonateContainer {
+  height: 84vh;
+}
+
+.DonateContainer-main {
+  background-color: white;
+}
+
+.DatabasePage__Donate-supporters {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.DatabasePage__Donate-supporters .DonateLeftColumn-supporters {
+  grid-row: 1;
+  grid-column: 1/2;
+  height: 100%;
+}
+
+.DatabasePage__Donate-supporters .DonateRightColumn {
+  grid-column: 2/3;
+  font-size: 28px;
+  margin-left: 45px;
+}
+
 .DatabasePage__Donate {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -33536,7 +33560,7 @@ li {
 .DatabasePage__Donate .DonateRightColumn {
   grid-column: 2/3;
   font-size: 28px;
-  margin-left: 25px;
+  margin-left: 45px;
 }
 
 .DonateContainer {
@@ -54553,8 +54577,29 @@ a.text-dark:hover, a.text-dark:focus {
 }
 
 @media (max-width: 1035px) {
-  .hero-image-img img {
-    height: 225px;
+  .DonateContainer-main {
+    height: 84vh;
+  }
+  .DatabasePage__Donate {
+    grid-template-columns: unset;
+  }
+  .donate-page-content {
+    display: grid;
+    grid-template-columns: 1fr 80%;
+  }
+  .DonateLeftColumn {
+    display: none;
+  }
+  .DonateContainer {
+    height: unset;
+  }
+  .DonateRightColumn-supporters {
+    font-size: 22px;
+  }
+  .DatabasePage__Donate-supporters {
+    display: grid;
+    grid-template-columns: unset;
+    grid-template-rows: 1fr 1fr;
   }
   .BoardOfDirectorsCardsContainer {
     grid-template-rows: unset;
@@ -54643,6 +54688,28 @@ a.text-dark:hover, a.text-dark:focus {
 }
 
 @media (max-width: 700px) {
+  .DatabasePage__Donate-supporters {
+    display: grid;
+  }
+  .DatabasePage__Donate-supporters .DonateRightColumn {
+    grid-row: 2;
+    font: 22px;
+  }
+  .DatabasePage__Donate-supporters .DonateLeftColumn-supporters {
+    grid-row: 1;
+  }
+  .donate-page-content {
+    grid-template-columns: 1fr 80%;
+  }
+  .DatabasePage__Donate {
+    grid-template-columns: unset;
+  }
+  .DonateLeftColumn {
+    display: none;
+  }
+  .WhoWeArePageImg {
+    max-height: 180px;
+  }
   .page-content-finances {
     grid-template-columns: 60px 1fr;
   }
@@ -54734,6 +54801,12 @@ a.text-dark:hover, a.text-dark:focus {
 @media (min-width: 600px) {
   div.mobile-social-home {
     display: none;
+  }
+}
+
+@media (max-width: 700px) {
+  #emails {
+    max-width: 200px;
   }
 }
 
@@ -55209,4 +55282,4 @@ a:hover {
   color: inherit;
 }
 
-/*# sourceMappingURL=app-6703f862374e27ff4e67.map*/
+/*# sourceMappingURL=app-add0064ebe38a6d30a32.map*/
