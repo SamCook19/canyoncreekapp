@@ -190,6 +190,7 @@
 
 .ArticleLabel {
   font-size: 22px;
+  text-align: center;
 }
 
 
@@ -936,6 +937,7 @@ div.FinancialsContainer {
 }
 
 .DatabasePage-Financials {
+  margin-top: 35px;
   grid-column: 2/3;
   max-width: 900px;
 }
@@ -956,7 +958,10 @@ div.FinancialsContainer {
   
 }
 
+
+
 .DatabasePage-AnnualReport {
+  margin-top: 35px;
   grid-column: 2/3;
   max-width: 900px;
 }
@@ -975,4 +980,9 @@ div.FinancialsContainer {
   box-shadow: -8px 11px 10px 5px rgba(0,0,0,0.04);
   display: grid;
   grid-template-columns: 10% 1fr 10%;
+}
+
+.DonateRightColumn-supporters {
+  font-size: 22px;
+  padding-left: 45px;
 }

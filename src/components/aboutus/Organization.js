@@ -161,7 +161,7 @@ class Organization extends Component {
                         })
                         : '' 
                       }
-                      <div className='organizational-spacer'></div>
+                      <div className='organizationalspacer'></div>
                       <div className='BDHeading'>
                           <h4>Board of Directors</h4>
                         </div>

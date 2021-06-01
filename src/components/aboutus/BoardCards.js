@@ -61,7 +61,7 @@ class BoardCard extends Component {
                     
                 </div>   
                   
-                <div className='spacer'></div>
+                
                 </div>
             
             

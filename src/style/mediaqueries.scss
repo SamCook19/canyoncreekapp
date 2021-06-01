@@ -377,7 +377,7 @@
   }
 
   .DonateRightColumn-supporters {
-    font-size: 22px;
+    font-size: 20px;
   }
 
   .DatabasePage__Donate-supporters {
@@ -501,6 +501,8 @@
 
 @media (min-width: 1035px)
  {
+
+  
   
   div.article-view-container {
     min-height: 700px;
@@ -511,6 +513,9 @@
 }
 
 @media (max-width: 700px) {
+  .DonateRightColumn-supporters {
+    font-size: 18px;
+  }
   .DatabasePage__Donate-supporters {
     display: grid;
     .DonateRightColumn {
@@ -651,9 +656,11 @@
 }
 
 @media (max-width: 600px) {
-  // div.quote-carousel {
-  //   height: 200px;
-  // }
+  div.first-quote {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 
   div.home-addresses {
     display: none;
@@ -754,7 +761,7 @@
           .quote-item {
             
             .first-slide {
-              font-size: 14px;
+              font-size: 16px;
               height: 100%;
               display: grid;
               grid-template-columns: 1fr 1fr 1fr 1fr 35px;
