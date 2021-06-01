@@ -9,13 +9,14 @@ const DonateContent = (props) => {
         return (
             <div className ="DatabasePage__Donate">
                 <div className="DonateRightColumn">
+                <CardTitle className="PageTitle">
+                        {props.data.title}
+                    </CardTitle>
                     <div className= "DonateTopContent">
                     {parse(props.data.contentTop)}
                     </div>
                     
-                    <CardTitle className="PageTitle">
-                        {props.data.title}
-                    </CardTitle>
+                    
                     <div className= "DonateBottomContent">
                     {parse(props.data.contentBottom)}
                     </div>

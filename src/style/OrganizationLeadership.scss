@@ -5,7 +5,12 @@
     grid-template-rows: 1fr 1fr;
 }
 
-.Leadership
+.LeadershipTeamHeading {
+    margin-bottom: 25px;
+    .h4 {
+        font-weight: bold;
+    }
+}
 
 .organizational-spacer {
     grid-row: 2;
@@ -27,6 +32,10 @@
     font-size: 20px;
     font-weight: normal;
     margin-bottom: 25px;
+    font-weight: bold;
+    .h4 {
+        font-weight: bold;
+    }
   }
 
   .LeadershipTeamHeading {

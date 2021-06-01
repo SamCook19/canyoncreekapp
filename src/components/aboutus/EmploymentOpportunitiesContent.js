@@ -11,7 +11,7 @@ const EmploymentOpportunitiesContent = (props) => {
                     <CardTitle className="PageTitle">
                         {parse(props.data.title)}
                     </CardTitle>
-                    <div className='page-spacer'></div>
+                    
                     <div className= "PageContent">
                     {parse(props.data.content)}
                     </div>

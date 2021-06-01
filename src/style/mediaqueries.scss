@@ -153,7 +153,7 @@
 }
 
 .PageContent-medium {
-  font-size: 22px;
+  font-size: 20px;
   
 }
 
@@ -231,7 +231,7 @@
     text-align: center;
   }
   .PageContent {
-    font-size: 22px;
+    font-size: 20px;
   }
 
   .PageTitle {
@@ -308,7 +308,25 @@
  
 }
 
+@media(max-height: 900px) {
+  .page-content-report {
+    height: 79vh;
+  }
+  .page-content-finances {
+    height: 79vh;
+  }
+}
+
 @media(max-width:1200px) {
+  div.CoalitionImage img {
+    height: 250px;
+    width: 400px;
+  }
+  div.DatabasePage__Donate {
+    div.DonateRightColumn {
+      font-size: 20px;
+    }
+  }
   .TopStatBackground {
     max-width: 250px;
     height: 150px;
@@ -384,6 +402,8 @@
   }
 
   @media (max-width: 1200px) {
+    
+     
     div.MobileFinancials {
       
         margin-top: 10px;

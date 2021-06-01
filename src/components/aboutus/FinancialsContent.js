@@ -18,9 +18,6 @@ const FinancialsContent = (props) => {
                     <div className= "PageContent">
                     {parse(props.data.content)}
                     <div className="PageImg">
-                <div className = "FinancialsYearHeading">
-                    {props.data.financialyear}    
-                </div>
                 
                 <div className="FinancialsContainer">
                 <div className="MobileFinancials">

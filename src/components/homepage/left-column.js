@@ -21,9 +21,9 @@ class LeftColumn extends Component {
                 </div>
                 <div className='home-address-container'>
                     <HomepageAddress/>
-                {/* <div className='sub-form'>
+                <div className='sub-form'>
                 <a href='https://canyoncreekservices.salsalabs.org/SubscriptionForm'>Join Our Email List</a>
-                </div> */}
+                </div>
                 </div>
                 
                 </div>
