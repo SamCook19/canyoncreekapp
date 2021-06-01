@@ -5,8 +5,8 @@ import PageSocialMedia from '../pagesocialmedia';
 
 const SupportersContent = (props) => {
         return (
-            <div className ="DatabasePage__Donate">
-                <div className="DonateRightColumn">
+            <div className ="DatabasePage__Donate-supporters">
+                <div className="DonateRightColumn-supporters">
                 
                 <CardTitle className="PageTitle">
                         {props.data.title}
@@ -16,7 +16,7 @@ const SupportersContent = (props) => {
                     {parse(props.data.content)}
                     </div>    
                 </div>   
-                <div className='DonateLeftColumn'>
+                <div className='DonateLeftColumn-supporters'>
                 <CardImg
                 top
                 width="300px"

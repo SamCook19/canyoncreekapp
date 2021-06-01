@@ -359,9 +359,32 @@
 
 
 @media (max-width: 1035px) {
+  .DonateContainer-main {
+    height: 84vh;
+  }
+  .DatabasePage__Donate {
+    grid-template-columns: unset;
+  }
+  .donate-page-content {
+    display: grid;
+    grid-template-columns: 1fr 80%;
+  }
+  .DonateLeftColumn {
+    display: none;
+  }
+  .DonateContainer {
+    height: unset;
+  }
 
-  .hero-image-img img {
-    height: 225px;
+  .DonateRightColumn-supporters {
+    font-size: 22px;
+  }
+
+  .DatabasePage__Donate-supporters {
+    display: grid;
+    grid-template-columns: unset;
+    grid-template-rows: 1fr 1fr;
+    
   }
 
   .BoardOfDirectorsCardsContainer {
@@ -488,6 +511,29 @@
 }
 
 @media (max-width: 700px) {
+  .DatabasePage__Donate-supporters {
+    display: grid;
+    .DonateRightColumn {
+      grid-row: 2;
+      font: 22px;
+    }
+    .DonateLeftColumn-supporters {
+      grid-row: 1;
+    }
+  }
+  
+  .donate-page-content {
+    grid-template-columns: 1fr 80%;
+  }
+  .DatabasePage__Donate {
+    grid-template-columns: unset;
+  }
+  .DonateLeftColumn {
+    display: none;
+  }
+  .WhoWeArePageImg {
+    max-height: 180px;
+  }
   .page-content-finances {
     grid-template-columns: 60px 1fr;
   }
@@ -598,11 +644,11 @@
   }
 }
 
-// @media (max-width: 700px) {
-//   div.quote-carousel {
-//     height: 200px;
-//   }
-// }
+@media (max-width: 700px) {
+  #emails {
+    max-width: 200px;
+  }
+}
 
 @media (max-width: 600px) {
   // div.quote-carousel {

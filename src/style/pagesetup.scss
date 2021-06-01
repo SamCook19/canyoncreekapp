@@ -479,9 +479,7 @@ grid-template-columns: 10% 1fr 10%;
   max-height: 750px;
 }
 
-.WhoWeArePageImg {
-  max-height: 180px;
-}
+
 
 .PreventionStats {
   position: relative;
@@ -519,7 +517,31 @@ grid-template-columns: 10% 1fr 10%;
   align-items: center;
 }
 
+.DonateContainer {
+  height: 84vh;
+}
 
+.DonateContainer-main {
+  background-color: white;
+}
+
+.DatabasePage__Donate-supporters {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  .DonateLeftColumn-supporters {
+    grid-row: 1;
+    grid-column: 1/2;
+    height: 100%;
+    
+  }
+
+  .DonateRightColumn {
+    grid-column: 2/3;
+    font-size: 28px;
+    margin-left: 45px;
+  }
+}
 
 .DatabasePage__Donate {
   display: grid;
@@ -540,7 +562,7 @@ grid-template-columns: 10% 1fr 10%;
   .DonateRightColumn {
     grid-column: 2/3;
     font-size: 28px;
-    margin-left: 25px;
+    margin-left: 45px;
   }
 }
 

@@ -79,7 +79,7 @@ class Donate extends Component {
                 </div>
                 
                     
-                    <div className='DonateContainer'> 
+                    <div className='DonateContainer-main'> 
                     
                     <div className='DonateSpacer'></div>
                     {
