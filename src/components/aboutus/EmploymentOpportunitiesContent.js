@@ -22,6 +22,8 @@ const EmploymentOpportunitiesContent = (props) => {
                 
                 <a className='ApplyButton'  href='https://www.indeed.com/q-Canyon-Creek-Services-jobs.html'>
                 </a>
+                <a className='ApplyLink' href='https://www.indeed.com/q-Canyon-Creek-Services-jobs.html'> Apply Here!
+                </a>
                 </div>
                 <div className='PageImg'>
                 <CardImg
