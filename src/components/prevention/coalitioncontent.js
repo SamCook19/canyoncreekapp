@@ -15,7 +15,7 @@ const CoalitionContent = (props) => {
                     {parse(props.data.content)}
                     </div>
                     <div className='CoalitionImage'>
-                    <CardImg 
+                    <img
                     src={props.data.coalitionImage}
                     alt="Card Image"
                     className="CardImage"

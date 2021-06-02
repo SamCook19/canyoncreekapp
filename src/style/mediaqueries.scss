@@ -357,6 +357,11 @@
   }
 }
 
+@media (min-width: 800px) {
+  .ApplyLink {
+    display: none;
+  }
+}
 
 @media (max-width: 1035px) {
   .DonateContainer-main {
@@ -514,6 +519,9 @@
 }
 
 @media (max-width: 700px) {
+  .DonateContainer-main {
+    box-shadow: -10px 23px 15px 5px rgba(0, 0, 0, 0.04) ;
+  }
   .prevention-page-content {
     grid-template-rows: 350px 1fr
   }
@@ -528,6 +536,7 @@
     max-width: 220px;
   }
   .DatabasePage__Donate {
+    grid-template-columns: 3% 1fr;
     .DonateRightColumn {
       margin-left: 52px;
     }
@@ -560,7 +569,8 @@
   }
   .WhoWeArePageImg {
     max-height: 150px;
-  }
+    width: 300px;
+    }
   .page-content-finances {
     grid-template-columns: 60px 1fr;
   }
@@ -672,6 +682,9 @@
 }
 
 @media (max-width: 700px) {
+  .DonateContainer-main {
+    height: unset;
+  }
   #emails {
     max-width: 200px;
   }
@@ -720,6 +733,7 @@
     }
     div.DonateRightColumn {
       font-size: 20px;
+      margin-left: unset;
     }
   }
   div.DonateContainer {
@@ -826,6 +840,11 @@
   }
 }
 
+@media (max-width: 800px) {
+  .ApplyButton {
+    display: none;
+  }
+}
 
 @media (max-width: 600px) {
   .CardTitle {
@@ -854,9 +873,7 @@
   .PageImgApplication {
     margin-top: unset;
   }
-  .ApplyButton {
-    display: none;
-  }
+  
   .page-info-finances {
     grid-template-columns: 3% 1fr 3%;
   }
@@ -953,7 +970,8 @@
     }
   }
   .donate-page-content {
-    display: unset;
+    display: grid;
+    grid-template-columns: 40px 1fr;
   }
   .help-page-content {
     display: grid;
