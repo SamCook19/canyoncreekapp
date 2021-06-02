@@ -34011,6 +34011,16 @@ div.FinancialsContainer {
   text-align: center;
 }
 
+.CoalitionImage {
+  display: flex;
+  justify-content: center;
+}
+
+.CoalitionImage img {
+  height: 300px;
+  width: 500px;
+}
+
 .button__hotline {
   cursor: pointer;
   font-size: 20px;
@@ -54620,6 +54630,12 @@ a.text-dark:hover, a.text-dark:focus {
   }
 }
 
+@media (min-width: 800px) {
+  .ApplyLink {
+    display: none;
+  }
+}
+
 @media (max-width: 1035px) {
   .DonateContainer-main {
     height: 84vh;
@@ -54733,6 +54749,9 @@ a.text-dark:hover, a.text-dark:focus {
 }
 
 @media (max-width: 700px) {
+  .DonateContainer-main {
+    box-shadow: -10px 23px 15px 5px rgba(0, 0, 0, 0.04);
+  }
   .prevention-page-content {
     grid-template-rows: 350px 1fr;
   }
@@ -54745,6 +54764,9 @@ a.text-dark:hover, a.text-dark:focus {
   .CoalitionImage img {
     max-height: 120px;
     max-width: 220px;
+  }
+  .DatabasePage__Donate {
+    grid-template-columns: 3% 1fr;
   }
   .DatabasePage__Donate .DonateRightColumn {
     margin-left: 52px;
@@ -54776,6 +54798,7 @@ a.text-dark:hover, a.text-dark:focus {
   }
   .WhoWeArePageImg {
     max-height: 150px;
+    width: 300px;
   }
   .page-content-finances {
     grid-template-columns: 60px 1fr;
@@ -54872,6 +54895,9 @@ a.text-dark:hover, a.text-dark:focus {
 }
 
 @media (max-width: 700px) {
+  .DonateContainer-main {
+    height: unset;
+  }
   #emails {
     max-width: 200px;
   }
@@ -54909,6 +54935,7 @@ a.text-dark:hover, a.text-dark:focus {
   }
   div.DatabasePage__Donate div.DonateRightColumn {
     font-size: 20px;
+    margin-left: unset;
   }
   div.DonateContainer {
     height: 73vh;
@@ -54996,6 +55023,12 @@ a.text-dark:hover, a.text-dark:focus {
   }
 }
 
+@media (max-width: 800px) {
+  .ApplyButton {
+    display: none;
+  }
+}
+
 @media (max-width: 600px) {
   .CardTitle {
     text-align: center;
@@ -55020,9 +55053,6 @@ a.text-dark:hover, a.text-dark:focus {
   }
   .PageImgApplication {
     margin-top: unset;
-  }
-  .ApplyButton {
-    display: none;
   }
   .page-info-finances {
     grid-template-columns: 3% 1fr 3%;
@@ -55117,7 +55147,8 @@ a.text-dark:hover, a.text-dark:focus {
     grid-column: 1/4;
   }
   .donate-page-content {
-    display: unset;
+    display: grid;
+    grid-template-columns: 40px 1fr;
   }
   .help-page-content {
     display: grid;
@@ -55436,4 +55467,4 @@ a:hover {
   color: inherit;
 }
 
-/*# sourceMappingURL=app-0dea994d2fc9cb81b767.map*/
+/*# sourceMappingURL=app-8d6c3ac6100fd7cdbda4.map*/
