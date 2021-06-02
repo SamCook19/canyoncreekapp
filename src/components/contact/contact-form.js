@@ -51,12 +51,12 @@ export default function ContactForm() {
                     name='recipient'
                     className='form-dropdown'
                     placeholder='recipient address'>
-                      <option value="prevention@canyoncreekservices.org">prevention@canyoncreekservices.org - Community Outreach/ Education/Awareness/Prevention</option>
-                      <option value="administration@canyoncreekservices.org">administration@canyoncreekservices.org - General Organizational Information/ Administration/Executive Director</option>
-                      <option value="development@canyoncreekservices.org">development@canyoncreekservices.org - Fundraising/Donations</option>
-                      <option value="volunteers@canyoncreekservices.org">volunteers@canyoncreekservices.org - Volunteering/Internships/Service Projects</option>
-                      <option value="business@canyoncreekservices.org">business@canyoncreekservices.org - Human Resources/Billing/Accounts/Grant Reporting</option>
-                      <option value="board@canyoncreekservices.org">board@canyoncreekservices.org - Board of Directors</option>
+                      <option value="prevention@canyoncreekservices.org">Community Outreach/ Education/Awareness/Prevention</option>
+                      <option value="administration@canyoncreekservices.org">General Organizational Information/ Administration/Executive Director</option>
+                      <option value="development@canyoncreekservices.org">Fundraising/Donations</option>
+                      <option value="volunteers@canyoncreekservices.org">Volunteering/Internships/Service Projects</option>
+                      <option value="business@canyoncreekservices.org"> Human Resources/Billing/Accounts/Grant Reporting</option>
+                      <option value="board@canyoncreekservices.org">Board of Directors</option>
                     </select>
                   </div>
                 </div>
