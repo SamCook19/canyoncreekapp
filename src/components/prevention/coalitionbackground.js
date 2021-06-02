@@ -5,7 +5,7 @@ import { CardImg, CardTitle } from 'reactstrap';
 
 const CoalitionBackground = (props) => {
     return (
-        <div>
+        <div className="PreventionBackgroundStatsImg">
             <div className="PreventionPageImg">
                 <CardImg
                 top

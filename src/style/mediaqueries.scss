@@ -378,12 +378,13 @@
 
   .DonateRightColumn-supporters {
     font-size: 20px;
+    padding-left: 60px;
   }
 
   .DatabasePage__Donate-supporters {
     display: grid;
     grid-template-columns: unset;
-    grid-template-rows: 1fr 1fr;
+    grid-template-rows: 330px 1fr;
     
   }
 
@@ -513,6 +514,24 @@
 }
 
 @media (max-width: 700px) {
+  .prevention-page-content {
+    grid-template-rows: 350px 1fr
+  }
+  .coalition-page-content {
+    grid-template-rows: 350px 1fr
+  }
+  .PreventionPageImg img {
+    max-height: 350px;
+  }
+  .CoalitionImage img {
+    max-height: 120px;
+    max-width: 220px;
+  }
+  .DatabasePage__Donate {
+    .DonateRightColumn {
+      margin-left: 52px;
+    }
+  }
   .DonateRightColumn-supporters {
     font-size: 18px;
   }
@@ -523,7 +542,7 @@
       font: 22px;
     }
     .DonateLeftColumn-supporters {
-      grid-row: 1;
+      grid-row: 2;
     }
   }
   
@@ -536,8 +555,11 @@
   .DonateLeftColumn {
     display: none;
   }
+  .CoalitionImage {
+    max-height: 150px;
+  }
   .WhoWeArePageImg {
-    max-height: 180px;
+    max-height: 150px;
   }
   .page-content-finances {
     grid-template-columns: 60px 1fr;
@@ -877,7 +899,7 @@
     margin-top: 15px;
   }
   .VolunteerContent {
-    grid-template-columns: 45px 1fr;
+    grid-template-columns: 60px 1fr;
   }
   div.right-side-carousel {
     grid-template-rows: 10px;
