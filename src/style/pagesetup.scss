@@ -571,6 +571,9 @@ grid-template-rows: 700px 1fr;
   }
 
   .DonateRightColumn {
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 35px;
     grid-column: 2/3;
     font-size: 28px;
     margin-left: 45px;
@@ -598,7 +601,16 @@ grid-template-rows: 700px 1fr;
     grid-column: 2/3;
     font-size: 28px;
     margin-left: 45px;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 35px;
   }
+}
+
+.DonateRightColumn-supporters {
+  margin-left: 10%;
+  margin-right: 10%;
+  margin-top: 35px;
 }
 
 .DonateContainer {
@@ -668,6 +680,7 @@ grid-template-rows: 700px 1fr;
 }
 
 .TopVolunteerContent {
+  margin-top: 35px;
   font-size: 24px;
   grid-column: 2/3;
 }
@@ -694,7 +707,7 @@ grid-template-rows: 700px 1fr;
 
 .VolunteerContent {
   display: grid;
-  grid-template-columns: 35px 1fr 35px;
+  grid-template-columns: 10% 1fr 10%;
   grid-column: 2/3;
   background-color: white;
   box-shadow: -8px 11px 10px 5px rgba(0,0,0,0.04);

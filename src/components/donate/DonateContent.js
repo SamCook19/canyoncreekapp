@@ -24,8 +24,7 @@ const DonateContent = (props) => {
                 </div>   
                 <div className='DonateLeftColumn'>
                     <Picture src={props.data.featuredImage}
-                    
-                />
+                    />
                 </div>
                 <div className='mobile-social-page'>
                     <PageSocialMedia />
