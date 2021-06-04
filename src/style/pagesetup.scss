@@ -595,6 +595,7 @@ grid-template-rows: 700px 1fr;
   .DonateLeftColumn img {
     height: 100%;
     width: 100%;
+    object-fit: cover;
   }
 
   .DonateRightColumn {

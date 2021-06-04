@@ -543,9 +543,13 @@
   }
   .DonateRightColumn-supporters {
     font-size: 18px;
+    margin-left: unset;
+    margin-right: unset;
+    margin-top: 15px;
   }
   .DatabasePage__Donate-supporters {
     display: grid;
+    grid-template-rows: unset;
     .DonateRightColumn {
       grid-row: 2;
       font: 22px;
@@ -734,8 +738,11 @@
     div.DonateRightColumn {
       font-size: 20px;
       margin-left: unset;
+      margin-top: 15px;
     }
   }
+
+  
   div.DonateContainer {
     height: 73vh;
     grid-column: 1/3;
