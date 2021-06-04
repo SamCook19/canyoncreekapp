@@ -33568,6 +33568,9 @@ li {
 }
 
 .DatabasePage__Donate-supporters .DonateRightColumn {
+  margin-left: 10%;
+  margin-right: 10%;
+  margin-top: 35px;
   grid-column: 2/3;
   font-size: 28px;
   margin-left: 45px;
@@ -33593,6 +33596,15 @@ li {
   grid-column: 2/3;
   font-size: 28px;
   margin-left: 45px;
+  margin-left: 10%;
+  margin-right: 10%;
+  margin-top: 35px;
+}
+
+.DonateRightColumn-supporters {
+  margin-left: 10%;
+  margin-right: 10%;
+  margin-top: 35px;
 }
 
 .DonateContainer {
@@ -33660,6 +33672,7 @@ li {
 }
 
 .TopVolunteerContent {
+  margin-top: 35px;
   font-size: 24px;
   grid-column: 2/3;
 }
@@ -33686,7 +33699,7 @@ li {
 
 .VolunteerContent {
   display: grid;
-  grid-template-columns: 35px 1fr 35px;
+  grid-template-columns: 10% 1fr 10%;
   grid-column: 2/3;
   background-color: white;
   box-shadow: -8px 11px 10px 5px rgba(0, 0, 0, 0.04);
@@ -55471,4 +55484,4 @@ a:hover {
   color: inherit;
 }
 
-/*# sourceMappingURL=app-d4e12d30ce5a1e1e48ca.map*/
+/*# sourceMappingURL=app-c55de373be16a312c1d6.map*/
