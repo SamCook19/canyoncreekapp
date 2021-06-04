@@ -33261,6 +33261,10 @@ li {
   grid-template-columns: 10% 1fr 10%;
 }
 
+.emaildropdown {
+  display: grid;
+}
+
 .ApplyLink {
   margin-bottom: 20px;
   background-color: #00a6a8;
@@ -55467,4 +55471,4 @@ a:hover {
   color: inherit;
 }
 
-/*# sourceMappingURL=app-2956d618b63e599dbac4.map*/
+/*# sourceMappingURL=app-627aea98c680aa1d1092.map*/
