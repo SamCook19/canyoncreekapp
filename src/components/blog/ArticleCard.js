@@ -72,7 +72,7 @@ class ArticleCard extends Component {
 
             </Link>
             
-            <div className='article-delete'>
+            <div className='blog-article-delete'>
             <ArticleDelete data={this.props.data} />
             </div>
             
