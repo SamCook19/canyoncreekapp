@@ -22,3 +22,4 @@ firebase.default.analytics()
 
 export const auth = app.auth()
 export default app
+
