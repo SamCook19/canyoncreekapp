@@ -65,14 +65,15 @@ class DonateSubmenu extends React.Component {
           </NavLink>
         </div>
         <div className="nav__submenu-item ">
-        <a href ="https://canyoncreekservices.salsalabs.org/2021websitegeneraldonationform" activeClassName="nav-link-active">
-           Donate Here
-          </a>
+        <NavLink to="/donate" activeClassName="nav-link-active">
+            Why to Donate
+            </NavLink>
         </div>
       </ul>
     )
   }
 }
+
 
 class NavigationComponent extends React.Component {
   constructor(props) {
@@ -85,6 +86,10 @@ class NavigationComponent extends React.Component {
   handleHover = (event) => {
     this.setState({ showAboutMenu: true });
   };
+
+  handleDonate = () => {
+    window.location.href = "https://canyoncreekservices.salsalabs.org/2021websitegeneraldonationform"
+  }
   
   handleLeave = (event) => {
     this.setState({ showAboutMenu: false });
@@ -121,8 +126,8 @@ class NavigationComponent extends React.Component {
             className="nav__menu-item"
             onMouseLeave={this.handleLeave}
           >
-            <NavLink to="/donate"  onMouseEnter={this.handleHover}>
-              Donate </NavLink>
+            <a onMouseEnter={this.handleHover} onClick={this.handleDonate}>
+              Donate </a>
               <div className="submenu-container-donate">
               <CSSTransitionGroup
                 transitionName="slide"
