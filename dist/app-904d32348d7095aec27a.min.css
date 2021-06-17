@@ -32919,7 +32919,7 @@ table.is-completely-borderless td, table.is-completely-borderless th, table.is-c
 }
 
 .home-button-group {
-  position: absolute;
+  position: fixed;
 }
 
 .homepage-img-button {
@@ -34146,6 +34146,25 @@ div.FinancialsContainer {
   width: 50px;
   font-size: 16px;
   align-items: center;
+}
+
+@media (max-width: 600px) {
+  div.business-button-mobile div.mobile-label {
+    display: none;
+  }
+  .business-button-mobile:hover, .business-button-mobile:active {
+    width: 100px;
+  }
+  .business-button-mobile:hover .mobile-label, .business-button-mobile:active .mobile-label {
+    display: unset;
+  }
+  .business-button-mobile:hover .button__business, .business-button-mobile:active .button__business {
+    font-size: 12px;
+    text-align: center;
+  }
+  .business-button-mobile:hover .button__business .phone-symbol, .business-button-mobile:active .button__business .phone-symbol {
+    display: none;
+  }
 }
 
 .button__business a {
@@ -55261,11 +55280,26 @@ a.text-dark:hover, a.text-dark:focus {
     text-align: center;
     width: 50px;
   }
+  div.mobile-button-group div.hotline-button-mobile div.mobile-label {
+    display: none;
+  }
   div.mobile-button-group div.hotline-button-mobile div.button__hotline {
     width: 50px;
   }
   div.mobile-button-group div.hotline-button-mobile div.button__hotline {
     color: #E77A54;
+  }
+  div.mobile-button-group div.hotline-button-mobile div.button__hotline:hover, div.mobile-button-group div.hotline-button-mobile div.button__hotline:active {
+    width: 100px;
+    background-color: white;
+  }
+  div.mobile-button-group div.hotline-button-mobile div.button__hotline:hover div.phone-symbol, div.mobile-button-group div.hotline-button-mobile div.button__hotline:active div.phone-symbol {
+    display: none;
+  }
+  div.mobile-button-group div.hotline-button-mobile div.button__hotline:hover div.mobile-label, div.mobile-button-group div.hotline-button-mobile div.button__hotline:active div.mobile-label {
+    display: unset;
+    color: #E77A54;
+    font-size: 12px;
   }
   div.edit-modal {
     position: fixed;
@@ -55492,4 +55526,4 @@ a:hover {
   color: inherit;
 }
 
-/*# sourceMappingURL=app-914f75226992f81861fe.map*/
+/*# sourceMappingURL=app-dd6521f8b084cb45bdd3.map*/
