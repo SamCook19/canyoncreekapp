@@ -854,6 +854,7 @@
 }
 
 @media (max-width: 600px) {
+  
   .CardTitle {
     text-align: center;
   }
@@ -1068,14 +1069,33 @@
       }
     }
     div.hotline-button-mobile {
+      div.mobile-label {
+        display: none;
+      }
     div.button__hotline {
       width: 50px;
     }
     div.button__hotline {
       color: #E77A54;
+      
     }
+    div.button__hotline:hover, div.button__hotline:active {
+      width: 100px;
+      background-color: white;
+      div.phone-symbol {
+        display: none;
+      }
+      div.mobile-label {
+        display: unset;
+        color: #E77A54;
+        font-size: 12px;
+      }
+    }
+    
+    
   }
   }
+  
   div.edit-modal{
     position: fixed;
     top: 60%;
@@ -1241,6 +1261,7 @@
     div.business-button-mobile {
       width: 35px;
     }
+    
     a.contact-link {
       width: 35px;
     }

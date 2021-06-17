@@ -4,6 +4,7 @@ import ButtonsComponent from '../buttons/buttons-component';
 import PageLogo from '../logo/pagelogo';
 import ContactForm from './contact-form';
 import PageSocialMedia from '../pagesocialmedia';
+import SmallNavDrawer from '../navigation/SmallNavDrawer';
 
 
 class Contact extends Component {
@@ -16,7 +17,9 @@ class Contact extends Component {
             </div>
             <div className='right-side-header'>
             <div className='navbar'>  <NavigationComponent /> </div>
-            
+            <div className='small-drawer'>
+            <SmallNavDrawer />
+            </div>
             </div>
             <div className='page-heading'>
                <h1 className='AboutUsHeader'>Contact <span style={{color: "#00A6A8", fontFamily: "Roboto"}}> Us</span></h1>

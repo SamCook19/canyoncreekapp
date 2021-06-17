@@ -50,6 +50,30 @@
         align-items: center;
 }
 
+@media (max-width: 600px) {
+    div.business-button-mobile {
+        div.mobile-label {
+          display: none;
+        }
+    }
+    .business-button-mobile:hover, .business-button-mobile:active {
+        width: 100px;
+        .mobile-label {
+            display: unset;
+            
+        }
+        .button__business {
+            font-size: 12px;
+            text-align: center;
+            .phone-symbol {
+            display: none;
+            
+        }
+    }
+        
+    }
+}
+
 .button__business a {
     color: black;
 }
