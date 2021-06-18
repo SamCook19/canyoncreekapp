@@ -33,6 +33,10 @@ export default function DonateNested() {
     window.location.href = "https://canyoncreekservices.salsalabs.org/2021websitegeneraldonationform"
   }
 
+  const currentNeeds = () => {
+    window.location.href = "https://canyoncreekservices.salsalabs.org/2021websitecurrentneedslist";
+  }
+
   return (
     <List>
       <ListItem button onClick={handleClick}>
@@ -48,7 +52,10 @@ export default function DonateNested() {
             <ListItemText primary="Our Supporters" />
           </ListItem>
           <ListItem button className={classes.nested} component={Link} to='/donate' >
-            <ListItemText primary="Why to Donate" />
+            <ListItemText primary="Why Donate" />
+          </ListItem>
+          <ListItem button onClick={currentNeeds} className={classes.nested} >
+            <ListItemText primary="Current Needs" />
           </ListItem>
         </List>
       </Collapse>
