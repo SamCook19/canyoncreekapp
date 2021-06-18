@@ -55,6 +55,9 @@ class Homepage extends Component {
                 </div>
                 <div className='mobile-social-home'>
                     <HomepageSocialMedia />
+                    <div className='sub-form'>
+                <a href='https://canyoncreekservices.salsalabs.org/SubscriptionForm'>Join Our Email List</a>
+                </div>
                 </div>
                 </div>
         );

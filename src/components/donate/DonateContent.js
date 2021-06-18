@@ -20,6 +20,11 @@ const DonateContent = (props) => {
                     <div className= "DonateBottomContent">
                     {parse(props.data.contentBottom)}
                     </div>
+
+                    <div className="donate-button">
+                        
+                        <a className="donate-button-link" href="https://canyoncreekservices.salsalabs.org/2021websitegeneraldonationform">Donate Here</a>
+                    </div>
                     
                 </div>   
                 <div className='DonateLeftColumn'>
