@@ -216,8 +216,8 @@ class NavigationComponent extends React.Component {
             className="nav__menu-item-medium"
             onMouseLeave={this.handleLeave}
           >
-            <NavLink to="/donate"  onMouseEnter={this.handleHover}>
-              Donate </NavLink>
+            <a onMouseEnter={this.handleHover} onClick={this.handleDonate}>
+              Donate </a>
               <div className="submenu-container-medium">
               <CSSTransitionGroup
                 transitionName="slide"
