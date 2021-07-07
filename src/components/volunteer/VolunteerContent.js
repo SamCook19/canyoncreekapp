@@ -26,7 +26,7 @@ const VolunteerContent = (props) => {
                 />
                 </div>  
                 <div className='signup-modal'>
-                          <a className='volunteer-link' href='https://canyoncreekservices.salsalabs.org/2021VolunteerSignupform'> Sign Up To Volunteer</a>
+                          <a className='volunteer-link' href='https://canyoncreekservices.salsalabs.org/2021VolunteerSignupform'> Sign Up To Learn More</a>
                       </div>
                       <div className = "VolunteerContent">
                 <div className= "BottomVolunteerContent">
