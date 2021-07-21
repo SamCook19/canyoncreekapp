@@ -20,6 +20,9 @@ export default function ContactForm() {
 
   return (
     <div className='ContactForm'>
+      <div className="disclaimer">
+              If you or someone you know is in need of supportive services related to domestic violence or sexual assault, please either contact our 24 hour hotline at 435-233-5732 for immediate assistance or complete <a href="https://apricot.socialsolutions.com/auth/autologin/org_id/1698/hash/fe63cfb2b7190a8b89cde77419b8d89c5af6ee4e">this</a> form and a member of our team will contact you as soon as possible.
+              </div>
       <div className='container'>
         <div className='row'>
           <div className='col-12 text-center'>
@@ -57,6 +60,7 @@ export default function ContactForm() {
                       <option value="volunteers@canyoncreekservices.org">Volunteering/Internships/Service Projects</option>
                       <option value="business@canyoncreekservices.org"> Human Resources/Billing/Accounts/Grant Reporting</option>
                       <option value="board@canyoncreekservices.org">Board of Directors</option>
+                      <option value="ciarra@canyoncreekservices.org">Help For Survivors/Shelter</option>
                     </select>
                   </div>
                 </div>
@@ -89,9 +93,7 @@ export default function ContactForm() {
                 </button>
                 </div>
               </form>
-              <div className="disclaimer">
-              If you or someone you know is in need of supportive services related to domestic violence or sexual assault, please either contact our 24 hour hotline at 435-233-5732 for immediate assistance or complete <a href="https://apricot.socialsolutions.com/auth/autologin/org_id/1698/hash/fe63cfb2b7190a8b89cde77419b8d89c5af6ee4e">this</a> form and a member of our team will contact you as soon as possible.
-              </div>
+              
             </div>
             
           </div>

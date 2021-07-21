@@ -75,9 +75,9 @@ class BoardCardEdit extends Component {
     }
 
 
-    submitEdit = () => {
+    submitEdit = async () => {
         const article = this.state.article
-        db.collection("OrganizationalLeadershipBD").doc(`${this.props.data.id}`)
+       await db.collection("OrganizationalLeadershipBD").doc(`${this.props.data.id}`)
             .update(
                 article
                 )
@@ -85,7 +85,7 @@ class BoardCardEdit extends Component {
                 console.log(res)
             } )
             .catch( err => console.log(err))
-            
+            location.reload()
     }
 
     uploadImageCallBack = (e) => {
