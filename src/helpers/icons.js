@@ -7,6 +7,7 @@ import {
     faPhone,
     faMapMarkedAlt,
     faLock,
+    faHandHoldingHeart
   } from "@fortawesome/free-solid-svg-icons";
 
   import {
@@ -26,6 +27,7 @@ import {
       faEnvelope,
       faMapMarkedAlt,
       faLock,
+      faHandHoldingHeart
       
     );
   };

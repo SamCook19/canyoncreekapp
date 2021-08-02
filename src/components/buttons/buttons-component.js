@@ -6,6 +6,7 @@ import BusinessButton from './businessbutton';
 import BusinessButtonMobile from './BusinessButtonMobile';
 import HotlineButtonMobile from './HotlineButtonMobile';
 import DonateButton from './donatebutton.js';
+import DonateButtonMobile from './donatebuttonmobile';
 
 class ButtonsComponent extends Component {
     render() {
@@ -38,6 +39,9 @@ class ButtonsComponent extends Component {
             </div>
             <div className='business-button-mobile'>
                       <BusinessButtonMobile />
+            </div>
+            <div className='business-button-mobile'>
+                      <DonateButtonMobile />
             </div>
             
             <div className='contact-button'>
