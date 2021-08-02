@@ -74,15 +74,15 @@ class CoalitionEdit extends Component {
             }
         })
     }
-    submitEdit = () => {
+    submitEdit = async () => {
         const article = this.state.article
-        db.collection("Coalition").doc("bg8ThwHltIHtLobs0eO1")
+        await db.collection("Coalition").doc("bg8ThwHltIHtLobs0eO1")
             .update(
                 article
                 )
             
             .catch( err => console.log(err))
-            
+            location.reload()
             
     }
 

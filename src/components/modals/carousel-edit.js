@@ -68,14 +68,15 @@
         }
     
     
-        submitArticle = () => {
+        submitArticle = async () => {
             const article = this.state.article
-            db.collection("Carousel")
+            await db.collection("Carousel")
                 .add(
                     article
                 )
                 
                 .catch( err => console.log(err))
+                location.reload()
                 
         }
     

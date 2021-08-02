@@ -76,14 +76,15 @@ class EmploymentOppEdit extends Component {
     }
 
 
-    submitEdit = () => {
+    submitEdit = async () => {
         const article = this.state.article
-        db.collection("Employment").doc("llzfAAoO1tNcsWnyTWjJ")
+        await db.collection("Employment").doc("llzfAAoO1tNcsWnyTWjJ")
             .update(
                 article
                 )
             
             .catch( err => console.log(err))
+            location.reload()
     }
 
     uploadImageCallBack = (e) => {

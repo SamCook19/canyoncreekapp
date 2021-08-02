@@ -76,15 +76,15 @@ class OrgEdit extends Component {
     }
 
 
-    submitEdit = () => {
+    submitEdit = async () => {
         const article = this.state.article
-        db.collection("OrganizationalLeadershipDescription").doc("Ya5wYo0Jct1zwyeRq9bX")
+       await db.collection("OrganizationalLeadershipDescription").doc("Ya5wYo0Jct1zwyeRq9bX")
             .update(
                 article
                 )
             
             .catch( err => console.log(err))
-            
+            location.reload()
     }
 
    

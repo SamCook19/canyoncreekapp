@@ -75,15 +75,15 @@ class VolunteerEdit extends Component {
     }
 
 
-    submitEdit = () => {
+    submitEdit = async () => {
         const article = this.state.article
-        db.collection("Volunteer").doc("EBWqelbNqnyier35pTga")
+        await db.collection("Volunteer").doc("EBWqelbNqnyier35pTga")
             .update(
                 article
                 )
             
             .catch( err => console.log(err))
-            
+            location.reload()
     }
 
     uploadImageCallBack = (e) => {

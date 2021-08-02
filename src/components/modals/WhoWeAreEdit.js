@@ -76,15 +76,15 @@ class WhoWeAreEdit extends Component {
     }
 
 
-    submitEdit = () => {
+    submitEdit = async () => {
         const article = this.state.article
-        db.collection("WhoWeAre").doc("GtwO0NM0cj6B2GUztU9m")
+       await db.collection("WhoWeAre").doc("GtwO0NM0cj6B2GUztU9m")
             .update(
                 article
                 )
             
             .catch( err => console.log(err))
-           
+            location.reload()
     }
 
 

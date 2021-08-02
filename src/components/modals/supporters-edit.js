@@ -75,15 +75,15 @@ class SupportersEdit extends Component {
     }
 
 
-    submitEdit = () => {
+    submitEdit = async () => {
         const article = this.state.article
-        db.collection("OurSupporters").doc("qYaX8tiePuigT92A8qQ2")
+        await db.collection("OurSupporters").doc("qYaX8tiePuigT92A8qQ2")
             .update(
                 article
                 )
             
             .catch( err => console.log(err))
-            
+            location.reload()
     }
 
     uploadImageCallBack = (e) => {

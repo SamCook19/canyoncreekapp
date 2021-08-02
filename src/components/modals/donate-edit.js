@@ -85,15 +85,15 @@ class DonateEdit extends Component {
     }
 
 
-    submitEdit = () => {
+    submitEdit = async () => {
         const article = this.state.article
-        db.collection("Donate").doc("O7mGnOee7pVK6ONcJ33R")
+       await db.collection("Donate").doc("O7mGnOee7pVK6ONcJ33R")
             .update(
                 article
                 )
             
             .catch( err => console.log(err))
-            
+            location.reload()
     }
 
     uploadImageCallBack = (e) => {

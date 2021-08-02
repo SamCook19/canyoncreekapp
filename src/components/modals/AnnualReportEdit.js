@@ -87,15 +87,15 @@ class AnnualReportEdit extends Component {
     }
 
 
-    submitEdit = () => {
+    submitEdit = async () => {
         const article = this.state.article
-        db.collection("AnnualReport").doc("jrHAtOMdqeyRpVwMoyEI")
+       await db.collection("AnnualReport").doc("jrHAtOMdqeyRpVwMoyEI")
             .update(
                 article
                 )
             
             .catch( err => console.log(err))
-            
+            location.reload()
     }
 
    

@@ -87,15 +87,15 @@ class FinancialsEdit extends Component {
     }
 
 
-    submitEdit = () => {
+    submitEdit = async () => {
         const article = this.state.article
-        db.collection("Financials").doc("DT5d8j3YaUW5muJZPVeF")
+      await db.collection("Financials").doc("DT5d8j3YaUW5muJZPVeF")
             .update(
                 article
                 )
             
             .catch( err => console.log(err))
-            
+            location.reload()
     }
 
    

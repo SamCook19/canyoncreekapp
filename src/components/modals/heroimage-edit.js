@@ -18,15 +18,15 @@ class HeroImageEdit extends Component {
         }
     }
 
-    submitEdit = () => {
+    submitEdit = async () => {
         const article = this.state.article
-        db.collection("HeroImage").doc("aPkcanFlDCYk43VLSfYK")
+       await db.collection("HeroImage").doc("aPkcanFlDCYk43VLSfYK")
             .update(
                 article
                 )
             
             .catch( err => console.log(err))
-            
+            location.reload()
     }
 
     uploadImageCallBack = (e) => {

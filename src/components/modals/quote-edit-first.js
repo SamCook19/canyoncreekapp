@@ -85,13 +85,13 @@ class QuoteEdit extends Component {
     }
 
 
-    submitEdit = () => {
+    submitEdit = async () => {
         const article = this.state.article
-        db.collection("Quotes").doc(`${this.props.data.id}`)
+      await db.collection("Quotes").doc(`${this.props.data.id}`)
             .update(
                 article
                 )
-            
+                location.reload()
             
     }
 

@@ -66,15 +66,15 @@ class HelpEdit extends Component {
     }
 
 
-    submitEdit = () => {
+    submitEdit = async () => {
         const article = this.state.article
-        db.collection("HelpForSurvivors").doc("zBI9ZqSkIg8MJ0n1zT3R")
+       await db.collection("HelpForSurvivors").doc("zBI9ZqSkIg8MJ0n1zT3R")
             .update(
                 article
                 )
             
             .catch( err => console.log(err))
-            
+            location.reload()
     }
 
     uploadImageCallBack = (e) => {

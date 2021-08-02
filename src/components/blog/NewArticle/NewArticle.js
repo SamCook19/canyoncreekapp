@@ -97,9 +97,9 @@ class NewArticle extends Component {
         })
     }
 
-    submitArticle = () => {
+    submitArticle = async () => {
         const article = this.state.article
-        db.collection("Articles")
+        await db.collection("Articles")
             .add(
                 article
             )
@@ -107,7 +107,7 @@ class NewArticle extends Component {
                 console.log(res)
             } )
             .catch( err => console.log(err))
-            
+            location.reload()
     }
 
     uploadImageCallBack = (e) => {
