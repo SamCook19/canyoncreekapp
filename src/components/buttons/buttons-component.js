@@ -40,7 +40,7 @@ class ButtonsComponent extends Component {
             <div className='business-button-mobile'>
                       <BusinessButtonMobile />
             </div>
-            <div className='business-button-mobile'>
+            <div className='donate-button-mobile'>
                       <DonateButtonMobile />
             </div>
             
