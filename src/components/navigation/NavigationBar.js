@@ -130,7 +130,7 @@ class NavigationComponent extends React.Component {
             onMouseLeave={this.handleLeave}
           >
             <a onMouseEnter={this.handleHover} onClick={this.handleDonate}>
-              Donate </a>
+              Support Us </a>
               <div className="submenu-container-donate">
               <CSSTransitionGroup
                 transitionName="slide"

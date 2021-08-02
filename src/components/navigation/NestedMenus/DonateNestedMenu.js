@@ -40,7 +40,7 @@ export default function DonateNested() {
   return (
     <List>
       <ListItem button onClick={handleClick}>
-        <ListItemText primary="Donate" />
+        <ListItemText primary="Support Us" />
         {open ? <ExpandLess /> : <ExpandMore />}
       </ListItem>
       <Collapse in={!open} timeout="auto" unmountOnExit>

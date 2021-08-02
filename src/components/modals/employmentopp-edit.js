@@ -84,8 +84,6 @@ class EmploymentOppEdit extends Component {
                 )
             
             .catch( err => console.log(err))
-            
-            
     }
 
     uploadImageCallBack = (e) => {

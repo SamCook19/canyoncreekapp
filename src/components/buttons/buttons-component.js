@@ -5,6 +5,7 @@ import EscapeButton from './escapebutton';
 import BusinessButton from './businessbutton';
 import BusinessButtonMobile from './BusinessButtonMobile';
 import HotlineButtonMobile from './HotlineButtonMobile';
+import DonateButton from './donatebutton.js';
 
 class ButtonsComponent extends Component {
     render() {
@@ -20,7 +21,9 @@ class ButtonsComponent extends Component {
             <div className='business-button'>
                 <BusinessButton />
             </div>
-            
+            <div className="donate-button-group">
+                <DonateButton />
+            </div>
             <div className='contact-button'>
                 <ContactButton />
             </div>

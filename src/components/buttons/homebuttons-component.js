@@ -6,6 +6,7 @@ import BusinessButton from './businessbutton';
 import HeroImage from '../homepage/HeroImage';
 import BusinessButtonMobile from './BusinessButtonMobile';
 import HotlineButtonMobile from './HotlineButtonMobile';
+import DonateButton from './donatebutton.js';
 import * as firebase from 'firebase';
 
 const db = firebase.default.firestore()
@@ -76,7 +77,9 @@ class HomeButtonsComponent extends Component {
             <div className='business-button'>
                 <BusinessButton />
             </div>
-            
+            <div className="donate-button-group">
+                <DonateButton />
+            </div>
             <div className='contact-button'>
                 <ContactButton />
             </div>

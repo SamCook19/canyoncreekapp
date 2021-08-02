@@ -208,6 +208,7 @@
     align-items: flex-end;
   }
   h1.HelpForSurvivorsHeader {
+    text-align: center;
     font-size: 60px;
     margin-right: 0;
   }
@@ -290,7 +291,7 @@
           .quote-item {
            
             .first-slide {
-              font-size: 20px;
+              font-size: 14px;
               
               .first-quote {
                 grid-column: 2/5;
@@ -339,11 +340,11 @@
   }
   .TopStatBackground {
     max-width: 250px;
-    height: 150px;
+    
   }
   .BottomStatBackground {
     max-width: 250px;
-    height: 150px;
+    
   }
   .CreateDate {
     font-size: 25px;
@@ -394,7 +395,7 @@
   .DatabasePage__Donate-supporters {
     display: grid;
     grid-template-columns: unset;
-    grid-template-rows: 330px 1fr;
+   grid-template-rows: unset;
     
   }
 
@@ -419,7 +420,7 @@
           .quote-item {
            
             .first-slide {
-              font-size: 20px;
+              font-size: 14px;
               
               .first-quote {
                 grid-column: 2/5;
@@ -473,7 +474,7 @@
             .quote-item {
              
               .first-slide {
-                font-size: 20px;
+                font-size: 14px;
                 
                 .first-quote {
                   grid-column: 2/5;
