@@ -72,6 +72,9 @@ class DonateSubmenu extends React.Component {
         <div className="nav__submenu-item">
           <a href="https://canyoncreekservices.salsalabs.org/2021websitecurrentneedslist">Current Needs</a>
         </div>
+        <div className="nav__submenu-item">
+          <a href=" https://canyoncreekservices.salsalabs.org/3rdAnnualMasquerade2021/index.html">Annual Gala</a>
+        </div>
       </ul>
     )
   }
@@ -177,14 +180,6 @@ class NavigationComponent extends React.Component {
         
          
         </ul>
-
-        
-        
-        {/* <div className="blog-link">
-          <NavLink to="/blog" activeClassName="nav-link-active">
-            Blog
-          </NavLink>
-          </div> */}
       </nav>
       </MediaQuery> 
       </div>
