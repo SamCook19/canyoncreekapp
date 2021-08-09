@@ -52,11 +52,17 @@ class Homepage extends Component {
                 <div className='right-side-column'>
                     <RightColumn />
                 </div>
+                <div className="small-ad">
+                        Website built by Sam Cook
+                    </div>
                 </div>
                 <div className='mobile-social-home'>
                     <HomepageSocialMedia />
                     <div className='sub-form'>
                 <a href='https://canyoncreekservices.salsalabs.org/SubscriptionForm'>Join Our Email List</a>
+                    <div className="small-ad-mobile">
+                        Website built by Sam Cook
+                    </div>
                 </div>
                 </div>
                 </div>
