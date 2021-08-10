@@ -33004,6 +33004,14 @@ li {
   z-index: 5;
 }
 
+.small-ad {
+  text-align: center;
+}
+
+.small-ad-mobile {
+  font-size: 10px;
+}
+
 .page-container {
   width: 100%;
   height: 100%;
@@ -55156,7 +55164,16 @@ a.text-dark:hover, a.text-dark:focus {
   }
 }
 
+@media (min-width: 601px) {
+  .small-ad-mobile {
+    display: none;
+  }
+}
+
 @media (max-width: 600px) {
+  .small-ad {
+    display: none;
+  }
   .CardTitle {
     text-align: center;
   }
@@ -55622,4 +55639,4 @@ a:hover {
   justify-content: center;
 }
 
-/*# sourceMappingURL=app-1f98aeb719a3a764f8b9.map*/
+/*# sourceMappingURL=app-91ec1b81086bf042edde.map*/
