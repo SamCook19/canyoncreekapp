@@ -17,12 +17,14 @@ class HomeButtonsComponent extends Component {
         super(props);
         this.state={
             isLoaded: false,
-            articles: []
+            articles: [],
+            mobileImage: [],
         }
       }
     
       componentDidMount() {
-        this.getMyArticles()
+        this.getMyArticles(),
+        this.getMyMobileImage()
       }
     
       getMyArticles = () => {
@@ -52,10 +54,38 @@ class HomeButtonsComponent extends Component {
         })
       }
 
+      getMyMobileImage = () => {
+        db
+        .collection( 'HeroImageMobile' )
+        .get()
+        .then(docs => {
+          if(!docs.empty){
+            let allImages = []
+            docs.forEach(function (doc) {
+              const Image = {
+                id: doc.id,
+                ...doc.data()
+              }
+    
+              allImages.push(Image)
+            })
+    
+            this.setState({
+              mobileImage: allImages
+            }, () => {
+              this.setState ({
+                isLoaded: true
+              })
+            })
+          }
+        })
+      }
+
     render() {
         return (
             <div className='homebutton-container'>
             <div className='hero-img'>
+              <div className="hero-img-desktop">
             {
                       this.state.isLoaded ?
                         this.state.articles.map((article, index) => {
@@ -68,6 +98,7 @@ class HomeButtonsComponent extends Component {
                         })
                         : '' 
                       }
+                      </div>
             <div className='home-button-group'>
             <div className='escape-button'>
                 <EscapeButton />
@@ -85,7 +116,22 @@ class HomeButtonsComponent extends Component {
                 <ContactButton />
             </div>
             </div>
+            <div className="hero-img-mobile">
+              {
+                      this.state.isLoaded ?
+                        this.state.mobileImage.map((image, index) => {
+                          return(
+                          <HeroImageMobile className='Hero'
+                            key={index}
+                            data={image}
+                          />
+                          )
+                        })
+                        : '' 
+                      }
+              </div>
             <div className='mobile-button-group'>
+              
             <div className='escape-button-mobile'>
                 <EscapeButton />
             </div>
@@ -108,6 +154,21 @@ class HomeButtonsComponent extends Component {
             </div>
         );
     }
+}
+
+const HeroImageMobile = (props) => {
+  return (
+      <div className='hero-image-mobile-container'>
+      <div className="hero-image-mobile-img">
+      <img
+      top
+      src={props.data.featuredImage}
+      alt="Card Image"
+      className="CardImage"
+      />
+      </div>
+      </div>
+  );
 }
 
 export default HomeButtonsComponent;

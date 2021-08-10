@@ -1,7 +1,8 @@
-import React from 'react';
+import React, { Component } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Modal from '@material-ui/core/Modal';
 import { useAuth } from '../../contexts/AuthContext';
+import firebase from "firebase";
 import HeroImageEdit from './heroimage-edit';
 
 function rand() {
@@ -64,3 +65,5 @@ export default function SimpleModal() {
     </div> ) : null
   );
 }
+
+

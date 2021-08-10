@@ -6,6 +6,7 @@ import LeftColumn from './left-column';
 import HomeButtonsComponent from '../buttons/homebuttons-component';
 import CenterPiece from './centerpiece';
 import SimpleModal from '../modals/heroimage-modal';
+import MobileModal from '../modals/HeroImageMobileModal';
 import SmallNavDrawer from '../navigation/SmallNavDrawer';
 import HomepageSocialMedia from '../homepage/homepage-socialmedia';
 
@@ -40,9 +41,18 @@ class Homepage extends Component {
             <div className='centerpiece'>
             <div className='homebutton-component'>
                 <HomeButtonsComponent />
+                
+            </div>
+            
+            </div>
+            <div className="home-modals">
+                <div className="desktop-modal">
                 <SimpleModal />
-            </div>
-            </div>
+                </div>
+                <div className="mobile-modal">
+                <MobileModal />
+                </div>
+                </div>
                 
                 <div className='home-page-content'>
                 <div className='left-side-column'>
